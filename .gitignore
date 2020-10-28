@@ -1,0 +1,7 @@
+node_modules
+etc/config.json
+.next
+npm-debug.log
+.cache
+.DS_Store
+bundle-analyzer

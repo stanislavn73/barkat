@@ -1,0 +1,52 @@
+{
+  "name": "dilianka",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "next",
+    "build": "next build",
+    "start": "next start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@gitlab.com/vladnovod7/dilianka.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://gitlab.com/vladnovod7/dilianka/issues"
+  },
+  "homepage": "https://gitlab.com/vladnovod7/dilianka#readme",
+  "dependencies": {
+    "@zeit/next-less": "^1.0.1",
+    "classnames": "^2.2.6",
+    "file-loader": "^6.0.0",
+    "file-saver": "^2.0.2",
+    "gsap": "^3.2.6",
+    "less": "^3.11.1",
+    "next": "^9.3.6",
+    "next-compose-plugins": "^2.2.0",
+    "next-fonts": "^1.1.0",
+    "next-images": "^1.4.0",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-slick": "^0.25.2",
+    "react-waypoint": "^9.0.2",
+    "react-youtube": "^7.11.2",
+    "styled-components": "^5.1.0",
+    "url-loader": "^4.1.0"
+  },
+  "devDependencies": {
+    "babel-eslint": "^10.1.0",
+    "babel-plugin-styled-components": "^1.10.7",
+    "eslint": "^6.8.0",
+    "eslint-config-standard": "^14.1.1",
+    "eslint-config-standard-react": "^9.2.0",
+    "eslint-plugin-import": "^2.20.2",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-react": "^7.19.0",
+    "eslint-plugin-standard": "^4.0.1"
+  }
+}

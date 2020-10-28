@@ -1,0 +1,70 @@
+.porcelian-tile-block{
+  p{
+    margin-bottom: 15px;
+  }
+
+  .porcelian-tile-images-wrapper {
+    margin-bottom: 20px;
+    display: flex;
+
+    @media screen and (max-width: 1024px) {
+      flex-direction: column;
+    }
+
+    .porcelian-tile-image-item {
+      width: 50%;
+
+      @media screen and (max-width: 1024px) {
+        width: 100%;
+      }
+
+      &:not(:last-child){
+        margin-right: 5px;
+
+        @media screen and (max-width: 1024px) {
+          margin-right: 0;
+          margin-bottom: 15px;
+        }
+      }
+
+      img{
+        width: 100%;
+      }
+    }
+
+    .porcelian-tile-download-item {
+      padding-left: 30px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: space-around;
+
+      @media screen and (max-width: 1024px) {
+        padding-left: 0;
+      }
+
+      > *:first-child {
+        margin-bottom: 15px;
+      }
+    } 
+  }
+
+  .porcelian-tile-system-wrapper{
+    display: flex;
+    align-items: flex-start;
+
+    > * {
+      width: 50%;
+    }
+    .porcelian-tile-system{
+      width: 50%;
+      margin-right: 15px;
+      display: flex;
+      flex-direction: column;
+
+      img {
+        width: 100%;
+      }
+    }
+  }
+}
