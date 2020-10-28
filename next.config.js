@@ -1,6 +1,6 @@
 const withFonts = require('next-fonts');
 const withImages = require('next-images');
-const withLess = require('@zeit/next-less');
+// const withLess = require('@zeit/next-less');
 const withPlugins = require('next-compose-plugins');
 
 const nextConfig = {
@@ -19,5 +19,5 @@ const nextConfig = {
 module.exports = withPlugins([
   withFonts,
   withImages,
-  withLess
+  // withLess
 ], nextConfig);
