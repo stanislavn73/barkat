@@ -22,6 +22,7 @@ const routes = {
   ABOUT_US: "/about_us",
   FACADES: "/facades",
   SOFT: "/soft",
+  EVENTS:"events"
 };
 
 const LOGOS = {
@@ -29,6 +30,7 @@ const LOGOS = {
   [routes.ABOUT_US]: logo,
   [routes.FACADES]: logoU,
   [routes.SOFT]: logoVille,
+  [routes.EVENTS]: logo
 };
 
 function Header({ location }) {

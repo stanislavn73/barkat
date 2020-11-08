@@ -6,6 +6,7 @@ import SoftPage from "../components/pages/SoftPage";
 import AboutPage from "../components/pages/AboutPage";
 
 import about from "../assets/images/pages/About_us_first.jpg";
+import Eventpage from "../components/pages/EventPage";
 
 export const PAGES = [
   {
@@ -63,8 +64,9 @@ export const PAGES = [
     id: 8,
     name: "События",
     route: "/events",
-    page: HomePage,
-    isMenu: true,
-    disabled: true,
+    page: Eventpage,
+    screenTitle: "События",
+    screenImg: "https://exo.in.ua/images/news/2018/08/new-41279.jpg",
+    isMenu: true
   },
 ];

@@ -7,6 +7,7 @@ import { ModalConsumer } from '../../../layouts/Layout';
 import './Autodesk.less';
 
 import AutodeskLogo from '../../../../assets/images/Autodesk.jpg';
+import SocialMedia from './SocialMedia';
 
 const allPlanItems = [
     {
@@ -46,7 +47,11 @@ class Autodesk extends React.PureComponent {
         return (
             <FullPage min ref={this.block} className='soft-block-wrapper'>
                 <Padded className='soft-block-padded'>
+                    <div className='title-container' >
                     <div className='soft-block-title'>Autodesk</div>
+                    <SocialMedia />
+                    </div>
+                    
                     <PlainText className='soft-plain-text'>
                         Autodesk, Inc. – компания, крупнейший в мире поставщик программного обеспечения
                         в области 3D-проектирования и BIM для промышленного и гражданского строительства,
@@ -69,16 +74,16 @@ class Autodesk extends React.PureComponent {
                             <div key={item.id} className='soft-item'>
                                 <Img className='logo' src={AutodeskLogo} />
                                 <ModalConsumer>
-                                    {({handleOpenSoftModal}) => (
-                                    <div className='title' onClick={handleOpenSoftModal(item.type)}>
-                                        {item.title}
-                                    </div>)}
+                                    {({ handleOpenSoftModal }) => (
+                                        <div className='title' onClick={handleOpenSoftModal(item.type)}>
+                                            {item.title}
+                                        </div>)}
                                 </ModalConsumer>
                                 <PlainText className='item-text'>
                                     {item.text}
                                 </PlainText>
                                 <ModalConsumer>
-                                    {({handleOpenForm}) => <div className='button' onClick={handleOpenForm}>Написать нам</div>}
+                                    {({ handleOpenForm }) => <div className='button' onClick={handleOpenForm}>Написать нам</div>}
                                 </ModalConsumer>
                             </div>
                         ))}
