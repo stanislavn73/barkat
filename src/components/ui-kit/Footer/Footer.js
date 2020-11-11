@@ -11,6 +11,8 @@ import logo from '../../../assets/images/logo.jpg';
 
 import './Footer.less';
 
+import SocialMedia from './SocialMedia';
+
 const FooterHead = styled.div`
   height: 40px;
   display: flex;
@@ -106,7 +108,13 @@ class Footer extends PureComponent {
                 E-mail:  <a className='footer-link' href={'mailto:barkat-3D-ville@gmail.com'}>barkat-3D-ville@gmail.com</a>
               </div>
             </div> */}
+            <div className='social-container'>
+            <SocialMedia />
+            </div>
+              
+            
             <div className='footer-content-block'>
+            
               <div className='content-title'>
                 <a className='footer-link' href={'mail:info@barkat-stein.com'}>info@barkat-stein.com</a>
               </div>

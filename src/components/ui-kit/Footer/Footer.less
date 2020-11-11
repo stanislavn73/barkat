@@ -19,14 +19,19 @@
 
     padding: 0 20px;
 
-    @media screen and ( max-width: 900px) {
+    @media screen and (max-width: 600px) {
       flex-direction: column;
+      justify-content: center;
+      align-items: center;
     }
 
     .footer-content-block {
       display: flex;
       flex-direction: column;
       padding: 20px 0;
+      @media screen and ( max-width: 900px) {
+        padding:5px;
+      }
 
       @media screen and ( max-width: 900px) {
         padding-left: 20px;
