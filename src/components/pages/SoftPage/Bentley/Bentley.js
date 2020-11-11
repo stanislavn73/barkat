@@ -7,6 +7,7 @@ import { ModalConsumer } from '../../../layouts/Layout';
 import './Bentley.less';
 
 import BentleyLogo from '../../../../assets/images/Bentley.jpg';
+import SocialMedia from '../Autodesk/SocialMedia';
 
 const allPlanItems = [
     {
@@ -38,7 +39,7 @@ const allPlanItems = [
         title: 'SYNCHRO',
         type: 'SYNCHRO',
         text: 'Сильный инструмент для 4D планирования процесса строительства и контроля производства работ'
-    },{
+    }, {
         id: 6,
         title: 'ProStructures',
         type: 'ProStructures',
@@ -51,7 +52,10 @@ class Bentley extends React.PureComponent {
         return (
             <FullPage min ref={this.block} className='soft-block-wrapper'>
                 <Padded className='soft-block-padded'>
-                    <div className='soft-block-title'>Bentley</div>
+                    <div className='title-container' >
+                        <div className='soft-block-title'>Bentley</div>
+                        <SocialMedia />
+                    </div>
                     <PlainText className='soft-plain-text'>
                         Bentley Systems - это компания-разработчик программного обеспечения на основе технологии
                         BIM для профессионалов в сфере строительства и управления мировой инфраструктурой, включая
@@ -81,16 +85,16 @@ class Bentley extends React.PureComponent {
                             <div key={item.id} className='soft-item'>
                                 <Img className='logo' src={BentleyLogo} />
                                 <ModalConsumer>
-                                    {({handleOpenSoftModal}) => (
-                                    <div className='title' onClick={handleOpenSoftModal(item.type)}>
-                                        {item.title}
-                                    </div>)}
+                                    {({ handleOpenSoftModal }) => (
+                                        <div className='title' onClick={handleOpenSoftModal(item.type)}>
+                                            {item.title}
+                                        </div>)}
                                 </ModalConsumer>
                                 <PlainText className='item-text'>
                                     {item.text}
                                 </PlainText>
                                 <ModalConsumer>
-                                    {({handleOpenForm}) => <div className='button' onClick={handleOpenForm}>Написать нам</div>}
+                                    {({ handleOpenForm }) => <div className='button' onClick={handleOpenForm}>Написать нам</div>}
                                 </ModalConsumer>
                             </div>
                         ))}

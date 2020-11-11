@@ -22,7 +22,7 @@ const routes = {
   ABOUT_US: "/about_us",
   FACADES: "/facades",
   SOFT: "/soft",
-  EVENTS:"events"
+  EVENTS:"/events"
 };
 
 const LOGOS = {

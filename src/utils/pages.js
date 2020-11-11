@@ -65,8 +65,9 @@ export const PAGES = [
     name: "События",
     route: "/events",
     page: Eventpage,
-    screenTitle: "События",
     screenImg: "https://exo.in.ua/images/news/2018/08/new-41279.jpg",
+    screenTitle: "События",
+    screenImg: about,
     isMenu: true
   },
 ];

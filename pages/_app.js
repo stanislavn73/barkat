@@ -95,7 +95,7 @@ const theme = {
   },
 };
 
-const mockedUrls = ["/engineer-nets", "/agro-solutions", "/events"];
+const mockedUrls = ["/engineer-nets", "/agro-solutions"];
 
 export default class MyApp extends App {
   componentDidMount() {

@@ -7,6 +7,7 @@ import { ModalConsumer } from '../../../layouts/Layout';
 import './Dassault.less';
 
 import DassaultLogo from '../../../../assets/images/Dassault.png';
+import SocialMedia from '../Autodesk/SocialMedia';
 
 const allPlanItems = [
     {
@@ -72,7 +73,10 @@ class Dassault extends React.PureComponent {
         return (
             <FullPage min ref={this.block} className='soft-block-wrapper'>
                 <Padded className='soft-block-padded'>
+                <div className='title-container' >
                     <div className='soft-block-title'>Dassault Systèmes</div>
+                    <SocialMedia />
+                    </div>
                     <PlainText className='soft-plain-text'>
                         Dassault Systèmes - разработчик программного обеспечения для 3D-проектирования и управления
                         жизненным циклом продукции (PLM), объединенного единой платформой 3DEXPERIENCE.

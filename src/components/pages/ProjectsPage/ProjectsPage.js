@@ -7,7 +7,7 @@ import FirstScreen from './FirstScreen';
 import SecondScreen from './SecondScreen';
 import ThirdScreen from './ThirdBlock';
 import FourthBlock from './FourthBlock';
-import FivethBlock from './FivethBlock';
+import FifthBlock from './FifthBlock';
 
 const anchors = [
     {
@@ -27,7 +27,7 @@ const anchors = [
         title : 'Проекты'
     },
     {
-        id    : 'fiveth',
+        id    : 'fifth',
         title : 'Преимущества'
     }
 ];
@@ -59,8 +59,8 @@ class ProjectsPage extends React.PureComponent {
                 <Anchor id='fourth' onPositionChange={this.handleAnchorReact}>
                     <FourthBlock />
                 </Anchor>
-                <Anchor id='fiveth' onPositionChange={this.handleAnchorReact}>
-                    <FivethBlock />
+                <Anchor id='fifth' onPositionChange={this.handleAnchorReact}>
+                    <FifthBlock />
                 </Anchor>
             </>
         );

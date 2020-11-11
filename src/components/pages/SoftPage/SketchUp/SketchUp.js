@@ -12,6 +12,7 @@ import * as sketchupTitleLogo from '../../../../assets/images/SketchUp.jpg';
 import * as backgroundImage from '../../../../assets/images/pages/facades/2back.jpg';
 import * as sketchupLogo from '../../../../assets/images/pages/soft/sketchup-logo.png';
 import * as dowloadIcon from '../../../../assets/images/pages/soft/download.png';
+import SocialMedia from '../Autodesk/SocialMedia';
 
 const sketchupItems = [
     {
@@ -59,7 +60,10 @@ class SketchUp extends React.PureComponent {
         return (
             <FullPage min ref={this.block} className='soft-block-wrapper'>
                 <Padded className='soft-block-padded'>
+                <div className='title-container' >
                     <div className='soft-block-title'>SketchUp</div>
+                    <SocialMedia />
+                    </div>
                     <PlainText className='soft-plain-text'>
                         Trimble более 40 лет создает уникальные решения, которые помогают клиентам
                         развивать свой бизнес. Имея более 2000 уникальных патентов, а также центры
