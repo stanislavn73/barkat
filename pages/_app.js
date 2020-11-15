@@ -51,12 +51,20 @@ const GlobalStyle = createGlobalStyle`
     font-display: none;
   }
 
+  
+
+  #__next{
+    margin:0 auto 0 auto;
+    max-width:1440px;
+    overflow: hidden;
+  }
   *{
       font-family: "GothamPro";
       margin: 0;
       padding: 0;
       box-sizing: border-box;
       font-weight: 300;
+      
   }
 
   h1 {

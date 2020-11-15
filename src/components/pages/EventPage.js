@@ -15,8 +15,7 @@ class Eventpage extends React.PureComponent {
     return (
       <>
         <FullPage>
-        <Img src={backgroundImage} className='background-image' />
-
+          <Img src={backgroundImage} className='background-image' />
         </FullPage>
       </>
     );

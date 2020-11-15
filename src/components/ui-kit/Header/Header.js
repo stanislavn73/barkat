@@ -79,6 +79,7 @@ function Header({ location }) {
   const headerCX = cx({
     "header-wrapper": true,
     "header-wrapper_shrinked": shrinked,
+    "header-wrapper_active": isMenuActive
   });
 
   return (
