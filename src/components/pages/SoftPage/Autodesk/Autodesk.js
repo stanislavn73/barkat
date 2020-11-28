@@ -7,7 +7,7 @@ import { ModalConsumer } from '../../../layouts/Layout';
 import './Autodesk.less';
 
 import AutodeskLogo from '../../../../assets/images/Autodesk.jpg';
-import SocialMedia from './SocialMedia';
+import SocialMedia from '../../../ui-kit/SocialMedia/SocialMedia';
 
 const allPlanItems = [
     {
@@ -42,6 +42,7 @@ const allPlanItems = [
     }
 ];
 
+
 class Autodesk extends React.PureComponent {
     render() {
         return (
@@ -49,7 +50,7 @@ class Autodesk extends React.PureComponent {
                 <Padded className='soft-block-padded'>
                     <div className='title-container' >
                     <div className='soft-block-title'>Autodesk</div>
-                    <SocialMedia />
+                    <SocialMedia page='Autodesk'/>
                     </div>
                     
                     <PlainText className='soft-plain-text'>

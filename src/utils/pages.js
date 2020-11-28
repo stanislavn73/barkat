@@ -6,7 +6,7 @@ import SoftPage from "../components/pages/SoftPage";
 import AboutPage from "../components/pages/AboutPage";
 
 import about from "../assets/images/pages/About_us_first.jpg";
-import Eventpage from "../components/pages/EventPage";
+import Eventpage from "../components/pages/EventPage/EventPage";
 
 export const PAGES = [
   {

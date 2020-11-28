@@ -1,7 +1,7 @@
 import React from 'react'
 import './Social.less';
 
-export default function SocialMedia() {
+export default function SocialMediaFooter() {
   return (
     <div className='social-wrapper1'>
 

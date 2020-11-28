@@ -8,10 +8,10 @@ import { ModalConsumer } from '../../layouts/Layout';
 import { PAGES } from '../../../utils/pages';
 
 import logo from '../../../assets/images/logo.jpg';
+import SocialMediaFooter from "./SocialMediaFooter";
 
 import './Footer.less';
 
-import SocialMedia from './SocialMedia';
 
 const FooterHead = styled.div`
   height: 40px;
@@ -62,6 +62,12 @@ const OrangeLine = styled.div`
   transition: 0.4s;
 `;
 
+const socialMediaLinks = {
+  facebook: 'https://www.facebook.com/Barkat-Stein-100872801796847',
+  insta: 'https://www.instagram.com/barkat_stein/?hl=ru',
+  linkedin: 'https://www.linkedin.com/company/65744024/admin/',
+}
+
 class Footer extends PureComponent {
   state = {
     current: 'mail'
@@ -109,12 +115,12 @@ class Footer extends PureComponent {
               </div>
             </div> */}
             <div className='social-container'>
-            <SocialMedia />
+              <SocialMediaFooter />
             </div>
-              
-            
+
+
             <div className='footer-content-block'>
-            
+
               <div className='content-title'>
                 <a className='footer-link' href={'mail:info@barkat-stein.com'}>info@barkat-stein.com</a>
               </div>
@@ -124,7 +130,7 @@ class Footer extends PureComponent {
             </div>
             <div className='footer-content-block'>
               <ModalConsumer>
-                {({handleOpenForm}) => <div className='footer-button' onClick={handleOpenForm}>Написать нам</div>}
+                {({ handleOpenForm }) => <div className='footer-button' onClick={handleOpenForm}>Написать нам</div>}
               </ModalConsumer>
             </div>
           </div>

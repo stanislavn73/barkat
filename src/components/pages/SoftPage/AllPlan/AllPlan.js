@@ -7,7 +7,7 @@ import { ModalConsumer } from '../../../layouts/Layout';
 import './AllPlan.less';
 
 import allPlanLogo from '../../../../assets/images/AllPlan.jpg';
-import SocialMedia from '../Autodesk/SocialMedia';
+import SocialMedia from '../../../ui-kit/SocialMedia/SocialMedia';
 
 const allPlanItems = [
     {
@@ -15,17 +15,17 @@ const allPlanItems = [
         title: 'Allplan Architecture',
         type: 'AllPlanArchitecture',
         text: 'Allplan Architecture - комплексное BIM решение для создания и выдачи детализированных чертежей, проектной документации и визуализации.'
-    },{
+    }, {
         id: 2,
         title: 'PLANBAR',
         type: 'PLANBAR',
         text: 'САПР решение, специально разработанное для производства сборного железобетона разной сложности'
-    },{
+    }, {
         id: 3,
         title: 'Allplan Engineering Building',
         type: 'AllplanEngineeringBuilding',
         text: 'Allplan Engineering Building - BIM решение для быстрого и эффективного моделирования и армирования строительных конструкций.'
-    },{
+    }, {
         id: 4,
         title: 'Allplan Linear',
         type: 'AllplanLinear',
@@ -33,15 +33,17 @@ const allPlanItems = [
     }
 ];
 
+
+
 class AllPlan extends React.PureComponent {
     render() {
         return (
             <FullPage min ref={this.block} className='soft-block-wrapper'>
                 <Padded className='soft-block-padded'>
                     <div className='title-container' >
-                    <div className='soft-block-title'>AllPlan</div>
-                    <SocialMedia />
-                        
+                        <div className='soft-block-title'>AllPlan</div>
+                        <SocialMedia page='AllPlan' />
+
                     </div>
                     <PlainText className='soft-plain-text'>
                         На протяжении более 50 лет ALLPLAN является лидером в автоматизации проектирования в
@@ -58,16 +60,16 @@ class AllPlan extends React.PureComponent {
                             <div key={item.id} className='soft-item'>
                                 <Img className='logo' src={allPlanLogo} />
                                 <ModalConsumer>
-                                    {({handleOpenSoftModal}) => (
-                                    <div className='title' onClick={handleOpenSoftModal(item.type)}>
-                                        {item.title}
-                                    </div>)}
+                                    {({ handleOpenSoftModal }) => (
+                                        <div className='title' onClick={handleOpenSoftModal(item.type)}>
+                                            {item.title}
+                                        </div>)}
                                 </ModalConsumer>
                                 <PlainText className='item-text'>
                                     {item.text}
                                 </PlainText>
                                 <ModalConsumer>
-                                    {({handleOpenForm}) => <div className='button' onClick={handleOpenForm}>Написать нам</div>}
+                                    {({ handleOpenForm }) => <div className='button' onClick={handleOpenForm}>Написать нам</div>}
                                 </ModalConsumer>
                             </div>
                         ))}

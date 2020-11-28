@@ -7,7 +7,7 @@ import { ModalConsumer } from '../../../layouts/Layout';
 import './Hexagon.less';
 
 import HexagonLogo from '../../../../assets/images/Hexagon.jpg';
-import SocialMedia from '../Autodesk/SocialMedia';
+import SocialMedia from '../../../ui-kit/SocialMedia/SocialMedia';
 
 const allPlanItems = [
     {
@@ -53,6 +53,10 @@ const allPlanItems = [
     }
 ];
 
+const socialMediaLinks = {
+  
+}
+
 class Hexagon extends React.PureComponent {
     render() {
         return (
@@ -60,7 +64,7 @@ class Hexagon extends React.PureComponent {
                 <Padded className='soft-block-padded'>
                 <div className='title-container' >
                     <div className='soft-block-title'>Hexagon</div>
-                    <SocialMedia />
+                    <SocialMedia page='Hexagon' />
                     </div>
                     <PlainText className='soft-plain-text'>
                         Hexagon является мировым лидером в области сенсорных, программных и автономных решений.

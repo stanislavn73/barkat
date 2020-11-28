@@ -7,7 +7,7 @@ import { ModalConsumer } from '../../../layouts/Layout';
 import './Dassault.less';
 
 import DassaultLogo from '../../../../assets/images/Dassault.png';
-import SocialMedia from '../Autodesk/SocialMedia';
+import SocialMedia from '../../../ui-kit/SocialMedia/SocialMedia';
 
 const allPlanItems = [
     {
@@ -68,6 +68,7 @@ const allPlanItems = [
     }
 ];
 
+
 class Dassault extends React.PureComponent {
     render() {
         return (
@@ -75,7 +76,7 @@ class Dassault extends React.PureComponent {
                 <Padded className='soft-block-padded'>
                 <div className='title-container' >
                     <div className='soft-block-title'>Dassault Systèmes</div>
-                    <SocialMedia />
+                    <SocialMedia page='Dassault' />
                     </div>
                     <PlainText className='soft-plain-text'>
                         Dassault Systèmes - разработчик программного обеспечения для 3D-проектирования и управления

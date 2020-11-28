@@ -41,6 +41,9 @@ const GlobalStyle = createGlobalStyle`
     img {
       width: 50%;
     }
+    @media screen and (max-width: 1024px){
+      display:none;
+    }
   }
 
   @font-face {
@@ -51,11 +54,8 @@ const GlobalStyle = createGlobalStyle`
     font-display: none;
   }
 
-  
-
   #__next{
     margin:0 auto 0 auto;
-    max-width:1440px;
     overflow: hidden;
   }
   *{

@@ -7,7 +7,7 @@ import { ModalConsumer } from '../../../layouts/Layout';
 import './Bentley.less';
 
 import BentleyLogo from '../../../../assets/images/Bentley.jpg';
-import SocialMedia from '../Autodesk/SocialMedia';
+import SocialMedia from '../../../ui-kit/SocialMedia/SocialMedia';
 
 const allPlanItems = [
     {
@@ -47,6 +47,7 @@ const allPlanItems = [
     }
 ];
 
+
 class Bentley extends React.PureComponent {
     render() {
         return (
@@ -54,7 +55,7 @@ class Bentley extends React.PureComponent {
                 <Padded className='soft-block-padded'>
                     <div className='title-container' >
                         <div className='soft-block-title'>Bentley</div>
-                        <SocialMedia />
+                        <SocialMedia page='Bentley' />
                     </div>
                     <PlainText className='soft-plain-text'>
                         Bentley Systems - это компания-разработчик программного обеспечения на основе технологии

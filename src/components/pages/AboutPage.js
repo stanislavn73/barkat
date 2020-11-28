@@ -9,7 +9,7 @@
 //     componentDidMount = () => {
 //         this.page.parentElement.parentElement.scrollTo(0, 0);
 //     }
-
+ 
 //     render() {
 //         const location = this.props.location.pathname;
 //         const { screenImg, screenTitle } = this.props.data;
