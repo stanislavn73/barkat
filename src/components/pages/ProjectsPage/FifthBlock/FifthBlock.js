@@ -51,13 +51,18 @@ function ProjectsFivethBlock() {
                     <div className='preferences-image'>
                         <div className='preference-text-wrapper'>
                             <div className='top-part' />
-                            <div className='bottom-part' />
+                            <div className='bottom-part' >
+                            <div className='text' >
+                                коммерческий директор группы компаний
+                            </div>
+                                </div>
                             <div className='text'>
                                 Если бизнес партнера стал более ефективный - это наивысшая оценка для нас
                             </div>
                             <div className='subtext'>
                                 Александр Баркат
-                            </div>
+                            </div><br/><br/>
+                            
                         </div>
                         <Img src={tower} />
                     </div>

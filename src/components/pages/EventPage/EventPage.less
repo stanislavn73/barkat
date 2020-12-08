@@ -38,32 +38,34 @@ padding-top:40px ;
     padding-top: 0;
   }
 
-}
-
-.logo {
-  height: 80px;
-  margin-top: -10px;
-
-  @media @laptop-b {
-    // margin: 10px;
+  .logo {
     height: 80px;
+    margin-top: -10px;
+  
+    @media @laptop-b {
+      // margin: 10px;
+      height: 80px;
+    }
+  
+    @media @laptop-m {
+    margin-top: 0px;
+      height: 60px;
+    }
+  
+    @media @mobile-l {
+    margin-top: -5px;
+      
+    }
+    @media @mobile-s{
+      height: 40px;
+      width: 215px;
+      margin-bottom: 15px;
+      margin-top: 15px;
+    }
   }
 
-  @media @laptop-m {
-  margin-top: 0px;
-    height: 60px;
-  }
-
-  @media @mobile-l {
-  margin-top: -5px;
-    
-  }
-  @media @mobile-s{
-    // width: 100%;
-    margin-bottom: 15px;
-    margin-top: 15px;
-  }
 }
+
 .soft-block-padded{
   @media screen and (max-width:920px){
     padding-left:10px;

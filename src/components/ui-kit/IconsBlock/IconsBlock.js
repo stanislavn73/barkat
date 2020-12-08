@@ -14,7 +14,7 @@ class IconsBlock extends PureComponent {
       return (
           <div className='icons-block-wrapper'>
               {items.map((item, index) => (
-                  <div key={item.icon.src} className='block-item'>
+                  <div key={index+1} className='block-item'>
                       <Img className='icon' src={item.icon} />
                       <div className='big-number'>
                           {item.boldText}

@@ -4,7 +4,7 @@ import Layout from '../src/components/layouts/Layout';
 
 function HomePage() {
   return (
-    <Layout>
+    <Layout page='soft' >
       <Soft />
     </Layout>
   )

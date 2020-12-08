@@ -53,7 +53,7 @@ class Layout extends React.Component {
                     <SoftModal type={softModalCode} isOpened={isSoftModalOpened} onClose={this.handleCloseSoftModal} />
                     <Header />
                     {this.props.children}
-                    <Footer />
+                    <Footer page={this.props.page} />
                 </Provider>
             </>
         );

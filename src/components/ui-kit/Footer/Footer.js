@@ -74,7 +74,7 @@ class Footer extends PureComponent {
   };
 
   render() {
-    const { location } = this.props;
+    // const { history } = this.props;
     const buttons = PAGES.filter(page => page.isMenu);
 
     return (
@@ -114,18 +114,21 @@ class Footer extends PureComponent {
                 E-mail:  <a className='footer-link' href={'mailto:barkat-3D-ville@gmail.com'}>barkat-3D-ville@gmail.com</a>
               </div>
             </div> */}
+            {/* {console.log(pageType)} */}
+            {this.props.page!=='events'&&
+            this.props.page!=='soft'&&
             <div className='social-container'>
               <SocialMediaFooter />
-            </div>
+            </div>}
 
 
             <div className='footer-content-block'>
 
               <div className='content-title'>
-                <a className='footer-link' href={'mail:info@barkat-stein.com'}>info@barkat-stein.com</a>
+                <a className='footer-link' href={'mail:info@barkat-3D-ville.com'}>info@barkat-3D-ville.com</a>
               </div>
               <div className='content-title'>
-                <a className='footer-link' href={'http://www.barkat-stein.com'}>www.barkat-stein.com</a>
+                <a className='footer-link' href={'http://www.barkat-3D-ville.com'}>www.barkat-3D-ville.com</a>
               </div>
             </div>
             <div className='footer-content-block'>

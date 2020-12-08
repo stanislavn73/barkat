@@ -4,7 +4,7 @@ import EventPage from "../src/components/pages/EventPage/EventPage";
 
 export default function events() {
   return (
-    <Layout>
+    <Layout page='events' >
       <EventPage /> 
     </Layout>
   )
