@@ -26,9 +26,9 @@ const routes = {
 };
 
 const LOGOS = {
-  [routes.HOME]: logo,
-  [routes.ABOUT_US]: logo,
-  [routes.FACADES]: logoU,
+  [routes.HOME]: logoU,
+  [routes.ABOUT_US]: logoU,
+  [routes.FACADES]: logo,
   [routes.SOFT]: logoVille,
   [routes.EVENTS]: logo
 };
