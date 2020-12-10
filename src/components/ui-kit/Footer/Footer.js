@@ -120,8 +120,6 @@ class Footer extends PureComponent {
             <div className='social-container'>
               <SocialMediaFooter />
             </div>}
-
-
             <div className='footer-content-block'>
 
               <div className='content-title'>
