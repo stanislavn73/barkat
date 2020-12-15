@@ -48,7 +48,7 @@ class Modal extends React.PureComponent {
             serviceId, templateId,
             {
                 ...data,
-                to_email: 'Order.Barkat@3D-ville.com'
+                to_email: 'Order@barkat-3d-ville.com'
             }).then(response => {
             console.log(response.status)
             if (response.status === 200) {
@@ -88,7 +88,7 @@ class Modal extends React.PureComponent {
 
         return (
             <div className={modalCX}>
-                <form className='modal' >
+                <div className='modal' >
                     <Img className='modal-close-icon' src={closeIcon} onClick={onClose} />
                     <div className='top-black-line' />
                     <div className='modal-content-wrapper'>
@@ -135,7 +135,6 @@ class Modal extends React.PureComponent {
                                 title='Телефон'
                                 value={phoneNumber}
                                 onChange={this.handleTextChange('phoneNumber')}
-                                required={true}
                             />
                         </div>
                         <div className='textarea-wrapper'>
@@ -156,7 +155,7 @@ class Modal extends React.PureComponent {
                         </div>
                         <div className='bottom-black-line' />
                     </div>
-                </form>
+                </div>
             </div>
         );
     }
