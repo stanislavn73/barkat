@@ -48,7 +48,7 @@ class Modal extends React.PureComponent {
             serviceId, templateId,
             {
                 ...data,
-                to_email: 'Order@barkat-3d-ville.com'
+                to_email: 'Order.Barkat@gmail.com'
             }).then(response => {
             console.log(response.status)
             if (response.status === 200) {
