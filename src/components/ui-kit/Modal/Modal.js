@@ -31,7 +31,7 @@ class Modal extends React.PureComponent {
         this.myRef.current.innerText = 'Отправка...'
         console.log(this.myRef)
 
-        const serviceId = 'service_b8z33u5'
+        const serviceId = 'service_2gxgl7t'
         const templateId = 'template_9dlnssp';
         this.sendFeedback(serviceId, templateId, this.state)
 
@@ -50,25 +50,31 @@ class Modal extends React.PureComponent {
                 ...data,
                 to_email: 'Order.Barkat@gmail.com'
             }).then(response => {
-            console.log(response.status)
-            if (response.status === 200) {
-                this.myRef.current.innerText = 'Отправлено!'
-                this.setState({
-                    name: '',
-                    surname: '',
-                    companyName: '',
-                    profession: '',
-                    email: '',
-                    phoneNumber: '',
-                    target: '',
-                })
+                console.log(response.status)
+                if (response.status === 200) {
+                    this.myRef.current.innerText = 'Отправлено!'
+                    this.setState({
+                        name: '',
+                        surname: '',
+                        companyName: '',
+                        profession: '',
+                        email: '',
+                        phoneNumber: '',
+                        target: '',
+                    })
+                    setTimeout(() => {
+                        this.props.onClose()
+                        this.myRef.current.innerText = 'Отправить'
+                    }, 1500)
+                }
+            })
+            .catch(() => {
+                this.myRef.current.innerText = 'Ошибка! Плохое соединение'
                 setTimeout(() => {
                     this.props.onClose()
                     this.myRef.current.innerText = 'Отправить'
                 }, 1500)
-            }
-        })
-            .catch(() => this.myRef.current.innerText = 'Ошибка! Плохое соединение')
+            })
     }
 
     render() {
