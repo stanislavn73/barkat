@@ -2,10 +2,11 @@
 
 .slick-slide {
   height: 100%;
-
+  
   > div {
     height: 100%;
   }
+  
 }
 
 .slider-item {
@@ -14,12 +15,16 @@
   background: @primary;
 
   img {
+
     width: 100%;
     height: 100%;
     object-fit: cover;
-    object-position: 50% 50%;
+    object-position: right top;
     opacity: 0.5;
     filter: grayscale(1);
+    @media screen and (max-width: 600px){
+      height:75%
+    }
   }
 }
 

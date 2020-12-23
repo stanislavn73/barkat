@@ -29,18 +29,9 @@ class Modal extends React.PureComponent {
 
     sendData = () => {
         this.myRef.current.innerText = 'Отправка...'
-        console.log(this.myRef)
-
         const serviceId = 'service_2gxgl7t'
         const templateId = 'template_9dlnssp';
         this.sendFeedback(serviceId, templateId, this.state)
-
-        // fetch('/call.php', { // eslint-disable-line
-        //     method: 'POST', // или 'PUT'
-        //     body: JSON.stringify(this.state) // данные могут быть 'строкой' или {объектом}!
-        // }
-        // ).then(() => setTimeout(onClose, 1000))
-        // .catch(()=>onClose())
     }
 
     sendFeedback(serviceId, templateId, data) {

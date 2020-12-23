@@ -15,6 +15,7 @@ class SliderComponent extends React.PureComponent {
         currentSlide: 0,
     }
 
+    
     handleSlide = (type) => () => {
         if (type === 'right') {
             this.slick.slickNext();
@@ -43,7 +44,7 @@ class SliderComponent extends React.PureComponent {
         autoplay: true,
         pauseOnHover: false,
         autoplaySpeed: 4000,
-        beforeChange: (...a) => this.setState({ currentSlide: a[1]})
+        beforeChange: (...a) => this.setState({ currentSlide: a[1]}),
     };
 
     render() {
@@ -65,9 +66,9 @@ class SliderComponent extends React.PureComponent {
                 <div className='arrow left' onClick={this.handleSlide('left')}>
                     <Img src={prevArrowImg} />
                 </div>
-                <Slider {...this.settings} ref={node => this.slick = node}>
+                <Slider {...this.settings} ref={node => this.slick = node} >
                     {slides.map(slide => (
-                        <div className='slider-item' key={slide} >
+                        <div className='slider-item' key={slide}>
                             <Img src={slide} />
                         </div>
                     ))}

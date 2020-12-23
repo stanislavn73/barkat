@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Slider from '../ui-kit/Slider/Slider';
 import FullPage from '../ui-kit/FullPage';
 import { HeaderThumb } from '../ui-kit/Header';
@@ -33,9 +33,10 @@ const titlesRules = [
 ]
 
 function HomePage() {
+
     return (
         <>
-            <HeaderThumb/>
+            <HeaderThumb />
             <FullPage className="home-full-page">
                 <Slider
                     title='Barkat Stein'

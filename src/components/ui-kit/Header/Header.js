@@ -30,10 +30,10 @@ const LOGOS = {
   [routes.ABOUT_US]: logoU,
   [routes.FACADES]: logo,
   [routes.SOFT]: logoVille,
-  [routes.EVENTS]: logo
+  [routes.EVENTS]: logoU
 };
 
-function Header({ location }) {
+function Header() {
   const [isMenuActive, setIsMenuActive] = useState(false);
   const [shrinked, setShrinked] = useState(false);
   const router = useRouter();
