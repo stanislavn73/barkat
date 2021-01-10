@@ -296,8 +296,11 @@
           position: relative;
           
           @media @mobile-m {
-            width: 300px;
+            width: 400px;
             height: 80px;
+          }
+          @media @mobile-s {
+            max-width: 350px;
           }
         }
 
@@ -311,6 +314,9 @@
           .text{
             margin-top: -40px;
             text-align: center;
+            @media @mobile-m{
+              margin-top:15px;
+            }
           }
         }
 
@@ -333,11 +339,12 @@
           }
 
           @media @mobile-m {
-            left: -80px;
+            top:20px;
+            left: 20px;
           }
 
           @media @mobile-s {
-            left: -15px;
+            left: 15px;
             font-size: 15px;
           }
         }
@@ -359,6 +366,9 @@
 
           @media @mobile-l {
             left: 25px;
+          }
+          @media @mobile-m {
+            top:90px;
           }
         }
       }
