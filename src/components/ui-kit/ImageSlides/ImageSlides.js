@@ -16,6 +16,7 @@ function ProjectsFourthBlock({ data }) {
 
   return (
     <div className='slides'>
+      
       {data.map(project => {
         const slideCX = cx(
           'slide-wrapper',
@@ -27,6 +28,7 @@ function ProjectsFourthBlock({ data }) {
 
         return (
           <div key={project.id} className={slideCX} onClick={handleSetActiveSlide(project.id)}>
+            
             {project.title &&
               <div className='title'>
                 {project.title}
