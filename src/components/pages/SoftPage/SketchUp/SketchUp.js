@@ -10,7 +10,7 @@ import './SketchUp.less';
 import achievements from '../../../../utils/achievements';
 import * as sketchupTitleLogo from '../../../../assets/images/SketchUp.jpg';
 import * as backgroundImage from '../../../../assets/images/pages/facades/2back.jpg';
-import * as sketchupLogo from '../../../../assets/images/pages/soft/sketchup-logo.png';
+import * as sketchupLogo from '../../../../assets/images/pages/soft/sketchup-logo1.svg';
 import * as dowloadIcon from '../../../../assets/images/pages/soft/download.png';
 import SocialMedia from '../../../ui-kit/SocialMedia/SocialMedia';
 
@@ -20,6 +20,16 @@ const sketchupItems = [
         title: 'SketchUp Pro',
         type: 'SketchUpPro',
         text: 'Профессиональное 3D-моделирование простых объектов'
+    },{
+        id: 5,
+        title: 'SketchUp Studio',
+        type: 'SketchUpStudio',
+        text: 'Пакет инструментов для профессионального 3D-моделирования, в который входят продукты: SketchUpPro, SketchUp для web, Trimble Connect, Sefaira'
+    },{
+        id: 4,
+        title: 'Trimble Connect',
+        type: 'TrimbleConnect',
+        text: 'Платформа, которая обеспечивает взаимодействие между участниками строительного проекта и программными инструментами.'
     },
     {
         id: 2,
@@ -29,14 +39,9 @@ const sketchupItems = [
     },
     {
         id: 3,
-        title: 'SketchUp для интернета',
+        title: 'SketchUp for Web',
         type: 'SketchUpForInternet',
         text: 'профессиональный инструмент моделирования в веб-браузере'
-    },{
-        id: 4,
-        title: 'Trimble Connect',
-        type: 'TrimbleConnect',
-        text: 'Платформа, которая обеспечивает взаимодействие между участниками строительного проекта и программными инструментами.'
     }
 ];
 

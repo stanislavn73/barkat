@@ -34,6 +34,7 @@ import DassaultBuilding from './content/DassaultBuilding'
 import DassaultPlanning from './content/DassaultPlanning'
 import DassaultClone from './content/DassaultClone'
 import GenPlan from './content/GenPlan'
+import SketchUpStudio from './content/SketchUpStudio'
 
 export default {
   REVIT: {
@@ -151,6 +152,10 @@ export default {
   SketchUpPro: {
     title: 'SketchUp Pro',
     content: SketchUpPro
+  },
+  SketchUpStudio: {
+    title: 'SketchUp Studio',
+    content: SketchUpStudio
   },
   ExtensionWarehouse: {
     title: 'Extension Warehouse',

@@ -1,0 +1,10 @@
+a0493180@barkat-3d-ville.com
+login a0493180
+password biruusduez
+test domen a0493180.xsph.ru
+
+NS-серверы
+ns3.sprinthost.ru
+ns3.sprinthost.ru
+ns3.sprinthost.net
+ns3.sprinthost.net
