@@ -11,6 +11,7 @@ import logo from '../../../assets/images/logo.jpg';
 import SocialMediaFooter from "./SocialMediaFooter";
 
 import './Footer.less';
+import PrivacyPolicy from './PrivacyPolicy';
 
 
 const FooterHead = styled.div`
@@ -115,6 +116,7 @@ class Footer extends PureComponent {
               </div>
             </div> */}
             {/* {console.log(pageType)} */}
+            <PrivacyPolicy />
             {this.props.page!=='events'&&
             this.props.page!=='soft'&&
             <div className='social-container'>

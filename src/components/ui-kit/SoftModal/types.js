@@ -35,6 +35,7 @@ import DassaultPlanning from './content/DassaultPlanning'
 import DassaultClone from './content/DassaultClone'
 import GenPlan from './content/GenPlan'
 import SketchUpStudio from './content/SketchUpStudio'
+import PrivacyPolicy from './content/PrivacyPolicy'
 
 export default {
   REVIT: {
@@ -184,5 +185,9 @@ export default {
   AllplanLinear: {
     title: 'AllplanLinear',
     content: AllplanLinear
+  },
+  PrivacyPolicy: {
+    title: 'Политика конфиденциальности ООО "Баркат-Штейн"',
+    content: PrivacyPolicy
   }
 }

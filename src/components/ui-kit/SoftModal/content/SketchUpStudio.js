@@ -79,7 +79,7 @@ export default function SketchUpStudio() {
           </div>
         </div>
       </div>
-    <img src={table} />
+      <img src={table} />
     </>
   )
 }
