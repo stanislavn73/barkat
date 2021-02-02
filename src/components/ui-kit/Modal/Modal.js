@@ -153,6 +153,7 @@ class Modal extends React.PureComponent {
                         <div className='bottom-black-line' />
                     </div>
                 </div>
+                <div className='modal-background' onClick={onClose}></div>
             </div>
         );
     }

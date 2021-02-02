@@ -24,7 +24,7 @@ class Modal extends React.PureComponent {
         const Content = isOpened ? currentType?.content : null;
 
         return (
-            <div className={modalCX}>
+            <div className={modalCX} >
                 <div className='soft-modal'>
                     <div className='soft-modal-header'>
                         <h2>{title}</h2>
@@ -34,6 +34,7 @@ class Modal extends React.PureComponent {
                         {Content && <Content />}
                     </div>
                 </div>
+                <div className='soft-modal-background' onClick={onClose} ></div>
             </div>
         );
     }

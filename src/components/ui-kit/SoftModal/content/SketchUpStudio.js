@@ -1,5 +1,4 @@
 import React from 'react'
-import * as table from "./../../../../assets/images/pages/soft/SketchUpStudioTable.png";
 
 export default function SketchUpStudio() {
   return (
@@ -79,7 +78,6 @@ export default function SketchUpStudio() {
           </div>
         </div>
       </div>
-      <img src={table} />
     </>
   )
 }
