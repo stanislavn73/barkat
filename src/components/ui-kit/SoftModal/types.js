@@ -36,6 +36,8 @@ import DassaultClone from './content/DassaultClone'
 import GenPlan from './content/GenPlan'
 import SketchUpStudio from './content/SketchUpStudio'
 import PrivacyPolicy from './content/PrivacyPolicy'
+import SketchUpShop from './content/SketchUpShop'
+import SketchUpEducation from './content/SketchUpEducation'
 
 export default {
   REVIT: {
@@ -58,7 +60,7 @@ export default {
     title: 'Autodesk Civil 3D',
     content: Civil3D
   },
-  '3DExperience' : {
+  '3DExperience': {
     title: '3DExperience',
     content: ThreeDExperience
   },
@@ -98,7 +100,7 @@ export default {
     title: 'Dassault: Цифровой двойник производства',
     content: DassaultClone
   },
-  GeoMedia : {
+  GeoMedia: {
     title: 'GeoMedia',
     content: GeoMedia
   },
@@ -169,6 +171,14 @@ export default {
   TrimbleConnect: {
     title: 'Trimble Connect',
     content: TrimbleConnect
+  },
+  SketchUpShop: {
+    title: 'SketchUp Shop',
+    content: SketchUpShop
+  },
+  SketchUpEducation: {
+    title: 'SketchUp для высшего образования',
+    content: SketchUpEducation
   },
   AllPlanArchitecture: {
     title: 'Allplan Architecture',

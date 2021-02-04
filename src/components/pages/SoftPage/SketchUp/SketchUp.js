@@ -16,32 +16,52 @@ import SocialMedia from '../../../ui-kit/SocialMedia/SocialMedia';
 
 const sketchupItems = [
     {
+        id: 3,
+        title: 'SketchUp FREE',
+        type: 'SketchUpForInternet',
+        text: 'профессиональный инструмент моделирования в веб-браузере',
+        butIt: true
+    },
+    {
+        id: 6,
+        title: 'SketchUp Shop',
+        type: 'SketchUpShop',
+        text: 'Программное обеспечение для самостоятельного 3D-моделирования, которое делает проектирование таким же увлекательным, как и строительство.',
+        butIt: true
+    },
+    {
         id: 1,
         title: 'SketchUp Pro',
         type: 'SketchUpPro',
-        text: 'Профессиональное 3D-моделирование простых объектов'
-    },{
+        text: 'Профессиональное 3D-моделирование простых объектов',
+        butIt: true
+    }, {
         id: 5,
         title: 'SketchUp Studio',
         type: 'SketchUpStudio',
-        text: 'Пакет инструментов для профессионального 3D-моделирования, в который входят продукты: SketchUpPro, SketchUp для web, Trimble Connect, Sefaira'
-    },{
+        text: 'Пакет инструментов для профессионального 3D-моделирования, в который входят продукты: SketchUpPro, SketchUp для web, Trimble Connect, Sefaira',
+        butIt: true
+    },
+    {
+        id: 7,
+        title: 'SketchUp для высшего образования',
+        type: 'SketchUpEducation',
+        text: 'Все, что нужно для выполнения проекта',
+        butIt: true
+    },
+    {
         id: 4,
         title: 'Trimble Connect',
         type: 'TrimbleConnect',
-        text: 'Платформа, которая обеспечивает взаимодействие между участниками строительного проекта и программными инструментами.'
+        text: 'Платформа, которая обеспечивает взаимодействие между участниками строительного проекта и программными инструментами.',
+        butIt: false
     },
     {
         id: 2,
         title: 'Extension Warehouse',
         type: 'ExtensionWarehouse',
-        text: 'Библиотека пользовательских сторонних расширений'
-    },
-    {
-        id: 3,
-        title: 'SketchUp for Web',
-        type: 'SketchUpForInternet',
-        text: 'профессиональный инструмент моделирования в веб-браузере'
+        text: 'Библиотека пользовательских сторонних расширений',
+        butIt: false
     }
 ];
 
@@ -65,9 +85,9 @@ class SketchUp extends React.PureComponent {
         return (
             <FullPage min ref={this.block} className='soft-block-wrapper'>
                 <Padded className='soft-block-padded'>
-                <div className='title-container' >
-                    <div className='soft-block-title'>SketchUp</div>
-                    <SocialMedia page='SketchUp' />
+                    <div className='title-container' >
+                        <div className='soft-block-title'>SketchUp</div>
+                        <SocialMedia page='SketchUp' />
                     </div>
                     <PlainText className='soft-plain-text'>
                         Trimble более 40 лет создает уникальные решения, которые помогают клиентам
@@ -89,17 +109,20 @@ class SketchUp extends React.PureComponent {
                             <div key={item.id} className='soft-item'>
                                 <Img className='logo' src={sketchupLogo} />
                                 <ModalConsumer>
-                                    {({handleOpenSoftModal}) => (
-                                    <div className='title' onClick={handleOpenSoftModal(item.type)}>
-                                        {item.title}
-                                    </div>)}
+                                    {({ handleOpenSoftModal }) => (
+                                        <div className='title' onClick={handleOpenSoftModal(item.type)}>
+                                            {item.title}
+                                        </div>)}
                                 </ModalConsumer>
                                 <PlainText className='item-text'>
                                     {item.text}
                                 </PlainText>
-                                <ModalConsumer>
-                                    {({handleOpenForm}) => <div className='button' onClick={handleOpenForm}>Написать нам</div>}
-                                </ModalConsumer>
+                                <div className='button-container' >
+                                    {item.butIt && <div className='button buy'>Купить</div>}
+                                    <ModalConsumer>
+                                        {({ handleOpenForm }) => <div className='button' onClick={handleOpenForm}>Написать нам</div>}
+                                    </ModalConsumer>
+                                </div>
                             </div>
                         ))}
                     </div>
