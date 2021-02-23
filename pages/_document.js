@@ -44,6 +44,8 @@ export default class MyDocument extends Document {
           <link rel="icon" type="image/png" sizes="16x16" href={favicon16} />
           <link rel="manifest" href="/site.webmanifest" /> */}
           <title>Barkat Stein</title>
+          <meta name="interkassa-verification" content="836f8037d066e4e412ef11512556fd96" />
+
           <link rel="stylesheet" type="text/css" charSet="UTF-8" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css" />
           <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css" />
         </Head>
