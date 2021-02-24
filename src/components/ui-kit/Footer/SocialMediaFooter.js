@@ -5,21 +5,18 @@ export default function SocialMediaFooter() {
   return (
     <div className='social-wrapper1'>
 
-      <button className='facebook1'
-        onClick={() => window.open('https://www.facebook.com/Barkat-Stein-100872801796847')}
+      <a className='facebook1' target='#'
+        href='https://www.facebook.com/Barkat-Stein-100872801796847'
       >
-
-      </button>
-      <button className='insta1'
-        onClick={() => window.open('https://www.instagram.com/barkat_stein/?hl=ru')}
+      </a>
+      <a className='insta1' target='#'
+        href='https://www.instagram.com/barkat_stein/?hl=ru'
       >
-
-      </button>
-      <button className='linkedin1'
-        onClick={() => window.open('https://www.linkedin.com/company/65744024/admin/')}
+      </a>
+      <a className='linkedin1' target='#'
+        href='https://www.linkedin.com/company/65744024/admin/'
       >
-
-      </button>
+      </a>
     </div>
   )
 }

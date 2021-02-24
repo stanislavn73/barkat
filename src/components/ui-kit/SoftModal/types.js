@@ -38,6 +38,10 @@ import SketchUpStudio from './content/SketchUpStudio'
 import PrivacyPolicy from './content/PrivacyPolicy'
 import SketchUpShop from './content/SketchUpShop'
 import SketchUpEducation from './content/SketchUpEducation'
+import BuySketchUpShop from './content/BuyButtons/BuySketchUpShop'
+import BuySketchUpPro from './content/BuyButtons/BuySketchUpPro'
+import BuySketchUpStudio from './content/BuyButtons/BuySketchUpStudio'
+import BuySketchUpHigher from './content/BuyButtons/BuySketchUpHigher'
 
 export default {
   REVIT: {
@@ -60,7 +64,7 @@ export default {
     title: 'Autodesk Civil 3D',
     content: Civil3D
   },
-  '3DExperience': {
+  '3DExperience' : {
     title: '3DExperience',
     content: ThreeDExperience
   },
@@ -100,7 +104,7 @@ export default {
     title: 'Dassault: Цифровой двойник производства',
     content: DassaultClone
   },
-  GeoMedia: {
+  GeoMedia : {
     title: 'GeoMedia',
     content: GeoMedia
   },
@@ -156,6 +160,14 @@ export default {
     title: 'SketchUp Pro',
     content: SketchUpPro
   },
+  SketchUpShop: {
+    title: 'SketchUp Shop',
+    content: SketchUpShop
+  },
+  SketchUpEducation: {
+    title: 'SketchUp для высшего образования',
+    content: SketchUpEducation
+  },
   SketchUpStudio: {
     title: 'SketchUp Studio',
     content: SketchUpStudio
@@ -171,14 +183,6 @@ export default {
   TrimbleConnect: {
     title: 'Trimble Connect',
     content: TrimbleConnect
-  },
-  SketchUpShop: {
-    title: 'SketchUp Shop',
-    content: SketchUpShop
-  },
-  SketchUpEducation: {
-    title: 'SketchUp для высшего образования',
-    content: SketchUpEducation
   },
   AllPlanArchitecture: {
     title: 'Allplan Architecture',
@@ -199,5 +203,21 @@ export default {
   PrivacyPolicy: {
     title: 'Политика конфиденциальности ООО "Баркат-Штейн"',
     content: PrivacyPolicy
+  },
+  BuySketchUpShop: {
+    title: 'Купить SketchUp Shop',
+    content: BuySketchUpShop
+  },
+  BuySketchUpPro: {
+    title: 'Купить SketchUp Pro',
+    content: BuySketchUpPro
+  },
+  BuySketchUpStudio: {
+    title: 'Купить SketchUp Studio',
+    content: BuySketchUpStudio
+  },
+  BuySketchUpHigher: {
+    title: 'Купить SketchUp для высшего образования',
+    content: BuySketchUpHigher
   }
 }

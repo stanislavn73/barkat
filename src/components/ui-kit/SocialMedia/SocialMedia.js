@@ -41,22 +41,22 @@ export default function SocialMedia({ page }) {
   return (
     <>
       <div className='social-wrapper'>
-        <button className='facebook'
-          onClick={() => window.open(linksObject[page].facebook)}
+        <a className='facebook' target='_blank'
+          href={linksObject[page].facebook}
         >
-        </button>
+        </a>
 
         {
-          linksObject[page].hasOwnProperty('insta') && <button className='insta'
-            onClick={() => window.open(linksObject[page].insta)}
+          linksObject[page].hasOwnProperty('insta') && 
+          <a className='insta' target='_blank'
+            href={linksObject[page].insta}
           >
-
-          </button>
+          </a>
         }
-        <button className='linkedin'
-          onClick={() => window.open(linksObject[page].linkedin)}
+        <a className='linkedin' target='_blank'
+          href={linksObject[page].linkedin}
         >
-        </button>
+        </a>
 
 
       </div>

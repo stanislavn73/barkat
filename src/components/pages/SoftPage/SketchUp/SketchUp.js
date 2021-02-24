@@ -13,57 +13,61 @@ import * as backgroundImage from '../../../../assets/images/pages/facades/2back.
 import * as sketchupLogo from '../../../../assets/images/pages/soft/sketchup-logo1.svg';
 import * as dowloadIcon from '../../../../assets/images/pages/soft/download.png';
 import SocialMedia from '../../../ui-kit/SocialMedia/SocialMedia';
+import Link from 'next/link';
 
 const sketchupItems = [
     {
         id: 3,
-        title: 'SketchUp FREE',
+        title: 'SketchUp Free',
         type: 'SketchUpForInternet',
         text: 'профессиональный инструмент моделирования в веб-браузере',
-        butIt: true
+        buyIt: true
     },
     {
         id: 6,
         title: 'SketchUp Shop',
         type: 'SketchUpShop',
-        text: 'Программное обеспечение для самостоятельного 3D-моделирования, которое делает проектирование таким же увлекательным, как и строительство.',
-        butIt: true
+        text: 'Программное обеспечение для самостоятельного 3D-моделирования, которое делает проектирование таким же увлекательным, как и строительство',
+        buyIt: true
     },
     {
+  
         id: 1,
         title: 'SketchUp Pro',
         type: 'SketchUpPro',
         text: 'Профессиональное 3D-моделирование простых объектов',
-        butIt: true
-    }, {
+        buyIt: true
+    },
+    {
         id: 5,
         title: 'SketchUp Studio',
         type: 'SketchUpStudio',
         text: 'Пакет инструментов для профессионального 3D-моделирования, в который входят продукты: SketchUpPro, SketchUp для web, Trimble Connect, Sefaira',
-        butIt: true
+        buyIt: true
     },
     {
         id: 7,
         title: 'SketchUp для высшего образования',
         type: 'SketchUpEducation',
         text: 'Все, что нужно для выполнения проекта',
-        butIt: true
+        buyIt: true
     },
     {
         id: 4,
         title: 'Trimble Connect',
         type: 'TrimbleConnect',
         text: 'Платформа, которая обеспечивает взаимодействие между участниками строительного проекта и программными инструментами.',
-        butIt: false
+        buyIt: false
     },
     {
         id: 2,
         title: 'Extension Warehouse',
         type: 'ExtensionWarehouse',
         text: 'Библиотека пользовательских сторонних расширений',
-        butIt: false
+        buyIt: false
     }
-];
+  
+  ];
 
 const sketchupDownloadItems = [
     {
@@ -118,7 +122,12 @@ class SketchUp extends React.PureComponent {
                                     {item.text}
                                 </PlainText>
                                 <div className='button-container' >
-                                    {item.butIt && <div className='button buy'>Купить</div>}
+                                    {item.buyIt &&
+                                        <Link key='910' href='/buy-sketchup'>
+                                            <a>
+                                                <div className='button buyIt' >Купить</div>
+                                            </a>
+                                        </Link>}
                                     <ModalConsumer>
                                         {({ handleOpenForm }) => <div className='button' onClick={handleOpenForm}>Написать нам</div>}
                                     </ModalConsumer>
