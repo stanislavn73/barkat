@@ -140,14 +140,14 @@ export default function BuySketchUpShop({ priceUSD = 119, product = 'SketchUpPro
         <input className='footer send_payment' type="submit" value={`Купить за ${currentAmount.toFixed(2)} ${selectedValue}`} />
       </form> */}
 
-        <form id="payment" name="payment" method="post" action="https://sci.interkassa.com/" enctype="utf-8">
+        <form id="payment" name="payment" method="post" action="https://sci.interkassa.com/?test" enctype="utf-8">
           <input type="hidden" name="ik_co_id" value="6034f76cc8961165be2b926a" />
           <input type="hidden" name="ik_pm_no" value="ID_4233" />
           <input type="hidden" name="ik_am" value="100.00" />
           <input type="hidden" name="ik_cur" value="UAH" />
           <input type="hidden" name="ik_desc" value="Event Description" />
           <input type="submit" value="Pay" />
-          <input type="password" class="span3 password" ng-model="loginData.password" name="password" placeholder="Password">8hJgzc6e</input>
+          <input type="password" class="span3 password" ng-model="loginData.password" name="password" placeholder="Password"value='8hJgzc6e' />
         </form>
 
       </div>
