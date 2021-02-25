@@ -15,6 +15,7 @@ import Radio from '@material-ui/core/Radio';
 import { Checkbox, FormControlLabel, makeStyles } from '@material-ui/core';
 import Link from 'next/link';
 import { ModalConsumer } from '../../../../layouts/Layout';
+import CryptoJS from "crypto-js";
 
 let currencies = [
   {
@@ -76,11 +77,43 @@ function UserAgreementLink() {
   )
 }
 
-export default function BuySketchUpShop({ priceUSD = 119, product = 'SketchUpPro' }) {
+
+
+export default function BuySketchUpShop({ priceUSD = 119, product = 'SketchUpShop' }) {
+  const [UahAmount, setUahAmount] = useState(priceUSD)
   const [selectedValue, setSelectedValue] = useState('USD')
   const [currentAmount, setCurentAmount] = useState(priceUSD)
   const [userAgreementCheckbox, setUserAgreementCheckbox] = useState(false)
+  const [hashedValue, setHashedValue] = useState('')
 
+  const formInputData = {
+    ik_co_id: '6034f76cc8961165be2b926a',
+    ik_pm_no: 'ID_4233',
+    ik_am: UahAmount.toFixed(2),
+    // ik_cur: 'uah',
+    ik_desc: product,
+    base_ik_sign: 'SWTTltrdP3VgnGXM',
+    ik_sign: ''
+  }
+
+  useEffect(() => {
+    const UAH_CURENCY = `https://free.currconv.com/api/v7/convert?q=USD_UAH&compact=ultra&apiKey=085850969420940b790b`
+    fetch(UAH_CURENCY)
+      .then(response => response.json())
+      .then(data => {
+        setUahAmount(data['USD_UAH'] * priceUSD)
+        console.log(UahAmount)
+      })
+    generateHash(formInputData)
+
+  }, [])
+
+  function generateHash({ ik_am, ik_co_id, ik_desc, ik_pm_no, base_ik_sign }) {
+    let value = `${ik_am}:${ik_co_id}:${ik_desc}:${ik_pm_no}:${base_ik_sign}`
+    let ik_sign = CryptoJS.MD5(value).toString(CryptoJS.enc.Base64)
+    setHashedValue(ik_sign)
+
+  }
 
   function handleChooseCurrency(currency) {
     setSelectedValue(currency)
@@ -100,6 +133,7 @@ export default function BuySketchUpShop({ priceUSD = 119, product = 'SketchUpPro
 
   return (
     <>
+      {console.log(hashedValue)}
       <div className='checkbox_container'  >
         {currencies.map((item, index) =>
           <div value={item.currency}
@@ -121,29 +155,34 @@ export default function BuySketchUpShop({ priceUSD = 119, product = 'SketchUpPro
         )}
       </div>
       <div className='text_container'>
-        <form id="payment" name="payment" method="post" action="https://sci.interkassa.com/?test" enctype="utf-8">
-      <FormControlLabel control={
-          <Checkbox color="primary"
-            checked={userAgreementCheckbox}
-            onChange={handleChangeCheckbox}
-            required
+        <form id="payment" name="payment" method="post"
+          action="https://sci.interkassa.com/" encType="utf-8"
+        >
+          <FormControlLabel control={
+            <Checkbox color="primary"
+              checked={userAgreementCheckbox}
+              onChange={handleChangeCheckbox}
+              required
+            />
+          }
           />
-        }
-        />
-        <UserAgreementLink />
-        <input type="hidden" name="s" value="JzXp8YUmgz" />
-        <input type="hidden" name="ik_co_id" value="6034f76cc8961165be2b926a"/> 
-        <input type="hidden" name="ik_pm_no" value="ID_4233"/>
-        <input type="hidden" name="ik_am" value={currentAmount.toFixed(2)}/>
-        <input type="hidden" name="ik_cur" value="uah"/>
-        <input type="hidden" name="ik_desc" value={product}/>
-        <input className='footer send_payment' type="submit" value={`Купить за ${currentAmount.toFixed(2)} ${selectedValue}`} />
-      </form>
-
+          <UserAgreementLink />
+          <input type="hidden" name="s" value="WOvLNIJQmb" />
+          <input type="hidden" name="ik_co_id" value={formInputData.ik_co_id} />
+          <input type="hidden" name="ik_pm_no" value={formInputData.ik_pm_no} />
+          <input type="hidden" name="ik_am" value={formInputData.ik_am} />
+          {/* <input type="hidden" name="ik_cur" value={formInputData.ik_cur} /> */}
+          <input type="hidden" name="ik_desc" value={formInputData.ik_desc} />
+          <input type="hidden" name="ik_sign" value={hashedValue} />
+          <input className='footer send_payment' type="submit"
+            value={`Купить за ${currentAmount.toFixed(2)} ${selectedValue}`}
+          />
+        </form>
       </div>
 
 
     </>
   )
 }
+
 
