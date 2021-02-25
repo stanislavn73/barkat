@@ -147,6 +147,7 @@ export default function BuySketchUpShop({ priceUSD = 119, product = 'SketchUpPro
           <input type="hidden" name="ik_cur" value="UAH" />
           <input type="hidden" name="ik_desc" value="Event Description" />
           <input type="submit" value="Pay" />
+          <input type="password" class="span3 password" ng-model="loginData.password" name="password" placeholder="Password">8hJgzc6e</input>
         </form>
 
       </div>
