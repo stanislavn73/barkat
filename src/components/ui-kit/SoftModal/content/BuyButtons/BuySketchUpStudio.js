@@ -3,6 +3,6 @@ import BuySketchUpShop from './BuySketchUpShop'
 
 export default function BuySketchUpStudio() {
   return (
-    <BuySketchUpShop priceUSD={1199}/>
+    <BuySketchUpShop priceUSD={1199} product='SketchUpStudio' />
   )
 }

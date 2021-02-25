@@ -35,7 +35,7 @@ export default function buyButtons({ handleSetColumn }) {
         )}
       </ModalConsumer>
       {buyButtons.map((item, index) =>
-        <ModalConsumer>
+        <ModalConsumer key={index} >
           {({ handleOpenSoftModal }) =>
             <TableCell onMouseEnter={() => handleSetColumn(index + 2)}
               onClick={handleOpenSoftModal(item.type)}

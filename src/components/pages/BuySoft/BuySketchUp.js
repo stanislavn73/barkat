@@ -79,7 +79,7 @@ const useStyles = makeStyles({
 
 export default function BuySketchUp() {
 
-  const [column, setColumn] = useState(null)
+  const [column, setColumn] = useState(-1)
 
   const classes = useStyles()
   let tableRef = useRef(<table></table>)
@@ -132,7 +132,7 @@ export default function BuySketchUp() {
         </TableFooter>
         <TableRow>
         </TableRow>
-        <HoverFrame column={column} width={tableRef.current.offsetWidth} height={tableRef.current.offsetHeight} />
+        <HoverFrame column={column} width={tableRef.current.offsetWidth||0} height={tableRef.current.offsetHeight} />
 
       </Table>
       
