@@ -68,15 +68,15 @@ function UserAgreementLink() {
   return (
     <ModalConsumer>
       {({ handleOpenSoftModal }) =>
-      <span >Нажимая купить Вы принимаете условия <span onClick={handleOpenSoftModal('PrivacyPolicy')}
-      className='policy_link'
-    >пользовательского соглашения</span></span> 
-        }
+        <span >Нажимая купить Вы принимаете условия <span onClick={handleOpenSoftModal('PrivacyPolicy')}
+          className='policy_link'
+        >пользовательского соглашения</span></span>
+      }
     </ModalConsumer>
   )
 }
 
-export default function BuySketchUpShop({ priceUSD = 119, product='SketchUpPro' }) {
+export default function BuySketchUpShop({ priceUSD = 119, product = 'SketchUpPro' }) {
   const [selectedValue, setSelectedValue] = useState('USD')
   const [currentAmount, setCurentAmount] = useState(priceUSD)
   const [userAgreementCheckbox, setUserAgreementCheckbox] = useState(false)
@@ -121,7 +121,7 @@ export default function BuySketchUpShop({ priceUSD = 119, product='SketchUpPro' 
         )}
       </div>
       <div className='text_container'>
-      <form id="payment" name="payment" method="post" action="https://sci.interkassa.com/" enctype="utf-8">
+        {/* <form id="payment" name="payment" method="post" action="https://sci.interkassa.com/" enctype="utf-8">
       <FormControlLabel control={
           <Checkbox color="primary"
             checked={userAgreementCheckbox}
@@ -134,14 +134,23 @@ export default function BuySketchUpShop({ priceUSD = 119, product='SketchUpPro' 
         <input type="hidden" name="s" value="JzXp8YUmgz" />
         <input type="hidden" name="ik_co_id" value="6034f76cc8961165be2b926a"/> 
         <input type="hidden" name="ik_pm_no" value="ID_4233"/>
-        <input type="hidden" name="ik_am" value={priceUSD}/>{/* amount to pay */}
+        <input type="hidden" name="ik_am" value={priceUSD}/>
         <input type="hidden" name="ik_cur" value="uah"/>
-        <input type="hidden" name="ik_desc" value={product}/>{/* payment description */}
+        <input type="hidden" name="ik_desc" value={product}/>
         <input className='footer send_payment' type="submit" value={`Купить за ${currentAmount.toFixed(2)} ${selectedValue}`} />
-      </form>
-        
+      </form> */}
+
+        <form id="payment" name="payment" method="post" action="https://sci.interkassa.com/" enctype="utf-8">
+          <input type="hidden" name="ik_co_id" value="6034f76cc8961165be2b926a" />
+          <input type="hidden" name="ik_pm_no" value="ID_4233" />
+          <input type="hidden" name="ik_am" value="100.00" />
+          <input type="hidden" name="ik_cur" value="UAH" />
+          <input type="hidden" name="ik_desc" value="Event Description" />
+          <input type="submit" value="Pay" />
+        </form>
+
       </div>
-      
+
 
     </>
   )
