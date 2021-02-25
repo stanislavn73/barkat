@@ -17,6 +17,7 @@ class Modal extends React.PureComponent {
         email: '',
         phoneNumber: '',
         target: '',
+        comment: this.props.comment
     }
     myRef = React.createRef();
     componentDidMount() {
@@ -24,7 +25,8 @@ class Modal extends React.PureComponent {
 
     }
     handleTextChange = key => e => {
-        this.setState({ [key]: e.target.value });
+        this.setState({ [key]: e.target.value, comment: '' });
+        console.log(this.state)
     }
 
     sendData = () => {
@@ -75,7 +77,8 @@ class Modal extends React.PureComponent {
             profession,
             email,
             phoneNumber,
-            target } = this.state;
+            target,
+            comment } = this.state;
         const { onClose, isOpened } = this.props;
 
         const modalCX = cx({
@@ -138,7 +141,7 @@ class Modal extends React.PureComponent {
                             <Input
                                 className='modal-input'
                                 title='Интересующий вопрос'
-                                value={target}
+                                value={target + comment}
                                 onChange={this.handleTextChange('target')}
                                 multiline
                             />

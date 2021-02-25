@@ -15,15 +15,19 @@ class Layout extends React.Component {
         isMenuOpened: true,
         isModalOpened: false,
         isSoftModalOpened: false,
-        softModalCode: null
+        softModalCode: null,
+        comment:''
     }
 
     handleCloseModal = () => {
         this.setState({ isModalOpened: false });
     }
 
-    handleOpenModal = () => {
-        this.setState({ isModalOpened: true });
+    handleOpenModal = (comment) => {
+        this.setState({
+             isModalOpened: true, 
+            comment:comment||''
+            });
     }
 
     handleOpenSoftModal = code => () => {
@@ -41,7 +45,7 @@ class Layout extends React.Component {
     }
 
     render() {
-        const { isMenuOpened, isModalOpened, isSoftModalOpened, softModalCode } = this.state;
+        const { isMenuOpened, isModalOpened, isSoftModalOpened, softModalCode, comment } = this.state;
 
         return (
             <>
@@ -49,7 +53,7 @@ class Layout extends React.Component {
                     handleOpenForm: this.handleOpenModal,
                     handleOpenSoftModal: this.handleOpenSoftModal
                 }} >
-                    <Modal isOpened={isModalOpened} onClose={this.handleCloseModal} />
+                    <Modal isOpened={isModalOpened} onClose={this.handleCloseModal} comment={comment}/>
                     <SoftModal type={softModalCode} isOpened={isSoftModalOpened} onClose={this.handleCloseSoftModal} />
                     <Header />
                     {this.props.children}
