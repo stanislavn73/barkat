@@ -3,8 +3,7 @@ import Title from '../../ui-kit/Title'
 
 export default function MobileScrollBar({handleShowColumn, buttons }) {
   const [width, setWidth] = useState()
-  const [styles, setStyles] = useState(buttons)
-  const [navCss, setNavCss] = useState({position:'relative'})
+  const [buttonBarStyles, setButtonBarStyles] = useState(buttons)
   let primaryColor = '#c9643b'
   let breakPoint = 850
 
@@ -17,11 +16,11 @@ export default function MobileScrollBar({handleShowColumn, buttons }) {
         return item
       })
       .filter(item => item.title !== 'Опции')
-    setStyles(newButtons)
+      setButtonBarStyles(newButtons)
   }, [])
 
 useEffect(() => {
-  if(window.innerWidth<=850&&styles[0].title!=='Опции'){handleClick(1)}
+  if(window.innerWidth<=850&&buttonBarStyles[0].title!=='Опции'){handleClick(1)}
 }, [width])
 
   function handleClick(index) {
@@ -30,7 +29,7 @@ useEffect(() => {
   }
 
   function handleChangeColor(index) {
-    let oldActive = styles.map(item => {
+    let oldActive = buttonBarStyles.map(item => {
       if (item.buttonBackground === 'white') {
         item.buttonBackground = primaryColor
         item.buttonColor = 'white'
@@ -39,7 +38,7 @@ useEffect(() => {
     })
     oldActive[index].buttonBackground = 'white'
     oldActive[index].buttonColor = 'black'
-    setStyles(oldActive)
+    setButtonBarStyles(oldActive)
   }
 
   return (
@@ -49,7 +48,7 @@ useEffect(() => {
       {width <= breakPoint &&
         < nav className='nav_scroll'  >
           <div className='button_container'>
-            {styles.map((item, index) =>
+            {buttonBarStyles.map((item, index) =>
               <div
                 className='footer button_bar_mobile'
                 key={index}

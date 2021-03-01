@@ -36,7 +36,6 @@
         .nav_scroll{
             overflow-x: auto;
             overflow-y: hidden; 
-            margin-right: 10px;
             width: calc(100%-10px);
             margin-top: -40px;
 
@@ -47,10 +46,7 @@
                 width: 100%;
                 height: 40px;
                 overflow:auto;
-                padding: 0 10px 0 10px;
-                :last-child{
-                    margin-right: 0;
-                }
+                padding-left:10px;
                 .button_bar_mobile{
                     height: 40px;
                     margin-right: 10px;
@@ -111,19 +107,18 @@
     }
     .buy_text{
         font-size: 20px;
-    line-height: 21px;
-    font-weight: 500;
-    @media @tablet-m {
-        font-weight: 400;
-        font-size: 16px; 
-    }
+        line-height: 21px;
+        font-weight: 500;
+        @media @tablet-m {
+            font-weight: 400;
+            font-size: 16px; 
+        }
     }
 }
 
 .hover_frame{
     top: 286px;
     position: absolute;
-    // border:2px @secondary solid;
     transition: right .3s;
     border:2px @secondary solid;
     z-index:-10;
