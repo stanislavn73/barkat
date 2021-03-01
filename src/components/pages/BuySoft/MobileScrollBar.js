@@ -45,7 +45,7 @@ useEffect(() => {
   return (
     <div className= 'mobile_header'
      >
-    <Title className='mobile' >Купить софт</Title>
+    <Title className='title-mobile' >Купить софт</Title>
       {width <= breakPoint &&
         < nav className='nav_scroll'  >
           <div className='button_container'>

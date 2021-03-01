@@ -1,16 +1,10 @@
 @import './../../../assets/variables.less';
-.button_bar_mobile{
-    height: 40px;
-      margin-left: 5px;
-    //   margin-right: 10px;
-      white-space: nowrap;
-      min-width: 350px;
-      align-items: center;
-}
+
 
 .table_container{
     padding:0 20px 0 20px;
     z-index:10;
+    
     .options_element{
         font-weight: 500;
         @media @tablet-m {
@@ -18,38 +12,65 @@
             font-size: 12px;
         }
     }
-    .mobile{
+    @media screen and (max-width: 850px) {
+        height: 90vh;
+        overflow-y: scroll;
+
+    }
+    .title-mobile{
         @media screen and (max-width: 850px) {
-            margin-top: 15px;
             padding-top: 5px;
             align-items: flex-start;
             height: 100px;
-             
+             font-size: 40px;
         }
-        
+        @media @mobile-l{
+            font-size: 26px;
+        }
+        @media @mobile-l{
+            height: 90px;
+       }
     }
     .mobile_header{
         position: relative;
         .nav_scroll{
-            // position: absolute;
             overflow-x: auto;
             overflow-y: hidden; 
-            width: 100%;
+            margin-right: 10px;
+            width: calc(100%-10px);
             margin-top: -40px;
-            padding-right: 10px;
+
             .button_container{
-                padding-right: 10px;
                 display: flex;
                 flex-direction: row;
                 flex-wrap: nowrap;
                 width: 100%;
                 height: 40px;
-                
+                overflow:auto;
+                padding: 0 10px 0 10px;
+                :last-child{
+                    margin-right: 0;
+                }
+                .button_bar_mobile{
+                    height: 40px;
+                    margin-right: 10px;
+                      white-space: nowrap;
+                      width: 100%;
+                      align-items: center;
+                      border-top-left-radius: 5px;
+                      border-top-right-radius: 5px;
+                      @media @mobile-s{
+                        font-size: 12px;
+                    }
+                }
             }
         }
         @media screen and (max-width: 850px) {
             position: sticky;
             top: 134px;
+        }
+        @media @mobile-l{
+            top: 90px;
         }
     }
     
@@ -66,6 +87,7 @@
         font-weight: 400;
         font-size: 16px; 
     }
+    
 }
 .footer{
     border:none;
@@ -81,6 +103,7 @@
         font-weight: 400;
         font-size: 16px; 
     }
+    
     .text{
         font-size: 11px;
         display: inline;
