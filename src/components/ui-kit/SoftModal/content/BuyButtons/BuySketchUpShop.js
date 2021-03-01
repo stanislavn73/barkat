@@ -133,7 +133,6 @@ export default function BuySketchUpShop({ priceUSD = 119, product = 'SketchUpSho
 
   return (
     <>
-      {console.log(hashedValue)}
       <div className='checkbox_container'  >
         {currencies.map((item, index) =>
           <div value={item.currency}
@@ -142,7 +141,6 @@ export default function BuySketchUpShop({ priceUSD = 119, product = 'SketchUpSho
             className='checkbox_wrapper'
           >
             <Radio
-              // style={{marginBottom:10}}
               checked={selectedValue === item.currency}
               name={item.currency}
             />

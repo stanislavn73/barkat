@@ -16,8 +16,7 @@ class Modal extends React.PureComponent {
         profession: '',
         email: '',
         phoneNumber: '',
-        target: '',
-        comment: this.props.comment
+        target: ''
     }
     myRef = React.createRef();
     componentDidMount() {
@@ -25,8 +24,7 @@ class Modal extends React.PureComponent {
 
     }
     handleTextChange = key => e => {
-        this.setState({ [key]: e.target.value, comment: '' });
-        console.log(this.state)
+        this.setState({ [key]: e.target.value });
     }
 
     sendData = () => {
@@ -41,9 +39,8 @@ class Modal extends React.PureComponent {
             serviceId, templateId,
             {
                 ...data,
-                to_email: 'Order.Barkat@gmail.com'
+                to_email: 'stas.at.n.t@gmail.com'
             }).then(response => {
-                console.log(response.status)
                 if (response.status === 200) {
                     this.myRef.current.innerText = 'Отправлено!'
                     this.setState({
@@ -77,8 +74,7 @@ class Modal extends React.PureComponent {
             profession,
             email,
             phoneNumber,
-            target,
-            comment } = this.state;
+            target } = this.state;
         const { onClose, isOpened } = this.props;
 
         const modalCX = cx({
@@ -141,7 +137,7 @@ class Modal extends React.PureComponent {
                             <Input
                                 className='modal-input'
                                 title='Интересующий вопрос'
-                                value={target + comment}
+                                value={target}
                                 onChange={this.handleTextChange('target')}
                                 multiline
                             />

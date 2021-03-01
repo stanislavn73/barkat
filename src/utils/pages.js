@@ -8,7 +8,6 @@ import AboutPage from "../components/pages/AboutPage";
 import about from "../assets/images/pages/About_us_first.jpg";
 import Eventpage from "../components/pages/EventPage/EventPage";
 import BuySketchUp from "../components/pages/BuySoft/BuySketchUp";
-import BuyPage from "../components/pages/BuyPage/BuyPage";
 
 export const PAGES = [
   {
@@ -81,15 +80,5 @@ export const PAGES = [
     screenTitle: "BuySoft",
     screenImg: about,
     isMenu: false
-  },
-  {
-    id: 10,
-    name: "Payment",
-    route: "/payment",
-    page: BuyPage,
-    screenImg: "https://exo.in.ua/images/news/2018/08/new-41279.jpg",
-    screenTitle: "Payment Processing",
-    screenImg: about,
-    isMenu: false
-  }
+  }  
 ];

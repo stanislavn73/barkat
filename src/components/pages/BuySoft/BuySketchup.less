@@ -1,10 +1,58 @@
 @import './../../../assets/variables.less';
+.button_bar_mobile{
+    height: 40px;
+      margin-left: 5px;
+    //   margin-right: 10px;
+      white-space: nowrap;
+      min-width: 350px;
+      align-items: center;
+}
+
 .table_container{
     padding:0 20px 0 20px;
     z-index:10;
     .options_element{
         font-weight: 500;
+        @media @tablet-m {
+            font-weight: 400;
+            font-size: 12px;
+        }
     }
+    .mobile{
+        @media screen and (max-width: 850px) {
+            margin-top: 15px;
+            padding-top: 5px;
+            align-items: flex-start;
+            height: 100px;
+             
+        }
+        
+    }
+    .mobile_header{
+        position: relative;
+        .nav_scroll{
+            // position: absolute;
+            overflow-x: auto;
+            overflow-y: hidden; 
+            width: 100%;
+            margin-top: -40px;
+            padding-right: 10px;
+            .button_container{
+                padding-right: 10px;
+                display: flex;
+                flex-direction: row;
+                flex-wrap: nowrap;
+                width: 100%;
+                height: 40px;
+                
+            }
+        }
+        @media screen and (max-width: 850px) {
+            position: sticky;
+            top: 134px;
+        }
+    }
+    
 }
 .buy_table{
     table-layout: fixed;
@@ -12,6 +60,12 @@
 .head_element{
     font-weight: 500;
     font-size: 18px;
+    text-align: center;
+    overflow-wrap: break-word;
+    @media @tablet-m {
+        font-weight: 400;
+        font-size: 16px; 
+    }
 }
 .footer{
     border:none;
@@ -23,11 +77,26 @@
     background-color: @primary;
     color: white;
     cursor: pointer;
+    @media @tablet-m {
+        font-weight: 400;
+        font-size: 16px; 
+    }
+    .text{
+        font-size: 11px;
+        display: inline;
+        overflow-wrap: unset;
+    }
+    .buy_text{
+        font-size: 20px;
+    line-height: 21px;
+    font-weight: 500;
+    @media @tablet-m {
+        font-weight: 400;
+        font-size: 16px; 
+    }
+    }
 }
-.text{
-    font-size: 11px;
-    display: inline;
-}
+
 .hover_frame{
     top: 286px;
     position: absolute;
@@ -38,6 +107,12 @@
     @media @laptop-s {
         top:207px;
     }
+
 }
+.cell {
+    font-size: 10px;
+    @media @tablet-m{
+    overflow-wrap: break-word;
 
-
+    }
+}

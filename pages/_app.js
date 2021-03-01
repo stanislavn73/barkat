@@ -119,6 +119,7 @@ export default class MyApp extends App {
     return (
       <ThemeProvider theme={theme}>
         <GlobalStyle />
+        <title>Barkat Stein</title>
         <Component {...pageProps} />
       </ThemeProvider>
     );

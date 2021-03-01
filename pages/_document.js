@@ -49,7 +49,7 @@ export default class MyDocument extends Document {
           <meta name="interkassa-verification" content="7c69060c3b88778d38aa23cd14db96e2" />
           
           <link rel="shortcut icon" href={favicon} />
-          <title>Barkat Stein</title>
+          
           <link rel="stylesheet" type="text/css" charSet="UTF-8" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css" />
           <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css" />
         </Head>

@@ -18,10 +18,10 @@ class Modal extends React.PureComponent {
             'soft-modal-wrapper_opened': isOpened
         });
 
-        const currentType = isOpened && types[type];
+        const currentType = types[type];
 
-        const title = isOpened ? currentType?.title : null;
-        const Content = isOpened ? currentType?.content : null;
+        const title = currentType?.title;
+        const Content = currentType?.content;
 
         return (
             <div className={modalCX} >

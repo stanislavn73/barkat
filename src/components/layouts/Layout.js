@@ -15,8 +15,7 @@ class Layout extends React.Component {
         isMenuOpened: true,
         isModalOpened: false,
         isSoftModalOpened: false,
-        softModalCode: null,
-        comment:''
+        softModalCode: null
     }
 
     handleCloseModal = () => {
@@ -25,8 +24,7 @@ class Layout extends React.Component {
 
     handleOpenModal = (comment) => {
         this.setState({
-             isModalOpened: true, 
-            comment:comment||''
+             isModalOpened: true
             });
     }
 
