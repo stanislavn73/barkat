@@ -18,7 +18,7 @@ export default function buyButtons({ mobileButtons, handleSetColumn }) {
       type: 'BuySketchUpShop'
     },
     {
-      price: 229,
+      price: 299,
       type: 'BuySketchUpPro'
     },
     {
