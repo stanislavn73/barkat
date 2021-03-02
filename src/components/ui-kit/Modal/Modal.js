@@ -39,7 +39,8 @@ class Modal extends React.PureComponent {
             serviceId, templateId,
             {
                 ...data,
-                to_email: 'stas.at.n.t@gmail.com'
+                to_email: 'Julia@barkat-3d-ville.com',
+                to_email1: 'Sergii@barkat-3d-ville.com',
             }).then(response => {
                 if (response.status === 200) {
                     this.myRef.current.innerText = 'Отправлено!'
