@@ -206,7 +206,7 @@ export default {
     content: PrivacyPolicy
   },
   UserAgreement: {
-    title: 'Пользовательское соглашение ООО "Баркат-Штейн"',
+    title: 'Договор публичной оферты ООО "Баркат-Штейн"',
     content: UserAgreement
   },
   BuySketchUpShop: {
