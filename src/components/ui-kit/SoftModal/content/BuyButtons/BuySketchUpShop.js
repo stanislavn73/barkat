@@ -69,7 +69,7 @@ function UserAgreementLink() {
   return (
     <ModalConsumer>
       {({ handleOpenSoftModal }) =>
-        <span >Нажимая купить Вы принимаете условия <span onClick={handleOpenSoftModal('PrivacyPolicy')}
+        <span >Нажимая купить Вы принимаете условия <span onClick={handleOpenSoftModal('UserAgreement')}
           className='policy_link'
         >пользовательского соглашения</span></span>
       }

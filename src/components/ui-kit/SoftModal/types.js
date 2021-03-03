@@ -42,6 +42,7 @@ import BuySketchUpShop from './content/BuyButtons/BuySketchUpShop'
 import BuySketchUpPro from './content/BuyButtons/BuySketchUpPro'
 import BuySketchUpStudio from './content/BuyButtons/BuySketchUpStudio'
 import BuySketchUpHigher from './content/BuyButtons/BuySketchUpHigher'
+import UserAgreement from './content/UserAgreement'
 
 export default {
   REVIT: {
@@ -203,6 +204,10 @@ export default {
   PrivacyPolicy: {
     title: 'Политика конфиденциальности ООО "Баркат-Штейн"',
     content: PrivacyPolicy
+  },
+  UserAgreement: {
+    title: 'Пользовательское соглашение ООО "Баркат-Штейн"',
+    content: UserAgreement
   },
   BuySketchUpShop: {
     title: 'Купить SketchUp Shop',

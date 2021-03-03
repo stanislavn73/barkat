@@ -42,7 +42,7 @@ export default function buyButtons({ mobileButtons, handleSetColumn }) {
           <ModalConsumer>
             {({ handleOpenForm }) => (
               <TableCell className={classes.TableCell} onMouseEnter={() => handleSetColumn(1)} >
-                <div className='footer' onClick={() => handleOpenForm('Примите запрос на SketchUp FREE')} >FREE</div>
+                <div className='footer' onClick={() => handleOpenForm('')} >FREE</div>
               </TableCell>
             )}
           </ModalConsumer>
