@@ -12,6 +12,7 @@ import SocialMediaFooter from "./SocialMediaFooter";
 
 import './Footer.less';
 import PrivacyPolicy from './PrivacyPolicy';
+import Agreement from './Agreement';
 
 
 const FooterHead = styled.div`
@@ -81,47 +82,16 @@ class Footer extends PureComponent {
     return (
       <>
         <div className='footer-wrapper'>
-          {/* <FooterHead>
-                      <Menu>
-                          {buttons.map(page => (
-                              <Link key={page.id} to={page.route}>
-                                  <MenuItem isActive={location === page.route}>
-                                      {page.name}
-                                  </MenuItem>
-                              </Link>))
-                          }
-                      </Menu>
-                  </FooterHead> */}
           <div className='footer-content'>
-            {/* <div className='footer-content-block'>
-              <div className='content-title'>
-                Контакты:
-              </div>
-              <div className='content-title'>
-                ООО «Баркат-Штейн», БЦ «Форум»
-              </div>
-              <div className='content-title'>
-                <a className='footer-link' target='_blank' rel='noopener noreferrer' href={'https://www.google.com/maps/place/%D1%83%D0%BB.+%D0%9D%D0%B8%D0%BA%D0%BE%D0%BB%D0%B0%D1%8F+%D0%9F%D0%B8%D0%BC%D0%BE%D0%BD%D0%B5%D0%BD%D0%BA%D0%BE,+13,+%D0%9A%D0%B8%D0%B5%D0%B2,+02000/@50.4591394,30.4881224,17z/data=!3m1!4b1!4m5!3m4!1s0x40d4ce64cc70dd3f:0xf52cb48444deb57a!8m2!3d50.4591394!4d30.4903111'}>01601, Киев, ул. Н. Пимоненко, 13</a>
-              </div>
+            <div className='links_container' >
+              <Agreement />
+              <PrivacyPolicy />
             </div>
-            <div className='footer-content-block'>
-              <div className='content-title'>
-                Web: <a className='footer-link' href={'http://www.barkat-3D-ville.com'} >www.barkat-3D-ville.com</a>
-              </div>
-              <div className='content-title'>
-                E-mail: <a className='footer-link' href={'mailto:barkat-stein@gmail.com'}>barkat-stein@gmail.com</a>
-              </div>
-              <div className='content-title'>
-                E-mail:  <a className='footer-link' href={'mailto:barkat-3D-ville@gmail.com'}>barkat-3D-ville@gmail.com</a>
-              </div>
-            </div> */}
-            {/* {console.log(pageType)} */}
-            <PrivacyPolicy />
-            {this.props.page!=='events'&&
-            this.props.page!=='soft'&&
-            <div className='social-container'>
-              <SocialMediaFooter />
-            </div>}
+            {this.props.page !== 'events' &&
+              this.props.page !== 'soft' &&
+              <div className='social-container'>
+                <SocialMediaFooter />
+              </div>}
             <div className='footer-content-block'>
 
               <div className='content-title'>
