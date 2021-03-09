@@ -1,9 +1,7 @@
 import HomePage from "../components/pages/HomePage";
 import ProjectsPage from "../components/pages/ProjectsPage/ProjectsPage";
-import ProjectPage from "../components/pages/ProjectPage";
 import FacadesPage from "../components/pages/FacadesPage/FacadesPage";
 import SoftPage from "../components/pages/SoftPage";
-import AboutPage from "../components/pages/AboutPage";
 
 import about from "../assets/images/pages/About_us_first.jpg";
 import Eventpage from "../components/pages/EventPage/EventPage";
@@ -50,15 +48,16 @@ export const PAGES = [
     name: "Инженерные сети Barkat-Engineering",
     route: "/engineer-nets",
     page: HomePage,
-    isMenu: true,
+    isMenu: false,
     disabled: true,
   },
   {
     id: 7,
+    // eslint-disable-next-line react/react-in-jsx-scope
     name: <>Агро&nbsp;решения Barkat-AGROSPATIAL</>,
     route: "/agro-solutions",
     page: HomePage,
-    isMenu: true,
+    isMenu: false,
     disabled: true,
   },
   {
@@ -68,7 +67,7 @@ export const PAGES = [
     page: Eventpage,
     screenImg: "https://exo.in.ua/images/news/2018/08/new-41279.jpg",
     screenTitle: "События",
-    screenImg: about,
+    // screenImg: about,
     isMenu: true
   },
   {
@@ -78,7 +77,7 @@ export const PAGES = [
     page: BuySketchUp,
     screenImg: "https://exo.in.ua/images/news/2018/08/new-41279.jpg",
     screenTitle: "BuySoft",
-    screenImg: about,
+    // screenImg: about,
     isMenu: false
   }  
 ];
