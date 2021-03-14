@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { useRouter, useRouteMatch } from "next/router";
+import { useRouter } from "next/router";
 import cx from "classnames";
 import Link from "next/link";
 
@@ -11,9 +11,6 @@ import * as close from "../../../assets/images/icons/close.png";
 import * as logo from "../../../assets/images/logo.png";
 import * as logoU from "../../../assets/images/logo_u.png";
 import * as logoVille from "../../../assets/images/logo-ville.png";
-import * as geo from "../../../assets/images/icons/map.png";
-import * as phone from "../../../assets/images/icons/phone.png";
-import * as mail from "../../../assets/images/icons/mail.png";
 
 import "./style.less";
 
@@ -48,9 +45,6 @@ function Header() {
 
   function onPageScroll() {
     const scrollTop = window.pageYOffset;
-
-    // if (scrollTop > 300 && !shrinked ||
-    //     scrollTop <= 300 && shrinked) return;
 
     if (scrollTop > 300) {
       setShrinked(true);

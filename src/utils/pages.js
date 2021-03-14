@@ -26,7 +26,7 @@ export const PAGES = [
   },
   {
     id: 4,
-    name: 'Вентилируемые фасады Barkat-Stein',
+    name: 'Вентилируемые фасады\n Barkat-Stein',
     route: "/facades",
     page: FacadesPage,
     screenImg:
@@ -36,7 +36,7 @@ export const PAGES = [
   },
   {
     id: 5,
-    name: "3D-Решения (BIM, PLM, GIS) Barkat-3d-ville",
+    name: "3D-Решения (BIM, PLM, GIS)\n Barkat-3d-ville",
     route: "/soft",
     page: SoftPage,
     screenImg: "https://exo.in.ua/images/news/2018/08/new-41279.jpg",
