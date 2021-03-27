@@ -1,69 +1,10 @@
 import React, { useEffect, useState } from 'react'
-import * as americaFlag from "./../../../../../assets/favicons/us.svg";
-import * as belarusFlag from "./../../../../../assets/favicons/by.svg";
-import * as azerFlag from "./../../../../../assets/favicons/az.svg";
-import * as europeFlag from "./../../../../../assets/favicons/eu.svg";
-import * as goeorgiaFlag from "./../../../../../assets/favicons/ge.svg";
-import * as kazahstanFlag from "./../../../../../assets/favicons/kz.svg";
-import * as moldovaFlag from "./../../../../../assets/favicons/md.svg";
-import * as russiaFlag from "./../../../../../assets/favicons/ru.svg";
-import * as ukraineFlag from "./../../../../../assets/favicons/ua.svg";
-import * as armenianFlag from "./../../../../../assets/favicons/am.svg";
-import * as uzbekistanFlag from "./../../../../../assets/favicons/uz.svg";
-import './flags.less'
 import Radio from '@material-ui/core/Radio';
-import { Checkbox, FormControlLabel, makeStyles } from '@material-ui/core';
-import Link from 'next/link';
+import { Checkbox, TextField } from '@material-ui/core';
 import { ModalConsumer } from '../../../../layouts/Layout';
 import CryptoJS from "crypto-js";
-
-let currencies = [
-  {
-    currency: 'USD',
-    img: americaFlag
-  },
-  {
-    currency: 'BYN',
-    img: belarusFlag
-  },
-  {
-    currency: 'RUB',
-    img: russiaFlag
-  },
-  {
-    currency: 'EUR',
-    img: europeFlag
-  },
-  {
-    currency: 'GEL',
-    img: goeorgiaFlag
-  },
-  {
-    currency: 'UAH',
-    img: ukraineFlag
-  },
-  {
-    currency: 'AMD',
-    img: armenianFlag
-  },
-  {
-    currency: 'KZT',
-    img: kazahstanFlag
-  },
-  {
-    currency: 'UZS',
-    img: uzbekistanFlag
-  },
-  {
-    currency: 'AZN',
-    img: azerFlag
-  },
-  {
-    currency: 'MDL',
-    img: moldovaFlag
-  }
-]
-
+import { currencies } from './currencies';
+import './BuySketchUpShop.less'
 
 function UserAgreementLink() {
   return (
@@ -77,21 +18,19 @@ function UserAgreementLink() {
   )
 }
 
-
-
 export default function BuySketchUpShop({ priceUSD = 119, product = 'SketchUpShop' }) {
   const [UahAmount, setUahAmount] = useState(priceUSD)
   const [selectedValue, setSelectedValue] = useState('USD')
   const [currentAmount, setCurentAmount] = useState(priceUSD)
   const [userAgreementCheckbox, setUserAgreementCheckbox] = useState(false)
   const [hashedValue, setHashedValue] = useState('')
+  const [userData, setUserData] = useState({})
 
   const formInputData = {
     ik_co_id: '6034f76cc8961165be2b926a',
     ik_pm_no: 'ID_4233',
-    ik_am: UahAmount.toFixed(2),
-    // ik_cur: 'uah',
-    ik_desc: product,
+    ik_am: Math.floor((UahAmount*100)/100),
+    ik_desc: `${product} ФИО: ${userData.name} + website: ${userData.website} + email:${userData.email}+ Телефон: ${userData.phone}`,
     base_ik_sign: 'SWTTltrdP3VgnGXM',
     ik_sign: ''
   }
@@ -102,7 +41,6 @@ export default function BuySketchUpShop({ priceUSD = 119, product = 'SketchUpSho
       .then(response => response.json())
       .then(data => {
         setUahAmount(data['USD_UAH'] * priceUSD)
-        console.log(UahAmount)
       })
     generateHash(formInputData)
 
@@ -112,7 +50,7 @@ export default function BuySketchUpShop({ priceUSD = 119, product = 'SketchUpSho
     let value = `${ik_am}:${ik_co_id}:${ik_desc}:${ik_pm_no}:${base_ik_sign}`
     let ik_sign = CryptoJS.MD5(value).toString(CryptoJS.enc.Base64)
     setHashedValue(ik_sign)
-
+    console.log(formInputData)
   }
 
   function handleChooseCurrency(currency) {
@@ -156,24 +94,38 @@ export default function BuySketchUpShop({ priceUSD = 119, product = 'SketchUpSho
         <form id="payment" name="payment" method="post"
           action="https://sci.interkassa.com/" encType="utf-8"
         >
-          <FormControlLabel control={
-            <Checkbox color="primary"
-              checked={userAgreementCheckbox}
-              onChange={handleChangeCheckbox}
-              required
-            />
-          }
-          />
-          <UserAgreementLink />
+          <div className='text_field_container' >
+            <TextField id="standard-basic" label="ФИО" 
+            onChange={(e) => { setUserData({ ...userData, name: e.target.value }) }} required 
+            defaultValue='empty'/>
+            <TextField id="standard-basic" label="Website"
+             onChange={(e) => { setUserData({ ...userData, webSite: e.target.value }) }} required 
+             defaultValue='empty'/>
+            <TextField id="standard-basic" label="E-mail" 
+            onChange={(e) => { setUserData({ ...userData, email: e.target.value }) }} required 
+            defaultValue='empty'/>
+
+            <TextField id="standard-basic" label="Телефон" 
+            onChange={(e) => { setUserData({ ...userData, phone: e.target.value }) }} required
+            defaultValue='empty' />
+            <div>
+              <Checkbox color="primary"
+                checked={userAgreementCheckbox}
+                onChange={handleChangeCheckbox}
+                required
+              />
+              <UserAgreementLink />
+            </div>
+          </div>
           <input type="hidden" name="s" value="WOvLNIJQmb" />
           <input type="hidden" name="ik_co_id" value={formInputData.ik_co_id} />
           <input type="hidden" name="ik_pm_no" value={formInputData.ik_pm_no} />
           <input type="hidden" name="ik_am" value={formInputData.ik_am} />
-          {/* <input type="hidden" name="ik_cur" value={formInputData.ik_cur} /> */}
           <input type="hidden" name="ik_desc" value={formInputData.ik_desc} />
           <input type="hidden" name="ik_sign" value={hashedValue} />
+
           <input className='footer send_payment' type="submit"
-            value={`Купить за ${currentAmount.toFixed(2)} ${selectedValue}`}
+            value={`Купить за ${Math.floor(currentAmount*100)/100} ${selectedValue}`}
           />
         </form>
       </div>

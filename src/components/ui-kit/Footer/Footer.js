@@ -15,6 +15,7 @@ import PrivacyPolicy from './PrivacyPolicy';
 import Agreement from './Agreement';
 
 
+
 const FooterHead = styled.div`
   height: 40px;
   display: flex;
@@ -86,6 +87,8 @@ class Footer extends PureComponent {
             <div className='links_container' >
               <Agreement />
               <PrivacyPolicy />
+
+
             </div>
             {this.props.page !== 'events' &&
               this.props.page !== 'soft' &&
