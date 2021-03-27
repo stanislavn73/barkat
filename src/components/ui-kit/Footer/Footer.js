@@ -87,8 +87,6 @@ class Footer extends PureComponent {
             <div className='links_container' >
               <Agreement />
               <PrivacyPolicy />
-
-
             </div>
             {this.props.page !== 'events' &&
               this.props.page !== 'soft' &&

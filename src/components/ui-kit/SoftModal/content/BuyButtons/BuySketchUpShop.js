@@ -29,9 +29,11 @@ export default function BuySketchUpShop({ priceUSD = 119, product = 'SketchUpSho
   const formInputData = {
     ik_co_id: '6034f76cc8961165be2b926a',
     ik_pm_no: 'ID_4233',
-    ik_am: Math.floor((UahAmount*100)/100),
-    ik_desc: `${product} ФИО: ${userData.name} + website: ${userData.website} + email:${userData.email}+ Телефон: ${userData.phone}`,
+    ik_am: Math.floor((UahAmount * 100) / 100),
+    ik_desc: product,
+    // `${product} ФИО: ${userData.name} + website: ${userData.website} + email:${userData.email}+ Телефон: ${userData.phone}`,
     base_ik_sign: 'SWTTltrdP3VgnGXM',
+    ik_cli: userData.email,
     ik_sign: ''
   }
 
@@ -95,19 +97,6 @@ export default function BuySketchUpShop({ priceUSD = 119, product = 'SketchUpSho
           action="https://sci.interkassa.com/" encType="utf-8"
         >
           <div className='text_field_container' >
-            <TextField id="standard-basic" label="ФИО" 
-            onChange={(e) => { setUserData({ ...userData, name: e.target.value }) }} required 
-            defaultValue='empty'/>
-            <TextField id="standard-basic" label="Website"
-             onChange={(e) => { setUserData({ ...userData, webSite: e.target.value }) }} required 
-             defaultValue='empty'/>
-            <TextField id="standard-basic" label="E-mail" 
-            onChange={(e) => { setUserData({ ...userData, email: e.target.value }) }} required 
-            defaultValue='empty'/>
-
-            <TextField id="standard-basic" label="Телефон" 
-            onChange={(e) => { setUserData({ ...userData, phone: e.target.value }) }} required
-            defaultValue='empty' />
             <div>
               <Checkbox color="primary"
                 checked={userAgreementCheckbox}
@@ -119,13 +108,14 @@ export default function BuySketchUpShop({ priceUSD = 119, product = 'SketchUpSho
           </div>
           <input type="hidden" name="s" value="WOvLNIJQmb" />
           <input type="hidden" name="ik_co_id" value={formInputData.ik_co_id} />
+          <input type="hidden" name="ik_cli" value={formInputData.ik_cli} />
           <input type="hidden" name="ik_pm_no" value={formInputData.ik_pm_no} />
           <input type="hidden" name="ik_am" value={formInputData.ik_am} />
           <input type="hidden" name="ik_desc" value={formInputData.ik_desc} />
           <input type="hidden" name="ik_sign" value={hashedValue} />
 
           <input className='footer send_payment' type="submit"
-            value={`Купить за ${Math.floor(currentAmount*100)/100} ${selectedValue}`}
+            value={`Купить за ${Math.floor(currentAmount * 100) / 100} ${selectedValue}`}
           />
         </form>
       </div>
