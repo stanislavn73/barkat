@@ -4,7 +4,8 @@ import { Checkbox, TextField } from '@material-ui/core';
 import { ModalConsumer } from '../../../../layouts/Layout';
 import CryptoJS from "crypto-js";
 import { currencies } from './currencies';
-import './BuySketchUpShop.less'
+import './BuySketchUpShop.less';
+import { v4 } from 'uuid';
 
 function UserAgreementLink() {
   return (
@@ -23,18 +24,18 @@ export default function BuySketchUpShop({ priceUSD = 119, product = 'SketchUpSho
   const [selectedValue, setSelectedValue] = useState('USD')
   const [currentAmount, setCurentAmount] = useState(priceUSD)
   const [userAgreementCheckbox, setUserAgreementCheckbox] = useState(false)
-  const [hashedValue, setHashedValue] = useState('')
+  const [hashedValue, setHashedValue] = useState([])
   const [userData, setUserData] = useState({})
 
-  const formInputData = {
-    ik_co_id: '6034f76cc8961165be2b926a',
-    ik_pm_no: 'ID_4233',
-    ik_am: Math.floor((UahAmount * 100) / 100),
-    ik_desc: product,
-    // `${product} ФИО: ${userData.name} + website: ${userData.website} + email:${userData.email}+ Телефон: ${userData.phone}`,
-    base_ik_sign: 'SWTTltrdP3VgnGXM',
-    ik_cli: userData.email,
-    ik_sign: ''
+  const private_key = 'sandbox_TnTWGwuz2FxuZDW8wOhJAANTGhWe3DqRAMD1Iolq'
+  const json_string = {
+    "public_key": "sandbox_i47920969914",
+   "version": "3", 
+   "action": "pay", 
+   "amount": `${Math.floor((UahAmount * 100) / 100)}`, 
+   "currency": "UAH", 
+   "description": `${product}`,
+    "order_id": `${v4()}`
   }
 
   useEffect(() => {
@@ -42,17 +43,21 @@ export default function BuySketchUpShop({ priceUSD = 119, product = 'SketchUpSho
     fetch(UAH_CURENCY)
       .then(response => response.json())
       .then(data => {
-        setUahAmount(data['USD_UAH'] * priceUSD)
+        setUahAmount(data['USD_UAH'] * priceUSD)  
       })
-    generateHash(formInputData)
-
   }, [])
 
-  function generateHash({ ik_am, ik_co_id, ik_desc, ik_pm_no, base_ik_sign }) {
-    let value = `${ik_am}:${ik_co_id}:${ik_desc}:${ik_pm_no}:${base_ik_sign}`
-    let ik_sign = CryptoJS.MD5(value).toString(CryptoJS.enc.Base64)
-    setHashedValue(ik_sign)
-    console.log(formInputData)
+  useEffect(()=>{
+    generateHash(json_string)
+  },[UahAmount])
+
+  function generateHash(json_string) {
+    let value = JSON.stringify(json_string)
+    const json_array = CryptoJS.enc.Utf8.parse(value)
+    const json_base64 = CryptoJS.enc.Base64.stringify(json_array)
+    const sign_array = CryptoJS.SHA1(private_key+json_base64+private_key)
+    const sign_sha1 = CryptoJS.enc.Base64.stringify(sign_array)
+    setHashedValue([json_base64, sign_sha1])
   }
 
   function handleChooseCurrency(currency) {
@@ -93,8 +98,9 @@ export default function BuySketchUpShop({ priceUSD = 119, product = 'SketchUpSho
         )}
       </div>
       <div className='text_container'>
-        <form id="payment" name="payment" method="post"
-          action="https://sci.interkassa.com/" encType="utf-8"
+        <form method="POST"
+         acceptCharset="utf-8" 
+         action="https://www.liqpay.ua/api/3/checkout"
         >
           <div className='text_field_container' >
             <div>
@@ -106,14 +112,8 @@ export default function BuySketchUpShop({ priceUSD = 119, product = 'SketchUpSho
               <UserAgreementLink />
             </div>
           </div>
-          <input type="hidden" name="s" value="WOvLNIJQmb" />
-          <input type="hidden" name="ik_co_id" value={formInputData.ik_co_id} />
-          <input type="hidden" name="ik_cli" value={formInputData.ik_cli} />
-          <input type="hidden" name="ik_pm_no" value={formInputData.ik_pm_no} />
-          <input type="hidden" name="ik_am" value={formInputData.ik_am} />
-          <input type="hidden" name="ik_desc" value={formInputData.ik_desc} />
-          <input type="hidden" name="ik_sign" value={hashedValue} />
-
+          <input type="hidden" name="data" value={hashedValue[0]} />
+          <input type="hidden" name="signature" value={hashedValue[1]} />
           <input className='footer send_payment' type="submit"
             value={`Купить за ${Math.floor(currentAmount * 100) / 100} ${selectedValue}`}
           />
