@@ -25,6 +25,7 @@
     "@zeit/next-less": "^1.0.1",
     "classnames": "^2.2.6",
     "crypto-js": "^4.0.0",
+    "dayjs": "^1.10.4",
     "emailjs-com": "^2.6.4",
     "file-loader": "^6.2.0",
     "file-saver": "^2.0.2",
