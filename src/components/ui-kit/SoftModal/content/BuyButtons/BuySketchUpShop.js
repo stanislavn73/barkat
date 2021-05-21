@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import Radio from '@material-ui/core/Radio';
-import { Checkbox, TextField } from '@material-ui/core';
+import { Checkbox, TextField, Box } from '@material-ui/core';
 import { ModalConsumer } from '../../../../layouts/Layout';
 import CryptoJS from "crypto-js";
 import { currencies } from './currencies';
@@ -19,13 +19,29 @@ function UserAgreementLink() {
   )
 }
 
+const initialUserData = {
+  name: '',
+  company: '',
+  website: '',
+  email: '',
+  phone: '',
+}
+
+const errors = {
+  name: '',
+  company: '',
+  website: '',
+  email: '',
+  phone: '',
+}
+
 export default function BuySketchUpShop({ priceUSD = 119, product = 'SketchUpShop' }) {
   const [UahAmount, setUahAmount] = useState(priceUSD)
   const [selectedValue, setSelectedValue] = useState('USD')
   const [currentAmount, setCurentAmount] = useState(priceUSD)
   const [userAgreementCheckbox, setUserAgreementCheckbox] = useState(false)
   const [hashedValue, setHashedValue] = useState([])
-  const [userData, setUserData] = useState({})
+  const [userData, setUserData] = useState(localStorage.getItem('USER_DATA_DATABASE') || initialUserData)
 
   const private_key = 'sandbox_TnTWGwuz2FxuZDW8wOhJAANTGhWe3DqRAMD1Iolq'
   const json_string = {
@@ -46,6 +62,10 @@ export default function BuySketchUpShop({ priceUSD = 119, product = 'SketchUpSho
         setUahAmount(data['USD_UAH'] * priceUSD)  
       })
   }, [])
+
+  useEffect(()=>{
+    localStorage.setItem('USER_DATA_DATABASE', JSON.stringify(userData))
+  },[userData])
 
   useEffect(()=>{
     generateHash(json_string)
@@ -76,11 +96,37 @@ export default function BuySketchUpShop({ priceUSD = 119, product = 'SketchUpSho
     setUserAgreementCheckbox(e.target.checked)
   }
 
+  function handleChangeUserData(event) {
+    localStorage.getItem('USER_DATA_DATABASE', userData)
+    const value = event.target.value
+    
+    setUserData({...userData, [event.target.name]:event.target.value})
+    console.log({...userData, [event.target.name]:event.target.value})
+  }
+ 
   return (
-    <>
-      <div className='checkbox_container'  >
+    <Box>
+      <form method="POST"
+         acceptCharset="utf-8" 
+         action="https://www.liqpay.ua/api/3/checkout"
+        >
+      <Box className='textfield_container'>
+        <TextField label='Ф.И.О.' name='name' onChange={handleChangeUserData} required 
+        className='textfield'
+        />
+        <TextField label='Название компании/физлицо' name='company' required onChange={handleChangeUserData} required
+        className='textfield'/>
+        <TextField label='Сайт' required name='website' onChange={handleChangeUserData} required
+        className='textfield'/>
+        <TextField label='E-Mail' required name='email' onChange={handleChangeUserData} required
+        className='textfield'/>
+        <TextField label='Конт. тел.' required name='phone' onChange={handleChangeUserData} required
+        className='textfield'/>
+      </Box>
+
+      <Box className='checkbox_container'>
         {currencies.map((item, index) =>
-          <div value={item.currency}
+          <Box value={item.currency}
             onClick={() => handleChooseCurrency(item.currency)}
             key={index}
             className='checkbox_wrapper'
@@ -89,39 +135,36 @@ export default function BuySketchUpShop({ priceUSD = 119, product = 'SketchUpSho
               checked={selectedValue === item.currency}
               name={item.currency}
             />
-            <div style={{ backgroundImage: `url(${item.img})` }}
+            <Box style={{ backgroundImage: `url(${item.img})` }}
               className='flag_image'
             >
-            </div>
+            </Box>
             <span className='currency_name' >{item.currency}</span>
-          </div>
+          </Box>
         )}
-      </div>
-      <div className='text_container'>
-        <form method="POST"
-         acceptCharset="utf-8" 
-         action="https://www.liqpay.ua/api/3/checkout"
-        >
-          <div className='text_field_container' >
-            <div>
+      </Box>
+      <Box className='text_container'>
+        
+          <Box className='text_field_container' >
+            <Box>
               <Checkbox color="primary"
                 checked={userAgreementCheckbox}
                 onChange={handleChangeCheckbox}
                 required
               />
               <UserAgreementLink />
-            </div>
-          </div>
-          <input type="hidden" name="data" value={hashedValue[0]} />
-          <input type="hidden" name="signature" value={hashedValue[1]} />
-          <input className='footer send_payment' type="submit"
-            value={`Купить за ${Math.floor(currentAmount * 100) / 100} ${selectedValue}`}
-          />
-        </form>
-      </div>
+            </Box>
+          </Box>
+            <input type="hidden" name="data" value={hashedValue[0]} />
+            <input type="hidden" name="signature" value={hashedValue[1]} />
+            <input className='footer send_payment' type="submit"
+              value={`Купить за ${Math.floor(currentAmount * 100) / 100} ${selectedValue}`}
+            />
+        
+      </Box>
 
-
-    </>
+      </form>
+    </Box>
   )
 }
 
