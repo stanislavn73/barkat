@@ -6,6 +6,7 @@ import CryptoJS from "crypto-js";
 import { currencies } from './currencies';
 import './BuySketchUpShop.less';
 import { v4 } from 'uuid';
+import UserDataForm from './UserDataForm';
 
 function UserAgreementLink() {
   return (
@@ -61,11 +62,10 @@ export default function BuySketchUpShop({ priceUSD = 119, product = 'SketchUpSho
       .then(data => {
         setUahAmount(data['USD_UAH'] * priceUSD)  
       })
+      const savedData = localStorage.getItem('USER_DATA_DATABASE')
+      if (savedData) setUserData(JSON.parse(savedData))
   }, [])
 
-  useEffect(()=>{
-    localStorage.setItem('USER_DATA_DATABASE', JSON.stringify(userData))
-  },[userData])
 
   useEffect(()=>{
     generateHash(json_string)
@@ -97,11 +97,11 @@ export default function BuySketchUpShop({ priceUSD = 119, product = 'SketchUpSho
   }
 
   function handleChangeUserData(event) {
-    localStorage.getItem('USER_DATA_DATABASE', userData)
-    const value = event.target.value
     
-    setUserData({...userData, [event.target.name]:event.target.value})
-    console.log({...userData, [event.target.name]:event.target.value})
+    const value = event.target.value
+    localStorage.setItem('USER_DATA_DATABASE', JSON.stringify({...userData, [event.target.name]:value}))
+    
+    setUserData({...userData, [event.target.name]:value})
   }
  
   return (
@@ -110,20 +110,7 @@ export default function BuySketchUpShop({ priceUSD = 119, product = 'SketchUpSho
          acceptCharset="utf-8" 
          action="https://www.liqpay.ua/api/3/checkout"
         >
-      <Box className='textfield_container'>
-        <TextField label='Ф.И.О.' name='name' onChange={handleChangeUserData} required 
-        className='textfield'
-        />
-        <TextField label='Название компании/физлицо' name='company' required onChange={handleChangeUserData} required
-        className='textfield'/>
-        <TextField label='Сайт' required name='website' onChange={handleChangeUserData} required
-        className='textfield'/>
-        <TextField label='E-Mail' required name='email' onChange={handleChangeUserData} required
-        className='textfield'/>
-        <TextField label='Конт. тел.' required name='phone' onChange={handleChangeUserData} required
-        className='textfield'/>
-      </Box>
-
+      <UserDataForm handleChangeUserData={handleChangeUserData} userData={userData}/>
       <Box className='checkbox_container'>
         {currencies.map((item, index) =>
           <Box value={item.currency}

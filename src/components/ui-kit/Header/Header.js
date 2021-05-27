@@ -20,7 +20,9 @@ const routes = {
   FACADES: "/facades",
   SOFT: "/soft",
   EVENTS: "/events",
-  BUYSKETCHUP: "/buy-sketchup"
+  BUYSKETCHUP: "/buy-sketchup",
+  SUCCESS: "/payment-success"
+
 };
 
 const LOGOS = {
@@ -29,7 +31,8 @@ const LOGOS = {
   [routes.FACADES]: logo,
   [routes.SOFT]: logoVille,
   [routes.EVENTS]: logoU,
-  [routes.BUYSKETCHUP]: logoU
+  [routes.BUYSKETCHUP]: logoU,
+  [routes.SUCCESS]: logoU
 };
 
 function Header() {

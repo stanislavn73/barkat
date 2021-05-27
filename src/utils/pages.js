@@ -6,6 +6,7 @@ import SoftPage from "../components/pages/SoftPage";
 import about from "../assets/images/pages/About_us_first.jpg";
 import Eventpage from "../components/pages/EventPage/EventPage";
 import BuySketchUp from "../components/pages/BuySoft/BuySketchUp";
+import PaymentSuccess from "../components/pages/PaymentSuccess";
 
 export const PAGES = [
   {
@@ -79,5 +80,15 @@ export const PAGES = [
     screenTitle: "BuySoft",
     // screenImg: about,
     isMenu: false
-  }  
+  },
+  {
+    id: 10,
+    name: "ОплатаУспешна",
+    route: "/payment-success",
+    page: PaymentSuccess,
+    screenImg: "https://exo.in.ua/images/news/2018/08/new-41279.jpg",
+    screenTitle: "BuySuccess",
+    // screenImg: about,
+    isMenu: false
+  }    
 ];
