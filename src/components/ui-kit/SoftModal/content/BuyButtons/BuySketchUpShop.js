@@ -52,7 +52,8 @@ export default function BuySketchUpShop({ priceUSD = 119, product = 'SketchUpSho
    "amount": `${Math.floor((UahAmount * 100) / 100)}`, 
    "currency": "UAH", 
    "description": `${product}`,
-    "order_id": `${v4()}`
+    "order_id": `${v4()}`,
+    "result_url": "https://barkat-3d-ville.com/payment-success"
   }
 
   useEffect(() => {
