@@ -14,22 +14,22 @@ class Modal extends React.PureComponent {
         phoneNumber: '',
         target: '',
         surname: '',
-        profession: ''
-    }
+        profession: '',
+    };
 
-    handleTextChange = key => e => {
+    handleTextChange = (key) => (e) => {
         this.setState({ [key]: e.target.value });
-    }
+    };
 
     sendData = () => {
         const { onClose, isOpened } = this.props;
 
-        fetch('/call.php', { // eslint-disable-line
+        fetch('/call.php', {
+            // eslint-disable-line
             method: 'POST', // или 'PUT'
-            body: JSON.stringify(this.state) // данные могут быть 'строкой' или {объектом}!
-        }
-        ).then(() => setTimeout(onClose, 1000));
-    }
+            body: JSON.stringify(this.state), // данные могут быть 'строкой' или {объектом}!
+        }).then(() => setTimeout(onClose, 1000));
+    };
 
     render() {
         const { companyName, name, email, phoneNumber, target } = this.state;
@@ -37,18 +37,20 @@ class Modal extends React.PureComponent {
 
         const modalCX = cx({
             'modal-wrapper': true,
-            'modal-wrapper_opened': isOpened
+            'modal-wrapper_opened': isOpened,
         });
 
         return (
             <div className={modalCX}>
                 <div className='modal'>
-                    <Img className='modal-close-icon' src={closeIcon} onClick={onClose} />
+                    <Img
+                        className='modal-close-icon'
+                        src={closeIcon}
+                        onClick={onClose}
+                    />
                     <div className='top-black-line' />
                     <div className='modal-content-wrapper'>
-                        <div className='modal-title'>
-                            Заказать консультацию
-                      </div>
+                        <div className='modal-title'>Заказать консультацию</div>
                         <div className='inputs-wrapper'>
                             <Input
                                 className='modal-input'
@@ -103,9 +105,12 @@ class Modal extends React.PureComponent {
                     </div>
                     <div className='bottom-submit-wrapper'>
                         <div className='submit-wrapper'>
-                            <div className='submit-button' onClick={this.sendData}>
+                            <div
+                                className='submit-button'
+                                onClick={this.sendData}
+                            >
                                 Отправить
-                          </div>
+                            </div>
                         </div>
                         <div className='bottom-black-line' />
                     </div>

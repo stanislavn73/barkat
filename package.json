@@ -37,6 +37,7 @@
     "next-fonts": "^1.4.0",
     "next-images": "^1.6.2",
     "payment-icons": "^1.2.1",
+    "prettier": "^2.3.0",
     "react": "^16.14.0",
     "react-dom": "^16.14.0",
     "react-slick": "^0.25.2",

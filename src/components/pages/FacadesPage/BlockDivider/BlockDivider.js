@@ -3,5 +3,5 @@ import cx from 'classnames';
 import './BlockDivider.less';
 
 export default function Divider({ className }) {
-  return <div className={cx('divider', className)} />
+    return <div className={cx('divider', className)} />;
 }

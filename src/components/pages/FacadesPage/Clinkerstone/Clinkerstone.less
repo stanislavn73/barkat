@@ -1,62 +1,62 @@
-.facades-sixth-block{
-  p{
-    margin-bottom: 15px;
-  }
-
-  .clinkerstone-images-wrapper {
-    margin-bottom: 20px;
-    display: flex;
-
-    @media screen and (max-width: 1024px) {
-      flex-direction: column;
+.facades-sixth-block {
+    p {
+        margin-bottom: 15px;
     }
 
-    .clinkerstone-image-item {
-      width: 30%;
-
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-
-      @media screen and (max-width: 1024px) {
-        height: auto;
-        width: 100%;
-      }
-
-      &:not(:last-child){
-        margin-right: 5px;
+    .clinkerstone-images-wrapper {
+        margin-bottom: 20px;
+        display: flex;
 
         @media screen and (max-width: 1024px) {
-          margin-right: 0px;
-          margin-bottom: 15px;
+            flex-direction: column;
         }
-      }
 
-      img{
-        width: 100%;
-      }
-    } 
-  }
+        .clinkerstone-image-item {
+            width: 30%;
 
-  .clinkerstone-system-wrapper{
-    display: flex;
-    align-items: flex-start;
-    > * {
-      width: 50%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+
+            @media screen and (max-width: 1024px) {
+                height: auto;
+                width: 100%;
+            }
+
+            &:not(:last-child) {
+                margin-right: 5px;
+
+                @media screen and (max-width: 1024px) {
+                    margin-right: 0px;
+                    margin-bottom: 15px;
+                }
+            }
+
+            img {
+                width: 100%;
+            }
+        }
     }
-    .clinkerstone-system{
-      width: 50%;
-      margin-right: 15px;
-      display: flex;
-      flex-direction: column;
 
-      @media screen and (max-width: 1024px) {
-        width: 100%;
-      }
+    .clinkerstone-system-wrapper {
+        display: flex;
+        align-items: flex-start;
+        > * {
+            width: 50%;
+        }
+        .clinkerstone-system {
+            width: 50%;
+            margin-right: 15px;
+            display: flex;
+            flex-direction: column;
 
-      img {
-        width: 100%;
-      }
+            @media screen and (max-width: 1024px) {
+                width: 100%;
+            }
+
+            img {
+                width: 100%;
+            }
+        }
     }
-  }
 }

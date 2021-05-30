@@ -21,67 +21,65 @@ const sketchupItems = [
         title: 'SketchUp Free',
         type: 'SketchUpForInternet',
         text: 'профессиональный инструмент моделирования в веб-браузере',
-        buyIt: true
+        buyIt: true,
     },
     {
         id: 6,
         title: 'SketchUp Shop',
         type: 'SketchUpShop',
         text: 'Программное обеспечение для самостоятельного 3D-моделирования, которое делает проектирование таким же увлекательным, как и строительство',
-        buyIt: true
+        buyIt: true,
     },
     {
-  
         id: 1,
         title: 'SketchUp Pro',
         type: 'SketchUpPro',
         text: 'Профессиональное 3D-моделирование простых объектов',
-        buyIt: true
+        buyIt: true,
     },
     {
         id: 5,
         title: 'SketchUp Studio',
         type: 'SketchUpStudio',
         text: 'Пакет инструментов для профессионального 3D-моделирования, в который входят продукты: SketchUpPro, SketchUp для web, Trimble Connect, Sefaira',
-        buyIt: true
+        buyIt: true,
     },
     {
         id: 7,
         title: 'SketchUp для высшего образования',
         type: 'SketchUpEducation',
         text: 'Все, что нужно для выполнения проекта',
-        buyIt: true
+        buyIt: true,
     },
     {
         id: 4,
         title: 'Trimble Connect',
         type: 'TrimbleConnect',
         text: 'Платформа, которая обеспечивает взаимодействие между участниками строительного проекта и программными инструментами.',
-        buyIt: false
+        buyIt: false,
     },
     {
         id: 2,
         title: 'Extension Warehouse',
         type: 'ExtensionWarehouse',
         text: 'Библиотека пользовательских сторонних расширений',
-        buyIt: false
-    }
-  
-  ];
+        buyIt: false,
+    },
+];
 
 const sketchupDownloadItems = [
     {
         id: 1,
-        text: '3D Warehouse - крупнейшая в мире и самая популярная 3D библиотека'
+        text: '3D Warehouse - крупнейшая в мире и самая популярная 3D библиотека',
     },
     {
         id: 2,
-        text: 'Extension Warehouse - библиотека расширений для моделирования'
+        text: 'Extension Warehouse - библиотека расширений для моделирования',
     },
     {
         id: 3,
-        text: 'Подписка SketchUp Pro. Инструменты, возможности'
-    }
+        text: 'Подписка SketchUp Pro. Инструменты, возможности',
+    },
 ];
 
 class SketchUp extends React.PureComponent {
@@ -89,24 +87,28 @@ class SketchUp extends React.PureComponent {
         return (
             <FullPage min ref={this.block} className='soft-block-wrapper'>
                 <Padded className='soft-block-padded'>
-                    <div className='title-container' >
+                    <div className='title-container'>
                         <div className='soft-block-title'>SketchUp</div>
                         <SocialMedia page='SketchUp' />
                     </div>
                     <PlainText className='soft-plain-text'>
-                        Trimble более 40 лет создает уникальные решения, которые помогают клиентам
-                        развивать свой бизнес. Имея более 2000 уникальных патентов, а также центры
-                        исследований и разработок в более чем 15 странах, Trimble дополняет разработку
-                        своих продуктов стратегическими приобретениями, чтобы вывести новейшие технологии
-                        на более широкий рынок. В портфеле компании передовые решения для эффективной
-                        трансформации таких отраслей, как сельское хозяйство, строительство,
-                        геопространство, транспорт и логистика. Все, что нужно архитектору и дизайнеру
-                        для визуализации идей и удобного черчения, создания энергетически эффективных
-                        зданий и уникальных интерьеров есть в продуктах SketchUp и насчитывает сотни
+                        Trimble более 40 лет создает уникальные решения, которые
+                        помогают клиентам развивать свой бизнес. Имея более 2000
+                        уникальных патентов, а также центры исследований и
+                        разработок в более чем 15 странах, Trimble дополняет
+                        разработку своих продуктов стратегическими
+                        приобретениями, чтобы вывести новейшие технологии на
+                        более широкий рынок. В портфеле компании передовые
+                        решения для эффективной трансформации таких отраслей,
+                        как сельское хозяйство, строительство, геопространство,
+                        транспорт и логистика. Все, что нужно архитектору и
+                        дизайнеру для визуализации идей и удобного черчения,
+                        создания энергетически эффективных зданий и уникальных
+                        интерьеров есть в продуктах SketchUp и насчитывает сотни
                         профессиональных расширений и уникальных инструментов.
-                        </PlainText>
+                    </PlainText>
                     <PlainText className='soft-plain-text'>
-                        <a href="https://www.sketchup.com/">www.sketchup.com</a>
+                        <a href='https://www.sketchup.com/'>www.sketchup.com</a>
                     </PlainText>
                     <div className='soft-items-wrapper'>
                         {sketchupItems.map((item) => (
@@ -114,22 +116,38 @@ class SketchUp extends React.PureComponent {
                                 <Img className='logo' src={sketchupLogo} />
                                 <ModalConsumer>
                                     {({ handleOpenSoftModal }) => (
-                                        <div className='title' onClick={handleOpenSoftModal(item.type)}>
+                                        <div
+                                            className='title'
+                                            onClick={handleOpenSoftModal(
+                                                item.type
+                                            )}
+                                        >
                                             {item.title}
-                                        </div>)}
+                                        </div>
+                                    )}
                                 </ModalConsumer>
                                 <PlainText className='item-text'>
                                     {item.text}
                                 </PlainText>
-                                <div className='button-container' >
-                                    {item.buyIt &&
+                                <div className='button-container'>
+                                    {item.buyIt && (
                                         <Link key='910' href='/buy-sketchup'>
                                             <a>
-                                                <div className='button buyIt' >Купить</div>
+                                                <div className='button buyIt'>
+                                                    Купить
+                                                </div>
                                             </a>
-                                        </Link>}
+                                        </Link>
+                                    )}
                                     <ModalConsumer>
-                                        {({ handleOpenForm }) => <div className='button' onClick={handleOpenForm}>Написать нам</div>}
+                                        {({ handleOpenForm }) => (
+                                            <div
+                                                className='button'
+                                                onClick={handleOpenForm}
+                                            >
+                                                Написать нам
+                                            </div>
+                                        )}
                                     </ModalConsumer>
                                 </div>
                             </div>

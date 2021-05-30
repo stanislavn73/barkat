@@ -8,7 +8,6 @@ import * as thirdIcon from '../../../../assets/images/icons/objectC.png';
 import * as tower from '../../../../assets/images/pages/About_us_fiveth.png';
 import './FivethBlock.less';
 
-
 function ProjectsFivethBlock() {
     const [activeSlide, setActiveSlide] = useState('');
 
@@ -21,29 +20,21 @@ function ProjectsFivethBlock() {
     return (
         <div className='fiveth-wrapper'>
             <FullPage>
-                <div className='title'>
-                    Наши преимущества
-                </div>
+                <div className='title'>Наши преимущества</div>
                 <Padded>
                     <div className='preferences'>
                         <div className='preference-item'>
-                            <div className='preference-text'>
-                                продажи
-                            </div>
+                            <div className='preference-text'>продажи</div>
                             <div className='preference-circle' />
                             <Img src={firstIcon} />
                         </div>
                         <div className='preference-item'>
-                            <div className='preference-text'>
-                                аудит
-                            </div>
+                            <div className='preference-text'>аудит</div>
                             <div className='preference-circle' />
                             <Img src={secondIcon} />
                         </div>
                         <div className='preference-item'>
-                            <div className='preference-text'>
-                                внедрение
-                            </div>
+                            <div className='preference-text'>внедрение</div>
                             <div className='preference-circle' />
                             <Img src={thirdIcon} />
                         </div>
@@ -51,18 +42,18 @@ function ProjectsFivethBlock() {
                     <div className='preferences-image'>
                         <div className='preference-text-wrapper'>
                             <div className='top-part' />
-                            <div className='bottom-part' >
-                                <div className='text' >
+                            <div className='bottom-part'>
+                                <div className='text'>
                                     коммерческий директор группы компаний
                                 </div>
                             </div>
                             <div className='text'>
-                                Если бизнес партнера стал более ефективный - это наивысшая оценка для нас
+                                Если бизнес партнера стал более ефективный - это
+                                наивысшая оценка для нас
                             </div>
-                            <div className='subtext'>
-                                Александр Баркат
-                            </div><br /><br />
-
+                            <div className='subtext'>Александр Баркат</div>
+                            <br />
+                            <br />
                         </div>
                         <Img src={tower} />
                     </div>

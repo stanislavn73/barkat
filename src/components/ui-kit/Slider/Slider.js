@@ -10,29 +10,29 @@ import * as prevArrowImg from '../../../assets/images/slider/prevArrow.png';
 import './Slider.less';
 
 class SliderComponent extends React.PureComponent {
-
     state = {
         currentSlide: 0,
-    }
+    };
 
-    
     handleSlide = (type) => () => {
         if (type === 'right') {
             this.slick.slickNext();
         } else {
             this.slick.slickPrev();
         }
-    }
+    };
 
     titlesControl = () => {
-        const {titlesControl} = this.props;
+        const { titlesControl } = this.props;
 
-        return titlesControl.find(rule => rule.titles.includes(this.state.currentSlide))
-    }
+        return titlesControl.find((rule) =>
+            rule.titles.includes(this.state.currentSlide)
+        );
+    };
 
-    handleTitleClick = link => () => {
+    handleTitleClick = (link) => () => {
         Router.push(link);
-    }
+    };
 
     settings = {
         dots: false,
@@ -44,7 +44,7 @@ class SliderComponent extends React.PureComponent {
         autoplay: true,
         pauseOnHover: false,
         autoplaySpeed: 4000,
-        beforeChange: (...a) => this.setState({ currentSlide: a[1]}),
+        beforeChange: (...a) => this.setState({ currentSlide: a[1] }),
     };
 
     render() {
@@ -53,27 +53,33 @@ class SliderComponent extends React.PureComponent {
 
         return (
             <div className='slider-wrapper'>
-                {title && <div className='slider-title-wrapper'>
-                    <div className='slider-title-content-wrapper'>
-                        <div className='slider-title' onClick={this.handleTitleClick(link)}>
-                            {title}
-                        </div>
-                        <div className='slider-subtitle'>
-                            {subTitle}
+                {title && (
+                    <div className='slider-title-wrapper'>
+                        <div className='slider-title-content-wrapper'>
+                            <div
+                                className='slider-title'
+                                onClick={this.handleTitleClick(link)}
+                            >
+                                {title}
+                            </div>
+                            <div className='slider-subtitle'>{subTitle}</div>
                         </div>
                     </div>
-                </div>}
+                )}
                 <div className='arrow left' onClick={this.handleSlide('left')}>
                     <Img src={prevArrowImg} />
                 </div>
-                <Slider {...this.settings} ref={node => this.slick = node} >
-                    {slides.map(slide => (
+                <Slider {...this.settings} ref={(node) => (this.slick = node)}>
+                    {slides.map((slide) => (
                         <div className='slider-item' key={slide}>
                             <Img src={slide} />
                         </div>
                     ))}
                 </Slider>
-                <div className='arrow right' onClick={this.handleSlide('right')}>
+                <div
+                    className='arrow right'
+                    onClick={this.handleSlide('right')}
+                >
                     <Img src={nextArrowImg} />
                 </div>
             </div>

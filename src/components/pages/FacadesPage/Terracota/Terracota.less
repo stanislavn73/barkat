@@ -1,66 +1,66 @@
-.terracota-block{
-  p{
-    margin-bottom: 15px;
-  }
-
-  .terracota-images-wrapper {
-    margin-bottom: 20px;
-    display: flex;
-
-    @media screen and (max-width: 1024px) {
-      flex-direction: column;
+.terracota-block {
+    p {
+        margin-bottom: 15px;
     }
 
-    .terracota-image-item {
-      width: 50%;
-
-      @media screen and (max-width: 1024px) {
-        width: 100%;
-      }
-    
-      &:not(:last-child){
-        margin-right: 5px;
+    .terracota-images-wrapper {
+        margin-bottom: 20px;
+        display: flex;
 
         @media screen and (max-width: 1024px) {
-          margin-right: 0px;
-          margin-bottom: 15px;
+            flex-direction: column;
         }
-      }
 
-      img{
-        width: 100%;
-      }
+        .terracota-image-item {
+            width: 50%;
+
+            @media screen and (max-width: 1024px) {
+                width: 100%;
+            }
+
+            &:not(:last-child) {
+                margin-right: 5px;
+
+                @media screen and (max-width: 1024px) {
+                    margin-right: 0px;
+                    margin-bottom: 15px;
+                }
+            }
+
+            img {
+                width: 100%;
+            }
+        }
+
+        .terracota-download-item {
+            padding-left: 30px;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: center;
+
+            @media screen and (max-width: 1024px) {
+                padding-left: 0px;
+            }
+        }
     }
-    
-    .terracota-download-item {
-      padding-left: 30px;
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start;
-      justify-content: center;
 
-      @media screen and (max-width: 1024px) {
-        padding-left: 0px;
-      }
+    .terracota-system-wrapper {
+        display: flex;
+        align-items: flex-start;
+
+        > * {
+            width: 50%;
+        }
+        .terracota-system {
+            width: 50%;
+            margin-right: 15px;
+            display: flex;
+            flex-direction: column;
+
+            img {
+                width: 100%;
+            }
+        }
     }
-  }
-
-  .terracota-system-wrapper{
-    display: flex;
-    align-items: flex-start;
-
-    > * {
-      width: 50%;
-    }
-    .terracota-system{
-      width: 50%;
-      margin-right: 15px;
-      display: flex;
-      flex-direction: column;
-
-      img {
-        width: 100%;
-      }
-    }
-  }
 }

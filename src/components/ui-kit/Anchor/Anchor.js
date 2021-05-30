@@ -2,7 +2,6 @@ import React, { useEffect } from 'react';
 import { Waypoint } from 'react-waypoint';
 
 function Anchor({ onPositionChange, id, children }) {
-
     function handlePositionChange(key) {
         return (data) => {
             if (data.currentPosition === 'inside') {
@@ -18,9 +17,7 @@ function Anchor({ onPositionChange, id, children }) {
             topOffset={'49%'}
             onPositionChange={handlePositionChange(id)}
         >
-            <div id={id}>
-                {children}
-            </div>
+            <div id={id}>{children}</div>
         </Waypoint>
     );
 }

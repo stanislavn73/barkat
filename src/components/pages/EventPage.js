@@ -6,21 +6,18 @@ import { HeaderThumb } from '../ui-kit/Header';
 import PageImageTitle from '../ui-kit/PageImageTitle/PageImageTitle';
 import * as backgroundImage from '../../assets/images/slider/projects/1.4.jpg';
 import Img from '../ui-kit/Img';
-import "./EventPage.less";
+import './EventPage.less';
 
 class Eventpage extends React.PureComponent {
-
-  render() {
-
-    return (
-      <>
-        <FullPage>
-        <Img src={backgroundImage} className='background-image' />
-
-        </FullPage>
-      </>
-    );
-  }
+    render() {
+        return (
+            <>
+                <FullPage>
+                    <Img src={backgroundImage} className='background-image' />
+                </FullPage>
+            </>
+        );
+    }
 }
 
 export default Eventpage;

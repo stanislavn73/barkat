@@ -14,19 +14,21 @@ function ProjectsFirstScreen() {
             <PageImageTitle
                 src={backgroundImage}
                 title={screenTitle}
-                subTitle={'Решения из портфеля Barkat-Stein установлены и внедрены в ряде компаний и объектов,\
+                subTitle={
+                    'Решения из портфеля Barkat-Stein установлены и внедрены в ряде компаний и объектов,\
                 что у всех «на слуху» в различных сферах промышленности: от вент.фасадов и\
                 инженерного оборудования на знаковых объектах гражданского и коммерческого\
                 строительства до таких софтовыех решений как: - «Digital Rock / Unified Reservoir» (в\
                 нафтегазовой отрасли), - «BIM Level 3» (в строительстве), - «3DExperience» (в машино- и\
                 авиастроение), - «Virtual Factory» (в производственных отраслях), - «3D-Печать» (в\
-                цифровом аддитивном производстве), «GEOMEDIA» (системы агромониторинга)'}
+                цифровом аддитивном производстве), «GEOMEDIA» (системы агромониторинга)'
+                }
             />
             <div className='black-bottom-line'>
                 <div className='padded'>
                     <div className='thumb-content-wrapper'>
                         <div>asd</div>
-                        <div className='title-flag' >
+                        <div className='title-flag'>
                             <div>О нас</div>
                         </div>
                     </div>

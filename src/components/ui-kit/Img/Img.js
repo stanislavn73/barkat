@@ -1,10 +1,7 @@
-import React from 'react'
-
+import React from 'react';
 
 export default function Img({ src, className, ...rest }) {
-    return (
-        <img src={src} className={className} {...rest} loading='lazy' />
-    );
+    return <img src={src} className={className} {...rest} loading='lazy' />;
 }
 // class Img extends React.Component {
 //   state = {

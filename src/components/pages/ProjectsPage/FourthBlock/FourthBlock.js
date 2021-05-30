@@ -7,7 +7,6 @@ import projects from '../../../../utils/projects';
 
 import './FourthBlock.less';
 
-
 function ProjectsFourthBlock() {
     return (
         <FullPage>

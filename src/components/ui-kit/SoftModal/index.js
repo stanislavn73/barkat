@@ -1,1 +1,1 @@
-export { default } from './SoftModal'
+export { default } from './SoftModal';

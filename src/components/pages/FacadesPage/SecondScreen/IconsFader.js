@@ -6,8 +6,8 @@ class IconsFader extends React.PureComponent {
     state = {
         order: 0,
         fadeIn: false,
-        fadeOut: false
-    }
+        fadeOut: false,
+    };
 
     componentDidMount = () => {
         const icons = this.props.children;
@@ -20,15 +20,18 @@ class IconsFader extends React.PureComponent {
             },
             delay ? delay : 0
         );
-    }
+    };
 
     handleChangeOrder = () => {
         const icons = this.props.children;
 
-        this.setState(prev => ({ order: (prev.order + 1) % icons.length, fadeIn: true }));
+        this.setState((prev) => ({
+            order: (prev.order + 1) % icons.length,
+            fadeIn: true,
+        }));
 
         setTimeout(() => this.setState({ fadeIn: false }), 3500);
-    }
+    };
 
     render() {
         const { order, fadeIn } = this.state;
@@ -36,14 +39,10 @@ class IconsFader extends React.PureComponent {
         const Item = this.props.children[order];
         const fadeCX = cx({
             'fade-default': true,
-            'fade-in': fadeIn
+            'fade-in': fadeIn,
         });
 
-        return (
-            <div className={fadeCX}>
-                {Item}
-            </div>
-        );
+        return <div className={fadeCX}>{Item}</div>;
     }
 }
 

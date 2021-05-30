@@ -3,20 +3,12 @@ import cx from 'classnames';
 
 import './Title.less';
 
-
 function Title({ children, className }) {
-    const titleCX = cx(
-        'title-kit',
-        {
-            [className]: className
-        }
-    );
+    const titleCX = cx('title-kit', {
+        [className]: className,
+    });
 
-    return (
-        <div className={titleCX}>
-            {children}
-        </div>
-    );
+    return <div className={titleCX}>{children}</div>;
 }
 
 export default React.memo(Title);

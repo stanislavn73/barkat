@@ -3,7 +3,7 @@ import Slider from '../ui-kit/Slider/Slider';
 import FullPage from '../ui-kit/FullPage';
 import { HeaderThumb } from '../ui-kit/Header';
 import { mainSlides } from '../../utils/slider';
-import "./HomePage.less";
+import './HomePage.less';
 
 const titlesRules = [
     {
@@ -30,14 +30,13 @@ const titlesRules = [
         subTitle: 'Making Farmers Digital',
         link: '/agro-solutions',
     },
-]
+];
 
 function HomePage() {
-
     return (
         <>
             <HeaderThumb />
-            <FullPage className="home-full-page">
+            <FullPage className='home-full-page'>
                 <Slider
                     title='Barkat Stein'
                     slides={mainSlides}

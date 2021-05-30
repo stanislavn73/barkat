@@ -13,7 +13,7 @@ const ArrowWrapper = styled.div`
     position: absolute;
     z-index: 40;
     top: 20px;
-    background: rgba(255,255,255,0.6);
+    background: rgba(255, 255, 255, 0.6);
     display: flex;
     padding: 20px 20px 20px 40px;
     align-items: center;
@@ -34,12 +34,11 @@ const Arrow = styled.img`
 class ProjectPage extends React.PureComponent {
     handleGoBack = () => {
         this.props.history.goBack();
-    }
+    };
 
     render() {
-
         const id = this.props.match.params.id;
-        const project = projects.find(project => project.id === id);
+        const project = projects.find((project) => project.id === id);
         const slides = project.images;
         const title = project.title;
         const location = project.location;
@@ -51,7 +50,9 @@ class ProjectPage extends React.PureComponent {
                 </ArrowWrapper>
                 <Slider
                     fullsize
-                    title={title} subTitle={location} slides={slides}
+                    title={title}
+                    subTitle={location}
+                    slides={slides}
                     maxHeight={window.innerHeight + 3}
                 />
             </Wrapper>

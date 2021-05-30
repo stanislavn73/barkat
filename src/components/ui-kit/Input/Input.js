@@ -5,21 +5,26 @@ import './Input.less';
 function Input({ onChange, title, className, multiline, value }) {
     const inputWrapperCx = cx({
         'input-wrapper': true,
-        [className]: className
+        [className]: className,
     });
 
     return (
-        <div className={inputWrapperCx} >
-            <div className='input-title'>
-                {title}
-            </div>
-            {!multiline ?
+        <div className={inputWrapperCx}>
+            <div className='input-title'>{title}</div>
+            {!multiline ? (
                 <input
-                    value={value} type='text' className='input'
+                    value={value}
+                    type='text'
+                    className='input'
                     onChange={onChange}
                 />
-                : <textarea value={value} className='textarea' onChange={onChange} />
-            }
+            ) : (
+                <textarea
+                    value={value}
+                    className='textarea'
+                    onChange={onChange}
+                />
+            )}
         </div>
     );
 }

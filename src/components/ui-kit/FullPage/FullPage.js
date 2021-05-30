@@ -4,19 +4,12 @@ import cx from 'classnames';
 import './FullPage.less';
 
 function FullPage({ children, min, className }) {
-    const fullPageCX = cx(
-        'full-page',
-        {
-            'full-page-freed': min,
-            [className]: className
-        }
-    );
+    const fullPageCX = cx('full-page', {
+        'full-page-freed': min,
+        [className]: className,
+    });
 
-    return (
-        <div className={fullPageCX}>
-            {children}
-        </div>
-    );
+    return <div className={fullPageCX}>{children}</div>;
 }
 
 export default FullPage;

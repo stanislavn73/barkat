@@ -11,35 +11,35 @@ import FifthBlock from './FifthBlock';
 
 const anchors = [
     {
-        id    : 'first',
-        title : 'Наши проекты'
+        id: 'first',
+        title: 'Наши проекты',
     },
     {
-        id    : 'second',
-        title : 'О нас'
+        id: 'second',
+        title: 'О нас',
     },
     {
-        id    : 'third',
-        title : 'Продукция'
+        id: 'third',
+        title: 'Продукция',
     },
     {
-        id    : 'fourth',
-        title : 'Проекты'
+        id: 'fourth',
+        title: 'Проекты',
     },
     {
-        id    : 'fifth',
-        title : 'Преимущества'
-    }
+        id: 'fifth',
+        title: 'Преимущества',
+    },
 ];
 
 class ProjectsPage extends React.PureComponent {
-    state={
-        activeAnchor : 'first'
-    }
+    state = {
+        activeAnchor: 'first',
+    };
 
     handleAnchorReact = (id) => {
         this.setState({ activeAnchor: id });
-    }
+    };
 
     render() {
         const { activeAnchor } = this.state;

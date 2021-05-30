@@ -1,1 +1,1 @@
-export { default } from './OpenModalButton'
+export { default } from './OpenModalButton';

@@ -8,7 +8,6 @@
 // import * as tower from '../../../../assets/images/pages/About_us_fiveth.png';
 // import './FivethBlock.less';
 
-
 // function ProjectsFivethBlock() {
 //     const [activeSlide, setActiveSlide] = useState('');
 

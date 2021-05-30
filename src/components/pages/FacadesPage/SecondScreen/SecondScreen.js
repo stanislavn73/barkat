@@ -18,7 +18,7 @@ class ProjectsSecondScreen extends React.PureComponent {
             <FullPage min ref={this.block} className='facades-second-wrapper'>
                 <Img src={backgroundImage} className='back' />
                 <IconsFader>
-                    {facadesIcons.slice(0, 3).map(el => (
+                    {facadesIcons.slice(0, 3).map((el) => (
                         <div className='icon-wrapper' key={el.icon.src}>
                             <Img src={el.icon} className='icon' />
                             <div>{el.text}</div>
@@ -26,7 +26,7 @@ class ProjectsSecondScreen extends React.PureComponent {
                     ))}
                 </IconsFader>
                 <IconsFader delay={1000}>
-                    {facadesIcons.slice(3, 6).map(el => (
+                    {facadesIcons.slice(3, 6).map((el) => (
                         <div className='icon-wrapper' key={el.icon.src}>
                             <Img src={el.icon} className='icon' />
                             <div>{el.text}</div>
@@ -34,7 +34,7 @@ class ProjectsSecondScreen extends React.PureComponent {
                     ))}
                 </IconsFader>
                 <IconsFader delay={2000}>
-                    {facadesIcons.slice(6, 9).map(el => (
+                    {facadesIcons.slice(6, 9).map((el) => (
                         <div className='icon-wrapper' key={el.icon.src}>
                             <Img src={el.icon} className='icon' />
                             <div>{el.text}</div>
@@ -42,7 +42,7 @@ class ProjectsSecondScreen extends React.PureComponent {
                     ))}
                 </IconsFader>
                 <IconsFader delay={3000}>
-                    {facadesIcons.slice(9, 12).map(el => (
+                    {facadesIcons.slice(9, 12).map((el) => (
                         <div className='icon-wrapper' key={el.icon.src}>
                             <Img src={el.icon} className='icon' />
                             <div className='text'>{el.text}</div>

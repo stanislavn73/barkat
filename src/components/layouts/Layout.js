@@ -15,44 +15,60 @@ class Layout extends React.Component {
         isMenuOpened: true,
         isModalOpened: false,
         isSoftModalOpened: false,
-        softModalCode: null
-    }
+        softModalCode: null,
+    };
 
     handleCloseModal = () => {
         this.setState({ isModalOpened: false });
-    }
+    };
 
     handleOpenModal = (comment) => {
         this.setState({
-             isModalOpened: true
-            });
-    }
+            isModalOpened: true,
+        });
+    };
 
-    handleOpenSoftModal = code => () => {
+    handleOpenSoftModal = (code) => () => {
         this.setState({
             isSoftModalOpened: true,
-            softModalCode: code
-        })
-    }
+            softModalCode: code,
+        });
+    };
 
     handleCloseSoftModal = () => {
         this.setState({
             isSoftModalOpened: false,
-            softModalCode: null
-        })
-    }
+            softModalCode: null,
+        });
+    };
 
     render() {
-        const { isMenuOpened, isModalOpened, isSoftModalOpened, softModalCode, comment } = this.state;
+        const {
+            isMenuOpened,
+            isModalOpened,
+            isSoftModalOpened,
+            softModalCode,
+            comment,
+        } = this.state;
 
         return (
             <>
-                <Provider value={{
-                    handleOpenForm: this.handleOpenModal,
-                    handleOpenSoftModal: this.handleOpenSoftModal
-                }} >
-                    <Modal isOpened={isModalOpened} onClose={this.handleCloseModal} comment={comment}/>
-                    <SoftModal type={softModalCode} isOpened={isSoftModalOpened} onClose={this.handleCloseSoftModal} />
+                <Provider
+                    value={{
+                        handleOpenForm: this.handleOpenModal,
+                        handleOpenSoftModal: this.handleOpenSoftModal,
+                    }}
+                >
+                    <Modal
+                        isOpened={isModalOpened}
+                        onClose={this.handleCloseModal}
+                        comment={comment}
+                    />
+                    <SoftModal
+                        type={softModalCode}
+                        isOpened={isSoftModalOpened}
+                        onClose={this.handleCloseSoftModal}
+                    />
                     <Header />
                     {this.props.children}
                     <Footer page={this.props.page} />

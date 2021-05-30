@@ -1,20 +1,22 @@
 import React, { PureComponent } from 'react';
 import styled from 'styled-components';
-import {
-    Link
-} from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { Waypoint } from 'react-waypoint';
 
 const Wow = styled.div`
-  transition: 0.6s; 
-  transform: translate3D(0, ${props => props.isVisible ? '0px' : '100px'}, 0);
-  opacity: ${props => props.isVisible ? '1' : '0'};
+    transition: 0.6s;
+    transform: translate3D(
+        0,
+        ${(props) => (props.isVisible ? '0px' : '100px')},
+        0
+    );
+    opacity: ${(props) => (props.isVisible ? '1' : '0')};
 `;
 
 class WowBlock extends React.PureComponent {
     state = {
-        visible: false
-    }
+        visible: false,
+    };
 
     handleSetVisible = () => {
         if (this.state.visible) return;
@@ -32,10 +34,12 @@ class WowBlock extends React.PureComponent {
         const { visible } = this.state;
 
         return (
-            <Waypoint bottomOffset={'30%'} topOffset={'49%'} onEnter={this.handleSetVisible}>
-                <Wow isVisible={visible}>
-                    {this.props.children}
-                </Wow>
+            <Waypoint
+                bottomOffset={'30%'}
+                topOffset={'49%'}
+                onEnter={this.handleSetVisible}
+            >
+                <Wow isVisible={visible}>{this.props.children}</Wow>
             </Waypoint>
         );
     }

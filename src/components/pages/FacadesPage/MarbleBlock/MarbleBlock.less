@@ -1,96 +1,95 @@
-.facades-sixth-block{
-  p{
-    margin-bottom: 15px;
-    font-size: 20px;
-  }
-
-  .mable-horizontal-wrapper {
-    display: flex;
-
-    @media screen and (max-width: 1024px) {
-      flex-direction: column;
+.facades-sixth-block {
+    p {
+        margin-bottom: 15px;
+        font-size: 20px;
     }
 
-    > div {
-      width: 33%;
-
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-
-      @media screen and (max-width: 1024px) {
-        height: auto;
-        width: 100%;
-      }
-
-      &:not(:last-child){
-        margin-right: 5px;
+    .mable-horizontal-wrapper {
+        display: flex;
 
         @media screen and (max-width: 1024px) {
-          margin-right: 0;
-          margin-bottom: 15px;
+            flex-direction: column;
         }
-      }
+
+        > div {
+            width: 33%;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+
+            @media screen and (max-width: 1024px) {
+                height: auto;
+                width: 100%;
+            }
+
+            &:not(:last-child) {
+                margin-right: 5px;
+
+                @media screen and (max-width: 1024px) {
+                    margin-right: 0;
+                    margin-bottom: 15px;
+                }
+            }
+        }
+
+        .marble-image-item {
+            width: 100% !important;
+        }
     }
 
-    .marble-image-item {
-      width: 100% !important;
-    }
-  }
-
-  .marble-images-wrapper {
-    margin-bottom: 20px;
-    display: flex;
-
-    @media screen and (max-width: 1024px) {
-      flex-direction: column;
-    }
-
-    .marble-image-item {
-      height: 100%;
-      width: 33%;
-
-      @media screen and (max-width: 1024px) {
-        height: auto;
-        width: 100%;
-      }
-  
-
-      &:not(:last-child){
-        margin-right: 5px;
+    .marble-images-wrapper {
+        margin-bottom: 20px;
+        display: flex;
 
         @media screen and (max-width: 1024px) {
-          margin-right: 0;
-          margin-bottom: 15px;
+            flex-direction: column;
         }
-      }
 
-      .marble-download-catalog {
-        margin: auto auto auto 50px;
-      }
+        .marble-image-item {
+            height: 100%;
+            width: 33%;
 
-      img{
-        width: 100%;
-      }
-    } 
-  }
+            @media screen and (max-width: 1024px) {
+                height: auto;
+                width: 100%;
+            }
 
-  .marble-system-wrapper{
-    display: flex;
-    align-items: flex-start;
+            &:not(:last-child) {
+                margin-right: 5px;
 
-    > * {
-      width: 50%;
+                @media screen and (max-width: 1024px) {
+                    margin-right: 0;
+                    margin-bottom: 15px;
+                }
+            }
+
+            .marble-download-catalog {
+                margin: auto auto auto 50px;
+            }
+
+            img {
+                width: 100%;
+            }
+        }
     }
-    .marble-system{
-      width: 50%;
-      margin-right: 15px;
-      display: flex;
-      flex-direction: column;
 
-      img {
-        width: 100%;
-      }
+    .marble-system-wrapper {
+        display: flex;
+        align-items: flex-start;
+
+        > * {
+            width: 50%;
+        }
+        .marble-system {
+            width: 50%;
+            margin-right: 15px;
+            display: flex;
+            flex-direction: column;
+
+            img {
+                width: 100%;
+            }
+        }
     }
-  }
 }

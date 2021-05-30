@@ -4,7 +4,6 @@ import Input from '../Input';
 import Img from '../Img';
 import { init, send } from 'emailjs-com';
 
-
 import * as closeIcon from '../../../assets/images/icons/close.png';
 import './Modal.less';
 
@@ -16,34 +15,32 @@ class Modal extends React.PureComponent {
         profession: '',
         email: '',
         phoneNumber: '',
-        target: ''
-    }
+        target: '',
+    };
     myRef = React.createRef();
     componentDidMount() {
-        init("user_8J36WovfcyvCTVUlGVgez")
-
+        init('user_8J36WovfcyvCTVUlGVgez');
     }
-    handleTextChange = key => e => {
+    handleTextChange = (key) => (e) => {
         this.setState({ [key]: e.target.value });
-    }
+    };
 
     sendData = () => {
-        this.myRef.current.innerText = 'Отправка...'
-        const serviceId = 'service_2gxgl7t'
+        this.myRef.current.innerText = 'Отправка...';
+        const serviceId = 'service_2gxgl7t';
         const templateId = 'template_9dlnssp';
-        this.sendFeedback(serviceId, templateId, this.state)
-    }
+        this.sendFeedback(serviceId, templateId, this.state);
+    };
 
     sendFeedback(serviceId, templateId, data) {
-        send(
-            serviceId, templateId,
-            {
-                ...data,
-                to_email: 'Julia@barkat-3d-ville.com',
-                to_email1: 'Sergii@barkat-3d-ville.com',
-            }).then(response => {
+        send(serviceId, templateId, {
+            ...data,
+            to_email: 'Julia@barkat-3d-ville.com',
+            to_email1: 'Sergii@barkat-3d-ville.com',
+        })
+            .then((response) => {
                 if (response.status === 200) {
-                    this.myRef.current.innerText = 'Отправлено!'
+                    this.myRef.current.innerText = 'Отправлено!';
                     this.setState({
                         name: '',
                         surname: '',
@@ -52,46 +49,50 @@ class Modal extends React.PureComponent {
                         email: '',
                         phoneNumber: '',
                         target: '',
-                    })
+                    });
                     setTimeout(() => {
-                        this.props.onClose()
-                        this.myRef.current.innerText = 'Отправить'
-                    }, 1500)
+                        this.props.onClose();
+                        this.myRef.current.innerText = 'Отправить';
+                    }, 1500);
                 }
             })
             .catch(() => {
-                this.myRef.current.innerText = 'Ошибка! Плохое соединение'
+                this.myRef.current.innerText = 'Ошибка! Плохое соединение';
                 setTimeout(() => {
-                    this.props.onClose()
-                    this.myRef.current.innerText = 'Отправить'
-                }, 1500)
-            })
+                    this.props.onClose();
+                    this.myRef.current.innerText = 'Отправить';
+                }, 1500);
+            });
     }
 
     render() {
-        const { name,
+        const {
+            name,
             surname,
             companyName,
             profession,
             email,
             phoneNumber,
-            target } = this.state;
+            target,
+        } = this.state;
         const { onClose, isOpened } = this.props;
 
         const modalCX = cx({
             'modal-wrapper': true,
-            'modal-wrapper_opened': isOpened
+            'modal-wrapper_opened': isOpened,
         });
 
         return (
             <div className={modalCX}>
-                <div className='modal' >
-                    <Img className='modal-close-icon' src={closeIcon} onClick={onClose} />
+                <div className='modal'>
+                    <Img
+                        className='modal-close-icon'
+                        src={closeIcon}
+                        onClick={onClose}
+                    />
                     <div className='top-black-line' />
                     <div className='modal-content-wrapper'>
-                        <div className='modal-title'>
-                            Заказать консультацию
-                      </div>
+                        <div className='modal-title'>Заказать консультацию</div>
                         <div className='inputs-wrapper'>
                             <Input
                                 className='modal-input'
@@ -146,9 +147,13 @@ class Modal extends React.PureComponent {
                     </div>
                     <div className='bottom-submit-wrapper'>
                         <div className='submit-wrapper'>
-                            <div className='submit-button' onClick={this.sendData} ref={this.myRef} >
+                            <div
+                                className='submit-button'
+                                onClick={this.sendData}
+                                ref={this.myRef}
+                            >
                                 Отправить
-                          </div>
+                            </div>
                         </div>
                         <div className='bottom-black-line' />
                     </div>
