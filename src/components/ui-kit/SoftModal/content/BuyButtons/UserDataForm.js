@@ -5,6 +5,7 @@ const UserDataForm = ({ handleChangeUserData, userData }) => {
     return (
         <Box className='textfield_container'>
             <TextField
+                autoFocus
                 label='Ф.И.О.'
                 name='name'
                 onChange={handleChangeUserData}
@@ -13,6 +14,7 @@ const UserDataForm = ({ handleChangeUserData, userData }) => {
                 value={userData.name}
             />
             <TextField
+                autoFocus
                 label='Название компании/физлицо'
                 name='company'
                 required
@@ -22,6 +24,7 @@ const UserDataForm = ({ handleChangeUserData, userData }) => {
                 value={userData.company}
             />
             <TextField
+                autoFocus
                 label='Сайт'
                 required
                 name='website'
@@ -31,6 +34,7 @@ const UserDataForm = ({ handleChangeUserData, userData }) => {
                 value={userData.website}
             />
             <TextField
+                autoFocus
                 label='E-Mail'
                 required
                 name='email'
@@ -40,6 +44,7 @@ const UserDataForm = ({ handleChangeUserData, userData }) => {
                 value={userData.email}
             />
             <TextField
+                autoFocus
                 label='Конт. тел.'
                 required
                 name='phone'
