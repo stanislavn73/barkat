@@ -59,7 +59,15 @@ export const rows = [
         checkMark
     ),
     createData(
-        'V-Ray (Интеративный метод)',
+        ['Sefaira', '(энергетический анализ)'],
+        closeMark,
+        closeMark,
+        closeMark,
+        closeMark,
+        checkMark
+    ),
+    createData(
+        ['V-Ray', '(интеративный рендер)'],
         closeMark,
         closeMark,
         closeMark,
@@ -67,7 +75,7 @@ export const rows = [
         checkMark
     ),
     createData(
-        'Scan Essentials (работа с облаками точек)',
+        ['Scan Essentials', '(работа с облаками точек)'],
         closeMark,
         closeMark,
         closeMark,
@@ -75,14 +83,21 @@ export const rows = [
         checkMark
     ),
     createData(
-        'Scan Essentials (профессиональная документация)',
-        closeMark,
+        ['PreDesign', '(инструмент для анализа погодных условий)'],
         closeMark,
         closeMark,
         checkMark,
+        checkMark,
         checkMark
     ),
-    createData('LayOut', closeMark, closeMark, checkMark, checkMark, checkMark),
+    createData(
+        ['LayOut', '(профессиональные чертежи)'],
+        closeMark,
+        closeMark,
+        checkMark,
+        checkMark,
+        checkMark
+    ),
     createData(
         'Облачное хранилище',
         '10 ГБ Trimble Connect',

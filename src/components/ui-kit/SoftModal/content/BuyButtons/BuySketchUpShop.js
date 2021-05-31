@@ -1,12 +1,12 @@
-import React, { useEffect, useState } from 'react';
-import Radio from '@material-ui/core/Radio';
-import { Checkbox, TextField, Box } from '@material-ui/core';
-import { ModalConsumer } from '../../../../layouts/Layout';
-import CryptoJS from 'crypto-js';
-import { currencies } from './currencies';
-import './BuySketchUpShop.less';
-import { v4 } from 'uuid';
-import UserDataForm from './UserDataForm';
+import React, { useEffect, useState } from 'react'
+import Radio from '@material-ui/core/Radio'
+import { Checkbox, TextField, Box } from '@material-ui/core'
+import { ModalConsumer } from '../../../../layouts/Layout'
+import CryptoJS from 'crypto-js'
+import { currencies } from './currencies'
+import './BuySketchUpShop.less'
+import { v4 } from 'uuid'
+import UserDataForm from './UserDataForm'
 
 function UserAgreementLink() {
     return (
@@ -23,7 +23,7 @@ function UserAgreementLink() {
                 </span>
             )}
         </ModalConsumer>
-    );
+    )
 }
 
 const initialUserData = {
@@ -32,7 +32,7 @@ const initialUserData = {
     website: '',
     email: '',
     phone: '',
-};
+}
 
 const errors = {
     name: '',
@@ -40,22 +40,22 @@ const errors = {
     website: '',
     email: '',
     phone: '',
-};
+}
 
 export default function BuySketchUpShop({
     priceUSD = 119,
     product = 'SketchUpShop',
 }) {
-    const [UahAmount, setUahAmount] = useState(priceUSD);
-    const [selectedValue, setSelectedValue] = useState('USD');
-    const [currentAmount, setCurentAmount] = useState(priceUSD);
-    const [userAgreementCheckbox, setUserAgreementCheckbox] = useState(false);
-    const [hashedValue, setHashedValue] = useState([]);
+    const [UahAmount, setUahAmount] = useState(priceUSD)
+    const [selectedValue, setSelectedValue] = useState('USD')
+    const [currentAmount, setCurentAmount] = useState(priceUSD)
+    const [userAgreementCheckbox, setUserAgreementCheckbox] = useState(false)
+    const [hashedValue, setHashedValue] = useState([])
     const [userData, setUserData] = useState(
         localStorage.getItem('USER_DATA_DATABASE') || initialUserData
-    );
+    )
 
-    const private_key = 'sandbox_TnTWGwuz2FxuZDW8wOhJAANTGhWe3DqRAMD1Iolq';
+    const private_key = 'sandbox_TnTWGwuz2FxuZDW8wOhJAANTGhWe3DqRAMD1Iolq'
     const json_string = {
         public_key: 'sandbox_i47920969914',
         version: '3',
@@ -65,57 +65,58 @@ export default function BuySketchUpShop({
         description: `${product}`,
         order_id: `${v4()}`,
         result_url: 'https://barkat-3d-ville.com/payment-success',
-    };
+    }
 
     useEffect(() => {
-        const UAH_CURENCY = `https://free.currconv.com/api/v7/convert?q=USD_UAH&compact=ultra&apiKey=085850969420940b790b`;
+        const UAH_CURENCY = `https://free.currconv.com/api/v7/convert?q=USD_UAH&compact=ultra&apiKey=085850969420940b790b`
         fetch(UAH_CURENCY)
-            .then((response) => response.json())
-            .then((data) => {
-                setUahAmount(data['USD_UAH'] * priceUSD);
-            });
-        const savedData = localStorage.getItem('USER_DATA_DATABASE');
-        if (savedData) setUserData(JSON.parse(savedData));
-    }, []);
+            .then(response => response.json())
+            .then(data => {
+                setUahAmount(data['USD_UAH'] * priceUSD)
+            })
+        const savedData = localStorage.getItem('USER_DATA_DATABASE')
+        if (savedData) setUserData(JSON.parse(savedData))
+    }, [])
 
     useEffect(() => {
-        generateHash(json_string);
-    }, [UahAmount]);
+        generateHash(json_string)
+    }, [UahAmount])
 
     function generateHash(json_string) {
-        let value = JSON.stringify(json_string);
-        const json_array = CryptoJS.enc.Utf8.parse(value);
-        const json_base64 = CryptoJS.enc.Base64.stringify(json_array);
+        let value = JSON.stringify(json_string)
+        const json_array = CryptoJS.enc.Utf8.parse(value)
+        const json_base64 = CryptoJS.enc.Base64.stringify(json_array)
         const sign_array = CryptoJS.SHA1(
             private_key + json_base64 + private_key
-        );
-        const sign_sha1 = CryptoJS.enc.Base64.stringify(sign_array);
-        setHashedValue([json_base64, sign_sha1]);
+        )
+        const sign_sha1 = CryptoJS.enc.Base64.stringify(sign_array)
+        setHashedValue([json_base64, sign_sha1])
     }
 
     function handleChooseCurrency(currency) {
-        setSelectedValue(currency);
-        const CONVERT_URL = `https://free.currconv.com/api/v7/convert?q=USD_${currency}&compact=ultra&apiKey=085850969420940b790b`;
+        setSelectedValue(currency)
+        const CONVERT_URL = `https://free.currconv.com/api/v7/convert?q=USD_${currency}&compact=ultra&apiKey=085850969420940b790b`
 
         fetch(CONVERT_URL)
-            .then((response) => response.json())
-            .then((data) => {
-                setCurentAmount(data[`USD_${currency}`] * priceUSD);
-            });
+            .then(response => response.json())
+            .then(data => {
+                setCurentAmount(data[`USD_${currency}`] * priceUSD)
+            })
     }
 
     function handleChangeCheckbox(e) {
-        setUserAgreementCheckbox(e.target.checked);
+        setUserAgreementCheckbox(e.target.checked)
     }
 
     function handleChangeUserData(event) {
-        const value = event.target.value;
+        console.log(event.target.value)
+        const value = event.target.value
         localStorage.setItem(
             'USER_DATA_DATABASE',
             JSON.stringify({ ...userData, [event.target.name]: value })
-        );
+        )
 
-        setUserData({ ...userData, [event.target.name]: value });
+        setUserData({ ...userData, [event.target.name]: value })
     }
 
     return (
@@ -179,5 +180,5 @@ export default function BuySketchUpShop({
                 </Box>
             </form>
         </Box>
-    );
+    )
 }

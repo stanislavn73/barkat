@@ -118,12 +118,23 @@ export default function BuySketchUp() {
                     {rows.map((item, index) => (
                         <TableRow key={index}>
                             <TableCell>
-                                <div
-                                    className='options_element'
-                                    onMouseEnter={() => setColumn(0)}
-                                >
-                                    {item.option}
-                                </div>
+                                {Array.isArray(item.option) ? (
+                                    <div
+                                        className='options_element'
+                                        onMouseEnter={() => setColumn(0)}
+                                    >
+                                        {item.option[0]}
+                                        <br />
+                                        {item.option[1]}
+                                    </div>
+                                ) : (
+                                    <div
+                                        className='options_element'
+                                        onMouseEnter={() => setColumn(0)}
+                                    >
+                                        {item.option}
+                                    </div>
+                                )}
                             </TableCell>
                             {!mobileColumnShowed[1].hideMobileColumn && (
                                 <TableCell

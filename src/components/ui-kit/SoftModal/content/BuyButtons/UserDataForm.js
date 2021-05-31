@@ -1,5 +1,12 @@
-import { Box, TextField } from '@material-ui/core';
-import React from 'react';
+import React from 'react'
+import {
+    Box,
+    FormControl,
+    InputLabel,
+    MenuItem,
+    Select,
+    TextField,
+} from '@material-ui/core'
 
 const UserDataForm = ({ handleChangeUserData, userData }) => {
     return (
@@ -13,7 +20,7 @@ const UserDataForm = ({ handleChangeUserData, userData }) => {
                 className='textfield'
                 value={userData.name}
             />
-            <TextField
+            {/* <TextField
                 autoFocus
                 label='Название компании/физлицо'
                 name='company'
@@ -22,17 +29,36 @@ const UserDataForm = ({ handleChangeUserData, userData }) => {
                 required
                 className='textfield'
                 value={userData.company}
-            />
-            <TextField
-                autoFocus
-                label='Сайт'
-                required
-                name='website'
-                onChange={handleChangeUserData}
-                required
-                className='textfield'
-                value={userData.website}
-            />
+            /> */}
+            <FormControl name='controll'>
+                <InputLabel id='activity-label'>Вид деятельности</InputLabel>
+                <Select
+                    native
+                    name='company'
+                    labelId='activity-label'
+                    id='company-select'
+                    value={userData.company}
+                    onChange={handleChangeUserData}
+                    required
+                >
+                    <option aria-label='None' value='' />
+
+                    <option value={'Физлицо'}>Физлицо</option>
+                    <option value={'Компания'}>Компания</option>
+                </Select>
+            </FormControl>
+            {userData.company === 'Компания' && (
+                <TextField
+                    autoFocus
+                    label='Сайт'
+                    required
+                    name='website'
+                    onChange={handleChangeUserData}
+                    required
+                    className='textfield'
+                    value={userData.website}
+                />
+            )}
             <TextField
                 autoFocus
                 label='E-Mail'
@@ -54,6 +80,6 @@ const UserDataForm = ({ handleChangeUserData, userData }) => {
                 value={userData.phone}
             />
         </Box>
-    );
-};
-export default UserDataForm;
+    )
+}
+export default UserDataForm
