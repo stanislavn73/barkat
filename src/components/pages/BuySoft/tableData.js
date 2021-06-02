@@ -67,7 +67,7 @@ export const rows = [
         checkMark
     ),
     createData(
-        ['V-Ray', '(интеративный рендер)'],
+        ['V-Ray', '(интерактивный рендер)'],
         closeMark,
         closeMark,
         closeMark,
