@@ -117,7 +117,7 @@ class SketchUp extends React.PureComponent {
                                 <ModalConsumer>
                                     {({ handleOpenSoftModal }) => (
                                         <div
-                                            className='title'
+                                            className={`${item.title.includes('SketchUp') ? 'title_SketchUp' : 'title'}`}
                                             onClick={handleOpenSoftModal(
                                                 item.type
                                             )}
