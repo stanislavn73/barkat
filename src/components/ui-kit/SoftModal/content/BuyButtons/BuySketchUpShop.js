@@ -4,7 +4,7 @@ import { Checkbox, TextField, Box } from '@material-ui/core'
 import { ModalConsumer } from '../../../../layouts/Layout'
 import CryptoJS from 'crypto-js'
 import { currencies } from './currencies'
-import './BuySketchUpShop.less'
+import './BuySketchUpShop.module.less'
 import { v4 } from 'uuid'
 import UserDataForm from './UserDataForm'
 
@@ -173,9 +173,8 @@ export default function BuySketchUpShop({
                     <input
                         className='footer send_payment'
                         type='submit'
-                        value={`Купить за ${
-                            Math.floor(currentAmount * 100) / 100
-                        } ${selectedValue}`}
+                        value={`Купить за ${Math.floor(currentAmount * 100) / 100
+                            } ${selectedValue}`}
                     />
                 </Box>
             </form>

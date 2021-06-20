@@ -1,5 +1,5 @@
 import React from 'react';
-import './Social.less';
+import './Social.module.less';
 
 const linksObject = {
     logo: {

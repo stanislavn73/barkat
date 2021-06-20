@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 import downloadIcon from '../../assets/images/icons/download.png';
 
 import WowBlock from './WowBlock';
-// import 'antd/dist/antd.less';
+// import 'antd/dist/antd.module.less';
 
 const BlockWrapper = styled.div`
     display: flex;

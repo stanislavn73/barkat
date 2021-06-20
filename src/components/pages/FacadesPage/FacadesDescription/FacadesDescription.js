@@ -1,7 +1,7 @@
 import React from 'react';
 import Navigation from './FacadesNavigation';
 
-import './FacadesDescription.less';
+import './FacadesDescription.module.less';
 
 export default function FacadesDescription() {
     return (

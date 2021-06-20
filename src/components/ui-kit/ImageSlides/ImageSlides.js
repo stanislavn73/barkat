@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import cx from 'classnames';
 import Img from '../Img';
 
-import './ImageSlides.less';
+import './ImageSlides.module.less';
 
 function ProjectsFourthBlock({ data }) {
     const [activeSlide, setActiveSlide] = useState('');

@@ -5,7 +5,7 @@ import Padded from '../../../ui-kit/Padded/Padded';
 import IconsBlock from '../../../ui-kit/IconsBlock';
 import Img from '../../../ui-kit/Img';
 
-import './SecondScreen.less';
+import './SecondScreen.module.less';
 
 import facadesIcons from '../../../../utils/facades_preferences';
 import * as backgroundImage from '../../../../assets/images/pages/facades/2back.jpg';

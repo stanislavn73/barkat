@@ -1,7 +1,7 @@
 import React from 'react';
 import cx from 'classnames';
 
-import './SubTitle.less';
+import './SubTitle.module.less';
 
 function SubTitle({ children, className }) {
     const titleCX = cx('subTitle-kit', {

@@ -15,7 +15,7 @@ import system from '../../../../assets/images/facades/terracota/system/system.jp
 import catalog from '../../../../assets/images/facades/terracota/catalog.pdf';
 import catalog_color from '../../../../assets/images/facades/terracota/catalog_color.pdf';
 
-import './Terracota.less';
+import './Terracota.module.less';
 
 export default function Terracota() {
     return (

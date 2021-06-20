@@ -12,7 +12,7 @@ import * as logo from '../../../assets/images/logo.png';
 import * as logoU from '../../../assets/images/logo_u.png';
 import * as logoVille from '../../../assets/images/logo-ville.png';
 
-import './style.less';
+import './style.module.less';
 
 const routes = {
     HOME: '/',

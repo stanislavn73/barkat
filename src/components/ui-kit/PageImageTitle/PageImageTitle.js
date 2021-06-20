@@ -5,7 +5,7 @@ import Padded from '../Padded';
 import Img from '../Img';
 import * as mobilefirst from './../../../assets/images/pages/2.2.jpg';
 
-import './PageImageTitle.less';
+import './PageImageTitle.module.less';
 
 function PageImageTitle({ src, title, subTitle, onButtonClick }) {
     return (

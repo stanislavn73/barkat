@@ -6,7 +6,7 @@ import FadeInWrapper from '../ui-kit/FadeInWrapper';
 import Modal from '../ui-kit/Modal';
 import SoftModal from '../ui-kit/SoftModal';
 
-import './Layout.less';
+import './Layout.module.less';
 
 const { Provider, Consumer } = React.createContext();
 

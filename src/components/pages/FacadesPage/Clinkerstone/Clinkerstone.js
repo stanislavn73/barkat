@@ -18,7 +18,7 @@ import wet_system from '../../../../assets/images/facades/clinkerstone/system/we
 
 import catalog from '../../../../assets/images/facades/clinkerstone/catalog.pdf';
 
-import './Clinkerstone.less';
+import './Clinkerstone.module.less';
 
 export default function Clinkerstone() {
     return (

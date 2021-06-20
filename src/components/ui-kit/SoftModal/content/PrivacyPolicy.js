@@ -1,5 +1,5 @@
 import React from 'react';
-import './PivacyPolicy.less';
+import './PivacyPolicy.module.less';
 
 export default function PrivacyPolicy() {
     return (

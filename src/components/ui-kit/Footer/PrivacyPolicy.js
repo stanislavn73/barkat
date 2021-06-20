@@ -1,6 +1,6 @@
 import React from 'react';
 import { ModalConsumer } from '../../layouts/Layout';
-import './PrivacyPolicy.less';
+import './PrivacyPolicy.module.less';
 import visa from 'payment-icons/min/flat/visa.svg';
 import masterCard from 'payment-icons/min/flat/mastercard.svg';
 

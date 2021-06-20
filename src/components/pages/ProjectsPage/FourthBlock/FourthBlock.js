@@ -5,7 +5,7 @@ import Img from '../../../ui-kit/Img';
 import ImageSlides from '../../../ui-kit/ImageSlides';
 import projects from '../../../../utils/projects';
 
-import './FourthBlock.less';
+import './FourthBlock.module.less';
 
 function ProjectsFourthBlock() {
     return (

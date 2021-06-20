@@ -7,7 +7,7 @@ import Img from '../Img';
 import * as nextArrowImg from '../../../assets/images/slider/nextArrow.png';
 import * as prevArrowImg from '../../../assets/images/slider/prevArrow.png';
 
-import './Slider.less';
+import './Slider.module.less';
 
 class SliderComponent extends React.PureComponent {
     state = {

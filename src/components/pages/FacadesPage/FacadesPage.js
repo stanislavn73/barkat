@@ -14,7 +14,7 @@ import TerracotaBlock from './Terracota';
 import PorcelainTileBlock from './PorcelainTile';
 import ArtificalStoneBlock from './ArtificalStone';
 import FacadesDescriptionNavigation from './FacadesDescription/FacadesNavigation';
-import './FacadesPage.less';
+import './FacadesPage.module.less';
 
 const anchors = [
     {

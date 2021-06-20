@@ -1,6 +1,6 @@
 import React from 'react';
 import cx from 'classnames';
-import './Input.less';
+import './Input.module.less';
 
 function Input({ onChange, title, className, multiline, value }) {
     const inputWrapperCx = cx({

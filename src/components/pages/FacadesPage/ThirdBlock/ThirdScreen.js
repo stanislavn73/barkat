@@ -5,7 +5,7 @@ import PlainText from '../../../ui-kit/PlainText';
 import Title from '../../../ui-kit/Title';
 import Img from '../../../ui-kit/Img';
 import * as imageBlock from '../../../../assets/images/pages/facades/2.png';
-import './ThirdScreen.less';
+import './ThirdScreen.module.less';
 
 function ProjectsThirdScreen() {
     return (

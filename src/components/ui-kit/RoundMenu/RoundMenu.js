@@ -7,7 +7,7 @@ import engineer from '../../../assets/images/marble-system.jpg';
 import about from '../../../assets/images/pages/About_us_third.jpg';
 import facades from '../../../assets/images/facades/clinkerstone/04.jpg';
 import soft from '../../../assets/images/pages/soft/title-back.jpg';
-import './styles.less';
+import './styles.module.less';
 
 function RoundMenu({ children, className }) {
     const [isActive, setIsActive] = useState(false);

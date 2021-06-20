@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import cx from 'classnames';
 import ReactDOM from 'react-dom';
-import './styles.less';
+import './styles.module.less';
 
 export default function Img({ src, className, ...rest }) {
     const [isFull, setIsFull] = useState(false);

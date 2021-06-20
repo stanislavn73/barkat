@@ -5,7 +5,7 @@ import IconsBlock from '../../../ui-kit/IconsBlock';
 import PlainText from '../../../ui-kit/PlainText';
 import Img from '../../../ui-kit/Img';
 import { ModalConsumer } from '../../../layouts/Layout';
-import './SketchUp.less';
+import './SketchUp.module.less';
 
 import achievements from '../../../../utils/achievements';
 import * as sketchupTitleLogo from '../../../../assets/images/SketchUp.jpg';

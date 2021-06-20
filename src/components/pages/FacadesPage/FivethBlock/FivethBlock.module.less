@@ -1,0 +1,84 @@
+@import '../../../../assets/variables.module.less';
+.facades-fiveth-wrapper {
+    position: relative;
+
+    .full-page {
+        height: 100%;
+
+        .back {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+
+            object-fit: cover;
+            object-position: center center;
+
+            z-index: 1;
+
+            opacity: 0.2;
+        }
+
+        .content-wrapper {
+            position: relative;
+            z-index: 2;
+
+            @media @tablet-m {
+                padding: 0 10px;
+                width: 100%;
+            }
+
+            .title {
+                color: @primary;
+                font-size: 180px;
+                font-weight: 700;
+                position: relative;
+                left: -100px;
+                opacity: 0.4;
+
+                @media @laptop-m {
+                    font-size: 120px;
+                    left: 0;
+                }
+
+                @media @tablet-m {
+                    font-size: 80px;
+                }
+
+                @media @mobile-m {
+                    font-size: 50px;
+                }
+            }
+
+            .text {
+                line-height: 30px;
+                font-size: 20px;
+
+                @media @laptop-m {
+                    line-height: 20px;
+                }
+
+                @media @laptop-m {
+                    font-size: 16px;
+                }
+            }
+            .bottom-title-wrapper {
+                position: relative;
+                height: 100%;
+
+                @media @laptop-s {
+                    display: none;
+                }
+
+                .bottom-title {
+                    position: absolute;
+                    bottom: 0;
+                    left: -5px;
+                    transform-origin: left bottom;
+                    transform: rotate(-90deg);
+                }
+            }
+        }
+    }
+}

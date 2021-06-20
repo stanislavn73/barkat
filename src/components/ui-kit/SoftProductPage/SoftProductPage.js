@@ -4,7 +4,7 @@ import Input from '../Input';
 import Img from '../Img';
 
 import * as closeIcon from '../../../assets/images/icons/close.png';
-import './Modal.less';
+import './Modal.module.less';
 
 class Modal extends React.PureComponent {
     state = {

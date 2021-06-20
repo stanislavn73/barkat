@@ -1,5 +1,5 @@
 import React from 'react';
-import './EventPage.less';
+import './EventPage.module.less';
 import SocialMedia from '../../ui-kit/SocialMedia/SocialMedia';
 import FirstScreen from './FirstScreen';
 import Padded from '../../ui-kit/Padded';

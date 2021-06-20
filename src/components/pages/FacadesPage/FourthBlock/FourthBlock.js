@@ -12,7 +12,7 @@ import * as icon4 from '../../../../assets/images/pages/facades/6.png';
 import * as icon5 from '../../../../assets/images/pages/facades/7.png';
 import * as icon6 from '../../../../assets/images/pages/facades/8.png';
 
-import './FourthBlock.less';
+import './FourthBlock.module.less';
 
 const icons = [
     {

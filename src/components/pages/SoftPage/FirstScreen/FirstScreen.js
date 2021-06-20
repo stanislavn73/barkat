@@ -3,7 +3,7 @@ import FullPage from '../../../ui-kit/FullPage/FullPage';
 import PageImageTitle from '../../../ui-kit/PageImageTitle/PageImageTitle';
 import { HeaderThumb } from '../../../ui-kit/Header';
 import * as backgroundImage from '../../../../assets/images/pages/soft/title-back.jpg';
-import './FirstScreen.less';
+import './FirstScreen.module.less';
 
 const screenTitle = '3D решения';
 const subTitle =

@@ -1,6 +1,6 @@
 import React from 'react';
 import FullPage from '../../../ui-kit/FullPage';
-import './FirstScreen.less';
+import './FirstScreen.module.less';
 
 export default function FirstScreen() {
     return (

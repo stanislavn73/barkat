@@ -15,7 +15,7 @@ import system from '../../../../assets/images/facades/porcelian-tile/system/syst
 import catalog from '../../../../assets/images/facades/porcelian-tile/catalog.pdf';
 import catalog_color from '../../../../assets/images/facades/porcelian-tile/catalog_color.pdf';
 
-import './PorcelainTile.less';
+import './PorcelainTile.module.less';
 
 export default function PorcelainTile() {
     return (

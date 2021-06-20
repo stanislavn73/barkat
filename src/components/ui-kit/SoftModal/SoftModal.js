@@ -5,7 +5,7 @@ import Img from '../Img';
 import types from './types';
 
 import * as closeIcon from '../../../assets/images/icons/close.png';
-import './SoftModal.less';
+import './SoftModal.module.less';
 
 class Modal extends React.PureComponent {
     render() {

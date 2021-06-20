@@ -3,7 +3,7 @@ import Slider from '../ui-kit/Slider/Slider';
 import FullPage from '../ui-kit/FullPage';
 import { HeaderThumb } from '../ui-kit/Header';
 import { mainSlides } from '../../utils/slider';
-import './HomePage.less';
+import './HomePage.module.less';
 
 const titlesRules = [
     {

@@ -14,7 +14,7 @@ import system from '../../../../assets/images/facades/artifical-stone/system/sys
 
 import catalog from '../../../../assets/images/facades/artifical-stone/catalog.pdf';
 
-import './ArtificalStone.less';
+import './ArtificalStone.module.less';
 
 export default function ArtificalStone() {
     return (

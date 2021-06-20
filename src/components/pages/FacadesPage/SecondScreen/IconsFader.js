@@ -1,6 +1,6 @@
 import React from 'react';
 import cx from 'classnames';
-import './SecondScreen.less';
+import './SecondScreen.module.less';
 
 class IconsFader extends React.PureComponent {
     state = {

@@ -1,4 +1,4 @@
-import './TableData.less';
+import './TableData.module.less';
 
 const checkMark = (
     <svg

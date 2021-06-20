@@ -8,7 +8,7 @@ import { PAGES } from '../../../utils/pages';
 import logo from '../../../assets/images/logo.jpg';
 import SocialMediaFooter from './SocialMediaFooter';
 
-import './Footer.less';
+import './Footer.module.less';
 import PrivacyPolicy from './PrivacyPolicy';
 import Agreement from './Agreement';
 
@@ -36,7 +36,7 @@ const MenuItem = styled.div`
   background: ${(props) => props.theme.main.primary};
   transition: 0.2s;
   border-bottom: 3px solid ${(props) =>
-      props.isActive ? 'white' : props.theme.main.primary}
+        props.isActive ? 'white' : props.theme.main.primary}
 
   &:hover {
     background: ${(props) => props.theme.main.primary};

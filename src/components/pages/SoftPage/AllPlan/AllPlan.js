@@ -4,7 +4,7 @@ import Padded from '../../../ui-kit/Padded/Padded';
 import PlainText from '../../../ui-kit/PlainText';
 import Img from '../../../ui-kit/Img';
 import { ModalConsumer } from '../../../layouts/Layout';
-import './AllPlan.less';
+import './AllPlan.module.less';
 
 import allPlanLogo from '../../../../assets/images/AllPlan.jpg';
 import SocialMedia from '../../../ui-kit/SocialMedia/SocialMedia';

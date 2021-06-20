@@ -1,6 +1,6 @@
 import React, { PureComponent } from 'react';
 import Img from '../Img';
-import styles from './IconsBlock.less';
+import styles from './IconsBlock.module.less';
 
 class IconsBlock extends PureComponent {
     state = {

@@ -6,7 +6,7 @@ import * as firstIcon from '../../../../assets/images/icons/objectA.png';
 import * as secondIcon from '../../../../assets/images/icons/objectB.png';
 import * as thirdIcon from '../../../../assets/images/icons/objectC.png';
 import * as tower from '../../../../assets/images/pages/About_us_fiveth.png';
-import './FivethBlock.less';
+import './FivethBlock.module.less';
 
 function ProjectsFivethBlock() {
     const [activeSlide, setActiveSlide] = useState('');

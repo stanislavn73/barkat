@@ -8,7 +8,7 @@ import FirstScreen from './FirstScreen/FirstScreen';
 import HoverFrame from './HoverFrame';
 import BuyButtons from './BuyButtons';
 
-import './BuySketchup.less';
+import './BuySketchup.module.less';
 import MobileScrollBar from './MobileScrollBar';
 import { rows } from './tableData';
 

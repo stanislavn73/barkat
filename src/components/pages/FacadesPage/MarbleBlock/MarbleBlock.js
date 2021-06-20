@@ -17,7 +17,7 @@ import system from '../../../../assets/images/facades/marble/system/marble-syste
 
 import catalog from '../../../../assets/images/facades/marble/catalog.pdf';
 
-import './MarbleBlock.less';
+import './MarbleBlock.module.less';
 
 export default function MarbleBlock() {
     return (

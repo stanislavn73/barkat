@@ -1,6 +1,6 @@
 import React, { useEffect, useContext, useState } from 'react';
 import { ModalConsumer } from '../../layouts/Layout';
-import './styles.less';
+import './styles.module.less';
 
 export default function OpenModalButton({ children }) {
     const [childrenEl, setChildren] = useState(null);

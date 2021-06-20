@@ -4,7 +4,7 @@ import cx from 'classnames';
 import { Waypoint } from 'react-waypoint';
 
 import { AboutPageAnchors } from '../../../utils/anchors';
-import './AnchorMenu.less';
+import './AnchorMenu.module.less';
 
 const handleScrollToAnchor = (id) => () => {
     // eslint-disable-line

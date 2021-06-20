@@ -8,7 +8,7 @@ import logo from '../../assets/images/logo.jpg';
 import logoVille from '../../assets/images/logo-ville.jpg';
 
 import WowBlock from './WowBlock';
-// import 'antd/dist/antd.less';
+// import 'antd/dist/antd.module.less';
 
 const BlockWrapper = styled.div`
     display: flex;

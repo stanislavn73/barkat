@@ -1,6 +1,6 @@
 import React from 'react';
 import Divider from '../BlockDivider';
-import './FacadesDescription.less';
+import './FacadesDescription.module.less';
 
 const navs = [
     {

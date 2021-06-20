@@ -4,7 +4,7 @@ import Padded from '../../../ui-kit/Padded/Padded';
 import PlainText from '../../../ui-kit/PlainText';
 import Img from '../../../ui-kit/Img';
 import { ModalConsumer } from '../../../layouts/Layout';
-import './Dassault.less';
+import './Dassault.module.less';
 
 import DassaultLogo from '../../../../assets/images/Dassault.png';
 import SocialMedia from '../../../ui-kit/SocialMedia/SocialMedia';

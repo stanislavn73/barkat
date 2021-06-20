@@ -5,7 +5,7 @@ import PlainText from '../../../ui-kit/PlainText';
 import Bold from '../../../ui-kit/Bold';
 import Img from '../../../ui-kit/Img';
 import * as imageBlock from '../../../../assets/images/pages/About_us_third.jpg';
-import './ThirdScreen.less';
+import './ThirdScreen.module.less';
 
 function ProjectsThirdScreen() {
     return (

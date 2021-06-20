@@ -1,0 +1,59 @@
+@import '../../../../../assets/variables.module.less';
+
+.textfield_container {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 30px;
+}
+.textfield {
+    margin-bottom: 10px !important;
+}
+.checkbox_container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    border-bottom: 1px solid black;
+    padding-bottom: 30px;
+    margin-bottom: 30px;
+    .checkbox_wrapper {
+        display: flex;
+        width: 33%;
+        align-items: center;
+        height: 100%;
+        cursor: pointer;
+        @media @mobile-s {
+            width: 50%;
+        }
+        .flag_image {
+            display: inline-block;
+            height: 25px;
+            width: 40px;
+            background-repeat: no-repeat;
+        }
+        .currency_name {
+            display: inline;
+            margin: 0;
+            margin-left: 10px;
+        }
+    }
+}
+
+.policy_link {
+    cursor: pointer;
+    text-decoration: underline;
+}
+.text_container {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    margin-bottom: 15px;
+    flex-direction: column;
+    .text_field_container {
+        display: flex;
+        flex-direction: column;
+    }
+}
+.send_payment {
+    margin-top: 20px;
+    display: block;
+}

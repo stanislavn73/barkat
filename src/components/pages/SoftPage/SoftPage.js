@@ -10,7 +10,7 @@ import Hexagon from './Hexagon';
 import Bentley from './Bentley';
 import SketchUp from './SketchUp';
 import AllPlan from './AllPlan';
-import './SoftPage.less';
+import './SoftPage.module.less';
 
 const anchors = [
     {

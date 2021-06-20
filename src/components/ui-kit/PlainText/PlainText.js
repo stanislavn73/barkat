@@ -1,6 +1,6 @@
 import React from 'react';
 import cx from 'classnames';
-import './PlainText.less';
+import './PlainText.module.less';
 
 function Padded({ children, className }) {
     const plainTextCX = cx('styled-text', {

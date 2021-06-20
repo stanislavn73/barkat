@@ -3,7 +3,7 @@ import FullPage from '../../../ui-kit/FullPage/FullPage';
 import Padded from '../../../ui-kit/Padded/Padded';
 import IconsBlock from '../../../ui-kit/IconsBlock';
 import Img from '../../../ui-kit/Img';
-import './SecondScreen.less';
+import './SecondScreen.module.less';
 
 import achievements from '../../../../utils/achievements';
 import * as backgroundImage from '../../../../assets/images/pages/About_us_second.jpg';

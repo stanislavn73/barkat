@@ -4,7 +4,7 @@ import FileSaver from 'file-saver';
 
 import pdf_icon from '../../../assets/images/icons/pdf.svg';
 
-import './DownloadCatalog.less';
+import './DownloadCatalog.module.less';
 
 export default function DownloadCatalog({
     className,
