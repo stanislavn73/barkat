@@ -55,9 +55,9 @@ export default function BuySketchUpShop({
         localStorage.getItem('USER_DATA_DATABASE') || initialUserData
     )
 
-    const private_key = 'sandbox_TnTWGwuz2FxuZDW8wOhJAANTGhWe3DqRAMD1Iolq'
+    const private_key = 'XZqhhwdbOUsJ8aok3Z2GePQGHBkwbeOT6K3vjmzZ'
     const json_string = {
-        public_key: 'sandbox_i47920969914',
+        public_key: 'i15655191258',
         version: '3',
         action: 'pay',
         amount: `${Math.floor((UahAmount * 100) / 100)}`,
