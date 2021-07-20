@@ -41,7 +41,7 @@ const sketchupItems = [
         id: 5,
         title: 'SketchUp Studio',
         type: 'SketchUpStudio',
-        text: 'Пакет инструментов для профессионального 3D-моделирования, в который входят продукты: SketchUpPro, SketchUp для web, Trimble Connect, Sefaira',
+        text: 'Пакет инструментов для профессионального 3D-моделирования, в который входят продукты: SketchUpPro, SketchUp для web, Trimble Connect, V-RAY и Scan Essentials',
         buyIt: true,
     },
     {
