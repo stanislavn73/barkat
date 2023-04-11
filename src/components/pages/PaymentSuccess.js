@@ -1,49 +1,30 @@
-import { Box } from '@material-ui/core';
-import React, { useEffect, useState } from 'react';
-import FullPage from '../ui-kit/FullPage';
-import { init, send } from 'emailjs-com';
-// import UserDataForm from '../ui-kit/SoftModal/content/BuyButtons/UserDataForm'
-// const initialUserData = {
-//     name: '',
-//     company: '',
-//     website: '',
-//     email: '',
-//     phone: '',
-//   }
+import React, { useEffect } from 'react'
+import FullPage from '../ui-kit/FullPage'
+import sgMail from '@sendgrid/mail'
 
 const PaymentSuccess = () => {
-    // const [userData, setUserData] = useState(initialUserData)
+    const sendGriKey = process.env.SENDGRID_API_KEY
+    // server_url
 
     useEffect(() => {
-        const savedData = localStorage.getItem('USER_DATA_DATABASE') || [];
-        // if (savedData) setUserData(JSON.parse(savedData))
-        init('user_8J36WovfcyvCTVUlGVgez');
-        const serviceId = 'service_2gxgl7t';
-        const templateId = 'template_9dlnssp';
-        sendFeedback(serviceId, templateId, JSON.parse(savedData));
-    }, []);
-    function sendFeedback(serviceId, templateId, data) {
+        const { name, company, email, phone, website } =
+            localStorage.getItem('USER_DATA_DATABASE') || []
+        sgMail.setApiKey(sendGriKey)
         const state = {
-            name: data.name,
-            surname: data.name,
-            companyName: data.company,
+            name,
+            company,
             profession: 'покупатель',
-            email: data.email,
-            phoneNumber: data.phone,
-            target: 'заказ оплачен',
-        };
-        console.log(state);
-        send(serviceId, templateId, {
-            ...state,
-            to_email: 'Julia@barkat-3d-ville.com',
-            to_email1: 'Sergii@barkat-3d-ville.com',
-        });
-    }
-    // function handleChangeUserData(event) {
-    // const value = event.target.value
-    // localStorage.setItem('USER_DATA_DATABASE', JSON.stringify({...userData, [event.target.name]:value}))
-    // setUserData({...userData, [event.target.name]:value})
-    // }
+            email,
+            phone,
+            website,
+            subject: 'заказ оплачен',
+            to: 'stas.at.n.t@gmail.com',
+            from: 'stas.at.n.t@gmail.com',
+        }
+        sgMail
+            .send(state)
+            .catch(err => console.error('Email notification not sent', err))
+    }, [])
 
     return (
         <FullPage>
@@ -51,12 +32,7 @@ const PaymentSuccess = () => {
                 Оплата прошла успешно.
                 <br /> С Вами свяжутся в ближайшее время
             </div>
-            {/* {userData && 
-        <Box style={{margin: '0 20px'}}>
-            <UserDataForm handleChangeUserData={handleChangeUserData} userData={userData}/>
-        </Box>
-        } */}
         </FullPage>
-    );
-};
-export default PaymentSuccess;
+    )
+}
+export default PaymentSuccess

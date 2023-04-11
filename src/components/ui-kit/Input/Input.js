@@ -1,12 +1,21 @@
-import React from 'react';
-import cx from 'classnames';
-import './Input.module.less';
+import React from 'react'
+import cx from 'classnames'
+import './Input.module.less'
+import { FormHelperText } from '@material-ui/core'
 
-function Input({ onChange, title, className, multiline, value }) {
+function Input({
+    onChange,
+    title,
+    className,
+    multiline,
+    value,
+    error,
+    errorMessage,
+}) {
     const inputWrapperCx = cx({
         'input-wrapper': true,
         [className]: className,
-    });
+    })
 
     return (
         <div className={inputWrapperCx}>
@@ -25,8 +34,11 @@ function Input({ onChange, title, className, multiline, value }) {
                     onChange={onChange}
                 />
             )}
+            {error && (
+                <FormHelperText error={error}>{errorMessage}</FormHelperText>
+            )}
         </div>
-    );
+    )
 }
 
-export default Input;
+export default Input

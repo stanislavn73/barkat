@@ -1,12 +1,15 @@
 import React, { useEffect, useState } from 'react'
 import Radio from '@material-ui/core/Radio'
-import { Checkbox, TextField, Box } from '@material-ui/core'
+import { Checkbox, Box } from '@material-ui/core'
 import { ModalConsumer } from '../../../../layouts/Layout'
-import CryptoJS from 'crypto-js'
 import { currencies } from './currencies'
-import './BuySketchUpShop.module.less'
-import { v4 } from 'uuid'
 import UserDataForm from './UserDataForm'
+import { initializeApp } from 'firebase/app'
+import { useLiqPay } from './effects/useLiqPay'
+import { getFirestore, doc, setDoc } from 'firebase/firestore'
+
+import './BuySketchUpShop.module.less'
+import dayjs from 'dayjs'
 
 function UserAgreementLink() {
     return (
@@ -34,74 +37,77 @@ const initialUserData = {
     phone: '',
 }
 
-const errors = {
-    name: '',
-    company: '',
-    website: '',
-    email: '',
-    phone: '',
-}
-
 export default function BuySketchUpShop({
     priceUSD = 119,
     product = 'SketchUpShop',
 }) {
-    const [UahAmount, setUahAmount] = useState(priceUSD)
     const [selectedValue, setSelectedValue] = useState('USD')
-    const [currentAmount, setCurentAmount] = useState(priceUSD)
+    const [currentAmount, setCurrentAmount] = useState(priceUSD)
     const [userAgreementCheckbox, setUserAgreementCheckbox] = useState(false)
-    const [hashedValue, setHashedValue] = useState([])
     const [userData, setUserData] = useState(
         localStorage.getItem('USER_DATA_DATABASE') || initialUserData
     )
+    const [db, setDB] = useState(null)
 
-    const private_key = 'XZqhhwdbOUsJ8aok3Z2GePQGHBkwbeOT6K3vjmzZ'
-    const json_string = {
-        public_key: 'i15655191258',
-        version: '3',
-        action: 'pay',
-        amount: `${Math.floor((UahAmount * 100) / 100)}`,
-        currency: 'UAH',
-        description: `${product}`,
-        order_id: `${v4()}`,
-        result_url: 'https://barkat-3d-ville.com/payment-success',
-    }
+    const currencyConvertKey = process.env.CURCONV_API_KEY
+
+    const [hashedValue] = useLiqPay(currentAmount, product, selectedValue)
 
     useEffect(() => {
-        const UAH_CURENCY = `https://free.currconv.com/api/v7/convert?q=USD_UAH&compact=ultra&apiKey=085850969420940b790b`
+        ;(async () => {
+            try {
+                const firebaseConfig = {
+                    databaseURL:
+                        'https://barkat.europe-west3.firebasedatabase.app',
+                    projectId: 'barkat-dbb65',
+                }
+
+                const app = await initializeApp(firebaseConfig)
+                const newDB = await getFirestore(app)
+                setDB(newDB)
+            } catch (err) {
+                console.error('error: ', err)
+            }
+        })()
+    }, [])
+
+    useEffect(() => {
+        const UAH_CURENCY = `https://free.currconv.com/api/v7/convert?q=USD_${selectedValue}&compact=ultra&apiKey=${currencyConvertKey}`
         fetch(UAH_CURENCY)
-            .then(response => response.json())
+            .then(response => {
+                console.log(response)
+                if (response.status === 200) {
+                    return response.json()
+                }
+                throw new Error('Currency conversion error')
+            })
             .then(data => {
-                setUahAmount(data['USD_UAH'] * priceUSD)
+                setCurrentAmount(data[`USD_${selectedValue}`] * priceUSD)
+            })
+            .catch(err => {
+                console.log(err)
+                setCurrentAmount(priceUSD)
+                setSelectedValue('USD')
             })
         const savedData = localStorage.getItem('USER_DATA_DATABASE')
         if (savedData) setUserData(JSON.parse(savedData))
     }, [])
 
-    useEffect(() => {
-        generateHash(json_string)
-    }, [UahAmount])
-
-    function generateHash(json_string) {
-        let value = JSON.stringify(json_string)
-        const json_array = CryptoJS.enc.Utf8.parse(value)
-        const json_base64 = CryptoJS.enc.Base64.stringify(json_array)
-        const sign_array = CryptoJS.SHA1(
-            private_key + json_base64 + private_key
-        )
-        const sign_sha1 = CryptoJS.enc.Base64.stringify(sign_array)
-        setHashedValue([json_base64, sign_sha1])
-    }
-
-    function handleChooseCurrency(currency) {
-        setSelectedValue(currency)
-        const CONVERT_URL = `https://free.currconv.com/api/v7/convert?q=USD_${currency}&compact=ultra&apiKey=085850969420940b790b`
-
-        fetch(CONVERT_URL)
-            .then(response => response.json())
-            .then(data => {
-                setCurentAmount(data[`USD_${currency}`] * priceUSD)
-            })
+    async function handleChooseCurrency(currency) {
+        const CONVERT_URL = `https://free.currconv.com/api/v7/convert?q=USD_${currency}&compact=ultra&apiKey=${currencyConvertKey}`
+        try {
+            const data = await fetch(CONVERT_URL).then(response =>
+                response.json()
+            )
+            console.log(data, currency)
+            // Promise.reject()
+            setCurrentAmount(data[`USD_${currency}`] * priceUSD)
+            setSelectedValue(currency)
+        } catch (err) {
+            setCurrentAmount(priceUSD)
+            setSelectedValue('USD')
+            console.error(err)
+        }
     }
 
     function handleChangeCheckbox(e) {
@@ -119,12 +125,51 @@ export default function BuySketchUpShop({
         setUserData({ ...userData, [event.target.name]: value })
     }
 
+    const handleSubmit = async e => {
+        // e.preventDefault()
+        try {
+            const formatToday = dayjs().format('MM.DD.YYYY')
+            await setDoc(doc(db, formatToday, userData.email), {
+                username: userData.name,
+                email: userData.email,
+                phone: userData.phone,
+                timestamp: dayjs().format('MMMM D, YYYY h:mm A'),
+            })
+            console.log('success')
+        } catch (err) {
+            console.error('error: ', err)
+        }
+
+        // try {
+        //     const formData = new FormData()
+        //     formData.append('data', hashedValue[0])
+        //     formData.append('signature', hashedValue[1])
+        //     // formData.append('currency', hashedValue[1])
+        //
+        //     const response = await fetch(
+        //         'https://www.liqpay.ua/api/3/checkout',
+        //         {
+        //             method: 'POST',
+        //             body: formData,
+        //             headers: {
+        //                 'accept-charset': 'utf-8',
+        //             },
+        //         }
+        //     ).then(response => response.json())
+        //     console.log(response)
+        // } catch (err) {
+        //     console.error('liqpay error', err)
+        //
+        // }
+    }
+
     return (
         <Box>
             <form
                 method='POST'
                 acceptCharset='utf-8'
                 action='https://www.liqpay.ua/api/3/checkout'
+                onSubmit={handleSubmit}
             >
                 <UserDataForm
                     handleChangeUserData={handleChangeUserData}
@@ -173,8 +218,9 @@ export default function BuySketchUpShop({
                     <input
                         className='footer send_payment'
                         type='submit'
-                        value={`Купить за ${Math.floor(currentAmount * 100) / 100
-                            } ${selectedValue}`}
+                        value={`Купить за ${
+                            Math.floor(currentAmount * 100) / 100
+                        } ${selectedValue}`}
                     />
                 </Box>
             </form>

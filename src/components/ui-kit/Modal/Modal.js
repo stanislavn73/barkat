@@ -1,14 +1,14 @@
-import React from 'react';
-import cx from 'classnames';
-import Input from '../Input';
-import Img from '../Img';
-import { init, send } from 'emailjs-com';
+import React, { useRef, useState } from 'react'
+import cx from 'classnames'
+import Input from '../Input'
+import Img from '../Img'
+import sgMail from '@sendgrid/mail'
 
-import * as closeIcon from '../../../assets/images/icons/close.png';
-import './Modal.module.less';
+import * as closeIcon from '../../../assets/images/icons/close.png'
+import './Modal.module.less'
 
-class Modal extends React.PureComponent {
-    state = {
+const Modal = props => {
+    const [state, setState] = useState({
         name: '',
         surname: '',
         companyName: '',
@@ -16,152 +16,183 @@ class Modal extends React.PureComponent {
         email: '',
         phoneNumber: '',
         target: '',
-    };
-    myRef = React.createRef();
-    componentDidMount() {
-        init('user_8J36WovfcyvCTVUlGVgez');
+    })
+
+    const [errors, setErrors] = useState({ email: false, phoneNumber: false })
+
+    const {
+        name,
+        surname,
+        companyName,
+        profession,
+        email,
+        phoneNumber,
+        target,
+    } = state
+
+    const { onClose, isOpened } = props
+    const buttonRef = useRef()
+
+    const modalCX = cx({
+        'modal-wrapper': true,
+        'modal-wrapper_opened': isOpened,
+    })
+
+    const sendGriKey = process.env.SENDGRID_API_KEY
+
+    const handleTextChange = key => e => {
+        if (key === 'email') {
+            const emailRegExp =
+                /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/
+            if (!e.target.value.match(emailRegExp)) {
+                setErrors(prev => ({ ...prev, email: true }))
+            } else {
+                setErrors(prev => ({ ...prev, email: false }))
+            }
+        }
+        if (key === 'phoneNumber') {
+            const phoneRegExp =
+                /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/im
+            if (!e.target.value.match(phoneRegExp)) {
+                setErrors(prev => ({ ...prev, phoneNumber: true }))
+            } else {
+                setErrors(prev => ({ ...prev, phoneNumber: false }))
+            }
+        }
+        setState(prev => ({ ...prev, [key]: e.target.value }))
     }
-    handleTextChange = (key) => (e) => {
-        this.setState({ [key]: e.target.value });
-    };
+    const sendData = async () => {
+        if (!phoneNumber) {
+            return setErrors(prev => ({ ...prev, phoneNumber: true }))
+        }
+        if (!email) {
+            return setErrors(prev => ({ ...prev, email: true }))
+        }
 
-    sendData = () => {
-        this.myRef.current.innerText = 'Отправка...';
-        const serviceId = 'service_2gxgl7t';
-        const templateId = 'template_9dlnssp';
-        this.sendFeedback(serviceId, templateId, this.state);
-    };
+        buttonRef.current.innerText = 'Отправка...'
+        const msg = {
+            to: 'stas.at.n.t@gmail.com',
+            from: 'stas.at.n.t@gmail.com',
+            subject: 'Новый заказ',
+            html: `
+            <div>
+            <div>имя: <strong>${name}</strong>
+            <div>фамилия: <strong>${surname}</div>
+            <div>компания: <strong>${companyName}</strong></div>
 
-    sendFeedback(serviceId, templateId, data) {
-        send(serviceId, templateId, {
-            ...data,
-            to_email: 'Julia@barkat-3d-ville.com',
-            to_email1: 'Sergii@barkat-3d-ville.com',
-        })
-            .then((response) => {
-                if (response.status === 200) {
-                    this.myRef.current.innerText = 'Отправлено!';
-                    this.setState({
-                        name: '',
-                        surname: '',
-                        companyName: '',
-                        profession: '',
-                        email: '',
-                        phoneNumber: '',
-                        target: '',
-                    });
-                    setTimeout(() => {
-                        this.props.onClose();
-                        this.myRef.current.innerText = 'Отправить';
-                    }, 1500);
-                }
-            })
-            .catch(() => {
-                this.myRef.current.innerText = 'Ошибка! Плохое соединение';
-                setTimeout(() => {
-                    this.props.onClose();
-                    this.myRef.current.innerText = 'Отправить';
-                }, 1500);
-            });
+            <div>профессия: <strong>${profession}</strong></div>
+
+            <div>имейл: <strong>${email}</strong></div>
+
+            <div>телефон: <strong>${phoneNumber}</strong></div>
+ 
+            <div>вопрос: <strong>${target}</strong></div>
+            </div>`,
+        }
+        sgMail.setApiKey(sendGriKey)
+
+        try {
+            await sgMail.send(msg)
+            buttonRef.current.innerText = 'Отправлено!'
+        } catch (error) {
+            buttonRef.current.innerText = 'Ошибка! Плохое соединение'
+            console.error('ERROR', error)
+        } finally {
+            setTimeout(() => {
+                buttonRef.current.innerText = 'Отправить'
+            }, 1500)
+        }
     }
 
-    render() {
-        const {
-            name,
-            surname,
-            companyName,
-            profession,
-            email,
-            phoneNumber,
-            target,
-        } = this.state;
-        const { onClose, isOpened } = this.props;
-
-        const modalCX = cx({
-            'modal-wrapper': true,
-            'modal-wrapper_opened': isOpened,
-        });
-
-        return (
-            <div className={modalCX}>
-                <div className='modal'>
-                    <Img
-                        className='modal-close-icon'
-                        src={closeIcon}
-                        onClick={onClose}
-                    />
-                    <div className='top-black-line' />
-                    <div className='modal-content-wrapper'>
-                        <div className='modal-title'>Заказать консультацию</div>
-                        <div className='inputs-wrapper'>
-                            <Input
-                                className='modal-input'
-                                title='Имя'
-                                value={name}
-                                onChange={this.handleTextChange('name')}
-                            />
-                            <Input
-                                className='modal-input'
-                                title='Фамилия'
-                                value={surname}
-                                onChange={this.handleTextChange('surname')}
-                            />
-                        </div>
-                        <div className='inputs-wrapper'>
-                            <Input
-                                className='modal-input'
-                                title='Компания'
-                                value={companyName}
-                                onChange={this.handleTextChange('companyName')}
-                            />
-                            <Input
-                                className='modal-input'
-                                title='Должность'
-                                value={profession}
-                                onChange={this.handleTextChange('profession')}
-                            />
-                        </div>
-                        <div className='inputs-wrapper'>
-                            <Input
-                                className='modal-input'
-                                title='Email'
-                                value={email}
-                                onChange={this.handleTextChange('email')}
-                            />
-                            <Input
-                                className='modal-input'
-                                title='Телефон'
-                                value={phoneNumber}
-                                onChange={this.handleTextChange('phoneNumber')}
-                            />
-                        </div>
-                        <div className='textarea-wrapper'>
-                            <Input
-                                className='modal-input'
-                                title='Интересующий вопрос'
-                                value={target}
-                                onChange={this.handleTextChange('target')}
-                                multiline
-                            />
-                        </div>
+    return (
+        <div className={modalCX}>
+            <div className='modal'>
+                <Img
+                    className='modal-close-icon'
+                    src={closeIcon}
+                    onClick={onClose}
+                />
+                <div className='top-black-line' />
+                <div className='modal-content-wrapper'>
+                    <div className='modal-title'>Заказать консультацию</div>
+                    <div className='inputs-wrapper'>
+                        <Input
+                            className='modal-input'
+                            title='Имя'
+                            value={name}
+                            onChange={handleTextChange('name')}
+                        />
+                        <Input
+                            className='modal-input'
+                            title='Фамилия'
+                            value={surname}
+                            onChange={handleTextChange('surname')}
+                        />
                     </div>
-                    <div className='bottom-submit-wrapper'>
-                        <div className='submit-wrapper'>
-                            <div
-                                className='submit-button'
-                                onClick={this.sendData}
-                                ref={this.myRef}
-                            >
-                                Отправить
-                            </div>
-                        </div>
-                        <div className='bottom-black-line' />
+                    <div className='inputs-wrapper'>
+                        <Input
+                            className='modal-input'
+                            title='Компания'
+                            value={companyName}
+                            onChange={handleTextChange('companyName')}
+                        />
+                        <Input
+                            className='modal-input'
+                            title='Должность'
+                            value={profession}
+                            onChange={handleTextChange('profession')}
+                        />
+                    </div>
+                    <div className='inputs-wrapper'>
+                        <Input
+                            className='modal-input'
+                            title='Email'
+                            value={email}
+                            onChange={handleTextChange('email')}
+                            error={!!errors.email}
+                            errorMessage={'Введите правильный почтовый ящик'}
+                        />
+
+                        <Input
+                            className='modal-input'
+                            title='Телефон'
+                            value={phoneNumber}
+                            onChange={handleTextChange('phoneNumber')}
+                            error={!!errors.phoneNumber}
+                            errorMessage={'Введите правильный телефон'}
+                        />
+                    </div>
+                    <div className='textarea-wrapper'>
+                        <Input
+                            className='modal-input'
+                            title='Интересующий вопрос'
+                            value={target}
+                            onChange={handleTextChange('target')}
+                            multiline
+                        />
                     </div>
                 </div>
-                <div className='modal-background' onClick={onClose}></div>
+                <div className='bottom-submit-wrapper'>
+                    <div
+                        className={cx(
+                            'submit-wrapper',
+                            (errors.email || errors.phoneNumber) && 'disabled'
+                        )}
+                    >
+                        <div
+                            className='submit-button'
+                            onClick={sendData}
+                            ref={buttonRef}
+                        >
+                            Отправить
+                        </div>
+                    </div>
+                    <div className='bottom-black-line' />
+                </div>
             </div>
-        );
-    }
+            <div className='modal-background' onClick={onClose}></div>
+        </div>
+    )
 }
 
-export default Modal;
+export default Modal
