@@ -5,7 +5,6 @@ npm-debug.log
 .cache
 .DS_Store
 bundle-analyzer
-yarn.lock
 .idea
 .env
 .http
