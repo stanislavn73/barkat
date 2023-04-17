@@ -7,6 +7,7 @@ export const useLiqPay = (amount, amountUAH, priceUSD, product, currency) => {
     const liqpayPublicKey = process.env.LIQPAY_PUBLIC_KEY
 
     const [hashedValue, setHashedValue] = useState([])
+    const [orderId, setOrderId] = useState(null)
 
     const amountToPay =
         currency === 'USD' || currency === 'UAH' ? amount : priceUSD
@@ -18,18 +19,21 @@ export const useLiqPay = (amount, amountUAH, priceUSD, product, currency) => {
         process.env.HOST === 'localhost'
             ? 'http://localhost:3000'
             : process.env.HOST
-    const json_string = {
-        public_key: liqpayPublicKey,
-        version: '3',
-        action: 'pay',
-        amount: `${Math.floor((amountToPay * 100) / 100)}`,
-        currency: currencyToPay,
-        description: `${product}`,
-        order_id: `${v4()}`,
-        result_url: `${url}/payment-success`,
-    }
 
     useEffect(() => {
+        const newOrderId = v4()
+        setOrderId(newOrderId)
+
+        const json_string = {
+            public_key: liqpayPublicKey,
+            version: '3',
+            action: 'pay',
+            amount: `${Math.floor((amountToPay * 100) / 100)}`,
+            currency: currencyToPay,
+            description: `${product}`,
+            order_id: `${newOrderId}`,
+            result_url: `${url}/payment-success`,
+        }
         generateHash(json_string)
     }, [amountToPay, currencyToPay])
 
@@ -44,5 +48,5 @@ export const useLiqPay = (amount, amountUAH, priceUSD, product, currency) => {
         setHashedValue([json_base64, sign_sha1])
     }
 
-    return [hashedValue]
+    return [hashedValue, orderId]
 }

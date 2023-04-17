@@ -46,7 +46,8 @@ export default function BuySketchUpShop({
     const [currentAmount, setCurrentAmount] = useState(priceUSD)
     const [userAgreementCheckbox, setUserAgreementCheckbox] = useState(false)
     const [userData, setUserData] = useState(
-        localStorage.getItem('USER_DATA_DATABASE') || initialUserData
+        JSON.parse(localStorage.getItem('USER_DATA_DATABASE')) ||
+            initialUserData
     )
     const [db, setDB] = useState(null)
 
@@ -55,7 +56,7 @@ export default function BuySketchUpShop({
 
     const currencyConvertKey = process.env.CURCONV_API_KEY
 
-    const [hashedValue] = useLiqPay(
+    const [hashedValue, orderId] = useLiqPay(
         currentAmount,
         amountUAH,
         priceUSD,
@@ -129,10 +130,10 @@ export default function BuySketchUpShop({
         const value = event.target.value
         localStorage.setItem(
             'USER_DATA_DATABASE',
-            JSON.stringify({ ...userData, [event.target.name]: value })
+            JSON.stringify({ ...userData, [event.target.name]: value, orderId })
         )
 
-        setUserData({ ...userData, [event.target.name]: value })
+        setUserData({ ...userData, [event.target.name]: value, orderId })
     }
 
     const handleSubmit = async e => {
@@ -144,6 +145,7 @@ export default function BuySketchUpShop({
                 email: userData.email,
                 phone: userData.phone,
                 timestamp: dayjs().format('MMMM D, YYYY h:mm A'),
+                orderId,
             })
         } catch (err) {
             console.error('error: ', err)
