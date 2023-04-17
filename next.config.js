@@ -22,10 +22,11 @@ const nextConfig = {
         return config
     },
     env: {
-        SENDGRID_API_KEY: process.env.SENDGRID_API_KEY,
         CURCONV_API_KEY: process.env.CURCONV_API_KEY,
         LIQPAY_PRIVATE_KEY: process.env.LIQPAY_PRIVATE_KEY,
         LIQPAY_PUBLIC_KEY: process.env.LIQPAY_PUBLIC_KEY,
+        HOST: process.env.HOST,
+        SENDGRID_URL: process.env.SENDGRID_URL,
     },
 }
 

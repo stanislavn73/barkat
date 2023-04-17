@@ -1,15 +1,10 @@
 import React, { useEffect } from 'react'
 import FullPage from '../ui-kit/FullPage'
-import sgMail from '@sendgrid/mail'
 
 const PaymentSuccess = () => {
-    const sendGriKey = process.env.SENDGRID_API_KEY
-    // server_url
-
     useEffect(() => {
         const { name, company, email, phone, website } =
             localStorage.getItem('USER_DATA_DATABASE') || []
-        sgMail.setApiKey(sendGriKey)
         const state = {
             name,
             company,
@@ -20,10 +15,28 @@ const PaymentSuccess = () => {
             subject: 'заказ оплачен',
             to: 'stas.at.n.t@gmail.com',
             from: 'stas.at.n.t@gmail.com',
-        }
-        sgMail
-            .send(state)
-            .catch(err => console.error('Email notification not sent', err))
+        }(async () => {
+            try {
+                const sendGridHost = process.env.SENDGRID_URL
+                const url = `https://${sendGridHost}/api/send`
+                const response = await fetch(url, {
+                    method: 'POST',
+                    body: JSON.stringify(state),
+                })
+                if (response.status !== 200) {
+                    throw new Error(response)
+                }
+                console.log(response)
+                buttonRef.current.innerText = 'Отправлено!'
+            } catch (error) {
+                buttonRef.current.innerText = 'Ошибка! Плохое соединение'
+                console.error('ERROR', error)
+            } finally {
+                setTimeout(() => {
+                    buttonRef.current.innerText = 'Отправить'
+                }, 1500)
+            }
+        })()
     }, [])
 
     return (

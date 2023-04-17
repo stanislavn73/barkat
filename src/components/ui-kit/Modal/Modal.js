@@ -2,7 +2,6 @@ import React, { useRef, useState } from 'react'
 import cx from 'classnames'
 import Input from '../Input'
 import Img from '../Img'
-import sgMail from '@sendgrid/mail'
 
 import * as closeIcon from '../../../assets/images/icons/close.png'
 import './Modal.module.less'
@@ -38,8 +37,6 @@ const Modal = props => {
         'modal-wrapper_opened': isOpened,
     })
 
-    const sendGriKey = process.env.SENDGRID_API_KEY
-
     const handleTextChange = key => e => {
         if (key === 'email') {
             const emailRegExp =
@@ -71,8 +68,9 @@ const Modal = props => {
 
         buttonRef.current.innerText = 'Отправка...'
         const msg = {
-            to: 'stas.at.n.t@gmail.com',
-            from: 'stas.at.n.t@gmail.com',
+            from: 'order@barkat-3d-ville.com',
+            to: 'order@barkat-3d-ville.com',
+            cc: 'sergii.barkat@gmail.com',
             subject: 'Новый заказ',
             html: `
             <div>
@@ -89,10 +87,17 @@ const Modal = props => {
             <div>вопрос: <strong>${target}</strong></div>
             </div>`,
         }
-        sgMail.setApiKey(sendGriKey)
 
         try {
-            await sgMail.send(msg)
+            const url = `${process.env.SENDGRID_URL}/api/send`
+            const response = await fetch(url, {
+                method: 'POST',
+                body: JSON.stringify(msg),
+            })
+            if (response.status !== 200) {
+                throw new Error(response)
+            }
+
             buttonRef.current.innerText = 'Отправлено!'
         } catch (error) {
             buttonRef.current.innerText = 'Ошибка! Плохое соединение'

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import Radio from '@material-ui/core/Radio'
 import { Checkbox, Box } from '@material-ui/core'
 import { ModalConsumer } from '../../../../layouts/Layout'
@@ -10,6 +10,7 @@ import { getFirestore, doc, setDoc } from 'firebase/firestore'
 
 import './BuySketchUpShop.module.less'
 import dayjs from 'dayjs'
+import { CurrencyContext } from '../../../../../../pages/buy-sketchup'
 
 function UserAgreementLink() {
     return (
@@ -49,9 +50,18 @@ export default function BuySketchUpShop({
     )
     const [db, setDB] = useState(null)
 
+    const { hryvnaExchangeRate } = useContext(CurrencyContext)
+    const amountUAH = hryvnaExchangeRate * priceUSD
+
     const currencyConvertKey = process.env.CURCONV_API_KEY
 
-    const [hashedValue] = useLiqPay(currentAmount, product, selectedValue)
+    const [hashedValue] = useLiqPay(
+        currentAmount,
+        amountUAH,
+        priceUSD,
+        product,
+        selectedValue
+    )
 
     useEffect(() => {
         ;(async () => {
@@ -75,7 +85,6 @@ export default function BuySketchUpShop({
         const UAH_CURENCY = `https://free.currconv.com/api/v7/convert?q=USD_${selectedValue}&compact=ultra&apiKey=${currencyConvertKey}`
         fetch(UAH_CURENCY)
             .then(response => {
-                console.log(response)
                 if (response.status === 200) {
                     return response.json()
                 }
@@ -85,7 +94,7 @@ export default function BuySketchUpShop({
                 setCurrentAmount(data[`USD_${selectedValue}`] * priceUSD)
             })
             .catch(err => {
-                console.log(err)
+                console.error(err)
                 setCurrentAmount(priceUSD)
                 setSelectedValue('USD')
             })
@@ -94,13 +103,15 @@ export default function BuySketchUpShop({
     }, [])
 
     async function handleChooseCurrency(currency) {
+        if (currency === 'UAH') {
+            setCurrentAmount(amountUAH)
+            return setSelectedValue('UAH')
+        }
         const CONVERT_URL = `https://free.currconv.com/api/v7/convert?q=USD_${currency}&compact=ultra&apiKey=${currencyConvertKey}`
         try {
             const data = await fetch(CONVERT_URL).then(response =>
                 response.json()
             )
-            console.log(data, currency)
-            // Promise.reject()
             setCurrentAmount(data[`USD_${currency}`] * priceUSD)
             setSelectedValue(currency)
         } catch (err) {
@@ -115,7 +126,6 @@ export default function BuySketchUpShop({
     }
 
     function handleChangeUserData(event) {
-        console.log(event.target.value)
         const value = event.target.value
         localStorage.setItem(
             'USER_DATA_DATABASE',
@@ -135,32 +145,9 @@ export default function BuySketchUpShop({
                 phone: userData.phone,
                 timestamp: dayjs().format('MMMM D, YYYY h:mm A'),
             })
-            console.log('success')
         } catch (err) {
             console.error('error: ', err)
         }
-
-        // try {
-        //     const formData = new FormData()
-        //     formData.append('data', hashedValue[0])
-        //     formData.append('signature', hashedValue[1])
-        //     // formData.append('currency', hashedValue[1])
-        //
-        //     const response = await fetch(
-        //         'https://www.liqpay.ua/api/3/checkout',
-        //         {
-        //             method: 'POST',
-        //             body: formData,
-        //             headers: {
-        //                 'accept-charset': 'utf-8',
-        //             },
-        //         }
-        //     ).then(response => response.json())
-        //     console.log(response)
-        // } catch (err) {
-        //     console.error('liqpay error', err)
-        //
-        // }
     }
 
     return (
