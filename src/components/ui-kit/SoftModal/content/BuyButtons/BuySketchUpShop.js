@@ -103,6 +103,17 @@ export default function BuySketchUpShop({
         if (savedData) setUserData(JSON.parse(savedData))
     }, [])
 
+    useEffect(() => {
+        localStorage.setItem(
+            'USER_DATA_DATABASE',
+            JSON.stringify({
+                ...userData,
+                orderId,
+                product,
+            })
+        )
+    }, [orderId])
+
     async function handleChooseCurrency(currency) {
         if (currency === 'UAH') {
             setCurrentAmount(amountUAH)
@@ -130,10 +141,17 @@ export default function BuySketchUpShop({
         const value = event.target.value
         localStorage.setItem(
             'USER_DATA_DATABASE',
-            JSON.stringify({ ...userData, [event.target.name]: value, orderId })
+            JSON.stringify({
+                ...userData,
+                [event.target.name]: value,
+            })
         )
 
-        setUserData({ ...userData, [event.target.name]: value, orderId })
+        setUserData({
+            ...userData,
+            [event.target.name]: value,
+            orderId,
+        })
     }
 
     const handleSubmit = async e => {

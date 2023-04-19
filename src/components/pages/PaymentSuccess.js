@@ -3,14 +3,11 @@ import FullPage from '../ui-kit/FullPage'
 
 const PaymentSuccess = () => {
     useEffect(() => {
-        const { name, company, email, phone, website, orderId } =
+        const { name, company, email, phone, website, orderId, product } =
             JSON.parse(localStorage.getItem('USER_DATA_DATABASE')) || {}
 
         const state = {
             subject: 'Заказ оплачен',
-            from: 'order@barkat-3d-ville.com',
-            to: 'order@barkat-3d-ville.com',
-            cc: 'sergii.barkat@gmail.com',
             html: `
             <div>
             <div>имя: <strong>${name}</strong>
@@ -20,6 +17,7 @@ const PaymentSuccess = () => {
             <div>телефон: <strong>${phone}</strong></div>
             <div>вебсайт: <strong>${website}</strong></div>
             <div>orderId: <strong>${orderId}</strong></div>
+            <div>продукт: <strong>${product}</strong></div>
              </div>`,
         }
         ;(async () => {

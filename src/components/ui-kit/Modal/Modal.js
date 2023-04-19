@@ -68,9 +68,6 @@ const Modal = props => {
 
         buttonRef.current.innerText = 'Отправка...'
         const msg = {
-            from: 'order@barkat-3d-ville.com',
-            to: 'order@barkat-3d-ville.com',
-            cc: 'sergii.barkat@gmail.com',
             subject: 'Новый заказ',
             html: `
             <div>
