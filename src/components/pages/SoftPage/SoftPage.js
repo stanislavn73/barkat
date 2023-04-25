@@ -1,93 +1,77 @@
-import React from 'react';
+import React, { memo, useState } from 'react'
 
-import Anchor from '../../ui-kit/Anchor';
-import AnchorMenu from '../../ui-kit/AnchorMenu';
+import Anchor from '../../ui-kit/Anchor'
+import AnchorMenu from '../../ui-kit/AnchorMenu'
 
-import FirstScreen from './FirstScreen';
-import Autodesk from './Autodesk';
-import DassaultSystemes from './Dassault';
-import Hexagon from './Hexagon';
-import Bentley from './Bentley';
-import SketchUp from './SketchUp';
-import AllPlan from './AllPlan';
-import './SoftPage.module.less';
+import FirstScreen from './FirstScreen'
+import Autodesk from './Autodesk'
+import DassaultSystemes from './Dassault'
+import Hexagon from './Hexagon'
+import Bentley from './Bentley'
+import SketchUp from './SketchUp'
+import AllPlan from './AllPlan'
+import './SoftPage.module.less'
 
-const anchors = [
-    {
-        id: '3d-solutions',
-        title: '3D-решения',
-    },
-    {
-        id: 'Autodesk',
-        title: 'Autodesk',
-    },
-    {
-        id: 'Dassault-systemes',
-        title: 'Dassault Systèmes',
-    },
-    {
-        id: 'Hexagon-geospatial',
-        title: 'Hexagon Geospatial',
-    },
-    {
-        id: 'Bentley',
-        title: 'Bentley',
-    },
-    {
-        id: 'SketchUp',
-        title: 'Sketchup',
-    },
-    {
-        id: 'AllPlan',
-        title: 'AllPlan',
-    },
-];
+const SoftPage = () => {
+    const anchors = [
+        {
+            id: '3d-solutions',
+            title: '3D-решения',
+            comp: <FirstScreen />,
+        },
 
-class FacadesPage extends React.PureComponent {
-    state = {
-        activeAnchor: 'first',
-    };
+        {
+            id: 'AllPlan',
+            title: 'AllPlan',
+            comp: <AllPlan />,
+        },
+        {
+            id: 'Autodesk',
+            title: 'Autodesk',
+            comp: <Autodesk />,
+        },
+        {
+            id: 'Bentley',
+            title: 'Bentley',
+            comp: <Bentley />,
+        },
+        {
+            id: 'Dassault-systemes',
+            title: 'Dassault Systèmes',
+            comp: <DassaultSystemes />,
+        },
+        {
+            id: 'Hexagon-geospatial',
+            title: 'Hexagon Geospatial',
+            comp: <Hexagon />,
+        },
+        {
+            id: 'SketchUp',
+            title: 'Sketchup',
+            comp: <SketchUp />,
+        },
+    ]
 
-    handleAnchorReact = (id) => {
-        this.setState({ activeAnchor: id });
-    };
+    const [activeAnchor, setActiveAnchor] = useState(anchors[0].id)
 
-    render() {
-        const { activeAnchor } = this.state;
-
-        return (
-            <>
-                <AnchorMenu anchors={anchors} activeAnchor={activeAnchor} />
-                <Anchor id='first' onPositionChange={this.handleAnchorReact}>
-                    <FirstScreen />
-                </Anchor>
-                <Anchor id='Autodesk' onPositionChange={this.handleAnchorReact}>
-                    <Autodesk />
-                </Anchor>
-                <Anchor
-                    id='Dassault-systemes'
-                    onPositionChange={this.handleAnchorReact}
-                >
-                    <DassaultSystemes />
-                </Anchor>
-                <Anchor
-                    id='Hexagon-geospatial'
-                    onPositionChange={this.handleAnchorReact}
-                >
-                    <Hexagon />
-                </Anchor>
-                <Anchor id='Bentley' onPositionChange={this.handleAnchorReact}>
-                    <Bentley />
-                </Anchor>
-                <Anchor id='SketchUp' onPositionChange={this.handleAnchorReact}>
-                    <SketchUp />
-                </Anchor>
-                <Anchor id='AllPlan' onPositionChange={this.handleAnchorReact}>
-                    <AllPlan />
-                </Anchor>
-            </>
-        );
+    const handleAnchorReact = id => {
+        setActiveAnchor(id)
     }
+
+    return (
+        <>
+            <AnchorMenu anchors={anchors} activeAnchor={activeAnchor} />
+            {anchors.map(anchor => (
+                <Anchor
+                    key={anchor.id}
+                    id={anchor.id}
+                    onPositionChange={handleAnchorReact}
+                >
+                    {anchor.comp}
+                </Anchor>
+            ))}
+        </>
+    )
 }
 
-export default FacadesPage;
+export default memo(SoftPage)
