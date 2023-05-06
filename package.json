@@ -43,6 +43,7 @@
         "react-waypoint": "^9.0.3",
         "react-youtube": "^7.13.0",
         "sass": "^1.62.1",
+        "sharp": "^0.32.1",
         "styled-components": "^5.2.0",
         "url-loader": "^4.1.1",
         "uuid": "^8.3.2"

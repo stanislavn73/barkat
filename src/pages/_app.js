@@ -1,7 +1,7 @@
 import Router, { useRouter } from 'next/router'
 import React, { useEffect } from 'react'
 import { ThemeProvider } from 'styled-components'
-import { GlobalStyle } from './GlobalStyle'
+import { GlobalStyle } from '../components/GlobalStyle'
 
 import ua from '../../lang/ua.json'
 import ru from '../../lang/ru.json'

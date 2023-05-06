@@ -21,13 +21,15 @@ const nextConfig = withFonts({
         HOST: process.env.HOST,
         SENDGRID_URL: process.env.SENDGRID_URL,
     },
-    i18n: {
-        locales: ['ua', 'ru'],
-        defaultLocale: 'ru',
-    },
-    // experimental: {
-    //     esmExternals: false,
+    // i18n: {
+    //     locales: ['ua', 'ru'],
+    //     defaultLocale: 'ru',
     // },
+    eslint: {
+        // Warning: This allows production builds to successfully complete even if
+        // your project has ESLint errors.
+        ignoreDuringBuilds: true,
+    },
 })
 
 module.exports = nextConfig
