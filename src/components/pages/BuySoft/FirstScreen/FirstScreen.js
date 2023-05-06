@@ -1,11 +1,6 @@
-import React from 'react'
 import FullPage from '../../../ui-kit/FullPage'
-import './FirstScreen.module.less'
+import styles from './FirstScreen.module.scss'
 
 export default function FirstScreen() {
-    return (
-        <>
-            <FullPage className='buySketchUp'></FullPage>
-        </>
-    )
+    return <FullPage className={styles.buySketchUp}></FullPage>
 }

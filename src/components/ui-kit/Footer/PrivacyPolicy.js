@@ -1,33 +1,44 @@
-import React from 'react';
-import { ModalConsumer } from '../../layouts/Layout';
-import './PrivacyPolicy.module.less';
-import visa from 'payment-icons/min/flat/visa.svg';
-import masterCard from 'payment-icons/min/flat/mastercard.svg';
+import { ModalConsumer } from '../../layouts/Layout'
+import visa from 'payment-icons/min/flat/visa.svg'
+import masterCard from 'payment-icons/min/flat/mastercard.svg'
+import Img from '../Img'
+import cx from 'classnames'
+
+import styles from './PrivacyPolicy.module.scss'
 
 export default function PrivacyPolicy() {
     return (
-        <div className='label-wrapper'>
+        <div className={styles['label-wrapper']}>
             <ModalConsumer>
                 {({ handleOpenSoftModal }) => (
                     <div
-                        className='label-container'
+                        className={styles['label-container']}
                         onClick={handleOpenSoftModal('PrivacyPolicy')}
                     >
                         {/* <p className='label-title'>Положение о </p> */}
-                        <p className='label-title underlined'>
+                        <p
+                            className={cx(
+                                styles['label-title'],
+                                styles.underlined
+                            )}
+                        >
                             Политика конфиденциальности
                         </p>
                         <div>
-                            <img alt='' src={visa} className='cards_logo' />
-                            <img
+                            <Img
+                                alt=''
+                                src={visa}
+                                className={styles['cards_logo']}
+                            />
+                            <Img
                                 alt=''
                                 src={masterCard}
-                                className='cards_logo'
+                                className={styles['cards_logo']}
                             />
                         </div>
                     </div>
                 )}
             </ModalConsumer>
         </div>
-    );
+    )
 }

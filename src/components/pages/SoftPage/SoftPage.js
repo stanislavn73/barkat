@@ -1,4 +1,4 @@
-import React, { memo, useState } from 'react'
+import { memo, useState } from 'react'
 
 import Anchor from '../../ui-kit/Anchor'
 import AnchorMenu from '../../ui-kit/AnchorMenu'
@@ -10,7 +10,7 @@ import Hexagon from './Hexagon'
 import Bentley from './Bentley'
 import SketchUp from './SketchUp'
 import AllPlan from './AllPlan'
-import './SoftPage.module.less'
+// import TeamViewer from './TeamViewer'
 
 const SoftPage = () => {
     const anchors = [
@@ -50,6 +50,11 @@ const SoftPage = () => {
             title: 'Sketchup',
             comp: <SketchUp />,
         },
+        // {
+        //     id: 'TeamViewerFrontline',
+        //     title: 'TeamViewer Frontline',
+        //     comp: <TeamViewer />,
+        // },
     ]
 
     const [activeAnchor, setActiveAnchor] = useState(anchors[0].id)

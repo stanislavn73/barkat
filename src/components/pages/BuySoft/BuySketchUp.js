@@ -1,16 +1,17 @@
-import React, { useState, useRef } from 'react';
-import Table from '@material-ui/core/Table';
-import TableCell from '@material-ui/core/TableCell';
-import TableHead from '@material-ui/core/TableHead';
-import TableRow from '@material-ui/core/TableRow';
-import { TableBody, TableFooter, makeStyles } from '@material-ui/core';
-import FirstScreen from './FirstScreen/FirstScreen';
-import HoverFrame from './HoverFrame';
-import BuyButtons from './BuyButtons';
+import { useState, useRef } from 'react'
+import Table from '@material-ui/core/Table'
+import TableCell from '@material-ui/core/TableCell'
+import TableHead from '@material-ui/core/TableHead'
+import TableRow from '@material-ui/core/TableRow'
+import { TableBody, TableFooter, makeStyles } from '@material-ui/core'
+import FirstScreen from './FirstScreen/FirstScreen'
+import HoverFrame from './HoverFrame'
+import BuyButtons from './BuyButtons'
+import cx from 'classnames'
 
-import './BuySketchup.module.less';
-import MobileScrollBar from './MobileScrollBar';
-import { rows } from './tableData';
+import styles from './BuySketchup.module.scss'
+import MobileScrollBar from './MobileScrollBar'
+import { rows } from './tableData'
 
 const buyItems = [
     {
@@ -37,9 +38,9 @@ const buyItems = [
         title: 'SketchUp для высшего образования',
         hideMobileColumn: false,
     },
-];
+]
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles(theme => ({
     table: {
         tableLayout: 'fixed',
         marginTop: 10,
@@ -49,36 +50,36 @@ const useStyles = makeStyles((theme) => ({
             padding: theme.spacing(1),
         },
     },
-}));
+}))
 
 export default function BuySketchUp() {
-    const [column, setColumn] = useState(-1);
-    const [mobileColumnShowed, setMobileColumnShowed] = useState(buyItems);
+    const [column, setColumn] = useState(-1)
+    const [mobileColumnShowed, setMobileColumnShowed] = useState(buyItems)
 
-    const classes = useStyles();
-    let tableRef = useRef(<table></table>);
+    const classes = useStyles()
+    let tableRef = useRef(<table></table>)
 
     function handleSetColumn(column) {
-        setColumn(column);
+        setColumn(column)
     }
 
     function handleShowMobileTable(index) {
-        let newState = [...mobileColumnShowed].map((item) => {
+        let newState = [...mobileColumnShowed].map(item => {
             if (item.title === 'Опции') {
-                item.hideMobileRow = true;
+                item.hideMobileRow = true
             } else {
-                item.hideMobileColumn = true;
+                item.hideMobileColumn = true
             }
 
-            return item;
-        });
+            return item
+        })
 
-        newState[index + 1].hideMobileColumn = false;
-        setMobileColumnShowed(newState);
+        newState[index + 1].hideMobileColumn = false
+        setMobileColumnShowed(newState)
     }
 
     return (
-        <div className='table_container'>
+        <div className={styles['table_container']}>
             <FirstScreen />
             <MobileScrollBar
                 buttons={mobileColumnShowed}
@@ -98,8 +99,8 @@ export default function BuySketchUp() {
                                     <div
                                         className={
                                             item.title === 'Опции'
-                                                ? 'options_element'
-                                                : 'head_element'
+                                                ? styles['options_element']
+                                                : styles['head_element']
                                         }
                                     >
                                         {item.title}
@@ -120,7 +121,7 @@ export default function BuySketchUp() {
                             <TableCell>
                                 {Array.isArray(item.option) ? (
                                     <div
-                                        className='options_element'
+                                        className={styles['options_element']}
                                         onMouseEnter={() => setColumn(0)}
                                     >
                                         {item.option[0]}
@@ -129,7 +130,7 @@ export default function BuySketchUp() {
                                     </div>
                                 ) : (
                                     <div
-                                        className='options_element'
+                                        className={styles['options_element']}
                                         onMouseEnter={() => setColumn(0)}
                                     >
                                         {item.option}
@@ -138,7 +139,10 @@ export default function BuySketchUp() {
                             </TableCell>
                             {!mobileColumnShowed[1].hideMobileColumn && (
                                 <TableCell
-                                    className={'cell ' + classes.TableCell}
+                                    className={cx(
+                                        styles.cell,
+                                        classes.TableCell
+                                    )}
                                     onMouseEnter={() => setColumn(1)}
                                 >
                                     {item.sketchUpFree}
@@ -146,7 +150,10 @@ export default function BuySketchUp() {
                             )}
                             {!mobileColumnShowed[2].hideMobileColumn && (
                                 <TableCell
-                                    className={'cell ' + classes.TableCell}
+                                    className={cx(
+                                        styles.cell,
+                                        classes.TableCell
+                                    )}
                                     onMouseEnter={() => setColumn(2)}
                                 >
                                     {item.sketchUpShop}
@@ -154,7 +161,10 @@ export default function BuySketchUp() {
                             )}
                             {!mobileColumnShowed[3].hideMobileColumn && (
                                 <TableCell
-                                    className={'cell ' + classes.TableCell}
+                                    className={cx(
+                                        styles.cell,
+                                        classes.TableCell
+                                    )}
                                     onMouseEnter={() => setColumn(3)}
                                 >
                                     {item.sketchUpPro}
@@ -162,7 +172,10 @@ export default function BuySketchUp() {
                             )}
                             {!mobileColumnShowed[4].hideMobileColumn && (
                                 <TableCell
-                                    className={'cell ' + classes.TableCell}
+                                    className={cx(
+                                        styles.cell,
+                                        classes.TableCell
+                                    )}
                                     onMouseEnter={() => setColumn(4)}
                                 >
                                     {item.sketchUpStudio}
@@ -170,7 +183,10 @@ export default function BuySketchUp() {
                             )}
                             {!mobileColumnShowed[5].hideMobileColumn && (
                                 <TableCell
-                                    className={'cell ' + classes.TableCell}
+                                    className={cx(
+                                        styles.cell,
+                                        classes.TableCell
+                                    )}
                                     onMouseEnter={() => setColumn(5)}
                                 >
                                     {item.sketchUpStudents}
@@ -196,5 +212,5 @@ export default function BuySketchUp() {
                 )}
             </Table>
         </div>
-    );
+    )
 }

@@ -1,4 +1,4 @@
-import React, { memo, useState } from 'react'
+import { memo, useState } from 'react'
 
 import Anchor from '../../ui-kit/Anchor'
 import AnchorMenu from '../../ui-kit/AnchorMenu'
@@ -13,8 +13,6 @@ import ClinkerstoneBlock from './Clinkerstone'
 import TerracotaBlock from './Terracota'
 import PorcelainTileBlock from './PorcelainTile'
 import ArtificalStoneBlock from './ArtificalStone'
-
-import './FacadesPage.module.less'
 
 const FacadesPage = () => {
     const anchors = [

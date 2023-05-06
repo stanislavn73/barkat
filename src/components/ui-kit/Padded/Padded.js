@@ -1,14 +1,12 @@
-import React from 'react';
-import cx from 'classnames';
+import React from 'react'
+import cx from 'classnames'
 
-import './Padded.module.less';
+import styles from './Padded.module.scss'
 
 function Padded({ children, className }) {
-    const paddedCX = cx('padded', {
-        [className]: className,
-    });
+    const paddedCX = cx(styles.padded, className)
 
-    return <div className={paddedCX}>{children}</div>;
+    return <div className={paddedCX}>{children}</div>
 }
 
-export default React.memo(Padded);
+export default React.memo(Padded)

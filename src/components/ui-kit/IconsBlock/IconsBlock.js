@@ -1,27 +1,18 @@
-import React, { PureComponent } from 'react';
-import Img from '../Img';
-import styles from './IconsBlock.module.less';
+import Img from '../Img'
+import styles from './IconsBlock.module.scss'
 
-class IconsBlock extends PureComponent {
-    state = {
-        current: 'mail',
-    };
-
-    render() {
-        const { items } = this.props;
-
-        return (
-            <div className='icons-block-wrapper'>
-                {items.map((item, index) => (
-                    <div key={index + 1} className='block-item'>
-                        <Img className='icon' src={item.icon} />
-                        <div className='big-number'>{item.boldText}</div>
-                        <div className='text'>{item.text}</div>
-                    </div>
-                ))}
-            </div>
-        );
-    }
+const IconsBlock = ({ items }) => {
+    return (
+        <div className={styles['icons-block-wrapper']}>
+            {items.map((item, index) => (
+                <div key={index + 1} className={styles['block-item']}>
+                    <Img className={styles['icon']} src={item.icon} />
+                    <div className={styles['big-number']}>{item.boldText}</div>
+                    <div className={styles['text']}>{item.text}</div>
+                </div>
+            ))}
+        </div>
+    )
 }
 
-export default IconsBlock;
+export default IconsBlock

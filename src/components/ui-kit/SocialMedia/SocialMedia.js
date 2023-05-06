@@ -1,5 +1,5 @@
-import React from 'react';
-import './Social.module.less';
+import React from 'react'
+import styles from './Social.module.scss'
 
 const linksObject = {
     logo: {
@@ -36,31 +36,31 @@ const linksObject = {
         insta: 'https://www.instagram.com/sketch_uper/?igshid=imjhssni9wh6',
         linkedin: 'https://www.linkedin.com/showcase/65673146/admin/',
     },
-};
+}
 
 export default function SocialMedia({ page }) {
     return (
         <>
-            <div className='social-wrapper'>
+            <div className={styles['social-wrapper']}>
                 <a
-                    className='facebook'
+                    className={styles['facebook']}
                     target='_blank'
                     href={linksObject[page].facebook}
                 ></a>
 
                 {linksObject[page].hasOwnProperty('insta') && (
                     <a
-                        className='insta'
+                        className={styles['insta']}
                         target='_blank'
                         href={linksObject[page].insta}
                     ></a>
                 )}
                 <a
-                    className='linkedin'
+                    className={styles['linkedin']}
                     target='_blank'
                     href={linksObject[page].linkedin}
                 ></a>
             </div>
         </>
-    );
+    )
 }

@@ -1,13 +1,17 @@
-import React, { useState } from 'react';
-import cx from 'classnames';
-import ReactDOM from 'react-dom';
-import './styles.module.less';
+import { useState } from 'react'
+import cx from 'classnames'
+import ReactDOM from 'react-dom'
+import styles from './styles.module.scss'
+import Image from './../Img'
 
 export default function Img({ src, className, ...rest }) {
-    const [isFull, setIsFull] = useState(false);
+    const [isFull, setIsFull] = useState(false)
 
     function handleImageClick(state) {
-        return () => setIsFull(state);
+        return () => {
+            console.log('clicked', state)
+            setIsFull(state)
+        }
     }
 
     return (
@@ -15,20 +19,21 @@ export default function Img({ src, className, ...rest }) {
             {isFull &&
                 ReactDOM.createPortal(
                     <div
-                        className='fullscreen-image'
+                        className={styles['fullscreen-image']}
                         onClick={handleImageClick(false)}
                     >
-                        <img src={src} {...rest} loading='lazy' />
+                        {console.log('rendered')}
+                        <Image src={src} {...rest} loading='lazy' />
                     </div>,
                     document.body
                 )}
-            <img
+            <Image
                 src={src}
-                className={cx('full-image-thumb', className)}
+                className={cx(styles['full-image-thumb'], className)}
                 onClick={handleImageClick(true)}
                 {...rest}
                 loading='lazy'
             />
         </>
-    );
+    )
 }

@@ -1,26 +1,40 @@
-import React, { useState } from 'react';
-import cx from 'classnames';
-import Img from '../Img';
+import React, { useState } from 'react'
+import cx from 'classnames'
+import Img from '../Img'
 
-import './ImageSlides.module.less';
+import styles from './ImageSlides.module.scss'
 
-function ProjectsFourthBlock({ data }) {
-    const [activeSlide, setActiveSlide] = useState('');
+function ProjectsFourthBlock({ data, styles: customStyles }) {
+    const [activeSlide, setActiveSlide] = useState('')
 
     function handleSetActiveSlide(id) {
         return () => {
-            setActiveSlide(activeSlide === id ? '' : id);
-        };
+            setActiveSlide(activeSlide === id ? '' : id)
+        }
     }
 
+    const resolvedSlides = cx(styles.slides, customStyles?.slides)
+    const resolvedWrapper = cx(
+        styles['slide-wrapper'],
+        customStyles?.['slide-wrapper']
+    )
+    const resolvedWrapperActive = cx(
+        styles['slide-wrapper_active'],
+        customStyles?.['slide-wrapper_active']
+    )
+    const resolvedWrapperUnactive = cx(
+        styles['slide-wrapper_unactive'],
+        customStyles?.['slide-wrapper_unactive']
+    )
+
     return (
-        <div className='slides'>
-            {data.map((project) => {
-                const slideCX = cx('slide-wrapper', {
-                    'slide-wrapper_active': project.id === activeSlide,
-                    'slide-wrapper_unactive':
+        <div className={resolvedSlides}>
+            {data.map(project => {
+                const slideCX = cx(resolvedWrapper, {
+                    [resolvedWrapperActive]: project.id === activeSlide,
+                    [resolvedWrapperUnactive]:
                         activeSlide && project.id !== activeSlide,
-                });
+                })
 
                 return (
                     <div
@@ -29,14 +43,14 @@ function ProjectsFourthBlock({ data }) {
                         onClick={handleSetActiveSlide(project.id)}
                     >
                         {project.title && (
-                            <div className='title'>{project.title}</div>
+                            <div className={styles.title}>{project.title}</div>
                         )}
                         <Img src={project.thumbnail} />
                     </div>
-                );
+                )
             })}
         </div>
-    );
+    )
 }
 
-export default React.memo(ProjectsFourthBlock);
+export default React.memo(ProjectsFourthBlock)

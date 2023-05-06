@@ -1,13 +1,13 @@
-import React from 'react';
-import styled from 'styled-components';
+import { memo } from 'react'
+import styled from 'styled-components'
 
 const StyledBold = styled.span`
     font-weight: 700;
     color: black;
-`;
+`
 
 function Bold(props) {
-    return <StyledBold>{props.children}</StyledBold>;
+    return <StyledBold>{props.children}</StyledBold>
 }
 
-export default React.memo(Bold);
+export default memo(Bold)

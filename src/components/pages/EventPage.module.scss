@@ -1,0 +1,8 @@
+@import '../../assets/variables.module.scss';
+
+.background-image {
+    // width: 100%;
+    object-fit: cover;
+    height: 100%;
+    object-position: center;
+}

@@ -1,24 +1,19 @@
-import React from 'react'
-import {
-    Box,
-    FormControl,
-    InputLabel,
-    MenuItem,
-    Select,
-    TextField,
-} from '@material-ui/core'
+import { Box, FormControl, InputLabel, Select, TextField } from '@mui/material'
+
+import styles from './BuySketchUpShop.module.scss'
 
 const UserDataForm = ({ handleChangeUserData, userData }) => {
     return (
-        <Box className='textfield_container'>
+        <Box className={styles.textfield_container}>
             <TextField
                 autoFocus
                 label='Ф.И.О.'
                 name='name'
                 onChange={handleChangeUserData}
                 required
-                className='textfield'
+                className={styles.textfield}
                 value={userData.name}
+                variant='standard'
             />
             {/* <TextField
                 autoFocus
@@ -30,7 +25,7 @@ const UserDataForm = ({ handleChangeUserData, userData }) => {
                 className='textfield'
                 value={userData.company}
             /> */}
-            <FormControl name='controll'>
+            <FormControl name='control' variant='standard'>
                 <InputLabel id='activity-label'>Вид деятельности</InputLabel>
                 <Select
                     native
@@ -54,9 +49,9 @@ const UserDataForm = ({ handleChangeUserData, userData }) => {
                     required
                     name='website'
                     onChange={handleChangeUserData}
-                    required
-                    className='textfield'
+                    className={styles.textfield}
                     value={userData.website}
+                    variant='standard'
                 />
             )}
             <TextField
@@ -65,9 +60,9 @@ const UserDataForm = ({ handleChangeUserData, userData }) => {
                 required
                 name='email'
                 onChange={handleChangeUserData}
-                required
-                className='textfield'
+                className={styles.textfield}
                 value={userData.email}
+                variant='standard'
             />
             <TextField
                 autoFocus
@@ -75,9 +70,9 @@ const UserDataForm = ({ handleChangeUserData, userData }) => {
                 required
                 name='phone'
                 onChange={handleChangeUserData}
-                required
-                className='textfield'
+                className={styles.textfield}
                 value={userData.phone}
+                variant='standard'
             />
         </Box>
     )

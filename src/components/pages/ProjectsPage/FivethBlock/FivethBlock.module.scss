@@ -1,0 +1,383 @@
+//@import '../../../../assets/variables.module.scss';
+//.fiveth-wrapper {
+//    position: relative;
+//
+//    .title {
+//        position: absolute;
+//        top: 20px;
+//        left: 0px;
+//        width: 100%;
+//        text-align: center;
+//        z-index: 5;
+//
+//        font-size: 100px;
+//        font-weight: 500;
+//        color: #cacaca;
+//
+//        @media @laptop-m {
+//            font-size: 60px;
+//        }
+//
+//        @media @tablet-m {
+//            font-size: 40px;
+//        }
+//
+//        @media @mobile-m {
+//            font-size: 30px;
+//        }
+//
+//        @media @mobile-s {
+//            font-size: 30px;
+//            top: 10px;
+//        }
+//    }
+//
+//    .padded {
+//        display: flex;
+//        flex-direction: row;
+//
+//        @media @tablet-m {
+//            flex-direction: column;
+//        }
+//
+//        .preferences,
+//        .preferences-image {
+//            height: 100%;
+//            width: 50%;
+//
+//            @media @tablet-m {
+//                flex-direction: column;
+//                height: 50%;
+//                width: 100%;
+//            }
+//        }
+//
+//        .preferences {
+//            display: flex;
+//            flex-direction: column;
+//            justify-content: center;
+//            align-items: flex-start;
+//
+//            @media @tablet-m {
+//                align-items: center;
+//                padding-top: 100px;
+//                position: relative;
+//                left: -50px;
+//            }
+//
+//            @media @mobile-m {
+//                align-items: flex-start;
+//                left: 0px;
+//                padding-left: 15px;
+//            }
+//
+//            @media @mobile-s {
+//                padding-top: 150px;
+//            }
+//
+//            .preference-item {
+//                display: flex;
+//                position: relative;
+//
+//                &:not(:last-child) {
+//                    margin-bottom: 120px;
+//
+//                    @media @laptop-m {
+//                        margin-bottom: 90px;
+//                    }
+//
+//                    @media @tablet-m {
+//                        align-items: center;
+//                        margin-bottom: 30px;
+//                    }
+//                }
+//
+//                .preference-text {
+//                    font-size: 50px;
+//                    font-weight: 500;
+//                    color: @primary;
+//                    position: relative;
+//                    z-index: 2;
+//
+//                    @media @mobile-l {
+//                        font-size: 40px;
+//                    }
+//                }
+//
+//                .preference-circle {
+//                    position: absolute;
+//                    right: 0px;
+//                    height: 150px;
+//                    width: 150px;
+//                    border-radius: 50%;
+//                    background: @secondary;
+//                    z-index: 1;
+//
+//                    @media @laptop-m {
+//                        height: 90px;
+//                        width: 90px;
+//                    }
+//                    @media @mobile-s {
+//                        height: 50px;
+//                        width: 50px;
+//                    }
+//                }
+//
+//                img {
+//                    position: absolute;
+//                    z-index: 2;
+//                    height: 180px;
+//
+//                    @media @laptop-m {
+//                        height: 120px;
+//                    }
+//
+//                    @media @tablet-m {
+//                        height: 90px;
+//                    }
+//
+//                    @media @mobile-s {
+//                        height: 60px;
+//                    }
+//                }
+//
+//                &:nth-child(1) {
+//                    .preference-circle {
+//                        right: -110px;
+//                        top: -90px;
+//                    }
+//
+//                    img {
+//                        right: -250px;
+//                        top: -90px;
+//                    }
+//
+//                    @media @laptop-m {
+//                        .preference-circle {
+//                            right: -70px;
+//                            top: -50px;
+//                        }
+//
+//                        img {
+//                            right: -150px;
+//                            top: -50px;
+//                        }
+//                    }
+//
+//                    @media @mobile-s {
+//                        .preference-circle {
+//                            right: -35px;
+//                            top: -15px;
+//                        }
+//
+//                        img {
+//                            right: -80px;
+//                            top: -10px;
+//                        }
+//                    }
+//                }
+//
+//                &:nth-child(2) {
+//                    .preference-circle {
+//                        right: -280px;
+//                        top: -70px;
+//                    }
+//
+//                    img {
+//                        right: -210px;
+//                        top: -60px;
+//                    }
+//
+//                    @media @laptop-m {
+//                        .preference-circle {
+//                            right: -180px;
+//                            top: -50px;
+//                        }
+//
+//                        img {
+//                            right: -130px;
+//                            top: -30px;
+//                        }
+//                    }
+//
+//                    @media @tablet-m {
+//                        .preference-circle {
+//                            right: -160px;
+//                            top: -40px;
+//                        }
+//
+//                        img {
+//                            right: -100px;
+//                            top: -20px;
+//                        }
+//                    }
+//
+//                    @media @mobile-s {
+//                        .preference-circle {
+//                            right: -85px;
+//                            top: 0px;
+//                        }
+//
+//                        img {
+//                            right: -60px;
+//                            top: -10px;
+//                        }
+//                    }
+//                }
+//
+//                &:nth-child(3) {
+//                    .preference-circle {
+//                        right: -120px;
+//                        top: 0px;
+//                    }
+//
+//                    img {
+//                        right: -230px;
+//                        top: -40px;
+//                    }
+//
+//                    @media @laptop-m {
+//                        .preference-circle {
+//                            right: -70px;
+//                            top: 20px;
+//                        }
+//
+//                        img {
+//                            right: -160px;
+//                            top: -20px;
+//                        }
+//                    }
+//
+//                    @media @tablet-m {
+//                        .preference-circle {
+//                            right: -80px;
+//                            top: 20px;
+//                        }
+//
+//                        img {
+//                            right: -100px;
+//                            top: -20px;
+//                        }
+//                    }
+//
+//                    @media @mobile-s {
+//                        .preference-circle {
+//                            right: -40px;
+//                            top: 20px;
+//                        }
+//
+//                        img {
+//                            right: -70px;
+//                            top: -10px;
+//                        }
+//                    }
+//                }
+//            }
+//        }
+//
+//        .preferences-image {
+//            position: relative;
+//
+//            .preference-text-wrapper {
+//                position: absolute;
+//                right: 0px;
+//                top: 30%;
+//
+//                @media @mobile-m {
+//                    top: unset;
+//                    bottom: 0px;
+//                }
+//
+//                .top-part,
+//                .bottom-part {
+//                    width: 400px;
+//                    height: 150px;
+//                    border: 6px solid @secondary;
+//                    position: relative;
+//
+//                    @media @mobile-m {
+//                        width: 300px;
+//                        height: 80px;
+//                    }
+//                }
+//
+//                .top-part {
+//                    z-index: 3;
+//                    border-bottom: unset;
+//                }
+//
+//                .bottom-part {
+//                    border-top: unset;
+//                }
+//
+//                .text {
+//                    position: absolute;
+//                    width: 290px;
+//                    top: 50px;
+//                    left: -200px;
+//                    z-index: 5;
+//                    font-size: 20px;
+//
+//                    @media @laptop-m {
+//                        left: -50px;
+//                        font-size: 16px;
+//                        width: 200px;
+//                    }
+//
+//                    @media @mobile-l {
+//                        left: 7px;
+//                    }
+//
+//                    @media @mobile-m {
+//                        left: -80px;
+//                    }
+//
+//                    @media @mobile-s {
+//                        left: -15px;
+//                        font-size: 15px;
+//                    }
+//                }
+//
+//                .subtext {
+//                    position: absolute;
+//                    width: 290px;
+//                    top: 130px;
+//                    left: -150px;
+//                    z-index: 5;
+//                    font-size: 20px;
+//                    font-weight: 700;
+//
+//                    @media @laptop-m {
+//                        left: -20px;
+//                        font-size: 16px;
+//                        width: 200px;
+//                    }
+//
+//                    @media @mobile-l {
+//                        left: 25px;
+//                    }
+//                }
+//            }
+//
+//            img {
+//                position: absolute;
+//                height: 800px;
+//                bottom: 0px;
+//                right: 0px;
+//
+//                @media (max-height: 800px) {
+//                    height: 600px;
+//                }
+//
+//                @media @tablet-m {
+//                    height: 500px;
+//                    bottom: -100px;
+//                }
+//
+//                @media @mobile-m {
+//                    height: 50vh;
+//                }
+//            }
+//        }
+//    }
+//}

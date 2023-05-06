@@ -1,30 +1,30 @@
-import React from 'react';
-import ImageSlides from '../../../ui-kit/ImageSlides';
-import FullPage from '../../../ui-kit/FullPage';
-import Title from '../../../ui-kit/Title';
-import SubTitle from '../../../ui-kit/SubTitle';
-import Padded from '../../../ui-kit/Padded';
-import OpenModalButton from '../../../ui-kit/OpenModalButton';
-import FullscreenImg from '../../../ui-kit/FullscreenImg';
-import DownloadCatalog from '../../../ui-kit/DownloadCatalog';
-import facadesMarbleSlides from '../../../../utils/facades/marble';
-import skin_marble from '../../../../assets/images/facades/marble/types/skin_marble.jpg';
-import gray_marble from '../../../../assets/images/facades/marble/types/gray_marble.jpg';
-import gray_marble_blurred from '../../../../assets/images/facades/marble/types/gray_marble_blurred.jpg';
-import dolomite from '../../../../assets/images/facades/marble/types/dolomite.jpg';
-import traverteen from '../../../../assets/images/facades/marble/types/traverteen.jpg';
-import system from '../../../../assets/images/facades/marble/system/marble-system.jpg';
+import ImageSlides from '../../../ui-kit/ImageSlides'
+import FullPage from '../../../ui-kit/FullPage'
+import Title from '../../../ui-kit/Title'
+import SubTitle from '../../../ui-kit/SubTitle'
+import Padded from '../../../ui-kit/Padded'
+import OpenModalButton from '../../../ui-kit/OpenModalButton'
+import FullscreenImg from '../../../ui-kit/FullscreenImg'
+import DownloadCatalog from '../../../ui-kit/DownloadCatalog'
+import facadesMarbleSlides from '../../../utils/facades/marble'
+import skin_marble from '../../../../../public/images/facades/marble/types/skin_marble.jpg'
+import gray_marble from '../../../../../public/images/facades/marble/types/gray_marble.jpg'
+import gray_marble_blurred from '../../../../../public/images/facades/marble/types/gray_marble_blurred.jpg'
+import dolomite from '../../../../../public/images/facades/marble/types/dolomite.jpg'
+import traverteen from '../../../../../public/images/facades/marble/types/traverteen.jpg'
+import system from '../../../../../public/images/facades/marble/system/marble-system.jpg'
 
-import catalog from '../../../../assets/images/facades/marble/catalog.pdf';
+import catalog from '../../../../../public/images/facades/marble/catalog.pdf'
 
-import './MarbleBlock.module.less';
+import styles from './MarbleBlock.module.scss'
+import { FacadesWrapper } from '../FacadesWrapper'
 
 export default function MarbleBlock() {
     return (
-        <div className='facades-sixth-block facade-type-wrapper'>
+        <FacadesWrapper className={styles['facades-sixth-block']}>
             <FullPage>
                 <Title>Фасад МРАМОР / ДОЛОМИТ / ТРАВЕРТИН</Title>
-                <ImageSlides data={facadesMarbleSlides} />
+                <ImageSlides data={facadesMarbleSlides} styles={styles} />
             </FullPage>
             <Padded>
                 <SubTitle>Юрский мрамор как строительный материал</SubTitle>
@@ -44,47 +44,47 @@ export default function MarbleBlock() {
                 </p>
                 <SubTitle>Цветовая гамма и виды камня, каталог</SubTitle>
                 <SubTitle>Юрский мрамор:</SubTitle>
-                <div className='marble-images-wrapper'>
-                    <div className='marble-image-item'>
+                <div className={styles['marble-images-wrapper']}>
+                    <div className={styles['marble-image-item']}>
                         <FullscreenImg src={skin_marble} />
-                        <div className='marble-image-title'>
+                        <div className={styles['marble-image-title']}>
                             Мрамор бежевый, пескоструйный
                         </div>
                     </div>
-                    <div className='marble-image-item'>
+                    <div className={styles['marble-image-item']}>
                         <FullscreenImg src={gray_marble} />
-                        <div className='marble-image-title'>
+                        <div className={styles['marble-image-title']}>
                             Мрамор серый, пескоструйная обработка
                         </div>
                     </div>
-                    <div className='marble-image-item'>
+                    <div className={styles['marble-image-item']}>
                         <FullscreenImg src={gray_marble_blurred} />
-                        <div className='marble-image-title'>
+                        <div className={styles['marble-image-title']}>
                             Мрамор серый, матовый
                         </div>
                     </div>
                 </div>
-                <div className='mable-horizontal-wrapper'>
+                <div className={styles['mable-horizontal-wrapper']}>
                     <div>
                         <SubTitle>Дитфуртский доломит:</SubTitle>
-                        <div className='marble-images-wrapper'>
-                            <div className='marble-image-item'>
+                        <div className={styles['marble-images-wrapper']}>
+                            <div className={styles['marble-image-item']}>
                                 <FullscreenImg src={dolomite} />
                             </div>
                         </div>
                     </div>
                     <div>
                         <SubTitle>Дитфуртский травертин:</SubTitle>
-                        <div className='marble-images-wrapper'>
-                            <div className='marble-image-item'>
+                        <div className={styles['marble-images-wrapper']}>
+                            <div className={styles['marble-image-item']}>
                                 <FullscreenImg src={traverteen} />
                             </div>
                         </div>
                     </div>
                     <div>
-                        <div className='marble-image-item'>
+                        <div className={styles['marble-image-item']}>
                             <DownloadCatalog
-                                className='marble-download-catalog'
+                                className={styles['marble-download-catalog']}
                                 file={catalog}
                                 name='Каталог Мрамор / Доломит / Травертин'
                             />
@@ -96,8 +96,10 @@ export default function MarbleBlock() {
                     облицовку мраморными плитами с пропилом, устанавливаемая
                     скрытым способом на кляммерных планках
                 </SubTitle>
-                <div className='marble-system-wrapper facades-system-wrapper'>
-                    <div className='marble-system'>
+                <div
+                    className={`${styles['marble-system-wrapper']} ${styles['facades-system-wrapper']}`}
+                >
+                    <div className={styles['marble-system']}>
                         <FullscreenImg src={system} />
                         <OpenModalButton />
                     </div>
@@ -139,6 +141,6 @@ export default function MarbleBlock() {
                     </div>
                 </div>
             </Padded>
-        </div>
-    );
+        </FacadesWrapper>
+    )
 }

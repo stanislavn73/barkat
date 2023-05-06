@@ -1,6 +1,5 @@
 import React, { useContext, useEffect, useState } from 'react'
-import Radio from '@material-ui/core/Radio'
-import { Checkbox, Box } from '@material-ui/core'
+import { Checkbox, Box, Radio } from '@mui/material'
 import { ModalConsumer } from '../../../../layouts/Layout'
 import { currencies } from './currencies'
 import UserDataForm from './UserDataForm'
@@ -8,9 +7,10 @@ import { initializeApp } from 'firebase/app'
 import { useLiqPay } from './effects/useLiqPay'
 import { getFirestore, doc, setDoc } from 'firebase/firestore'
 
-import './BuySketchUpShop.module.less'
+import styles from './BuySketchUpShop.module.scss'
 import dayjs from 'dayjs'
-import { CurrencyContext } from '../../../../../../pages/buy-sketchup'
+import { CurrencyContext } from '../../../../../pages/buy-sketchup'
+import Img from '../../../Img'
 
 function UserAgreementLink() {
     return (
@@ -182,30 +182,30 @@ export default function BuySketchUpShop({
                     handleChangeUserData={handleChangeUserData}
                     userData={userData}
                 />
-                <Box className='checkbox_container'>
+                <Box className={styles.checkbox_container}>
                     {currencies.map((item, index) => (
                         <Box
                             value={item.currency}
                             onClick={() => handleChooseCurrency(item.currency)}
                             key={index}
-                            className='checkbox_wrapper'
+                            className={styles.checkbox_wrapper}
                         >
                             <Radio
                                 checked={selectedValue === item.currency}
                                 name={item.currency}
                             />
-                            <Box
-                                style={{ backgroundImage: `url(${item.img})` }}
-                                className='flag_image'
-                            ></Box>
-                            <span className='currency_name'>
+                            <Img
+                                src={item.img}
+                                className={styles.flag_image}
+                            ></Img>
+                            <span className={styles.currency_name}>
                                 {item.currency}
                             </span>
                         </Box>
                     ))}
                 </Box>
-                <Box className='text_container'>
-                    <Box className='text_field_container'>
+                <Box className={styles.text_container}>
+                    <Box className={styles.text_field_container}>
                         <Box>
                             <Checkbox
                                 color='primary'
@@ -223,7 +223,7 @@ export default function BuySketchUpShop({
                         value={hashedValue[1]}
                     />
                     <input
-                        className='footer send_payment'
+                        className={`${styles.footer} ${styles.send_payment}`}
                         type='submit'
                         value={`Купить за ${
                             Math.floor(currentAmount * 100) / 100

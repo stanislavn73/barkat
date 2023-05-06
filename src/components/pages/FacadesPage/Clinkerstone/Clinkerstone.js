@@ -1,28 +1,29 @@
-import React from 'react';
-import ImageSlides from '../../../ui-kit/ImageSlides';
-import FullPage from '../../../ui-kit/FullPage';
-import Title from '../../../ui-kit/Title';
-import SubTitle from '../../../ui-kit/SubTitle';
-import Padded from '../../../ui-kit/Padded';
-import OpenModalButton from '../../../ui-kit/OpenModalButton';
-import FullscreenImg from '../../../ui-kit/FullscreenImg';
-import DownloadCatalog from '../../../ui-kit/DownloadCatalog';
-import facadesClinkerstoneSlides from '../../../../utils/facades/clinkerstone';
-import coral_star from '../../../../assets/images/facades/clinkerstone/types/Coral_star.jpg';
-import marrakesh_dust from '../../../../assets/images/facades/clinkerstone/types/Marrakesh_dust.jpg';
-import silver_rose from '../../../../assets/images/facades/clinkerstone/types/Silver_rose.jpg';
-import snow_brick from '../../../../assets/images/facades/clinkerstone/types/Snow_brick.jpg';
-import argon_wall from '../../../../assets/images/facades/clinkerstone/types/Argon_wall.jpg';
-import dry_system from '../../../../assets/images/facades/clinkerstone/system/dry-system.jpg';
-import wet_system from '../../../../assets/images/facades/clinkerstone/system/wet-system.jpg';
+import React from 'react'
+import ImageSlides from '../../../ui-kit/ImageSlides'
+import FullPage from '../../../ui-kit/FullPage'
+import Title from '../../../ui-kit/Title'
+import SubTitle from '../../../ui-kit/SubTitle'
+import Padded from '../../../ui-kit/Padded'
+import OpenModalButton from '../../../ui-kit/OpenModalButton'
+import FullscreenImg from '../../../ui-kit/FullscreenImg'
+import DownloadCatalog from '../../../ui-kit/DownloadCatalog'
+import facadesClinkerstoneSlides from '../../../utils/facades/clinkerstone'
+import coral_star from '../../../../../public/images/facades/clinkerstone/types/Coral_star.jpg'
+import marrakesh_dust from '../../../../../public/images/facades/clinkerstone/types/Marrakesh_dust.jpg'
+import silver_rose from '../../../../../public/images/facades/clinkerstone/types/Silver_rose.jpg'
+import snow_brick from '../../../../../public/images/facades/clinkerstone/types/Snow_brick.jpg'
+import argon_wall from '../../../../../public/images/facades/clinkerstone/types/Argon_wall.jpg'
+import dry_system from '../../../../../public/images/facades/clinkerstone/system/dry-system.jpg'
+import wet_system from '../../../../../public/images/facades/clinkerstone/system/wet-system.jpg'
 
-import catalog from '../../../../assets/images/facades/clinkerstone/catalog.pdf';
+import catalog from '../../../../../public/images/facades/clinkerstone/catalog.pdf'
 
-import './Clinkerstone.module.less';
+import styles from './Clinkerstone.module.scss'
+import { FacadesWrapper } from '../FacadesWrapper'
 
 export default function Clinkerstone() {
     return (
-        <div className='facades-sixth-block  facade-type-wrapper'>
+        <FacadesWrapper className={styles['facades-sixth-block']}>
             <FullPage>
                 <Title>Фасад КЛИНКЕРСТОУН</Title>
                 <ImageSlides data={facadesClinkerstoneSlides} />
@@ -74,40 +75,40 @@ export default function Clinkerstone() {
                     совершенно пожаробезопасен.
                 </p>
                 <SubTitle>Цветовая гамма и виды камня, каталог</SubTitle>
-                <div className='clinkerstone-images-wrapper'>
-                    <div className='clinkerstone-image-item'>
+                <div className={styles['clinkerstone-images-wrapper']}>
+                    <div className={styles['clinkerstone-image-item']}>
                         <FullscreenImg src={coral_star} />
-                        <div className='clinkerstone-image-title'>
+                        <div className={styles['clinkerstone-image-title']}>
                             Кораловая звезда
                         </div>
                     </div>
-                    <div className='clinkerstone-image-item'>
+                    <div className={styles['clinkerstone-image-item']}>
                         <FullscreenImg src={marrakesh_dust} />
-                        <div className='clinkerstone-image-title'>
+                        <div className={styles['clinkerstone-image-title']}>
                             Пыль Марракеша
                         </div>
                     </div>
-                    <div className='clinkerstone-image-item'>
+                    <div className={styles['clinkerstone-image-item']}>
                         <FullscreenImg src={silver_rose} />
-                        <div className='clinkerstone-image-title'>
+                        <div className={styles['clinkerstone-image-title']}>
                             Серебряная роза
                         </div>
                     </div>
                 </div>
-                <div className='clinkerstone-images-wrapper'>
-                    <div className='clinkerstone-image-item'>
+                <div className={styles['clinkerstone-images-wrapper']}>
+                    <div className={styles['clinkerstone-image-item']}>
                         <FullscreenImg src={snow_brick} />
-                        <div className='clinkerstone-image-title'>
+                        <div className={styles['clinkerstone-image-title']}>
                             Зимний кирпич
                         </div>
                     </div>
-                    <div className='clinkerstone-image-item'>
+                    <div className={styles['clinkerstone-image-item']}>
                         <FullscreenImg src={argon_wall} />
-                        <div className='clinkerstone-image-title'>
+                        <div className={styles['clinkerstone-image-title']}>
                             Аргон настенный
                         </div>
                     </div>
-                    <div className='clinkerstone-image-item'>
+                    <div className={styles['clinkerstone-image-item']}>
                         <DownloadCatalog
                             file={catalog}
                             name='Каталог Клинкерстоун'
@@ -119,10 +120,12 @@ export default function Clinkerstone() {
                     облицовку клинкерным камнем, установлеваемая на кляммерных
                     планках с применением затирочных смесей
                 </SubTitle>
-                <div className='clinkerstone-system-wrapper facades-system-wrapper'>
+                <div
+                    className={`${styles['clinkerstone-system-wrapper']} ${styles['facades-system-wrapper']}`}
+                >
                     <FullscreenImg
                         src={dry_system}
-                        className='clinkerstone-system'
+                        className={styles['clinkerstone-system']}
                     />
                     <div>
                         <p>
@@ -170,8 +173,10 @@ export default function Clinkerstone() {
                     облицовку клинкерным камнем, установлеваемая на кляммерных
                     планках сухим методом
                 </SubTitle>
-                <div className='clinkerstone-system-wrapper facades-system-wrapper'>
-                    <div className='clinkerstone-system'>
+                <div
+                    className={`${styles['clinkerstone-system-wrapper']} ${styles['facades-system-wrapper']}`}
+                >
+                    <div className={styles['clinkerstone-system']}>
                         <FullscreenImg src={wet_system} />
                         <OpenModalButton />
                     </div>
@@ -214,6 +219,6 @@ export default function Clinkerstone() {
                     </div>
                 </div>
             </Padded>
-        </div>
-    );
+        </FacadesWrapper>
+    )
 }

@@ -1,13 +1,12 @@
-import React from 'react';
-import FullPage from '../../../ui-kit/FullPage/FullPage';
-import Padded from '../../../ui-kit/Padded/Padded';
-import PlainText from '../../../ui-kit/PlainText';
-import Img from '../../../ui-kit/Img';
-import { ModalConsumer } from '../../../layouts/Layout';
-import './Hexagon.module.less';
+import FullPage from '../../../ui-kit/FullPage/FullPage'
+import Padded from '../../../ui-kit/Padded/Padded'
+import PlainText from '../../../ui-kit/PlainText'
+import Img from '../../../ui-kit/Img'
+import { ModalConsumer } from '../../../layouts/Layout'
+import styles from '../SoftPage.module.scss'
 
-import HexagonLogo from '../../../../assets/images/Hexagon.jpg';
-import SocialMedia from '../../../ui-kit/SocialMedia/SocialMedia';
+import HexagonLogo from '../../../../../public/images/Hexagon.jpg'
+import SocialMedia from '../../../ui-kit/SocialMedia/SocialMedia'
 
 const allPlanItems = [
     {
@@ -52,89 +51,83 @@ const allPlanItems = [
         type: 'GenPlan',
         text: 'Решение для создания цифрового генплана и ГИС-систем предприятий',
     },
-];
+]
 
-const socialMediaLinks = {};
-
-class Hexagon extends React.PureComponent {
-    render() {
-        return (
-            <FullPage min ref={this.block} className='soft-block-wrapper'>
-                <Padded className='soft-block-padded'>
-                    <div className='title-container'>
-                        <div className='soft-block-title'>Hexagon</div>
-                        <SocialMedia page='Hexagon' />
-                    </div>
-                    <PlainText className='soft-plain-text'>
-                        Hexagon является мировым лидером в области сенсорных,
-                        программных и автономных решений.
-                    </PlainText>
-                    <PlainText className='soft-plain-text'>
-                        Технологии Hexagon формируют городские и
-                        производственные экосистемы, которые становятся все
-                        более связанными и автономными, обеспечивая
-                        масштабируемое и прогнозируемое будущее. Такие решения
-                        уже имеют спрос для организации крупных массивов данных
-                        в легко-читаемые визуальные представления.
-                    </PlainText>
-                    <PlainText className='soft-plain-text'>
-                        Hexagon Geospatial занимается разработкой
-                        геопространственных решений и специализированных
-                        приложений для сбора, анализа и визуализации данных о
-                        месторасположении, которые позволяют добиваться большей
-                        эффективности, производительности и качества в таких
-                        отраслях как общественная безопасность, государственное
-                        и муниципальное управление, транспорт, фотограмметрия,
-                        инженерные коммуникации, телекоммуникации.
-                    </PlainText>
-                    <PlainText className='soft-plain-text'>
-                        Подразделение Hexagon Geospatial создает решения,
-                        которые визуализируют информацию о местоположении и
-                        обеспечивают интеллектуальную цифровую реальность 5D с
-                        пониманием того, что было, что есть, что может быть, что
-                        должно быть, и в конечном итоге, что будет.
-                    </PlainText>
-                    <PlainText className='soft-plain-text'>
-                        <a href='http://www.hexagongeospatial.com'>
-                            www.hexagongeospatial.com
-                        </a>
-                    </PlainText>
-                    <div className='soft-items-wrapper'>
-                        {allPlanItems.map((item) => (
-                            <div key={item.id} className='soft-item'>
-                                <Img className='logo' src={HexagonLogo} />
-                                <ModalConsumer>
-                                    {({ handleOpenSoftModal }) => (
-                                        <div
-                                            className='title'
-                                            onClick={handleOpenSoftModal(
-                                                item.type
-                                            )}
-                                        >
-                                            {item.title}
-                                        </div>
-                                    )}
-                                </ModalConsumer>
-                                <PlainText className='item-text'>
-                                    {item.text}
-                                </PlainText>
-                                <ModalConsumer>
-                                    {({ handleOpenForm }) => (
-                                        <div
-                                            className='button'
-                                            onClick={handleOpenForm}
-                                        >
-                                            Написать нам
-                                        </div>
-                                    )}
-                                </ModalConsumer>
-                            </div>
-                        ))}
-                    </div>
-                </Padded>
-            </FullPage>
-        );
-    }
+const Hexagon = () => {
+    return (
+        <FullPage min className={styles['soft-block-wrapper']}>
+            <Padded className={styles['soft-block-padded']}>
+                <div className={styles['title-container']}>
+                    <div className={styles['soft-block-title']}>Hexagon</div>
+                    <SocialMedia page='Hexagon' />
+                </div>
+                <PlainText className={styles['soft-plain-text']}>
+                    Hexagon является мировым лидером в области сенсорных,
+                    программных и автономных решений.
+                </PlainText>
+                <PlainText className={styles['soft-plain-text']}>
+                    Технологии Hexagon формируют городские и производственные
+                    экосистемы, которые становятся все более связанными и
+                    автономными, обеспечивая масштабируемое и прогнозируемое
+                    будущее. Такие решения уже имеют спрос для организации
+                    крупных массивов данных в легко-читаемые визуальные
+                    представления.
+                </PlainText>
+                <PlainText className={styles['soft-plain-text']}>
+                    Hexagon Geospatial занимается разработкой
+                    геопространственных решений и специализированных приложений
+                    для сбора, анализа и визуализации данных о
+                    месторасположении, которые позволяют добиваться большей
+                    эффективности, производительности и качества в таких
+                    отраслях как общественная безопасность, государственное и
+                    муниципальное управление, транспорт, фотограмметрия,
+                    инженерные коммуникации, телекоммуникации.
+                </PlainText>
+                <PlainText className={styles['soft-plain-text']}>
+                    Подразделение Hexagon Geospatial создает решения, которые
+                    визуализируют информацию о местоположении и обеспечивают
+                    интеллектуальную цифровую реальность 5D с пониманием того,
+                    что было, что есть, что может быть, что должно быть, и в
+                    конечном итоге, что будет.
+                </PlainText>
+                <PlainText className={styles['soft-plain-text']}>
+                    <a href='http://www.hexagongeospatial.com'>
+                        www.hexagongeospatial.com
+                    </a>
+                </PlainText>
+                <div className={styles['soft-items-wrapper']}>
+                    {allPlanItems.map(item => (
+                        <div key={item.id} className={styles['soft-item']}>
+                            <Img className={styles['logo']} src={HexagonLogo} />
+                            <ModalConsumer>
+                                {({ handleOpenSoftModal }) => (
+                                    <div
+                                        className={styles['title']}
+                                        onClick={handleOpenSoftModal(item.type)}
+                                    >
+                                        {item.title}
+                                    </div>
+                                )}
+                            </ModalConsumer>
+                            <PlainText className={styles['item-text']}>
+                                {item.text}
+                            </PlainText>
+                            <ModalConsumer>
+                                {({ handleOpenForm }) => (
+                                    <div
+                                        className={styles['button']}
+                                        onClick={handleOpenForm}
+                                    >
+                                        Написать нам
+                                    </div>
+                                )}
+                            </ModalConsumer>
+                        </div>
+                    ))}
+                </div>
+            </Padded>
+        </FullPage>
+    )
 }
 
-export default Hexagon;
+export default Hexagon

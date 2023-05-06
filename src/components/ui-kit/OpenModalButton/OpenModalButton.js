@@ -1,17 +1,19 @@
-import React from 'react';
-import { ModalConsumer } from '../../layouts/Layout';
-import './styles.module.less';
+import { ModalConsumer } from '../../layouts/Layout'
+import styles from './styles.module.scss'
 
 export default function OpenModalButton() {
     return (
         <ModalConsumer>
             {({ handleOpenForm }) => {
                 return (
-                    <div className='modal-open-button' onClick={handleOpenForm}>
+                    <div
+                        className={styles['modal-open-button']}
+                        onClick={handleOpenForm}
+                    >
                         Написать нам
                     </div>
-                );
+                )
             }}
         </ModalConsumer>
-    );
+    )
 }

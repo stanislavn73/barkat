@@ -1,13 +1,13 @@
-import React from 'react';
-import FullPage from '../../../ui-kit/FullPage/FullPage';
-import Padded from '../../../ui-kit/Padded/Padded';
-import PlainText from '../../../ui-kit/PlainText';
-import Img from '../../../ui-kit/Img';
-import { ModalConsumer } from '../../../layouts/Layout';
-import './Bentley.module.less';
+import React from 'react'
+import FullPage from '../../../ui-kit/FullPage/FullPage'
+import Padded from '../../../ui-kit/Padded/Padded'
+import PlainText from '../../../ui-kit/PlainText'
+import Img from '../../../ui-kit/Img'
+import { ModalConsumer } from '../../../layouts/Layout'
+import styles from '../SoftPage.module.scss'
 
-import BentleyLogo from '../../../../assets/images/Bentley.jpg';
-import SocialMedia from '../../../ui-kit/SocialMedia/SocialMedia';
+import BentleyLogo from '../../../../../public/images/Bentley.jpg'
+import SocialMedia from '../../../ui-kit/SocialMedia/SocialMedia'
 
 const allPlanItems = [
     {
@@ -46,18 +46,24 @@ const allPlanItems = [
         type: 'ProStructures',
         text: 'Создание точных 3D моделей строительных сооружений из стали, металла и железобетонных конструкций',
     },
-];
+]
 
 class Bentley extends React.PureComponent {
     render() {
         return (
-            <FullPage min ref={this.block} className='soft-block-wrapper'>
-                <Padded className='soft-block-padded'>
-                    <div className='title-container'>
-                        <div className='soft-block-title'>Bentley</div>
+            <FullPage
+                min
+                ref={this.block}
+                className={styles['soft-block-wrapper']}
+            >
+                <Padded className={styles['soft-block-padded']}>
+                    <div className={styles['title-container']}>
+                        <div className={styles['soft-block-title']}>
+                            Bentley
+                        </div>
                         <SocialMedia page='Bentley' />
                     </div>
-                    <PlainText className='soft-plain-text'>
+                    <PlainText className={styles['soft-plain-text']}>
                         Bentley Systems - это компания-разработчик программного
                         обеспечения на основе технологии BIM для профессионалов
                         в сфере строительства и управления мировой
@@ -65,14 +71,14 @@ class Bentley extends React.PureComponent {
                         аэропорты, небоскребы, заводы и электростанции, а также
                         сети.
                     </PlainText>
-                    <PlainText className='soft-plain-text'>
+                    <PlainText className={styles['soft-plain-text']}>
                         Bentley предоставляет решения для полного жизненного
                         цикла объектов инфраструктуры c учетом потребностей
                         различных специалистов – инженеров, архитекторов,
                         планировщиков, подрядчиков, IT менеджеров, операторов и
                         инженеров техобслуживания.
                     </PlainText>
-                    <PlainText className='soft-plain-text'>
+                    <PlainText className={styles['soft-plain-text']}>
                         Каждое решение, состоящее из интегрированных приложений
                         и сервисов, построенных на открытой платформе,
                         разработано для оперативного обмена информацией между
@@ -80,23 +86,26 @@ class Bentley extends React.PureComponent {
                         команды, обеспечивая совместимость решений и
                         сотрудничество инженеров в группе.
                     </PlainText>
-                    <PlainText className='soft-plain-text'>
+                    <PlainText className={styles['soft-plain-text']}>
                         Штат Bentley Systems превышает 3500 сотрудников, а
                         годовой доход составляет более 700 млн. долларов в 170
                         странах. С 2014 года Bentley инвестировала более 1 млрд.
                         долларов в исследования, разработки и поглощения.
                     </PlainText>
-                    <PlainText className='soft-plain-text'>
+                    <PlainText className={styles['soft-plain-text']}>
                         <a href='http://www.bentley.com'>www.bentley.com</a>
                     </PlainText>
-                    <div className='soft-items-wrapper'>
-                        {allPlanItems.map((item) => (
-                            <div key={item.id} className='soft-item'>
-                                <Img className='logo' src={BentleyLogo} />
+                    <div className={styles['soft-items-wrapper']}>
+                        {allPlanItems.map(item => (
+                            <div key={item.id} className={styles['soft-item']}>
+                                <Img
+                                    className={styles['logo']}
+                                    src={BentleyLogo}
+                                />
                                 <ModalConsumer>
                                     {({ handleOpenSoftModal }) => (
                                         <div
-                                            className='title'
+                                            className={styles['title']}
                                             onClick={handleOpenSoftModal(
                                                 item.type
                                             )}
@@ -105,13 +114,13 @@ class Bentley extends React.PureComponent {
                                         </div>
                                     )}
                                 </ModalConsumer>
-                                <PlainText className='item-text'>
+                                <PlainText className={styles['item-text']}>
                                     {item.text}
                                 </PlainText>
                                 <ModalConsumer>
                                     {({ handleOpenForm }) => (
                                         <div
-                                            className='button'
+                                            className={styles['button']}
                                             onClick={handleOpenForm}
                                         >
                                             Написать нам
@@ -123,8 +132,8 @@ class Bentley extends React.PureComponent {
                     </div>
                 </Padded>
             </FullPage>
-        );
+        )
     }
 }
 
-export default Bentley;
+export default Bentley

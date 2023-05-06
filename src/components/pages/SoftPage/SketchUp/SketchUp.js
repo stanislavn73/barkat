@@ -1,19 +1,14 @@
-import React from 'react';
-import FullPage from '../../../ui-kit/FullPage/FullPage';
-import Padded from '../../../ui-kit/Padded/Padded';
-import IconsBlock from '../../../ui-kit/IconsBlock';
-import PlainText from '../../../ui-kit/PlainText';
-import Img from '../../../ui-kit/Img';
-import { ModalConsumer } from '../../../layouts/Layout';
-import './SketchUp.module.less';
+import React from 'react'
+import FullPage from '../../../ui-kit/FullPage/FullPage'
+import Padded from '../../../ui-kit/Padded/Padded'
+import PlainText from '../../../ui-kit/PlainText'
+import Img from '../../../ui-kit/Img'
+import { ModalConsumer } from '../../../layouts/Layout'
+import styles from '../SoftPage.module.scss'
 
-import achievements from '../../../../utils/achievements';
-import * as sketchupTitleLogo from '../../../../assets/images/SketchUp.jpg';
-import * as backgroundImage from '../../../../assets/images/pages/facades/2back.jpg';
-import * as sketchupLogo from '../../../../assets/images/pages/soft/sketchup-logo1.svg';
-import * as dowloadIcon from '../../../../assets/images/pages/soft/download.png';
-import SocialMedia from '../../../ui-kit/SocialMedia/SocialMedia';
-import Link from 'next/link';
+import * as sketchupLogo from '../../../../../public/images/pages/soft/sketchup-logo1.svg'
+import SocialMedia from '../../../ui-kit/SocialMedia/SocialMedia'
+import Link from 'next/link'
 
 const sketchupItems = [
     {
@@ -65,33 +60,20 @@ const sketchupItems = [
         text: 'Библиотека пользовательских сторонних расширений',
         buyIt: false,
     },
-];
-
-const sketchupDownloadItems = [
-    {
-        id: 1,
-        text: '3D Warehouse - крупнейшая в мире и самая популярная 3D библиотека',
-    },
-    {
-        id: 2,
-        text: 'Extension Warehouse - библиотека расширений для моделирования',
-    },
-    {
-        id: 3,
-        text: 'Подписка SketchUp Pro. Инструменты, возможности',
-    },
-];
+]
 
 class SketchUp extends React.PureComponent {
     render() {
         return (
-            <FullPage min ref={this.block} className='soft-block-wrapper'>
-                <Padded className='soft-block-padded'>
-                    <div className='title-container'>
-                        <div className='soft-block-title'>SketchUp</div>
+            <FullPage min className={styles['soft-block-wrapper']}>
+                <Padded className={styles['soft-block-padded']}>
+                    <div className={styles['title-container']}>
+                        <div className={styles['soft-block-title']}>
+                            SketchUp
+                        </div>
                         <SocialMedia page='SketchUp' />
                     </div>
-                    <PlainText className='soft-plain-text'>
+                    <PlainText className={styles['soft-plain-text']}>
                         Trimble более 40 лет создает уникальные решения, которые
                         помогают клиентам развивать свой бизнес. Имея более 2000
                         уникальных патентов, а также центры исследований и
@@ -107,17 +89,24 @@ class SketchUp extends React.PureComponent {
                         интерьеров есть в продуктах SketchUp и насчитывает сотни
                         профессиональных расширений и уникальных инструментов.
                     </PlainText>
-                    <PlainText className='soft-plain-text'>
+                    <PlainText className={styles['soft-plain-text']}>
                         <a href='https://www.sketchup.com/'>www.sketchup.com</a>
                     </PlainText>
-                    <div className='soft-items-wrapper'>
-                        {sketchupItems.map((item) => (
-                            <div key={item.id} className='soft-item'>
-                                <Img className='logo' src={sketchupLogo} />
+                    <div className={styles['soft-items-wrapper']}>
+                        {sketchupItems.map(item => (
+                            <div key={item.id} className={styles['soft-item']}>
+                                <Img
+                                    className={styles['logo']}
+                                    src={sketchupLogo}
+                                />
                                 <ModalConsumer>
                                     {({ handleOpenSoftModal }) => (
                                         <div
-                                            className={`${item.title.includes('SketchUp') ? 'title_SketchUp' : 'title'}`}
+                                            className={`${
+                                                item.title.includes('SketchUp')
+                                                    ? styles['title_SketchUp']
+                                                    : styles.title
+                                            }`}
                                             onClick={handleOpenSoftModal(
                                                 item.type
                                             )}
@@ -126,23 +115,25 @@ class SketchUp extends React.PureComponent {
                                         </div>
                                     )}
                                 </ModalConsumer>
-                                <PlainText className='item-text'>
+                                <PlainText className={styles['item-text']}>
                                     {item.text}
                                 </PlainText>
-                                <div className='button-container'>
+                                <div className={styles['button-container']}>
                                     {item.buyIt && (
-                                        <Link key='910' href='/buy-sketchup'>
-                                            <a>
-                                                <div className='button buyIt'>
-                                                    Купить
-                                                </div>
-                                            </a>
+                                        <Link
+                                            key='910'
+                                            href='/buy-sketchup'
+                                            className={styles.buyIt}
+                                        >
+                                            <div className={`${styles.button}`}>
+                                                Купить
+                                            </div>
                                         </Link>
                                     )}
                                     <ModalConsumer>
                                         {({ handleOpenForm }) => (
                                             <div
-                                                className='button'
+                                                className={styles.button}
                                                 onClick={handleOpenForm}
                                             >
                                                 Написать нам
@@ -155,8 +146,8 @@ class SketchUp extends React.PureComponent {
                     </div>
                 </Padded>
             </FullPage>
-        );
+        )
     }
 }
 
-export default SketchUp;
+export default SketchUp

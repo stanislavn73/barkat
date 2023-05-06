@@ -1,57 +1,56 @@
-import React, { useState } from 'react';
-import FullPage from '../../../ui-kit/FullPage';
-import Padded from '../../../ui-kit/Padded';
-import Img from '../../../ui-kit/Img';
-import * as firstIcon from '../../../../assets/images/icons/objectA.png';
-import * as secondIcon from '../../../../assets/images/icons/objectB.png';
-import * as thirdIcon from '../../../../assets/images/icons/objectC.png';
-import * as tower from '../../../../assets/images/pages/About_us_fiveth.png';
-import './FivethBlock.module.less';
+import FullPage from '../../../ui-kit/FullPage'
+import Padded from '../../../ui-kit/Padded'
+import Img from '../../../ui-kit/Img'
+import * as firstIcon from '../../../../../public/images/icons/objectA.png'
+import * as secondIcon from '../../../../../public/images/icons/objectB.png'
+import * as thirdIcon from '../../../../../public/images/icons/objectC.png'
+import * as tower from '../../../../../public/images/pages/About_us_fiveth.png'
+import styles from './FivethBlock.module.scss'
 
 function ProjectsFivethBlock() {
-    const [activeSlide, setActiveSlide] = useState('');
-
-    function handleSetActiveSlide(id) {
-        return () => {
-            setActiveSlide(activeSlide === id ? '' : id);
-        };
-    }
-
     return (
-        <div className='fiveth-wrapper'>
+        <div className={styles['fiveth-wrapper']}>
             <FullPage>
-                <div className='title'>Наши преимущества</div>
-                <Padded>
-                    <div className='preferences'>
-                        <div className='preference-item'>
-                            <div className='preference-text'>продажи</div>
-                            <div className='preference-circle' />
+                <div className={styles.title}>Наши преимущества</div>
+                <Padded className={styles.padded}>
+                    <div className={styles.preferences}>
+                        <div className={styles['preference-item']}>
+                            <div className={styles['preference-text']}>
+                                продажи
+                            </div>
+                            <div className={styles['preference-circle']} />
                             <Img src={firstIcon} />
                         </div>
-                        <div className='preference-item'>
-                            <div className='preference-text'>аудит</div>
-                            <div className='preference-circle' />
+                        <div className={styles['preference-item']}>
+                            <div className={styles['preference-text']}>
+                                аудит
+                            </div>
+                            <div className={styles['preference-circle']} />
                             <Img src={secondIcon} />
                         </div>
-                        <div className='preference-item'>
-                            <div className='preference-text'>внедрение</div>
-                            <div className='preference-circle' />
+                        <div className={styles['preference-item']}>
+                            <div className={styles['preference-text']}>
+                                внедрение
+                            </div>
+                            <div className={styles['preference-circle']} />
                             <Img src={thirdIcon} />
                         </div>
                     </div>
-                    <div className='preferences-image'>
-                        <div className='preference-text-wrapper'>
-                            <div className='top-part' />
-                            <div className='bottom-part'>
-                                <div className='text'>
+                    <div className={styles['preferences-image']}>
+                        <div className={styles['preference-text-wrapper']}>
+                            <div className={styles['top-part']} />
+                            <div className={styles['bottom-part']}>
+                                <div className={styles.text}>
                                     коммерческий директор группы компаний
                                 </div>
                             </div>
-                            <div className='text'>
+                            <div className={styles.text}>
                                 Если бизнес партнера стал более ефективный - это
                                 наивысшая оценка для нас
                             </div>
-                            <div className='subtext'>Александр Баркат</div>
+                            <div className={styles.subtext}>
+                                Александр Баркат
+                            </div>
                             <br />
                             <br />
                         </div>
@@ -60,7 +59,7 @@ function ProjectsFivethBlock() {
                 </Padded>
             </FullPage>
         </div>
-    );
+    )
 }
 
-export default ProjectsFivethBlock;
+export default ProjectsFivethBlock

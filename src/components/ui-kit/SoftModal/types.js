@@ -1,48 +1,49 @@
-import Revit from './content/Revit';
-import AutoCAD from './content/AutoCAD';
-import AutodeskAecCollection from './content/AutodeskAecCollection';
-import Navisworks from './content/Navisworks';
-import Civil3D from './content/Civil3D';
-import ThreeDExperience from './content/3DExperience';
-import DraftSide from './content/DraftSide';
-import Simulia from './content/Simulia';
-import Delmia from './content/Delmia';
-import Enovia from './content/Enovia';
-import Catia from './content/Catia';
-import GeoMedia from './content/GeoMedia';
-import ErdasImagine from './content/ErdasImagine';
-import ImagineStation from './content/ImagineStation';
-import ErdasApollo from './content/ErdasApollo';
-import MAppEnterprise from './content/MAppEnterprise';
-import Luciad from './content/Luciad';
-import MicroStation from './content/MicroStation';
-import Plaxis from './content/Plaxis';
-import Staad from './content/Staad';
-import SketchUpPro from './content/SketchUpPro';
-import ExtensionWarehouse from './content/ExtensionWarehouse';
-import SketchUpForInternet from './content/SketchUpForInternet';
-import AllPlanArchitecture from './content/AllPlanArchitecture';
-import ContextCapture from './content/ContextCapture';
-import SYNCHRO from './content/SYNCHRO';
-import ProStructures from './content/ProStructures';
-import PLANBAR from './content/PLANBAR';
-import AllplanEngineeringBuilding from './content/AllplanEngineeringBuilding';
-import AllplanLinear from './content/AllplanLinear';
-import TrimbleConnect from './content/TrimbleConnect';
-import DassaultOil from './content/DassaultOil';
-import DassaultBuilding from './content/DassaultBuilding';
-import DassaultPlanning from './content/DassaultPlanning';
-import DassaultClone from './content/DassaultClone';
-import GenPlan from './content/GenPlan';
-import SketchUpStudio from './content/SketchUpStudio';
-import PrivacyPolicy from './content/PrivacyPolicy';
-import SketchUpShop from './content/SketchUpShop';
-import SketchUpEducation from './content/SketchUpEducation';
-import BuySketchUpShop from './content/BuyButtons/BuySketchUpShop';
-import BuySketchUpPro from './content/BuyButtons/BuySketchUpPro';
-import BuySketchUpStudio from './content/BuyButtons/BuySketchUpStudio';
-import BuySketchUpHigher from './content/BuyButtons/BuySketchUpHigher';
-import UserAgreement from './content/UserAgreement';
+import Revit from './content/Revit'
+import AutoCAD from './content/AutoCAD'
+import AutodeskAecCollection from './content/AutodeskAecCollection'
+import Navisworks from './content/Navisworks'
+import Civil3D from './content/Civil3D'
+import ThreeDExperience from './content/3DExperience'
+import DraftSide from './content/DraftSide'
+import Simulia from './content/Simulia'
+import Delmia from './content/Delmia'
+import Enovia from './content/Enovia'
+import Catia from './content/Catia'
+import GeoMedia from './content/GeoMedia'
+import ErdasImagine from './content/ErdasImagine'
+import ImagineStation from './content/ImagineStation'
+import ErdasApollo from './content/ErdasApollo'
+import MAppEnterprise from './content/MAppEnterprise'
+import Luciad from './content/Luciad'
+import MicroStation from './content/MicroStation'
+import Plaxis from './content/Plaxis'
+import Staad from './content/Staad'
+import SketchUpPro from './content/SketchUpPro'
+import ExtensionWarehouse from './content/ExtensionWarehouse'
+import SketchUpForInternet from './content/SketchUpForInternet'
+import AllPlanArchitecture from './content/AllPlanArchitecture'
+import ContextCapture from './content/ContextCapture'
+import SYNCHRO from './content/SYNCHRO'
+import ProStructures from './content/ProStructures'
+import PLANBAR from './content/PLANBAR'
+import AllplanEngineeringBuilding from './content/AllplanEngineeringBuilding'
+import AllplanLinear from './content/AllplanLinear'
+import TrimbleConnect from './content/TrimbleConnect'
+import DassaultOil from './content/DassaultOil'
+import DassaultBuilding from './content/DassaultBuilding'
+import DassaultPlanning from './content/DassaultPlanning'
+import DassaultClone from './content/DassaultClone'
+import GenPlan from './content/GenPlan'
+import SketchUpStudio from './content/SketchUpStudio'
+import PrivacyPolicy from './content/PrivacyPolicy'
+import SketchUpShop from './content/SketchUpShop'
+import SketchUpEducation from './content/SketchUpEducation'
+import BuySketchUpShop from './content/BuyButtons/BuySketchUpShop'
+import BuySketchUpPro from './content/BuyButtons/BuySketchUpPro'
+import BuySketchUpStudio from './content/BuyButtons/BuySketchUpStudio'
+import BuySketchUpHigher from './content/BuyButtons/BuySketchUpHigher'
+import UserAgreement from './content/UserAgreement'
+import { TeamViewerXPick } from './content/TeamViewer'
 
 export default {
     REVIT: {
@@ -225,4 +226,8 @@ export default {
         title: 'Купить SketchUp для высшего образования',
         content: BuySketchUpHigher,
     },
-};
+    xPick: {
+        title: 'Купить TeamViewer Frontline xPick',
+        content: TeamViewerXPick,
+    },
+}

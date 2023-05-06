@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react'
 import FullPage from '../ui-kit/FullPage'
+import styles from './SoftPage/SoftPage.module.scss'
 
 const PaymentSuccess = () => {
     useEffect(() => {
@@ -40,7 +41,7 @@ const PaymentSuccess = () => {
 
     return (
         <FullPage>
-            <div className='soft-block-title'>
+            <div className={styles['soft-block-title']}>
                 Оплата прошла успешно.
                 <br /> С Вами свяжутся в ближайшее время
             </div>

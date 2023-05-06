@@ -1,23 +1,16 @@
 const withFonts = require('next-fonts')
-const withImages = require('next-images')
-const withLess = require('@zeit/next-less')
-const withPlugins = require('next-compose-plugins')
 
 require('dotenv').config()
 
-const nextConfig = {
-    webpack: (config, options) => {
+const nextConfig = withFonts({
+    webpack: config => {
         config.module.rules.push({
-            test: /\.(pdf)$/i,
-            loader: 'file-loader',
-            options: { publicPath: '/_next/static/', outputPath: 'static/' },
+            test: /\.(|mp4|pdf|webm)$/,
+            type: 'asset',
+            generator: {
+                filename: 'static/chunks/[path][name].[hash][ext]',
+            },
         })
-
-        if (!options.isServer) {
-            config.node = {
-                fs: 'empty',
-            }
-        }
 
         return config
     },
@@ -28,6 +21,13 @@ const nextConfig = {
         HOST: process.env.HOST,
         SENDGRID_URL: process.env.SENDGRID_URL,
     },
-}
+    i18n: {
+        locales: ['ua', 'ru'],
+        defaultLocale: 'ru',
+    },
+    // experimental: {
+    //     esmExternals: false,
+    // },
+})
 
-module.exports = withPlugins([withFonts, withImages, withLess], nextConfig)
+module.exports = nextConfig

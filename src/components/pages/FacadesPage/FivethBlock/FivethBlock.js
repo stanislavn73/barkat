@@ -1,24 +1,19 @@
-import React, { useState } from 'react';
-import FullPage from '../../../ui-kit/FullPage';
-import Padded from '../../../ui-kit/Padded';
-import Img from '../../../ui-kit/Img';
-import PlainText from '../../../ui-kit/PlainText';
-import Title from '../../../ui-kit/Title';
-import * as firstIcon from '../../../../assets/images/icons/objectA.png';
-import * as secondIcon from '../../../../assets/images/icons/objectB.png';
-import * as thirdIcon from '../../../../assets/images/icons/objectC.png';
-import * as tower from '../../../../assets/images/pages/About_us_fiveth.png';
-import * as back from '../../../../assets/images/pages/facades-5.jpg';
-import './FivethBlock.module.less';
+import FullPage from '../../../ui-kit/FullPage'
+import Padded from '../../../ui-kit/Padded'
+import Img from '../../../ui-kit/Img'
+import PlainText from '../../../ui-kit/PlainText'
+import Title from '../../../ui-kit/Title'
+import * as back from '../../../../../public/images/pages/facades-5.jpg'
+import styles from './FivethBlock.module.scss'
 
 function ProjectsFivethBlock() {
     return (
-        <div className='facades-fiveth-wrapper'>
-            <FullPage min>
-                <Img src={back} className='back' />
-                <Padded className='content-wrapper'>
-                    <div className='title'>О системе</div>
-                    <PlainText className='text'>
+        <div className={styles['facades-fiveth-wrapper']}>
+            <FullPage min className={styles['full-page']}>
+                <Img src={back} className={styles.back} />
+                <Padded className={styles['content-wrapper']}>
+                    <div className={styles.title}>О системе</div>
+                    <PlainText className={styles.text}>
                         Навесной вентилируемый фасад — система, состоящая из
                         облицовочных материалов, которые крепятся на каркас из
                         н/ж стали или алюминия к несущей плоскости стены или к
@@ -53,13 +48,15 @@ function ProjectsFivethBlock() {
                         стен зданий, что ведёт к экономии средств при
                         строительстве и облегчению всего сооружения
                     </PlainText>
-                    <div className='bottom-title-wrapper'>
-                        <Title className='bottom-title'>О системе</Title>
+                    <div className={styles['bottom-title-wrapper']}>
+                        <Title className={styles['bottom-title']}>
+                            О системе
+                        </Title>
                     </div>
                 </Padded>
             </FullPage>
         </div>
-    );
+    )
 }
 
-export default ProjectsFivethBlock;
+export default ProjectsFivethBlock

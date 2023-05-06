@@ -1,12 +1,12 @@
 import React, { useRef } from 'react'
 import cx from 'classnames'
 
-import './AnchorMenu.module.less'
+import styles from './AnchorMenu.module.scss'
 
 function AnchorMenu({ anchors, activeAnchor }) {
     const activeAnchorRef = useRef(activeAnchor)
 
-    const handleScrollToAnchor = id => () => {
+    const handleScrollToAnchor = (id, index) => () => {
         const element = document.getElementById(id)
         element.scrollIntoView({ behavior: 'smooth', block: 'start' })
         setTimeout(() => {
@@ -14,27 +14,27 @@ function AnchorMenu({ anchors, activeAnchor }) {
                 activeAnchorRef.current = null
                 handleScrollToAnchor(id)()
             }
-        }, 500)
+        }, index * 100)
     }
 
     return (
-        <div className='anchor-menu-wrapper'>
-            {anchors.map(anchor => {
+        <div className={styles['anchor-menu-wrapper']}>
+            {anchors.map((anchor, index) => {
                 const isActive = activeAnchor === anchor.id
 
                 const buttonCX = cx({
-                    button: true,
-                    button_active: isActive,
+                    [styles.button]: true,
+                    [styles.button_active]: isActive,
                 })
 
                 return (
                     <div
                         className={buttonCX}
                         key={anchor.id}
-                        onClick={handleScrollToAnchor(anchor.id)}
+                        onClick={handleScrollToAnchor(anchor.id, index)}
                     >
-                        <div className='dot' />
-                        <div className='title'>{anchor.title}</div>
+                        <div className={styles['dot']} />
+                        <div className={styles['title']}>{anchor.title}</div>
                     </div>
                 )
             })}

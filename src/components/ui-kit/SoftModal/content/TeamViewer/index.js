@@ -1,0 +1,1 @@
+export { TeamViewerXPick } from './TeamViewerXPick'

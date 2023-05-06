@@ -1,0 +1,16 @@
+@import '../../../assets/variables.module.scss';
+
+.full-page {
+    height: 100vh;
+    max-height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    &-freed {
+        max-height: unset;
+        min-height: 100vh;
+        height: 100%;
+    }
+}

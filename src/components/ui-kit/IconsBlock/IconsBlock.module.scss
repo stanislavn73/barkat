@@ -1,0 +1,52 @@
+@import '../../../assets/variables.module.scss';
+
+.icons-block-wrapper {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 0;
+    width: 100%;
+    color: $primary;
+
+    @media screen and (max-width: #{$laptop-s}) {
+        flex-wrap: wrap;
+    }
+
+    .block-item {
+        display: flex;
+        flex-direction: column;
+
+        @media screen and (max-width: #{$laptop-s}) {
+            width: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .icon {
+            height: 150px;
+            position: relative;
+            margin-bottom: -63px;
+            z-index: 1;
+
+            @media screen and (max-width: #{$laptop-s}) {
+                height: 120px;
+            }
+        }
+
+        .big-number {
+            font-size: 120px;
+            font-weight: 500;
+            position: relative;
+            z-index: 2;
+
+            @media screen and (max-width: #{$laptop-s}) {
+                font-size: 100px;
+            }
+        }
+
+        .text {
+            font-size: 20px;
+            padding-left: 13px;
+        }
+    }
+}

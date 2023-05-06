@@ -1,9 +1,8 @@
-import React, { useState, useEffect } from 'react';
-import Slider from '../ui-kit/Slider/Slider';
-import FullPage from '../ui-kit/FullPage';
-import { HeaderThumb } from '../ui-kit/Header';
-import { mainSlides } from '../../utils/slider';
-import './HomePage.module.less';
+import Slider from '../ui-kit/Slider/Slider'
+import FullPage from '../ui-kit/FullPage'
+import { HeaderThumb } from '../ui-kit/Header'
+import { mainSlides } from '../utils/slider'
+import styles from './HomePage.module.scss'
 
 const titlesRules = [
     {
@@ -30,13 +29,13 @@ const titlesRules = [
         subTitle: 'Making Farmers Digital',
         link: '/agro-solutions',
     },
-];
+]
 
 function HomePage() {
     return (
         <>
             <HeaderThumb />
-            <FullPage className='home-full-page'>
+            <FullPage className={styles['home-full-page']}>
                 <Slider
                     title='Barkat Stein'
                     slides={mainSlides}
@@ -44,7 +43,7 @@ function HomePage() {
                 />
             </FullPage>
         </>
-    );
+    )
 }
 
-export default HomePage;
+export default HomePage

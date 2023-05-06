@@ -1,0 +1,17 @@
+@import '../../../assets/variables.module.scss';
+
+.padded {
+    height: 100%;
+    width: 100%;
+    padding: 0 calc((100% - #{$padding-desktop}) / 2);
+    display: flex;
+    flex-direction: column;
+
+    @media screen and (max-width: #{$laptop-b}) {
+        padding: 0 calc((100% - #{$padding-laptop}) / 2);
+    }
+
+    @media screen and (max-width: #{$laptop-m}) {
+        padding: 0 calc((100% - #{$padding-laptop-m}) / 2);
+    }
+}

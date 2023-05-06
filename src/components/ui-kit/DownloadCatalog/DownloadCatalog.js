@@ -1,10 +1,9 @@
-import React from 'react';
-import cx from 'classnames';
-import FileSaver from 'file-saver';
+import cx from 'classnames'
 
-import pdf_icon from '../../../assets/images/icons/pdf.svg';
+import pdf_icon from '../../../../public/images/icons/pdf.svg'
 
-import './DownloadCatalog.module.less';
+import styles from './DownloadCatalog.module.scss'
+import Image from 'next/image'
 
 export default function DownloadCatalog({
     className,
@@ -13,16 +12,16 @@ export default function DownloadCatalog({
     name = 'catalog',
 }) {
     function handleDownload() {
-        window.open(file, name);
+        window.open(file, name)
         // FileSaver.saveAs(file, name)
     }
     return (
         <div
-            className={cx('download-wrapper', className)}
+            className={cx(styles['download-wrapper'], className)}
             onClick={handleDownload}
         >
-            <img className='icon' src={pdf_icon} />
+            <Image className={styles['icon']} src={pdf_icon} />
             <span>{title || 'Cмотри детальнее'}</span>
         </div>
-    );
+    )
 }
