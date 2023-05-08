@@ -1,5 +1,5 @@
 import React, { useContext, useEffect, useState } from 'react'
-import { Checkbox, Box, Radio } from '@mui/material'
+import { Checkbox, Box, Radio } from '@material-ui/core'
 import { ModalConsumer } from '../../../../layouts/Layout'
 import { currencies } from './currencies'
 import UserDataForm from './UserDataForm'
