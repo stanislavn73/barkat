@@ -1,4 +1,4 @@
-import { useState, useRef } from 'react'
+import { useState, useRef, useEffect } from 'react'
 import Table from '@material-ui/core/Table'
 import TableCell from '@material-ui/core/TableCell'
 import TableHead from '@material-ui/core/TableHead'
@@ -78,6 +78,13 @@ export default function BuySketchUp() {
         setMobileColumnShowed(newState)
     }
 
+    const [mounted, setMounted] = useState(false)
+    useEffect(() => {
+        setMounted(true)
+    }, [])
+
+    if (!mounted) return null
+
     return (
         <div className={styles['table_container']}>
             <FirstScreen />
@@ -85,132 +92,137 @@ export default function BuySketchUp() {
                 buttons={mobileColumnShowed}
                 handleShowColumn={handleShowMobileTable}
             />
-
-            <Table className={classes.table} ref={tableRef}>
-                <TableHead>
-                    {!mobileColumnShowed[0].hideMobileRow && (
-                        <TableRow>
-                            {mobileColumnShowed.map((item, index) => (
-                                <TableCell
-                                    key={index}
-                                    onMouseEnter={() => setColumn(index)}
-                                    className={classes.TableCell}
-                                >
-                                    <div
-                                        className={
-                                            item.title === 'Опции'
-                                                ? styles['options_element']
-                                                : styles['head_element']
-                                        }
+            <div>
+                <Table className={classes.table} ref={tableRef}>
+                    <TableHead>
+                        {!mobileColumnShowed[0].hideMobileRow && (
+                            <TableRow>
+                                {mobileColumnShowed.map((item, index) => (
+                                    <TableCell
+                                        key={index}
+                                        onMouseEnter={() => setColumn(index)}
+                                        className={classes.TableCell}
                                     >
-                                        {item.title}
-                                    </div>
+                                        <div
+                                            className={
+                                                item.title === 'Опции'
+                                                    ? styles['options_element']
+                                                    : styles['head_element']
+                                            }
+                                        >
+                                            {item.title}
+                                        </div>
+                                    </TableCell>
+                                ))}
+                            </TableRow>
+                        )}
+                        <BuyButtons
+                            handleSetColumn={handleSetColumn}
+                            mobileButtons={mobileColumnShowed}
+                        />
+                    </TableHead>
+
+                    <TableBody>
+                        {rows.map((item, index) => (
+                            <TableRow key={index}>
+                                <TableCell>
+                                    {Array.isArray(item.option) ? (
+                                        <div
+                                            className={
+                                                styles['options_element']
+                                            }
+                                            onMouseEnter={() => setColumn(0)}
+                                        >
+                                            {item.option[0]}
+                                            <br />
+                                            {item.option[1]}
+                                        </div>
+                                    ) : (
+                                        <div
+                                            className={
+                                                styles['options_element']
+                                            }
+                                            onMouseEnter={() => setColumn(0)}
+                                        >
+                                            {item.option}
+                                        </div>
+                                    )}
                                 </TableCell>
-                            ))}
-                        </TableRow>
-                    )}
-                    <BuyButtons
-                        handleSetColumn={handleSetColumn}
-                        mobileButtons={mobileColumnShowed}
-                    />
-                </TableHead>
-
-                <TableBody>
-                    {rows.map((item, index) => (
-                        <TableRow key={index}>
-                            <TableCell>
-                                {Array.isArray(item.option) ? (
-                                    <div
-                                        className={styles['options_element']}
-                                        onMouseEnter={() => setColumn(0)}
+                                {!mobileColumnShowed[1].hideMobileColumn && (
+                                    <TableCell
+                                        className={cx(
+                                            styles.cell,
+                                            classes.TableCell
+                                        )}
+                                        onMouseEnter={() => setColumn(1)}
                                     >
-                                        {item.option[0]}
-                                        <br />
-                                        {item.option[1]}
-                                    </div>
-                                ) : (
-                                    <div
-                                        className={styles['options_element']}
-                                        onMouseEnter={() => setColumn(0)}
-                                    >
-                                        {item.option}
-                                    </div>
+                                        {item.sketchUpFree}
+                                    </TableCell>
                                 )}
-                            </TableCell>
-                            {!mobileColumnShowed[1].hideMobileColumn && (
-                                <TableCell
-                                    className={cx(
-                                        styles.cell,
-                                        classes.TableCell
-                                    )}
-                                    onMouseEnter={() => setColumn(1)}
-                                >
-                                    {item.sketchUpFree}
-                                </TableCell>
-                            )}
-                            {!mobileColumnShowed[2].hideMobileColumn && (
-                                <TableCell
-                                    className={cx(
-                                        styles.cell,
-                                        classes.TableCell
-                                    )}
-                                    onMouseEnter={() => setColumn(2)}
-                                >
-                                    {item.sketchUpShop}
-                                </TableCell>
-                            )}
-                            {!mobileColumnShowed[3].hideMobileColumn && (
-                                <TableCell
-                                    className={cx(
-                                        styles.cell,
-                                        classes.TableCell
-                                    )}
-                                    onMouseEnter={() => setColumn(3)}
-                                >
-                                    {item.sketchUpPro}
-                                </TableCell>
-                            )}
-                            {!mobileColumnShowed[4].hideMobileColumn && (
-                                <TableCell
-                                    className={cx(
-                                        styles.cell,
-                                        classes.TableCell
-                                    )}
-                                    onMouseEnter={() => setColumn(4)}
-                                >
-                                    {item.sketchUpStudio}
-                                </TableCell>
-                            )}
-                            {!mobileColumnShowed[5].hideMobileColumn && (
-                                <TableCell
-                                    className={cx(
-                                        styles.cell,
-                                        classes.TableCell
-                                    )}
-                                    onMouseEnter={() => setColumn(5)}
-                                >
-                                    {item.sketchUpStudents}
-                                </TableCell>
-                            )}
-                        </TableRow>
-                    ))}
-                </TableBody>
+                                {!mobileColumnShowed[2].hideMobileColumn && (
+                                    <TableCell
+                                        className={cx(
+                                            styles.cell,
+                                            classes.TableCell
+                                        )}
+                                        onMouseEnter={() => setColumn(2)}
+                                    >
+                                        {item.sketchUpShop}
+                                    </TableCell>
+                                )}
+                                {!mobileColumnShowed[3].hideMobileColumn && (
+                                    <TableCell
+                                        className={cx(
+                                            styles.cell,
+                                            classes.TableCell
+                                        )}
+                                        onMouseEnter={() => setColumn(3)}
+                                    >
+                                        {item.sketchUpPro}
+                                    </TableCell>
+                                )}
+                                {!mobileColumnShowed[4].hideMobileColumn && (
+                                    <TableCell
+                                        className={cx(
+                                            styles.cell,
+                                            classes.TableCell
+                                        )}
+                                        onMouseEnter={() => setColumn(4)}
+                                    >
+                                        {item.sketchUpStudio}
+                                    </TableCell>
+                                )}
+                                {!mobileColumnShowed[5].hideMobileColumn && (
+                                    <TableCell
+                                        className={cx(
+                                            styles.cell,
+                                            classes.TableCell
+                                        )}
+                                        onMouseEnter={() => setColumn(5)}
+                                    >
+                                        {item.sketchUpStudents}
+                                    </TableCell>
+                                )}
+                            </TableRow>
+                        ))}
+                    </TableBody>
 
-                <TableFooter>
-                    <BuyButtons
-                        handleSetColumn={handleSetColumn}
-                        mobileButtons={mobileColumnShowed}
-                    />
-                </TableFooter>
-                <TableRow></TableRow>
-                {!mobileColumnShowed[0].hideMobileRow && (
-                    <HoverFrame
-                        column={column}
-                        width={tableRef.current.offsetWidth || 0}
-                        height={tableRef.current.offsetHeight}
-                    />
-                )}
-            </Table>
+                    <TableFooter>
+                        <BuyButtons
+                            handleSetColumn={handleSetColumn}
+                            mobileButtons={mobileColumnShowed}
+                        />
+                    </TableFooter>
+                    <TableRow></TableRow>
+                    {!mobileColumnShowed[0].hideMobileRow && (
+                        <HoverFrame
+                            column={column}
+                            width={tableRef.current.offsetWidth || 0}
+                            height={tableRef.current.offsetHeight}
+                        />
+                    )}
+                </Table>
+            </div>
         </div>
     )
 }

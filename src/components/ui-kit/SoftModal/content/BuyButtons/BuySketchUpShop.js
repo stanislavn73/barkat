@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { Checkbox, Box, Radio } from '@material-ui/core'
 import { ModalConsumer } from '../../../../layouts/Layout'
 import { currencies } from './currencies'
@@ -9,7 +9,6 @@ import { getFirestore, doc, setDoc } from 'firebase/firestore'
 
 import styles from './BuySketchUpShop.module.scss'
 import dayjs from 'dayjs'
-import { CurrencyContext } from '../../../../../pages/buy-sketchup'
 import Img from '../../../Img'
 
 function UserAgreementLink() {
@@ -51,7 +50,17 @@ export default function BuySketchUpShop({
     )
     const [db, setDB] = useState(null)
 
-    const { hryvnaExchangeRate } = useContext(CurrencyContext)
+    const [hryvnaExchangeRate, setHryvnaExchangeRate] = useState(1)
+
+    useEffect(() => {
+        ;(async () => {
+            const response = await fetch('/api/liqpay')
+            const responseData = await response.json()
+            setHryvnaExchangeRate(responseData.hryvnaExchangeRate)
+        })()
+    }, [])
+
+    // const { hryvnaExchangeRate } = useContext(CurrencyContext)
     const amountUAH = hryvnaExchangeRate * priceUSD
 
     const currencyConvertKey = process.env.CURCONV_API_KEY
@@ -115,6 +124,7 @@ export default function BuySketchUpShop({
     }, [orderId])
 
     async function handleChooseCurrency(currency) {
+        if (currency === 'USD') return setCurrentAmount(priceUSD)
         if (currency === 'UAH') {
             setCurrentAmount(amountUAH)
             return setSelectedValue('UAH')
