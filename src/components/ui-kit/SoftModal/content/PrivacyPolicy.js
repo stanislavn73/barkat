@@ -3,7 +3,7 @@ import styles from './PivacyPolicy.module.scss'
 
 export default function PrivacyPolicy() {
     return (
-        <div>
+        <>
             <p className={styles['little-text']}>
                 ООО «Баркат-Штейн» (Barkat-Stein) заботится о соблюдении Вашей
                 конфиденциальности. Мы хотим, чтобы Ваша работа в Интернет, по
@@ -97,6 +97,6 @@ export default function PrivacyPolicy() {
                 любым вопросам вы можете написать письмо на e-mail:
                 info@barkat-3d-ville.com
             </p>
-        </div>
+        </>
     )
 }

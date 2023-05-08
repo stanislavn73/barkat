@@ -36,9 +36,9 @@ class Footer extends PureComponent {
                             <div className={styles['content-title']}>
                                 <a
                                     className={styles['footer-link']}
-                                    href={'http://www.barkat-3D-ville.com'}
+                                    href={'https://barkat-3d-ville.com/'}
                                 >
-                                    www.barkat-3D-ville.com
+                                    barkat-3d-ville.com
                                 </a>
                             </div>
                         </div>
