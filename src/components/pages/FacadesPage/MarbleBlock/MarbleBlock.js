@@ -104,7 +104,7 @@ export default function MarbleBlock() {
                         <OpenModalButton />
                     </div>
                     <div>
-                        <p>
+                        <div>
                             <SubTitle>Конструкция:</SubTitle>
                             <p>
                                 • Мраморные облицовочные плиты с пропилом
@@ -121,8 +121,8 @@ export default function MarbleBlock() {
                                 либо к плитам перекрытия (для межэтажной
                                 подсистемы){' '}
                             </p>
-                        </p>
-                        <p>
+                        </div>
+                        <div>
                             <SubTitle>Преимущества:</SubTitle>
                             <p>
                                 • Монтаж в любое время года независимо от
@@ -137,7 +137,7 @@ export default function MarbleBlock() {
                                 • Универсальное решение для рядовой и межэтажной
                                 подсистемы
                             </p>
-                        </p>
+                        </div>
                     </div>
                 </div>
             </Padded>

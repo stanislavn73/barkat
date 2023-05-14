@@ -1,10 +1,9 @@
-import React from 'react'
 import Soft from '../components/pages/SoftPage'
 import Layout from '../components/layouts/Layout'
 
-function HomePage() {
+function HomePage({ locale }) {
     return (
-        <Layout page='soft'>
+        <Layout page='soft' locale={locale}>
             <Soft />
         </Layout>
     )

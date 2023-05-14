@@ -128,7 +128,7 @@ export default function Clinkerstone() {
                         className={styles['clinkerstone-system']}
                     />
                     <div>
-                        <p>
+                        <div>
                             <SubTitle>Конструкция:</SubTitle>
                             <p>
                                 • Клинкерный камень монтируется между
@@ -146,8 +146,8 @@ export default function Clinkerstone() {
                                 вертикальном шве применена стальная
                                 перфорированная лента{' '}
                             </p>
-                        </p>
-                        <p>
+                        </div>
+                        <div>
                             <SubTitle>Преимущества:</SubTitle>
                             <p>
                                 • Перфорация в рядовом профиле удерживает
@@ -165,7 +165,7 @@ export default function Clinkerstone() {
                                 подсистемы{' '}
                             </p>
                             <p>• Широкий выбор вида камня толщиной от 14 мм </p>
-                        </p>
+                        </div>
                     </div>
                 </div>
                 <SubTitle>
@@ -181,7 +181,7 @@ export default function Clinkerstone() {
                         <OpenModalButton />
                     </div>
                     <div>
-                        <p>
+                        <div>
                             <SubTitle>Конструкция:</SubTitle>
                             <p>
                                 • Клинкерный камень монтируется беззатирочным
@@ -198,8 +198,8 @@ export default function Clinkerstone() {
                                 • Конструкция рядового профиля предусматривает
                                 пружинный зажим для верхнего гребня плитки{' '}
                             </p>
-                        </p>
-                        <p>
+                        </div>
+                        <div>
                             <SubTitle>Преимущества:</SubTitle>
                             <p>
                                 • Монтаж в любое время года независимо от
@@ -215,7 +215,7 @@ export default function Clinkerstone() {
                                 отдельная плитка может быть оперативно извлечена
                                 или заменена{' '}
                             </p>
-                        </p>
+                        </div>
                     </div>
                 </div>
             </Padded>

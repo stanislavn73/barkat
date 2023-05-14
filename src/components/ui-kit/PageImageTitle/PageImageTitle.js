@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import FadeInWrapper from '../FadeInWrapper'
 import { ModalConsumer } from '../../layouts/Layout'
 import Padded from '../Padded'
@@ -8,17 +8,32 @@ import * as mobilefirst from '../../../../public/images/pages/2.2.jpg'
 import styles from './PageImageTitle.module.scss'
 
 function PageImageTitle({ src, title, subTitle }) {
+    const [mobileSize, setMobileSize] = useState(false)
+
+    const handleMobileDetect = e => {
+        if (e.target.outerWidth < 400 && title === 'Наши проекты') {
+            return setMobileSize(true)
+        }
+        setMobileSize(false)
+    }
+
+    useEffect(() => {
+        window.addEventListener('resize', handleMobileDetect)
+        if (window.outerWidth < 400 && title === 'Наши проекты') {
+            setMobileSize(true)
+        } else {
+            setMobileSize(false)
+        }
+        return () => removeEventListener('resize', handleMobileDetect)
+    }, [])
+
     return (
         <div className={styles['image-title-wrapper']}>
-            {typeof window !== 'undefined' &&
-                (window.outerWidth < 400 && title === 'Наши проекты' ? (
-                    <Img
-                        src={mobilefirst}
-                        className={styles['background-image']}
-                    />
-                ) : (
-                    <Img src={src} className={styles['background-image']} />
-                ))}
+            {mobileSize ? (
+                <Img src={mobilefirst} className={styles['background-image']} />
+            ) : (
+                <Img src={src} className={styles['background-image']} />
+            )}
             <FadeInWrapper delay='0.4'>
                 <Padded>
                     <div className={styles['title-wrapper']}>

@@ -2,9 +2,9 @@ import React from 'react'
 import Facades from '../components/pages/FacadesPage'
 import Layout from '../components/layouts/Layout'
 
-function HomePage() {
+function HomePage({ locale }) {
     return (
-        <Layout>
+        <Layout locale={locale}>
             <Facades />
         </Layout>
     )

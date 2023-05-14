@@ -1,77 +1,83 @@
 import Padded from '../../../ui-kit/Padded/Padded'
-import SocialMedia from '../../../ui-kit/SocialMedia/SocialMedia'
+// import SocialMedia from '../../../ui-kit/SocialMedia/SocialMedia'
 import PlainText from '../../../ui-kit/PlainText'
 import Img from '../../../ui-kit/Img'
-import allPlanLogo from '../../../../../public/images/AllPlan.jpg'
-import { ModalConsumer } from '../../../layouts/Layout'
+import xPick from '../../../../../public/images/teamViewer/xPick.png'
+import xMake from '../../../../../public/images/teamViewer/xMake.png'
+import xInspect from '../../../../../public/images/teamViewer/xInspect.png'
+import xAssist from '../../../../../public/images/teamViewer/xAssist.png'
+import { ModalConsumer, useTranslation } from '../../../layouts/Layout'
 import FullPage from '../../../ui-kit/FullPage'
-import React from 'react'
+import styles from '../SoftPage.module.scss'
+import teamViewerStyles from './TeamViewer.module.scss'
 
 const teamViewerItems = [
     {
         id: 1,
-        title: 'TeamViewer Frontline xPick',
+        title: 'xPick',
         type: 'xPick',
-        text: 'Решение используется для автоматизированного сбора и упаковки товаров на складах и производственных линиях. Она использует передовые технологии компьютерного зрения и машинного обучения, чтобы распознавать товары и пакеты в режиме реального времени и уменьшать время сбора и ошибки. Frontline xPick помогает компаниям оптимизировать процессы и повышать эффективность работы склада',
+        textKey: 'xPick',
+        logo: xPick,
     },
     {
         id: 2,
-        title: 'TeamViewer Frontline xMake',
+        title: 'xMake',
         type: 'xMake',
-        text: 'САПР решение, специально разработанное для производства сборного железобетона разной сложности',
+        logo: xMake,
     },
     {
         id: 3,
-        title: 'Allplan Engineering Building',
-        type: 'AllplanEngineeringBuilding',
-        text: 'Allplan Engineering Building - BIM решение для быстрого и эффективного моделирования и армирования строительных конструкций.',
+        title: 'xInspect',
+        type: 'xInspect',
+        logo: xInspect,
     },
     {
         id: 4,
-        title: 'Allplan Linear',
-        type: 'AllplanLinear',
-        text: 'Allplan Linear - высокопроизводительный инструмент для быстрого создания 2D и 3D моделей, профессионального оформления рабочих чертежей.',
+        title: 'xAssist',
+        type: 'xAssist',
+        logo: xAssist,
     },
 ]
 const TeamViewer = () => {
+    const { t } = useTranslation('soft')
     return (
-        <FullPage min className='soft-block-wrapper'>
-            <Padded className='soft-block-padded'>
-                <div className='title-container'>
-                    <div className='soft-block-title'>TeamViewer</div>
-                    {/*<SocialMedia page='AllPlan' />*/}
+        <FullPage min className={styles['soft-block-wrapper']}>
+            <Padded className={styles['soft-block-padded']}>
+                <div className={styles['title-container']}>
+                    <div className={styles['soft-block-title']}>
+                        TeamViewer Frontline
+                    </div>
                 </div>
-                <PlainText className='soft-plain-text'>
-                    Team Viewer Frontline разработан для помощи людям,
-                    работающих руками, и концентрируется на предоставлении
-                    возможности специалисту работать в цифровой среде. Frontline
-                    предоставляет возможность сосредоточиться на реальных
-                    задачах, а не на сложном программном обеспечении.
+                <PlainText className={styles['soft-plain-text']}>
+                    {t.teamViewerFrontline}
                 </PlainText>
-                <PlainText className='soft-plain-text'>
+                <PlainText className={styles['soft-plain-text']}>
                     <a href='https://www.teamviewer.com/'>teamviewer.com</a>
                 </PlainText>
-                <div className='soft-items-wrapper'>
+                <div className={styles['soft-items-wrapper']}>
                     {teamViewerItems.map(item => (
-                        <div key={item.id} className='soft-item'>
-                            <Img className='logo' src={allPlanLogo} />
+                        <div key={item.id} className={styles['soft-item']}>
+                            <Img
+                                className={teamViewerStyles.logo}
+                                src={item.logo}
+                            />
                             <ModalConsumer>
                                 {({ handleOpenSoftModal }) => (
                                     <div
-                                        className='title'
+                                        className={styles.title}
                                         onClick={handleOpenSoftModal(item.type)}
                                     >
                                         {item.title}
                                     </div>
                                 )}
                             </ModalConsumer>
-                            <PlainText className='item-text'>
-                                {item.text}
+                            <PlainText className={styles['item-text']}>
+                                {t[item.type].resume}
                             </PlainText>
                             <ModalConsumer>
                                 {({ handleOpenForm }) => (
                                     <div
-                                        className='button'
+                                        className={styles.button}
                                         onClick={handleOpenForm}
                                     >
                                         Написать нам

@@ -10,7 +10,7 @@ import Hexagon from './Hexagon'
 import Bentley from './Bentley'
 import SketchUp from './SketchUp'
 import AllPlan from './AllPlan'
-// import TeamViewer from './TeamViewer'
+import TeamViewer from './TeamViewer'
 
 const SoftPage = () => {
     const anchors = [
@@ -50,11 +50,11 @@ const SoftPage = () => {
             title: 'Sketchup',
             comp: <SketchUp />,
         },
-        // {
-        //     id: 'TeamViewerFrontline',
-        //     title: 'TeamViewer Frontline',
-        //     comp: <TeamViewer />,
-        // },
+        {
+            id: 'TeamViewerFrontline',
+            title: 'TeamViewer Frontline',
+            comp: <TeamViewer />,
+        },
     ]
 
     const [activeAnchor, setActiveAnchor] = useState(anchors[0].id)

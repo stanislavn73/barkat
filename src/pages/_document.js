@@ -45,7 +45,7 @@ export default class MyDocument extends Document {
           <link rel="icon" type="image/png" sizes="16x16" href={favicon16} />
           <link rel="manifest" href="/site.webmanifest" /> */}
 
-                    <link rel='shortcut icon' href='/favicon.ico' />
+                    <link rel='icon' href='/favicon.ico' />
 
                     <link
                         rel='stylesheet'

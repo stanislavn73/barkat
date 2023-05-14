@@ -1,8 +1,8 @@
 import { useTranslation } from '../../../../layouts/Layout'
 
-export const TeamViewerXPick = () => {
+export const TeamViewerXAssist = () => {
     const { t } = useTranslation('soft')
-    const { modal } = t.xPick
+    const { modal } = t.xAssist
 
     return (
         <>
@@ -17,8 +17,6 @@ export const TeamViewerXPick = () => {
                     </ul>
                 </div>
             ))}
-            <p>{modal.integration}</p>
-            <p>{modal.summary}</p>
         </>
     )
 }

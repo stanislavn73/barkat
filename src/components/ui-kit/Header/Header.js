@@ -13,6 +13,7 @@ import * as logoU from '../../../../public/images/logo_u.png'
 import * as logoVille from '../../../../public/images/logo-ville.png'
 
 import styles from './style.module.scss'
+import { useTranslation } from '../../layouts/Layout'
 
 const routes = {
     HOME: '/',
@@ -38,6 +39,9 @@ function Header() {
     const [isMenuActive, setIsMenuActive] = useState(false)
     const [shrinked, setShrinked] = useState(false)
     const router = useRouter()
+    const {
+        t: { header: headerTranslate },
+    } = useTranslation('common')
 
     useEffect(() => {
         window.addEventListener('scroll', onPageScroll)
@@ -86,11 +90,13 @@ function Header() {
             <div className={styles['orange-line']} />
             <div className={styles['header-contacts-wrapper']}>
                 <Link href={logoPage.route} className={styles['menu-item']}>
-                    <Img className={styles['logo']} src={logo} />
-                    <Img
-                        className={cx(styles.logo, styles['logo-mobile'])}
-                        src={LOGOS[router.route]}
-                    />
+                    <>
+                        <Img className={styles['logo']} src={logo} />
+                        <Img
+                            className={cx(styles.logo, styles['logo-mobile'])}
+                            src={LOGOS[router.route]}
+                        />
+                    </>
                 </Link>
                 <Img
                     className={cx(styles.logo, styles['logo-ville'])}
@@ -118,7 +124,7 @@ function Header() {
                                 className={menuItemCX}
                                 onClick={handleMenuItemClick}
                             >
-                                {page.name}
+                                {headerTranslate[page.id]}
                             </Link>
                         )
                     })}

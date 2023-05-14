@@ -43,7 +43,12 @@ import BuySketchUpPro from './content/BuyButtons/BuySketchUpPro'
 import BuySketchUpStudio from './content/BuyButtons/BuySketchUpStudio'
 import BuySketchUpHigher from './content/BuyButtons/BuySketchUpHigher'
 import UserAgreement from './content/UserAgreement'
-import { TeamViewerXPick } from './content/TeamViewer'
+import {
+    TeamViewerXAssist,
+    TeamViewerXInspect,
+    TeamViewerXMake,
+    TeamViewerXPick,
+} from './content/TeamViewer'
 
 export default {
     REVIT: {
@@ -227,7 +232,19 @@ export default {
         content: BuySketchUpHigher,
     },
     xPick: {
-        title: 'Купить TeamViewer Frontline xPick',
+        title: 'TeamViewer Frontline xPick',
         content: TeamViewerXPick,
+    },
+    xAssist: {
+        title: 'TeamViewer Frontline xPick',
+        content: TeamViewerXAssist,
+    },
+    xMake: {
+        title: 'TeamViewer Frontline xMake',
+        content: TeamViewerXMake,
+    },
+    xInspect: {
+        title: 'TeamViewer Frontline xInspect',
+        content: TeamViewerXInspect,
     },
 }
