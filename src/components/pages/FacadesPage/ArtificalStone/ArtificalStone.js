@@ -1,24 +1,24 @@
-import React from 'react';
-import ImageSlides from '../../../ui-kit/ImageSlides';
-import FullPage from '../../../ui-kit/FullPage';
-import Title from '../../../ui-kit/Title';
-import SubTitle from '../../../ui-kit/SubTitle';
-import Padded from '../../../ui-kit/Padded';
-import Img from '../../../ui-kit/Img';
-import FullscreenImg from '../../../ui-kit/FullscreenImg';
-import OpenModalButton from '../../../ui-kit/OpenModalButton';
-import DownloadCatalog from '../../../ui-kit/DownloadCatalog';
-import facadesArtificalStoneSlides from '../../../../utils/facades/artificalStone';
-import artifical_stone_type from '../../../../assets/images/facades/artifical-stone/types/01.jpg';
-import system from '../../../../assets/images/facades/artifical-stone/system/system.jpg';
+import ImageSlides from '../../../ui-kit/ImageSlides'
+import FullPage from '../../../ui-kit/FullPage'
+import Title from '../../../ui-kit/Title'
+import SubTitle from '../../../ui-kit/SubTitle'
+import Padded from '../../../ui-kit/Padded'
+import FullscreenImg from '../../../ui-kit/FullscreenImg'
+import OpenModalButton from '../../../ui-kit/OpenModalButton'
+import DownloadCatalog from '../../../ui-kit/DownloadCatalog'
+import facadesArtificalStoneSlides from '../../../utils/facades/artificalStone'
+import artifical_stone_type from '../../../../../public/images/facades/artifical-stone/types/01.jpg'
+import system from '../../../../../public/images/facades/artifical-stone/system/system.jpg'
+import cx from 'classnames'
 
-import catalog from '../../../../assets/images/facades/artifical-stone/catalog.pdf';
+import catalog from '../../../../../public/images/facades/artifical-stone/catalog.pdf'
 
-import './ArtificalStone.module.less';
+import styles from './ArtificalStone.module.scss'
+import { FacadesWrapper } from '../FacadesWrapper'
 
 export default function ArtificalStone() {
     return (
-        <div className='artifical-stone-block  facade-type-wrapper'>
+        <FacadesWrapper className={styles['artifical-stone-block']}>
             <FullPage>
                 <Title>Фасад ИСКУССТВЕННЫЙ КАМЕНЬ</Title>
                 <ImageSlides data={facadesArtificalStoneSlides} />
@@ -42,11 +42,11 @@ export default function ArtificalStone() {
                     также полностью совместим с другими фасадными материалами.
                 </p>
                 <SubTitle>Цветовая гамма ИСКУСВЕННОГО КАМНЯ</SubTitle>
-                <div className='artifical-stone-images-wrapper'>
-                    <div className='artifical-stone-image-item'>
+                <div className={styles['artifical-stone-images-wrapper']}>
+                    <div className={styles['artifical-stone-image-item']}>
                         <FullscreenImg src={artifical_stone_type} />
                     </div>
-                    <div className='artifical-stone-download-item'>
+                    <div className={styles['artifical-stone-download-item']}>
                         <DownloadCatalog
                             file={catalog}
                             name='Каталог Искусственный камень'
@@ -58,8 +58,13 @@ export default function ArtificalStone() {
                     облицовку терракотовыми панелями, установленных на
                     универсальные кляммеры из нержавеющей стали
                 </SubTitle>
-                <div className='artifical-stone-system-wrapper facades-system-wrapper'>
-                    <div className='artifical-stone-system'>
+                <div
+                    className={cx(
+                        styles['artifical-stone-system-wrapper'],
+                        styles['facades-system-wrapper']
+                    )}
+                >
+                    <div className={styles['artifical-stone-system']}>
                         <FullscreenImg src={system} />
                         <OpenModalButton />
                     </div>
@@ -122,6 +127,6 @@ export default function ArtificalStone() {
                     </div>
                 </div>
             </Padded>
-        </div>
-    );
+        </FacadesWrapper>
+    )
 }

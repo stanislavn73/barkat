@@ -1,22 +1,28 @@
-import React from 'react';
-import { ModalConsumer } from '../../layouts/Layout';
+import { ModalConsumer } from '../../layouts/Layout'
+import cx from 'classnames'
+import styles from './PrivacyPolicy.module.scss'
 
 export default function UserAgreement() {
     return (
-        <div className='label-wrapper'>
+        <div className={styles['label-wrapper']}>
             <ModalConsumer>
                 {({ handleOpenSoftModal }) => (
                     <div
-                        className='label-container'
+                        className={styles['label-container']}
                         onClick={handleOpenSoftModal('UserAgreement')}
                     >
-                        <p className='label-title'></p>
-                        <p className='label-title underlined'>
+                        <p className={styles['label-title']}></p>
+                        <p
+                            className={cx(
+                                styles['label-title'],
+                                styles.underlined
+                            )}
+                        >
                             Пользовательское соглашение
                         </p>
                     </div>
                 )}
             </ModalConsumer>
         </div>
-    );
+    )
 }

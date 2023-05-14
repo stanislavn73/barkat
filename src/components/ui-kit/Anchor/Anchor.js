@@ -1,14 +1,14 @@
-import React, { useEffect } from 'react';
-import { Waypoint } from 'react-waypoint';
+import React from 'react'
+import { Waypoint } from 'react-waypoint'
 
 function Anchor({ onPositionChange, id, children }) {
     function handlePositionChange(key) {
-        return (data) => {
+        return data => {
             if (data.currentPosition === 'inside') {
-                onPositionChange(key);
-                window.history.replaceState(null, null, `#${key}`);
+                onPositionChange(key)
+                window.history.replaceState(null, null, `#${key}`)
             }
-        };
+        }
     }
 
     return (
@@ -19,7 +19,7 @@ function Anchor({ onPositionChange, id, children }) {
         >
             <div id={id}>{children}</div>
         </Waypoint>
-    );
+    )
 }
 
-export default React.memo(Anchor);
+export default React.memo(Anchor)

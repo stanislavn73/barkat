@@ -1,11 +1,10 @@
-import React from 'react';
-import './Social.module.less';
+import styles from './Social.module.scss'
 
 export default function SocialMedia() {
     return (
-        <div className='social-wrapper'>
+        <div className={styles['social-wrapper']}>
             <button
-                className='facebook'
+                className={styles['facebook']}
                 onClick={() =>
                     window.open(
                         'https://www.facebook.com/Barkat-Stein-100872801796847'
@@ -13,13 +12,13 @@ export default function SocialMedia() {
                 }
             ></button>
             <button
-                className='insta'
+                className={styles['insta']}
                 onClick={() =>
                     window.open('https://www.instagram.com/barkat_stein/?hl=ru')
                 }
             ></button>
             <button
-                className='linkedin'
+                className={styles['linkedin']}
                 onClick={() =>
                     window.open(
                         'https://www.linkedin.com/company/65744024/admin/'
@@ -27,5 +26,5 @@ export default function SocialMedia() {
                 }
             ></button>
         </div>
-    );
+    )
 }

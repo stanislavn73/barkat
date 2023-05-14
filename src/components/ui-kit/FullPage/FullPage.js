@@ -1,15 +1,14 @@
-import React from 'react';
-import cx from 'classnames';
+import cx from 'classnames'
 
-import './FullPage.module.less';
+import styles from './FullPage.module.scss'
 
 function FullPage({ children, min, className }) {
-    const fullPageCX = cx('full-page', {
-        'full-page-freed': min,
+    const fullPageCX = cx(styles['full-page'], {
+        [styles['full-page-freed']]: min,
         [className]: className,
-    });
+    })
 
-    return <div className={fullPageCX}>{children}</div>;
+    return <div className={fullPageCX}>{children}</div>
 }
 
-export default FullPage;
+export default FullPage

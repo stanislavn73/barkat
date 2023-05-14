@@ -1,0 +1,67 @@
+@import '../../../assets/variables.module.scss';
+
+.label-wrapper {
+    padding-right: 15px;
+
+    @media (max-width: 750px) {
+        text-align: center;
+        align-items: center;
+    }
+
+    @media screen and (max-width: #{$mobile-l}) {
+        height: 55px;
+    }
+
+    @media screen and (max-width: #{$mobile-m}) {
+        width: 240px;
+    }
+}
+
+.label-container {
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+
+    @media screen and (max-width: #{$mobile-l}) {
+        position: relative;
+        left: auto;
+        flex-direction: row;
+
+        div {
+            position: absolute;
+            top: -40px;
+            right: -140px;
+
+            display: flex;
+            flex-direction: row;
+        }
+    }
+
+    .cards_logo {
+        height: 60px;
+        margin-top: 10px;
+        margin-right: 10px;
+
+        @media screen and (max-width: #{$mobile-l}) {
+            height: 30px;
+        }
+    }
+}
+
+.label-title {
+    color: white;
+    cursor: pointer;
+    font-size: 18px;
+    line-height: 22px;
+    font-weight: 300;
+    display: inline;
+
+    @media (max-width: 830px) {
+        font-size: 18px;
+    }
+}
+
+.underlined {
+    text-decoration: underline;
+}

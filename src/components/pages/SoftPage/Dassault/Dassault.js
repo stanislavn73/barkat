@@ -1,13 +1,13 @@
-import React from 'react';
-import FullPage from '../../../ui-kit/FullPage/FullPage';
-import Padded from '../../../ui-kit/Padded/Padded';
-import PlainText from '../../../ui-kit/PlainText';
-import Img from '../../../ui-kit/Img';
-import { ModalConsumer } from '../../../layouts/Layout';
-import './Dassault.module.less';
+import React from 'react'
+import FullPage from '../../../ui-kit/FullPage/FullPage'
+import Padded from '../../../ui-kit/Padded/Padded'
+import PlainText from '../../../ui-kit/PlainText'
+import Img from '../../../ui-kit/Img'
+import { ModalConsumer } from '../../../layouts/Layout'
+import styles from '../SoftPage.module.scss'
 
-import DassaultLogo from '../../../../assets/images/Dassault.png';
-import SocialMedia from '../../../ui-kit/SocialMedia/SocialMedia';
+import DassaultLogo from '../../../../../public/images/Dassault.png'
+import SocialMedia from '../../../ui-kit/SocialMedia/SocialMedia'
 
 const allPlanItems = [
     {
@@ -70,26 +70,30 @@ const allPlanItems = [
         type: 'DassaultClone',
         text: 'Планирование технологических процессов, симуляция поведения оборудования и материальных потоков, виртуальная фабрика',
     },
-];
+]
 
 class Dassault extends React.PureComponent {
     render() {
         return (
-            <FullPage min ref={this.block} className='soft-block-wrapper'>
-                <Padded className='soft-block-padded'>
-                    <div className='title-container'>
-                        <div className='soft-block-title'>
+            <FullPage
+                min
+                ref={this.block}
+                className={styles['soft-block-wrapper']}
+            >
+                <Padded className={styles['soft-block-padded']}>
+                    <div className={styles['title-container']}>
+                        <div className={styles['soft-block-title']}>
                             Dassault Systèmes
                         </div>
                         <SocialMedia page='Dassault' />
                     </div>
-                    <PlainText className='soft-plain-text'>
+                    <PlainText className={styles['soft-plain-text']}>
                         Dassault Systèmes - разработчик программного обеспечения
                         для 3D-проектирования и управления жизненным циклом
                         продукции (PLM), объединенного единой платформой
                         3DEXPERIENCE.
                     </PlainText>
-                    <PlainText className='soft-plain-text'>
+                    <PlainText className={styles['soft-plain-text']}>
                         3DEXPERIENCE – это цифровая среда для моделирования
                         предметов окружающего мира и связанных с ними ощущений,
                         которая обеспечивает эффективную работу производственных
@@ -97,7 +101,7 @@ class Dassault extends React.PureComponent {
                         этапа его создания до утилизации в виртуальной
                         реальности.
                     </PlainText>
-                    <PlainText className='soft-plain-text'>
+                    <PlainText className={styles['soft-plain-text']}>
                         Dassault Systèmes, штаб квартира которой расположена во
                         французском Велизи (пригород Парижа), является одним из
                         лидеров мирового рынка PLM и САПР, насчитывает 64 центра
@@ -105,17 +109,20 @@ class Dassault extends React.PureComponent {
                         поддержку более 250 тыс. корпоративных клиентов в 11
                         промышленных отраслях.
                     </PlainText>
-                    <PlainText className='soft-plain-text'>
+                    <PlainText className={styles['soft-plain-text']}>
                         <a href='http://www.3ds.com'>http://www.3ds.com</a>
                     </PlainText>
-                    <div className='soft-items-wrapper'>
-                        {allPlanItems.map((item) => (
-                            <div key={item.id} className='soft-item'>
-                                <Img className='logo' src={DassaultLogo} />
+                    <div className={styles['soft-items-wrapper']}>
+                        {allPlanItems.map(item => (
+                            <div key={item.id} className={styles['soft-item']}>
+                                <Img
+                                    className={styles['logo']}
+                                    src={DassaultLogo}
+                                />
                                 <ModalConsumer>
                                     {({ handleOpenSoftModal }) => (
                                         <div
-                                            className='title'
+                                            className={styles['title']}
                                             onClick={handleOpenSoftModal(
                                                 item.type
                                             )}
@@ -124,13 +131,13 @@ class Dassault extends React.PureComponent {
                                         </div>
                                     )}
                                 </ModalConsumer>
-                                <PlainText className='item-text'>
+                                <PlainText className={styles['item-text']}>
                                     {item.text}
                                 </PlainText>
                                 <ModalConsumer>
                                     {({ handleOpenForm }) => (
                                         <div
-                                            className='button'
+                                            className={styles['button']}
                                             onClick={handleOpenForm}
                                         >
                                             Написать нам
@@ -142,8 +149,8 @@ class Dassault extends React.PureComponent {
                     </div>
                 </Padded>
             </FullPage>
-        );
+        )
     }
 }
 
-export default Dassault;
+export default Dassault

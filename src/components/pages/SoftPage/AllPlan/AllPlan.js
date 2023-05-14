@@ -1,13 +1,13 @@
-import React from 'react';
-import FullPage from '../../../ui-kit/FullPage/FullPage';
-import Padded from '../../../ui-kit/Padded/Padded';
-import PlainText from '../../../ui-kit/PlainText';
-import Img from '../../../ui-kit/Img';
-import { ModalConsumer } from '../../../layouts/Layout';
-import './AllPlan.module.less';
+import React from 'react'
+import FullPage from '../../../ui-kit/FullPage/FullPage'
+import Padded from '../../../ui-kit/Padded/Padded'
+import PlainText from '../../../ui-kit/PlainText'
+import Img from '../../../ui-kit/Img'
+import { ModalConsumer } from '../../../layouts/Layout'
+import styles from '../SoftPage.module.scss'
 
-import allPlanLogo from '../../../../assets/images/AllPlan.jpg';
-import SocialMedia from '../../../ui-kit/SocialMedia/SocialMedia';
+import allPlanLogo from '../../../../../public/images/AllPlan.jpg'
+import SocialMedia from '../../../ui-kit/SocialMedia/SocialMedia'
 
 const allPlanItems = [
     {
@@ -34,18 +34,24 @@ const allPlanItems = [
         type: 'AllplanLinear',
         text: 'Allplan Linear - высокопроизводительный инструмент для быстрого создания 2D и 3D моделей, профессионального оформления рабочих чертежей.',
     },
-];
+]
 
 class AllPlan extends React.PureComponent {
     render() {
         return (
-            <FullPage min ref={this.block} className='soft-block-wrapper'>
-                <Padded className='soft-block-padded'>
-                    <div className='title-container'>
-                        <div className='soft-block-title'>AllPlan</div>
+            <FullPage
+                min
+                ref={this.block}
+                className={styles['soft-block-wrapper']}
+            >
+                <Padded className={styles['soft-block-padded']}>
+                    <div className={styles['title-container']}>
+                        <div className={styles['soft-block-title']}>
+                            AllPlan
+                        </div>
                         <SocialMedia page='AllPlan' />
                     </div>
-                    <PlainText className='soft-plain-text'>
+                    <PlainText className={styles['soft-plain-text']}>
                         На протяжении более 50 лет ALLPLAN является лидером в
                         автоматизации проектирования в строительной отрасли,
                         последние 25 лет внедряет технологию BIM. Более 240
@@ -54,19 +60,22 @@ class AllPlan extends React.PureComponent {
                         объектов известных своей уникальной архитектурой и
                         сложными инженерными решениями.
                     </PlainText>
-                    <PlainText className='soft-plain-text'>
+                    <PlainText className={styles['soft-plain-text']}>
                         <a href='https://www.allplan.com/en/'>
                             www.allplan.com
                         </a>
                     </PlainText>
-                    <div className='soft-items-wrapper'>
-                        {allPlanItems.map((item) => (
-                            <div key={item.id} className='soft-item'>
-                                <Img className='logo' src={allPlanLogo} />
+                    <div className={styles['soft-items-wrapper']}>
+                        {allPlanItems.map(item => (
+                            <div key={item.id} className={styles['soft-item']}>
+                                <Img
+                                    className={styles.logo}
+                                    src={allPlanLogo}
+                                />
                                 <ModalConsumer>
                                     {({ handleOpenSoftModal }) => (
                                         <div
-                                            className='title'
+                                            className={styles.title}
                                             onClick={handleOpenSoftModal(
                                                 item.type
                                             )}
@@ -75,13 +84,13 @@ class AllPlan extends React.PureComponent {
                                         </div>
                                     )}
                                 </ModalConsumer>
-                                <PlainText className='item-text'>
+                                <PlainText className={styles['item-text']}>
                                     {item.text}
                                 </PlainText>
                                 <ModalConsumer>
                                     {({ handleOpenForm }) => (
                                         <div
-                                            className='button'
+                                            className={styles.button}
                                             onClick={handleOpenForm}
                                         >
                                             Написать нам
@@ -93,8 +102,8 @@ class AllPlan extends React.PureComponent {
                     </div>
                 </Padded>
             </FullPage>
-        );
+        )
     }
 }
 
-export default AllPlan;
+export default AllPlan

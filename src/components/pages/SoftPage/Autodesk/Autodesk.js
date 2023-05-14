@@ -1,13 +1,13 @@
-import React from 'react';
-import FullPage from '../../../ui-kit/FullPage/FullPage';
-import Padded from '../../../ui-kit/Padded/Padded';
-import PlainText from '../../../ui-kit/PlainText';
-import Img from '../../../ui-kit/Img';
-import { ModalConsumer } from '../../../layouts/Layout';
-import './Autodesk.module.less';
+import React from 'react'
+import FullPage from '../../../ui-kit/FullPage/FullPage'
+import Padded from '../../../ui-kit/Padded/Padded'
+import PlainText from '../../../ui-kit/PlainText'
+import Img from '../../../ui-kit/Img'
+import { ModalConsumer } from '../../../layouts/Layout'
+import styles from '../SoftPage.module.scss'
 
-import AutodeskLogo from '../../../../assets/images/Autodesk.jpg';
-import SocialMedia from '../../../ui-kit/SocialMedia/SocialMedia';
+import AutodeskLogo from '../../../../../public/images/Autodesk.jpg'
+import SocialMedia from '../../../ui-kit/SocialMedia/SocialMedia'
 
 const allPlanItems = [
     {
@@ -40,25 +40,27 @@ const allPlanItems = [
         type: 'CIVIL_3D',
         text: 'Autodesk Civil 3D – решение для проектирования объектов инфраструктуры и выпуска документации, основанное на технологии информационного моделирования (BIM).',
     },
-];
+]
 
 class Autodesk extends React.PureComponent {
     render() {
         return (
-            <FullPage min ref={this.block} className='soft-block-wrapper'>
-                <Padded className='soft-block-padded'>
-                    <div className='title-container'>
-                        <div className='soft-block-title'>Autodesk</div>
+            <FullPage min className={styles['soft-block-wrapper']}>
+                <Padded className={styles['soft-block-padded']}>
+                    <div className={styles['title-container']}>
+                        <div className={styles['soft-block-title']}>
+                            Autodesk
+                        </div>
                         <SocialMedia page='Autodesk' />
                     </div>
 
-                    <PlainText className='soft-plain-text'>
+                    <PlainText className={styles['soft-plain-text']}>
                         Autodesk, Inc. – компания, крупнейший в мире поставщик
                         программного обеспечения в области 3D-проектирования и
                         BIM для промышленного и гражданского строительства,
                         машиностроения, рынка средств информации и развлечений.
                     </PlainText>
-                    <PlainText className='soft-plain-text'>
+                    <PlainText className={styles['soft-plain-text']}>
                         Компанией разработан широкий спектр программных
                         продуктов для архитекторов, инженеров, конструкторов,
                         самые популярные из которых: Revit, AutoCAD, AutoCAD LT,
@@ -72,17 +74,20 @@ class Autodesk extends React.PureComponent {
                         экономятся время и средства, повышается качество и
                         рождаются новаторские решения.
                     </PlainText>
-                    <PlainText className='soft-plain-text'>
+                    <PlainText className={styles['soft-plain-text']}>
                         <a href='https://www.autodesk.ru/'>www.autodesk.ru</a>
                     </PlainText>
-                    <div className='soft-items-wrapper'>
-                        {allPlanItems.map((item) => (
-                            <div key={item.id} className='soft-item'>
-                                <Img className='logo' src={AutodeskLogo} />
+                    <div className={styles['soft-items-wrapper']}>
+                        {allPlanItems.map(item => (
+                            <div key={item.id} className={styles['soft-item']}>
+                                <Img
+                                    className={styles['logo']}
+                                    src={AutodeskLogo}
+                                />
                                 <ModalConsumer>
                                     {({ handleOpenSoftModal }) => (
                                         <div
-                                            className='title'
+                                            className={styles['title']}
                                             onClick={handleOpenSoftModal(
                                                 item.type
                                             )}
@@ -91,13 +96,13 @@ class Autodesk extends React.PureComponent {
                                         </div>
                                     )}
                                 </ModalConsumer>
-                                <PlainText className='item-text'>
+                                <PlainText className={styles['item-text']}>
                                     {item.text}
                                 </PlainText>
                                 <ModalConsumer>
                                     {({ handleOpenForm }) => (
                                         <div
-                                            className='button'
+                                            className={styles['button']}
                                             onClick={handleOpenForm}
                                         >
                                             Написать нам
@@ -109,8 +114,8 @@ class Autodesk extends React.PureComponent {
                     </div>
                 </Padded>
             </FullPage>
-        );
+        )
     }
 }
 
-export default Autodesk;
+export default Autodesk

@@ -1,11 +1,11 @@
-import React from 'react';
-import FullPage from '../../../ui-kit/FullPage/FullPage';
-import PageImageTitle from '../../../ui-kit/PageImageTitle/PageImageTitle';
-import { HeaderThumb } from '../../../ui-kit/Header';
-import * as backgroundImage from '../../../../assets/images/pages/About_us_first.jpg';
-import './FirstScreen.module.less';
+import React from 'react'
+import FullPage from '../../../ui-kit/FullPage/FullPage'
+import PageImageTitle from '../../../ui-kit/PageImageTitle/PageImageTitle'
+import { HeaderThumb } from '../../../ui-kit/Header'
+import * as backgroundImage from '../../../../../public/images/pages/About_us_first.jpg'
+import styles from './FirstScreen.module.scss'
 
-const screenTitle = 'Наши проекты';
+const screenTitle = 'Наши проекты'
 
 function ProjectsFirstScreen() {
     return (
@@ -24,18 +24,18 @@ function ProjectsFirstScreen() {
                 цифровом аддитивном производстве), «GEOMEDIA» (системы агромониторинга)'
                 }
             />
-            <div className='black-bottom-line'>
-                <div className='padded'>
-                    <div className='thumb-content-wrapper'>
+            <div className={styles['black-bottom-line']}>
+                <div className={styles.padded}>
+                    <div className={styles['thumb-content-wrapper']}>
                         <div>asd</div>
-                        <div className='title-flag'>
+                        <div className={styles['title-flag']}>
                             <div>О нас</div>
                         </div>
                     </div>
                 </div>
             </div>
         </FullPage>
-    );
+    )
 }
 
-export default ProjectsFirstScreen;
+export default ProjectsFirstScreen

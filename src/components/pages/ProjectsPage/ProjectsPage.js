@@ -1,13 +1,13 @@
-import React from 'react';
+import { useState } from 'react'
 
-import Anchor from '../../ui-kit/Anchor';
-import AnchorMenu from '../../ui-kit/AnchorMenu';
+import Anchor from '../../ui-kit/Anchor'
+import AnchorMenu from '../../ui-kit/AnchorMenu'
 
-import FirstScreen from './FirstScreen';
-import SecondScreen from './SecondScreen';
-import ThirdScreen from './ThirdBlock';
-import FourthBlock from './FourthBlock';
-import FifthBlock from './FifthBlock';
+import FirstScreen from './FirstScreen'
+import SecondScreen from './SecondScreen'
+import ThirdScreen from './ThirdBlock'
+import FourthBlock from './FourthBlock'
+import FifthBlock from './FifthBlock'
 
 const anchors = [
     {
@@ -30,41 +30,35 @@ const anchors = [
         id: 'fifth',
         title: 'Преимущества',
     },
-];
+]
 
-class ProjectsPage extends React.PureComponent {
-    state = {
-        activeAnchor: 'first',
-    };
+const ProjectsPage = () => {
+    const [activeAnchor, setActiveAnchor] = useState('first')
 
-    handleAnchorReact = (id) => {
-        this.setState({ activeAnchor: id });
-    };
-
-    render() {
-        const { activeAnchor } = this.state;
-
-        return (
-            <>
-                <AnchorMenu anchors={anchors} activeAnchor={activeAnchor} />
-                <Anchor id='first' onPositionChange={this.handleAnchorReact}>
-                    <FirstScreen />
-                </Anchor>
-                <Anchor id='second' onPositionChange={this.handleAnchorReact}>
-                    <SecondScreen />
-                </Anchor>
-                <Anchor id='third' onPositionChange={this.handleAnchorReact}>
-                    <ThirdScreen />
-                </Anchor>
-                <Anchor id='fourth' onPositionChange={this.handleAnchorReact}>
-                    <FourthBlock />
-                </Anchor>
-                <Anchor id='fifth' onPositionChange={this.handleAnchorReact}>
-                    <FifthBlock />
-                </Anchor>
-            </>
-        );
+    const handleAnchorReact = id => {
+        setActiveAnchor(id)
     }
+
+    return (
+        <>
+            <AnchorMenu anchors={anchors} activeAnchor={activeAnchor} />
+            <Anchor id='first' onPositionChange={handleAnchorReact}>
+                <FirstScreen />
+            </Anchor>
+            <Anchor id='second' onPositionChange={handleAnchorReact}>
+                <SecondScreen />
+            </Anchor>
+            <Anchor id='third' onPositionChange={handleAnchorReact}>
+                <ThirdScreen />
+            </Anchor>
+            <Anchor id='fourth' onPositionChange={handleAnchorReact}>
+                <FourthBlock />
+            </Anchor>
+            <Anchor id='fifth' onPositionChange={handleAnchorReact}>
+                <FifthBlock />
+            </Anchor>
+        </>
+    )
 }
 
-export default ProjectsPage;
+export default ProjectsPage

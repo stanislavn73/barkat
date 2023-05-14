@@ -1,49 +1,44 @@
-import React from 'react';
-import cx from 'classnames';
-import './SecondScreen.module.less';
+import { useState, useEffect } from 'react'
+import cx from 'classnames'
+import styles from './SecondScreen.module.scss'
 
-class IconsFader extends React.PureComponent {
-    state = {
+const IconsFader = ({ children, delay }) => {
+    const [state, setState] = useState({
         order: 0,
         fadeIn: false,
         fadeOut: false,
-    };
+    })
+    const { order, fadeIn } = state
 
-    componentDidMount = () => {
-        const icons = this.props.children;
-        const { delay } = this.props;
-
+    useEffect(() => {
         setTimeout(
             () => {
-                this.handleChangeOrder();
-                setInterval(this.handleChangeOrder, 5000);
+                handleChangeOrder()
+                setInterval(handleChangeOrder, 5000)
             },
             delay ? delay : 0
-        );
-    };
+        )
+    }, [])
 
-    handleChangeOrder = () => {
-        const icons = this.props.children;
-
-        this.setState((prev) => ({
-            order: (prev.order + 1) % icons.length,
+    const handleChangeOrder = () => {
+        setState(prev => ({
+            ...prev,
+            order: (prev.order + 1) % children.length,
             fadeIn: true,
-        }));
+        }))
 
-        setTimeout(() => this.setState({ fadeIn: false }), 3500);
-    };
-
-    render() {
-        const { order, fadeIn } = this.state;
-
-        const Item = this.props.children[order];
-        const fadeCX = cx({
-            'fade-default': true,
-            'fade-in': fadeIn,
-        });
-
-        return <div className={fadeCX}>{Item}</div>;
+        setTimeout(() => setState(prev => ({ ...prev, fadeIn: false })), 3500)
     }
+
+    const Item = children[order]
+
+    return (
+        <div
+            className={cx(styles['fade-default'], fadeIn && styles['fade-in'])}
+        >
+            {Item}
+        </div>
+    )
 }
 
-export default IconsFader;
+export default IconsFader

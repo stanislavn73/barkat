@@ -1,83 +1,68 @@
-import React, { PureComponent } from 'react';
-import styled, { createGlobalStyle } from 'styled-components';
-import Header from '../ui-kit/Header';
-import Footer from '../ui-kit/Footer/Footer';
-import FadeInWrapper from '../ui-kit/FadeInWrapper';
-import Modal from '../ui-kit/Modal';
-import SoftModal from '../ui-kit/SoftModal';
+import { createContext, useState } from 'react'
+import Header from '../ui-kit/Header'
+import Footer from '../ui-kit/Footer/Footer'
+import Modal from '../ui-kit/Modal'
+import SoftModal from '../ui-kit/SoftModal'
 
-import './Layout.module.less';
+const { Provider, Consumer } = createContext()
 
-const { Provider, Consumer } = React.createContext();
-
-class Layout extends React.Component {
-    state = {
-        isMenuOpened: true,
+const Layout = ({ children, page }) => {
+    const [state, setState] = useState({
         isModalOpened: false,
         isSoftModalOpened: false,
         softModalCode: null,
-    };
+    })
 
-    handleCloseModal = () => {
-        this.setState({ isModalOpened: false });
-    };
+    const handleCloseModal = () => {
+        setState(prev => ({ ...prev, isModalOpened: false }))
+    }
 
-    handleOpenModal = (comment) => {
-        this.setState({
-            isModalOpened: true,
-        });
-    };
+    const handleOpenModal = () => {
+        setState(prev => ({ ...prev, isModalOpened: true }))
+    }
 
-    handleOpenSoftModal = (code) => () => {
-        this.setState({
+    const handleOpenSoftModal = code => () => {
+        setState(prev => ({
+            ...prev,
             isSoftModalOpened: true,
             softModalCode: code,
-        });
-    };
+        }))
+    }
 
-    handleCloseSoftModal = () => {
-        this.setState({
+    const handleCloseSoftModal = () => {
+        setState(prev => ({
+            ...prev,
             isSoftModalOpened: false,
             softModalCode: null,
-        });
-    };
-
-    render() {
-        const {
-            isMenuOpened,
-            isModalOpened,
-            isSoftModalOpened,
-            softModalCode,
-            comment,
-        } = this.state;
-
-        return (
-            <>
-                <Provider
-                    value={{
-                        handleOpenForm: this.handleOpenModal,
-                        handleOpenSoftModal: this.handleOpenSoftModal,
-                    }}
-                >
-                    <Modal
-                        isOpened={isModalOpened}
-                        onClose={this.handleCloseModal}
-                        comment={comment}
-                    />
-                    <SoftModal
-                        type={softModalCode}
-                        isOpened={isSoftModalOpened}
-                        onClose={this.handleCloseSoftModal}
-                    />
-                    <Header />
-                    {this.props.children}
-                    <Footer page={this.props.page} />
-                </Provider>
-            </>
-        );
+        }))
     }
+
+    const { isModalOpened, isSoftModalOpened, softModalCode, comment } = state
+
+    return (
+        <Provider
+            value={{
+                handleOpenForm: handleOpenModal,
+                handleOpenSoftModal,
+            }}
+        >
+            <Modal
+                isOpened={isModalOpened}
+                onClose={handleCloseModal}
+                comment={comment}
+            />
+            <SoftModal
+                type={softModalCode}
+                isOpened={isSoftModalOpened}
+                onClose={handleCloseSoftModal}
+            />
+            <Header />
+            {children}
+            <Footer page={page} />
+        </Provider>
+    )
 }
 
-export const ModalConsumer = Consumer;
+export const ModalConsumer = Consumer
 
-export default Layout;
+export default Layout

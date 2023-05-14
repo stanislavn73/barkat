@@ -1,13 +1,14 @@
-import React from 'react';
-import styled from 'styled-components';
-import Slider from '../ui-kit/Slider/Slider';
+import React from 'react'
+import styled from 'styled-components'
+import Slider from '../ui-kit/Slider/Slider'
+import Image from 'next/image'
 
-import projects from '../../utils/projects';
-import arrowImg from '../../assets/images/icons/backArrow.png';
+import projects from '../utils/projects'
+import arrowImg from '../../../public/images/icons/backArrow.png'
 
 const Wrapper = styled.div`
     position: relative;
-`;
+`
 
 const ArrowWrapper = styled.div`
     position: absolute;
@@ -25,23 +26,23 @@ const ArrowWrapper = styled.div`
         cursor: pointer;
         transform: translate3D(0, 0, 0);
     }
-`;
+`
 
-const Arrow = styled.img`
+const Arrow = styled(Image)`
     height: 40px;
-`;
+`
 
 class ProjectPage extends React.PureComponent {
     handleGoBack = () => {
-        this.props.history.goBack();
-    };
+        this.props.history.goBack()
+    }
 
     render() {
-        const id = this.props.match.params.id;
-        const project = projects.find((project) => project.id === id);
-        const slides = project.images;
-        const title = project.title;
-        const location = project.location;
+        const id = this.props.match.params.id
+        const project = projects.find(project => project.id === id)
+        const slides = project.images
+        const title = project.title
+        const location = project.location
 
         return (
             <Wrapper>
@@ -56,8 +57,8 @@ class ProjectPage extends React.PureComponent {
                     maxHeight={window.innerHeight + 3}
                 />
             </Wrapper>
-        );
+        )
     }
 }
 
-export default ProjectPage;
+export default ProjectPage

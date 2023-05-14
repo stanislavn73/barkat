@@ -1,7 +1,6 @@
-import React from 'react';
-
+import styles from './style.module.scss'
 function HeaderThumb() {
-    return <div className='header-thumb' />;
+    return <div className={styles['header-thumb']} />
 }
 
-export default HeaderThumb;
+export default HeaderThumb

@@ -1,10 +1,10 @@
-import React, { useRef, useState } from 'react'
+import { useRef, useState } from 'react'
 import cx from 'classnames'
 import Input from '../Input'
 import Img from '../Img'
 
-import * as closeIcon from '../../../assets/images/icons/close.png'
-import './Modal.module.less'
+import * as closeIcon from '../../../../public/images/icons/close.png'
+import styles from './Modal.module.scss'
 
 const Modal = props => {
     const [state, setState] = useState({
@@ -32,10 +32,10 @@ const Modal = props => {
     const { onClose, isOpened } = props
     const buttonRef = useRef()
 
-    const modalCX = cx({
-        'modal-wrapper': true,
-        'modal-wrapper_opened': isOpened,
-    })
+    const modalCX = cx(
+        styles['modal-wrapper'],
+        isOpened && styles['modal-wrapper_opened']
+    )
 
     const handleTextChange = key => e => {
         if (key === 'email') {
@@ -108,46 +108,48 @@ const Modal = props => {
 
     return (
         <div className={modalCX}>
-            <div className='modal'>
+            <div className={styles.modal}>
                 <Img
-                    className='modal-close-icon'
+                    className={styles['modal-close-icon']}
                     src={closeIcon}
                     onClick={onClose}
                 />
-                <div className='top-black-line' />
-                <div className='modal-content-wrapper'>
-                    <div className='modal-title'>Заказать консультацию</div>
-                    <div className='inputs-wrapper'>
+                <div className={styles['top-black-line']} />
+                <div className={styles['modal-content-wrapper']}>
+                    <div className={styles['modal-title']}>
+                        Заказать консультацию
+                    </div>
+                    <div className={styles['inputs-wrapper']}>
                         <Input
-                            className='modal-input'
+                            className={styles['modal-input']}
                             title='Имя'
                             value={name}
                             onChange={handleTextChange('name')}
                         />
                         <Input
-                            className='modal-input'
+                            className={styles['modal-input']}
                             title='Фамилия'
                             value={surname}
                             onChange={handleTextChange('surname')}
                         />
                     </div>
-                    <div className='inputs-wrapper'>
+                    <div className={styles['inputs-wrapper']}>
                         <Input
-                            className='modal-input'
+                            className={styles['modal-input']}
                             title='Компания'
                             value={companyName}
                             onChange={handleTextChange('companyName')}
                         />
                         <Input
-                            className='modal-input'
+                            className={styles['modal-input']}
                             title='Должность'
                             value={profession}
                             onChange={handleTextChange('profession')}
                         />
                     </div>
-                    <div className='inputs-wrapper'>
+                    <div className={styles['inputs-wrapper']}>
                         <Input
-                            className='modal-input'
+                            className={styles['modal-input']}
                             title='Email'
                             value={email}
                             onChange={handleTextChange('email')}
@@ -156,7 +158,7 @@ const Modal = props => {
                         />
 
                         <Input
-                            className='modal-input'
+                            className={styles['modal-input']}
                             title='Телефон'
                             value={phoneNumber}
                             onChange={handleTextChange('phoneNumber')}
@@ -164,9 +166,9 @@ const Modal = props => {
                             errorMessage={'Введите правильный телефон'}
                         />
                     </div>
-                    <div className='textarea-wrapper'>
+                    <div className={styles['textarea-wrapper']}>
                         <Input
-                            className='modal-input'
+                            className={styles['modal-input']}
                             title='Интересующий вопрос'
                             value={target}
                             onChange={handleTextChange('target')}
@@ -174,25 +176,26 @@ const Modal = props => {
                         />
                     </div>
                 </div>
-                <div className='bottom-submit-wrapper'>
+                <div className={styles['bottom-submit-wrapper']}>
                     <div
                         className={cx(
-                            'submit-wrapper',
-                            (errors.email || errors.phoneNumber) && 'disabled'
+                            styles['submit-wrapper'],
+                            (errors.email || errors.phoneNumber) &&
+                                styles['disabled']
                         )}
                     >
                         <div
-                            className='submit-button'
+                            className={styles['submit-button']}
                             onClick={sendData}
                             ref={buttonRef}
                         >
                             Отправить
                         </div>
                     </div>
-                    <div className='bottom-black-line' />
+                    <div className={styles['bottom-black-line']} />
                 </div>
             </div>
-            <div className='modal-background' onClick={onClose}></div>
+            <div className={styles['modal-background']} onClick={onClose}></div>
         </div>
     )
 }

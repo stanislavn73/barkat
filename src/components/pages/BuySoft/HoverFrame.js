@@ -1,11 +1,10 @@
-import React from 'react';
-
+import styles from './BuySketchup.module.scss'
 export default function HoverFrame({ column, width, height }) {
-    let right = 20 + (width / 6) * (5 - column);
+    let right = 20 + (width / 6) * (5 - column)
 
     return (
         <div
-            className='hover_frame'
+            className={styles.hover_frame}
             style={{
                 right: right,
                 width: width / 6,
@@ -13,5 +12,5 @@ export default function HoverFrame({ column, width, height }) {
                 display: column === -1 || column === 0 ? 'none' : 'block',
             }}
         ></div>
-    );
+    )
 }

@@ -1,10 +1,10 @@
-import React from 'react';
-import './PivacyPolicy.module.less';
+import React from 'react'
+import styles from './PivacyPolicy.module.scss'
 
 export default function PrivacyPolicy() {
     return (
-        <div>
-            <p className='little-text'>
+        <>
+            <p className={styles['little-text']}>
                 ООО «Баркат-Штейн» (Barkat-Stein) заботится о соблюдении Вашей
                 конфиденциальности. Мы хотим, чтобы Ваша работа в Интернет, по
                 возможности, была максимально приятной и полезной, и Вы
@@ -12,10 +12,13 @@ export default function PrivacyPolicy() {
                 инструментов и возможностей, которые предлагает Интернет.
             </p>
 
-            <p className='little-text'>
+            <p className={styles['little-text']}>
                 Личная информация клиентов, собранная при регистрации и
                 заполнении формы обратной связи на сайте
-                <a className='little-text' href='https://barkat-3d-ville.com'>
+                <a
+                    className={styles['little-text']}
+                    href='https://barkat-3d-ville.com'
+                >
                     {' '}
                     barkat-3d-ville.com
                 </a>
@@ -27,14 +30,14 @@ export default function PrivacyPolicy() {
             </p>
 
             <h5>Какие данные собираются на сайте</h5>
-            <p className='little-text'>
+            <p className={styles['little-text']}>
                 При добровольной регистрации на получение нашей рассылки и
                 материалов по продуктам Вы отправляете свои данные через форму
                 регистрации/обратной связи.
             </p>
 
             <h5>С какой целью собираются эти данные </h5>
-            <p className='little-text'>
+            <p className={styles['little-text']}>
                 Имя используется для обращения лично к Вам, Ваш e-mail для
                 отправки Вам писем рассылок, новостей, полезных материалов,
                 коммерческих предложений. Ваши данные не передаются третьим
@@ -48,9 +51,12 @@ export default function PrivacyPolicy() {
             </p>
 
             <h5>Как эти данные используются</h5>
-            <p className='little-text'>
+            <p className={styles['little-text']}>
                 На сайте{' '}
-                <a className='little-text' href='https://barkat-3d-ville.com'>
+                <a
+                    className={styles['little-text']}
+                    href='https://barkat-3d-ville.com'
+                >
                     barkat-3d-ville.com
                 </a>
                 используются куки (Cookies), данные о посетителях сервисов
@@ -65,7 +71,7 @@ export default function PrivacyPolicy() {
                 образом.
             </p>
             <h5>Как эти данные защищаются</h5>
-            <p className='little-text'>
+            <p className={styles['little-text']}>
                 Для защиты Вашей личной информации мы используем разнообразные
                 административные, управленческие и технические меры
                 безопасности. Наша Компания придерживается различных
@@ -91,6 +97,6 @@ export default function PrivacyPolicy() {
                 любым вопросам вы можете написать письмо на e-mail:
                 info@barkat-3d-ville.com
             </p>
-        </div>
-    );
+        </>
+    )
 }

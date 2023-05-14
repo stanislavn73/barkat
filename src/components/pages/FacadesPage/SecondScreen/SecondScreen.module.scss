@@ -1,0 +1,76 @@
+@import '../../../../assets/variables.module.scss';
+
+.facades-second-wrapper {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    @media screen and (max-width: #{$laptop-s}) {
+        flex-wrap: wrap;
+    }
+
+    @media screen and (max-width: #{$laptop-s}) {
+        padding-top: 100px;
+    }
+
+    @media screen and (max-width: #{$laptop-s}) {
+        height: unset;
+        min-height: unset;
+    }
+
+    .back {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+
+        object-fit: cover;
+        object-position: center center;
+
+        filter: brightness(20%);
+    }
+
+    .icon-wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 300px;
+        height: 200px;
+        padding: 0 30px;
+        position: relative;
+        z-index: 2;
+
+        @media screen and (max-width: #{$laptop-m}) {
+            width: 250px;
+        }
+
+        @media screen and (max-width: #{$laptop-s}) {
+            width: 250px;
+        }
+
+        .icon {
+            height: 150px;
+
+            @media screen and (max-width: #{$laptop-s}) {
+                height: 100px;
+            }
+        }
+
+        div {
+            width: 100%;
+            text-align: center;
+            color: white;
+        }
+    }
+}
+
+.fade-default {
+    opacity: 0;
+    transition: opacity 1.5s;
+}
+
+.fade-in {
+    opacity: 1;
+}

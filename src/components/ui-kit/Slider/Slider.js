@@ -1,40 +1,34 @@
-import React from 'react';
-import Slider from 'react-slick';
-import Router from 'next/router';
+import React, { useRef, useState } from 'react'
+import Slider from 'react-slick'
+import Router from 'next/router'
+import cx from 'classnames'
 
-import Img from '../Img';
+import Img from '../Img'
 
-import * as nextArrowImg from '../../../assets/images/slider/nextArrow.png';
-import * as prevArrowImg from '../../../assets/images/slider/prevArrow.png';
+import * as nextArrowImg from '../../../../public/images/slider/nextArrow.png'
+import * as prevArrowImg from '../../../../public/images/slider/prevArrow.png'
 
-import './Slider.module.less';
+import styles from './Slider.module.scss'
 
-class SliderComponent extends React.PureComponent {
-    state = {
+const SliderComponent = ({ slides, titlesControl }) => {
+    const [state, setState] = useState({
         currentSlide: 0,
-    };
+    })
+    const sliderRef = useRef()
 
-    handleSlide = (type) => () => {
+    const handleSlide = type => () => {
         if (type === 'right') {
-            this.slick.slickNext();
+            sliderRef.current.slickNext()
         } else {
-            this.slick.slickPrev();
+            sliderRef.current.slickPrev()
         }
-    };
+    }
 
-    titlesControl = () => {
-        const { titlesControl } = this.props;
+    const handleTitleClick = link => () => {
+        Router.push(link)
+    }
 
-        return titlesControl.find((rule) =>
-            rule.titles.includes(this.state.currentSlide)
-        );
-    };
-
-    handleTitleClick = (link) => () => {
-        Router.push(link);
-    };
-
-    settings = {
+    const settings = {
         dots: false,
         arrows: false,
         infinite: true,
@@ -44,47 +38,51 @@ class SliderComponent extends React.PureComponent {
         autoplay: true,
         pauseOnHover: false,
         autoplaySpeed: 4000,
-        beforeChange: (...a) => this.setState({ currentSlide: a[1] }),
-    };
+        beforeChange: (...a) => setState({ currentSlide: a[1] }),
+    }
 
-    render() {
-        const { slides } = this.props;
-        const { title, subTitle, link } = this.titlesControl();
+    const { title, subTitle, link } = titlesControl.find(rule =>
+        rule.titles.includes(state.currentSlide)
+    )
 
-        return (
-            <div className='slider-wrapper'>
-                {title && (
-                    <div className='slider-title-wrapper'>
-                        <div className='slider-title-content-wrapper'>
-                            <div
-                                className='slider-title'
-                                onClick={this.handleTitleClick(link)}
-                            >
-                                {title}
-                            </div>
-                            <div className='slider-subtitle'>{subTitle}</div>
+    return (
+        <div className={styles['slider-wrapper']}>
+            {title && (
+                <div className={styles['slider-title-wrapper']}>
+                    <div className={styles['slider-title-content-wrapper']}>
+                        <div
+                            className={styles['slider-title']}
+                            onClick={handleTitleClick(link)}
+                        >
+                            {title}
+                        </div>
+                        <div className={styles['slider-subtitle']}>
+                            {subTitle}
                         </div>
                     </div>
-                )}
-                <div className='arrow left' onClick={this.handleSlide('left')}>
-                    <Img src={prevArrowImg} />
                 </div>
-                <Slider {...this.settings} ref={(node) => (this.slick = node)}>
-                    {slides.map((slide) => (
-                        <div className='slider-item' key={slide}>
-                            <Img src={slide} />
-                        </div>
-                    ))}
-                </Slider>
-                <div
-                    className='arrow right'
-                    onClick={this.handleSlide('right')}
-                >
-                    <Img src={nextArrowImg} />
-                </div>
+            )}
+            <div
+                className={cx(styles.arrow, styles.left)}
+                onClick={handleSlide('left')}
+            >
+                <Img src={prevArrowImg} />
             </div>
-        );
-    }
+            <Slider {...settings} ref={sliderRef}>
+                {slides.map(slide => (
+                    <div className={styles['slider-item']} key={slide}>
+                        <Img src={slide} />
+                    </div>
+                ))}
+            </Slider>
+            <div
+                className={styles['arrow right']}
+                onClick={handleSlide('right')}
+            >
+                <Img src={nextArrowImg} />
+            </div>
+        </div>
+    )
 }
 
-export default SliderComponent;
+export default SliderComponent

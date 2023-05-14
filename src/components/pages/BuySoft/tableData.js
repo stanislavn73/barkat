@@ -1,27 +1,27 @@
-import './TableData.module.less';
+import styles from './TableData.module.scss'
 
 const checkMark = (
     <svg
         xmlns='http://www.w3.org/2000/svg'
-        className='check_mark'
+        className={styles.check_mark}
         width='17'
         height='17'
         viewBox='0 0 24 24'
     >
         <path d='M20.285 2l-11.285 11.567-5.286-5.011-3.714 3.716 9 8.728 15-15.285z' />
     </svg>
-);
+)
 const closeMark = (
     <svg
         xmlns='http://www.w3.org/2000/svg'
-        className='close_mark'
+        className={styles.close_mark}
         width='18'
         height='18'
         viewBox='0 0 18 18'
     >
         <path d='M14.53 4.53l-1.06-1.06L9 7.94 4.53 3.47 3.47 4.53 7.94 9l-4.47 4.47 1.06 1.06L9 10.06l4.47 4.47 1.06-1.06L10.06 9z' />
     </svg>
-);
+)
 
 function createData(
     option,
@@ -38,7 +38,7 @@ function createData(
         sketchUpPro,
         sketchUpStudio,
         sketchUpStudents,
-    };
+    }
 }
 
 export const rows = [
@@ -154,7 +154,6 @@ export const rows = [
         'Неограниченное количество загрузок',
         'Неограниченное количество загрузок'
     ),
-    // createData('2D-чертежи', closeMark, closeMark, 'LayOut', 'LayOut', 'LayOut'),
     createData(
         'Пользовательские стили, материалы, обводка',
         closeMark,
@@ -187,4 +186,4 @@ export const rows = [
         'Создание и редактирование',
         closeMark
     ),
-];
+]

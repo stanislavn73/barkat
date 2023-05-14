@@ -1,0 +1,34 @@
+@import '../../../assets/variables.module.scss';
+
+.social-wrapper {
+    margin-bottom: 40px;
+    align-items: center;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+}
+.insta,
+.linkedin,
+.facebook {
+    cursor: pointer;
+    margin: 0 15px 0 15px;
+    width: 60px;
+    height: 60px;
+    border: none;
+    user-select: none;
+    background-repeat: no-repeat;
+    background-color: white;
+    @media screen and (max-width: 600px) {
+        width: 30px;
+        height: 30px;
+    }
+}
+.facebook {
+    background-image: url('../../../../public/images/social/facebook.svg');
+}
+.insta {
+    background-image: url('../../../../public/images/social/instagram.svg');
+}
+.linkedin {
+    background-image: url('../../../../public/images/social/linkedin.svg');
+}

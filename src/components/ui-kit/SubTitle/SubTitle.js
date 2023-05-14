@@ -1,14 +1,12 @@
-import React from 'react';
-import cx from 'classnames';
+import React from 'react'
+import cx from 'classnames'
 
-import './SubTitle.module.less';
+import styles from './SubTitle.module.scss'
 
 function SubTitle({ children, className }) {
-    const titleCX = cx('subTitle-kit', {
-        [className]: className,
-    });
+    const titleCX = cx(styles['subTitle-kit'], className)
 
-    return <div className={titleCX}>{children}</div>;
+    return <div className={titleCX}>{children}</div>
 }
 
-export default React.memo(SubTitle);
+export default React.memo(SubTitle)

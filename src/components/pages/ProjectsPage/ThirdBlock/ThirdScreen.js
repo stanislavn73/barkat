@@ -1,19 +1,19 @@
-import React from 'react';
-import FullPage from '../../../ui-kit/FullPage';
-import Padded from '../../../ui-kit/Padded';
-import PlainText from '../../../ui-kit/PlainText';
-import Bold from '../../../ui-kit/Bold';
-import Img from '../../../ui-kit/Img';
-import * as imageBlock from '../../../../assets/images/pages/About_us_third.jpg';
-import './ThirdScreen.module.less';
+import React from 'react'
+import FullPage from '../../../ui-kit/FullPage'
+import Padded from '../../../ui-kit/Padded'
+import PlainText from '../../../ui-kit/PlainText'
+import Bold from '../../../ui-kit/Bold'
+import Img from '../../../ui-kit/Img'
+import * as imageBlock from '../../../../../public/images/pages/About_us_third.jpg'
+import styles from './ThirdScreen.module.scss'
 
 function ProjectsThirdScreen() {
     return (
-        <div className='third-screen-wrapper'>
-            <FullPage className='third-fullpage-projects'>
+        <div className={styles['third-screen-wrapper']}>
+            <FullPage className={styles['third-fullpage-projects']}>
                 <Padded>
-                    <div className='text-block'>
-                        <div className='text'>
+                    <div className={styles['text-block']}>
+                        <div className={styles.text}>
                             <PlainText>
                                 <Bold>Группа компаний BARKAT</Bold> - Value
                                 Increasing Partner в сфере поставок фасадных и
@@ -55,14 +55,19 @@ function ProjectsThirdScreen() {
                         </div>
                     </div>
                 </Padded>
-                <div className='image-block'>
-                    <Img className='image-block-image' src={imageBlock} />
-                    <div className='image-block-title'>Barkat stein</div>
+                <div className={styles['image-block']}>
+                    <Img
+                        className={styles['image-block-image']}
+                        src={imageBlock}
+                    />
+                    <div className={styles['image-block-title']}>
+                        Barkat stein
+                    </div>
                 </div>
-                <div className='back-title'>Barkat-stein</div>
+                <div className={styles['back-title']}>Barkat-stein</div>
             </FullPage>
         </div>
-    );
+    )
 }
 
-export default ProjectsThirdScreen;
+export default ProjectsThirdScreen

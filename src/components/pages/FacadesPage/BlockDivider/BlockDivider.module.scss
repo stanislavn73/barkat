@@ -1,0 +1,11 @@
+@import '../../../../assets/variables.module.scss';
+
+.divider {
+    width: 100%;
+    height: 10px;
+    background: $primary;
+
+    -webkit-box-shadow: 0px 0px 7px 2px rgba(201, 100, 59, 1);
+    -moz-box-shadow: 0px 0px 7px 2px rgba(201, 100, 59, 1);
+    box-shadow: 0px 0px 7px 2px rgba(201, 100, 59, 1);
+}

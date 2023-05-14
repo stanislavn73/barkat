@@ -1,25 +1,25 @@
-import React from 'react';
-import ImageSlides from '../../../ui-kit/ImageSlides';
-import FullPage from '../../../ui-kit/FullPage';
-import Title from '../../../ui-kit/Title';
-import SubTitle from '../../../ui-kit/SubTitle';
-import Padded from '../../../ui-kit/Padded';
-import OpenModalButton from '../../../ui-kit/OpenModalButton';
-import FullscreenImg from '../../../ui-kit/FullscreenImg';
-import DownloadCatalog from '../../../ui-kit/DownloadCatalog';
-import facadesTerracotaSlides from '../../../../utils/facades/terracota';
-import terracota_first_type from '../../../../assets/images/facades/terracota/types/01.jpg';
-import terracota_second_type from '../../../../assets/images/facades/terracota/types/02.jpg';
-import system from '../../../../assets/images/facades/terracota/system/system.jpg';
+import ImageSlides from '../../../ui-kit/ImageSlides'
+import FullPage from '../../../ui-kit/FullPage'
+import Title from '../../../ui-kit/Title'
+import SubTitle from '../../../ui-kit/SubTitle'
+import Padded from '../../../ui-kit/Padded'
+import OpenModalButton from '../../../ui-kit/OpenModalButton'
+import FullscreenImg from '../../../ui-kit/FullscreenImg'
+import DownloadCatalog from '../../../ui-kit/DownloadCatalog'
+import facadesTerracotaSlides from '../../../utils/facades/terracota'
+import terracota_first_type from '../../../../../public/images/facades/terracota/types/01.jpg'
+import terracota_second_type from '../../../../../public/images/facades/terracota/types/02.jpg'
+import system from '../../../../../public/images/facades/terracota/system/system.jpg'
 
-import catalog from '../../../../assets/images/facades/terracota/catalog.pdf';
-import catalog_color from '../../../../assets/images/facades/terracota/catalog_color.pdf';
+import catalog from '../../../../../public/images/facades/terracota/catalog.pdf'
+import catalog_color from '../../../../../public/images/facades/terracota/catalog_color.pdf'
 
-import './Terracota.module.less';
+import styles from './Terracota.module.scss'
+import { FacadesWrapper } from '../FacadesWrapper'
 
 export default function Terracota() {
     return (
-        <div className='terracota-block  facade-type-wrapper'>
+        <FacadesWrapper className={styles['terracota-block']}>
             <FullPage>
                 <Title>Фасад ТЕРРАКОТОВЫЕ ПАНЕЛИ</Title>
                 <ImageSlides data={facadesTerracotaSlides} />
@@ -79,22 +79,22 @@ export default function Terracota() {
                 <SubTitle>
                     Цветовая гамма ТЕРРАКОТОВЫХ ПАНЕЛЕЙ, каталог
                 </SubTitle>
-                <div className='terracota-images-wrapper'>
-                    <div className='terracota-image-item'>
+                <div className={styles['terracota-images-wrapper']}>
+                    <div className={styles['terracota-image-item']}>
                         <FullscreenImg src={terracota_first_type} />
                     </div>
-                    <div className='terracota-download-item'>
+                    <div className={styles['terracota-download-item']}>
                         <DownloadCatalog
                             file={catalog}
                             name='Каталог Керамогранит'
                         />
                     </div>
                 </div>
-                <div className='terracota-images-wrapper'>
-                    <div className='terracota-image-item'>
+                <div className={styles['terracota-images-wrapper']}>
+                    <div className={styles['terracota-image-item']}>
                         <FullscreenImg src={terracota_second_type} />
                     </div>
-                    <div className='terracota-download-item'>
+                    <div className={styles['terracota-download-item']}>
                         <DownloadCatalog
                             file={catalog_color}
                             name='Цветовая линейка Керамогранит'
@@ -107,8 +107,10 @@ export default function Terracota() {
                     облицовку терракотовыми панелями, установленных на
                     универсальные кляммеры из нержавеющей стали
                 </SubTitle>
-                <div className='terracota-system-wrapper facades-system-wrapper'>
-                    <div className='terracota-system'>
+                <div
+                    className={`${styles['terracota-system-wrapper']} ${styles['facades-system-wrapper']}`}
+                >
+                    <div className={styles['terracota-system']}>
                         <FullscreenImg src={system} />
                         <OpenModalButton />
                     </div>
@@ -153,6 +155,6 @@ export default function Terracota() {
                     </div>
                 </div>
             </Padded>
-        </div>
-    );
+        </FacadesWrapper>
+    )
 }

@@ -1,6 +1,5 @@
-import React from 'react'
 import cx from 'classnames'
-import './Input.module.less'
+import styles from './Input.module.scss'
 import { FormHelperText } from '@material-ui/core'
 
 function Input({
@@ -12,25 +11,22 @@ function Input({
     error,
     errorMessage,
 }) {
-    const inputWrapperCx = cx({
-        'input-wrapper': true,
-        [className]: className,
-    })
+    const inputWrapperCx = cx(styles['input-wrapper'], className)
 
     return (
         <div className={inputWrapperCx}>
-            <div className='input-title'>{title}</div>
+            <div className={styles['input-title']}>{title}</div>
             {!multiline ? (
                 <input
                     value={value}
                     type='text'
-                    className='input'
+                    className={styles.input}
                     onChange={onChange}
                 />
             ) : (
                 <textarea
                     value={value}
-                    className='textarea'
+                    className={styles.textarea}
                     onChange={onChange}
                 />
             )}

@@ -1,20 +1,19 @@
-import React from 'react';
-import styled from 'styled-components';
+import styled from 'styled-components'
 
-import WowBlock from './WowBlock';
+import WowBlock from './WowBlock'
 
 const StyledDivider = styled.div`
     width: 100%;
     border-bottom: 1px solid #cacaca;
     margin: 20px 0;
-`;
+`
 
-function Divider(props) {
+function Divider() {
     return (
         <WowBlock>
             <StyledDivider />
         </WowBlock>
-    );
+    )
 }
 
-export default Divider;
+export default Divider

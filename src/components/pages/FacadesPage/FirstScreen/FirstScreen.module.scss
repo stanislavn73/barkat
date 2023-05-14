@@ -1,0 +1,51 @@
+@import '../../../../assets/variables.module.scss';
+
+.full-page {
+    position: relative;
+}
+.bottom-line-facades {
+    width: 100%;
+    height: 100px;
+    position: absolute;
+    bottom: 0;
+    z-index: 2;
+    left: 0;
+
+    @media screen and (max-width: #{$mobile-l}) {
+        height: 60px;
+    }
+
+    & > div {
+        position: relative;
+    }
+
+    .padded {
+        height: 100%;
+        padding: 0 calc((100% - #{$padding-desktop}) / 2);
+        .thumb-content-wrapper {
+            height: 100%;
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-end;
+
+            .title-flag {
+                height: calc(100% + 90px);
+                padding: 15px 20px;
+                background: $secondary;
+                display: flex;
+                align-items: flex-end;
+                font-size: 50px;
+
+                @media screen and (max-width: #{$mobile-m}) {
+                    font-size: 37px;
+                }
+
+                * {
+                    font-weight: 700;
+                    color: black;
+                    margin-bottom: 10px;
+                }
+            }
+        }
+    }
+}

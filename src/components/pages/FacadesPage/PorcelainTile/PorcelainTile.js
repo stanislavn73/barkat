@@ -1,25 +1,25 @@
-import React from 'react';
-import ImageSlides from '../../../ui-kit/ImageSlides';
-import FullPage from '../../../ui-kit/FullPage';
-import Title from '../../../ui-kit/Title';
-import SubTitle from '../../../ui-kit/SubTitle';
-import Padded from '../../../ui-kit/Padded';
-import OpenModalButton from '../../../ui-kit/OpenModalButton';
-import FullscreenImg from '../../../ui-kit/FullscreenImg';
-import DownloadCatalog from '../../../ui-kit/DownloadCatalog';
-import facadesPorcelianTileSlides from '../../../../utils/facades/porcelianTile';
-import porcelian_tile_colors from '../../../../assets/images/facades/porcelian-tile/types/01.jpg';
-import porcelian_tile_type from '../../../../assets/images/facades/porcelian-tile/types/02.jpg';
-import system from '../../../../assets/images/facades/porcelian-tile/system/system.jpg';
+import React from 'react'
+import ImageSlides from '../../../ui-kit/ImageSlides'
+import FullPage from '../../../ui-kit/FullPage'
+import Title from '../../../ui-kit/Title'
+import SubTitle from '../../../ui-kit/SubTitle'
+import Padded from '../../../ui-kit/Padded'
+import OpenModalButton from '../../../ui-kit/OpenModalButton'
+import FullscreenImg from '../../../ui-kit/FullscreenImg'
+import DownloadCatalog from '../../../ui-kit/DownloadCatalog'
+import facadesPorcelianTileSlides from '../../../utils/facades/porcelianTile'
+import porcelian_tile_colors from '../../../../../public/images/facades/porcelian-tile/types/01.pdf'
+import porcelian_tile_type from '../../../../../public/images/facades/porcelian-tile/types/02.jpg'
+import system from '../../../../../public/images/facades/porcelian-tile/system/system.jpg'
 
-import catalog from '../../../../assets/images/facades/porcelian-tile/catalog.pdf';
-import catalog_color from '../../../../assets/images/facades/porcelian-tile/catalog_color.pdf';
+import catalog from '../../../../../public/images/facades/porcelian-tile/catalog.pdf'
 
-import './PorcelainTile.module.less';
+import styles from './PorcelainTile.module.scss'
+import { FacadesWrapper } from '../FacadesWrapper'
 
 export default function PorcelainTile() {
     return (
-        <div className='porcelian-tile-block  facade-type-wrapper'>
+        <FacadesWrapper className={styles['porcelian-tile-block']}>
             <FullPage>
                 <Title>Фасад КЕРАМОГРАНИТ</Title>
                 <ImageSlides data={facadesPorcelianTileSlides} />
@@ -42,11 +42,11 @@ export default function PorcelainTile() {
                     архитекторов и дизайнеров.
                 </p>
                 <SubTitle>Цветовая гамма КЕРАМОГРАНИТ, каталог</SubTitle>
-                <div className='porcelian-tile-images-wrapper'>
-                    <div className='porcelian-tile-image-item'>
+                <div className={styles['porcelian-tile-images-wrapper']}>
+                    <div className={styles['porcelian-tile-image-item']}>
                         <FullscreenImg src={porcelian_tile_type} />
                     </div>
-                    <div className='porcelian-tile-download-item'>
+                    <div className={styles['porcelian-tile-download-item']}>
                         <DownloadCatalog
                             file={porcelian_tile_colors}
                             name='Цветовая линейка Керамогранит'
@@ -63,8 +63,10 @@ export default function PorcelainTile() {
                     облицовку керамогранитом, установленного в кляммерах из
                     нержавеющей стали видимым способом
                 </SubTitle>
-                <div className='porcelian-tile-system-wrapper facades-system-wrapper'>
-                    <div className='porcelian-tile-system'>
+                <div
+                    className={`${styles['porcelian-tile-system-wrapper']} ${styles['facades-system-wrapper']}`}
+                >
+                    <div className={styles['porcelian-tile-system']}>
                         <FullscreenImg src={system} />
                         <OpenModalButton />
                     </div>
@@ -122,6 +124,6 @@ export default function PorcelainTile() {
                     </div>
                 </div>
             </Padded>
-        </div>
-    );
+        </FacadesWrapper>
+    )
 }

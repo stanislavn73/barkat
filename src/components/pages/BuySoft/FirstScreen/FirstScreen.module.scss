@@ -1,0 +1,14 @@
+@import './../../../../assets/variables.module.scss';
+
+.buySketchUp {
+    height: 200px;
+    @media screen and (max-width: #{$laptop-s}) {
+        height: 120px;
+    }
+    @media screen and (max-width: 850px) {
+        height: 134px;
+    }
+    @media screen and (max-width: #{$mobile-l}) {
+        height: 90px;
+    }
+}

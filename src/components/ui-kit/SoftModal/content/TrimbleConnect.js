@@ -1,5 +1,5 @@
-import React from 'react';
-import * as table from './../../../../assets/images/pages/soft/SketchUpStudioTable.png';
+import * as table from '../../../../../public/images/pages/soft/SketchUpStudioTable.png'
+import Img from '../../Img'
 
 export default function TrimbleConnect() {
     return (
@@ -87,7 +87,7 @@ export default function TrimbleConnect() {
                 выбор: через определённый интервал времени, каждый в указанное
                 время или каждую неделю в указанный день и время.
             </p>
-            <img src={table} />
+            <Img src={table} />
         </>
-    );
+    )
 }

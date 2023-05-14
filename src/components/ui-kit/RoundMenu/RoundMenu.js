@@ -1,46 +1,47 @@
-import React, { useEffect, useState } from 'react';
-import { useRouter } from 'next/router';
-import cx from 'classnames';
+import React, { useEffect, useState } from 'react'
+import { useRouter } from 'next/router'
+import cx from 'classnames'
 
-import logo from '../../../assets/images/Logo_new.svg';
-import engineer from '../../../assets/images/marble-system.jpg';
-import about from '../../../assets/images/pages/About_us_third.jpg';
-import facades from '../../../assets/images/facades/clinkerstone/04.jpg';
-import soft from '../../../assets/images/pages/soft/title-back.jpg';
-import './styles.module.less';
+import logo from '../../../../public/images/Logo_new.svg'
+import engineer from '../../../../public/images/marble-system.jpg'
+import about from '../../../../public/images/pages/About_us_third.jpg'
+import facades from '../../../../public/images/facades/clinkerstone/04.jpg'
+import soft from '../../../../public/images/pages/soft/title-back.jpg'
+import styles from './styles.module.scss'
+import Img from '../Img'
 
 function RoundMenu({ children, className }) {
-    const [isActive, setIsActive] = useState(false);
-    const [isDisplay, setIsDisplay] = useState(false);
+    const [isActive, setIsActive] = useState(false)
+    const [isDisplay, setIsDisplay] = useState(false)
     useEffect(() => {
         setTimeout(() => {
-            setIsActive(true);
+            setIsActive(true)
             setTimeout(() => {
-                setIsDisplay(true);
-            });
-        }, 0);
-    }, []);
+                setIsDisplay(true)
+            })
+        }, 0)
+    }, [])
 
-    const router = useRouter();
+    const router = useRouter()
 
     const spanCX = cx({
         active: isDisplay,
-    });
+    })
 
     return (
         isActive && (
-            <div className='round-menu-wrapper'>
+            <div className={styles['round-menu-wrapper']}>
                 <span className={spanCX}>
-                    <img src={logo} />
+                    <Img src={logo} />
                 </span>
-                <div className='wrap'>
+                <div className={styles.wrap}>
                     <a
                         href='#'
                         style={{
                             backgroundImage: `url(${about})`,
                         }}
                         onClick={() => {
-                            router.push('/about_us');
+                            router.push('/about_us')
                         }}
                     >
                         <div>О нас</div>
@@ -51,7 +52,7 @@ function RoundMenu({ children, className }) {
                             backgroundImage: `url(${engineer})`,
                         }}
                         onClick={() => {
-                            router.push('/soft');
+                            router.push('/soft')
                         }}
                     >
                         <div>Инженерные сети</div>
@@ -62,7 +63,7 @@ function RoundMenu({ children, className }) {
                             backgroundImage: `url(${facades})`,
                         }}
                         onClick={() => {
-                            router.push('/facades');
+                            router.push('/facades')
                         }}
                     >
                         <div>Вентфасады</div>
@@ -73,18 +74,18 @@ function RoundMenu({ children, className }) {
                             backgroundImage: `url(${soft})`,
                         }}
                         onClick={() => {
-                            router.push('/soft');
+                            router.push('/soft')
                         }}
                     >
                         <div>3D решения</div>
                     </a>
                     <a href='#'>
-                        <img src={logo} />
+                        <Img src={logo} />
                     </a>
                 </div>
             </div>
         )
-    );
+    )
 }
 
-export default RoundMenu;
+export default RoundMenu
