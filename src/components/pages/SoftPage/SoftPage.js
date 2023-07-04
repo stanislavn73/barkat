@@ -11,19 +11,22 @@ import Bentley from './Bentley'
 import SketchUp from './SketchUp'
 import AllPlan from './AllPlan'
 import TeamViewer from './TeamViewer'
+import { useTranslation } from '../../layouts/Layout'
+import { GoogleCloud } from './GoogleCloud/GoogleCloud'
 
 const SoftPage = () => {
+    const { t } = useTranslation('soft')
+    const solutionsAnchorTitle = t.solutions.title
     const anchors = [
         {
             id: '3d-solutions',
-            title: '3D-решения',
+            title: solutionsAnchorTitle,
             comp: <FirstScreen />,
         },
-
         {
-            id: 'AllPlan',
-            title: 'AllPlan',
-            comp: <AllPlan />,
+            id: 'googleCloud',
+            title: 'Google Cloud',
+            comp: <GoogleCloud />,
         },
         {
             id: 'Autodesk',

@@ -84,8 +84,7 @@ export const ModalConsumer = Consumer
 export default Layout
 export const useTranslation = key => {
     const allTrans = useContext(TranslationContext)
-    // const translations =keys.reduce((res,key)=>res[key],allTrans.data[allTrans.locale])
-    console.log(allTrans)
+
     if (key?.length) {
         return { t: allTrans.data[allTrans.locale][key] }
     }

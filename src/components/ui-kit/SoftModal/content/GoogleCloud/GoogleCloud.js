@@ -1,9 +1,4 @@
-import { useTranslation } from '../../../../layouts/Layout'
-
-export const TeamViewerXPick = () => {
-    const { t } = useTranslation('soft')
-    const { modal } = t.xPick
-
+export const GoogleCloud = modal => () => {
     return (
         <>
             <p>{modal.general}</p>
@@ -17,8 +12,13 @@ export const TeamViewerXPick = () => {
                     </ul>
                 </div>
             ))}
-            <p>{modal.integration}</p>
-            <p>{modal.summary}</p>
+            {modal.summary && <p>{modal.summary}</p>}
+            {modal.summaryArray?.map(item => (
+                <div>
+                    <p>{item}</p>
+                    <br />
+                </div>
+            ))}
         </>
     )
 }

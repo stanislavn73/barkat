@@ -1,9 +1,4 @@
-import { useTranslation } from '../../../../layouts/Layout'
-
-export const TeamViewerXAssist = () => {
-    const { t } = useTranslation('soft')
-    const { modal } = t.xAssist
-
+export const TeamViewer = modal => () => {
     return (
         <>
             <p>{modal.general}</p>

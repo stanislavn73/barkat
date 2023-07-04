@@ -43,14 +43,10 @@ import BuySketchUpPro from './content/BuyButtons/BuySketchUpPro'
 import BuySketchUpStudio from './content/BuyButtons/BuySketchUpStudio'
 import BuySketchUpHigher from './content/BuyButtons/BuySketchUpHigher'
 import UserAgreement from './content/UserAgreement'
-import {
-    TeamViewerXAssist,
-    TeamViewerXInspect,
-    TeamViewerXMake,
-    TeamViewerXPick,
-} from './content/TeamViewer'
+import { TeamViewer } from './content/TeamViewer'
+import { GoogleCloud } from './content/GoogleCloud/GoogleCloud'
 
-export default {
+export default softTranslation => ({
     REVIT: {
         title: 'Autodesk Revit',
         content: Revit,
@@ -233,18 +229,63 @@ export default {
     },
     xPick: {
         title: 'TeamViewer Frontline xPick',
-        content: TeamViewerXPick,
+        content: TeamViewer(softTranslation.xPick.modal),
     },
     xAssist: {
-        title: 'TeamViewer Frontline xPick',
-        content: TeamViewerXAssist,
+        title: 'TeamViewer Frontline xAssist',
+        content: TeamViewer(softTranslation.xAssist.modal),
     },
     xMake: {
         title: 'TeamViewer Frontline xMake',
-        content: TeamViewerXMake,
+        content: TeamViewer(softTranslation.xMake.modal),
     },
     xInspect: {
         title: 'TeamViewer Frontline xInspect',
-        content: TeamViewerXInspect,
+        content: TeamViewer(softTranslation.xInspect.modal),
     },
-}
+
+    stratoZone: {
+        title: 'Google Cloud Stratozone',
+        content: GoogleCloud(softTranslation.stratoZone.modal),
+    },
+    vmWare: {
+        title: 'Google Cloud VMWare Engine',
+        content: GoogleCloud(softTranslation.vmWare.modal),
+    },
+    bigQuery: {
+        title: 'Big Query Machine Learning',
+        content: GoogleCloud(softTranslation.bigQuery.modal),
+    },
+    networking: {
+        title: 'Google Cloud Networking',
+        content: GoogleCloud(softTranslation.networking.modal),
+    },
+    distributedCloud: {
+        title: 'Distributed Cloud',
+        content: GoogleCloud(softTranslation.distributedCloud.modal),
+    },
+    security: {
+        title: 'Security and Identity Chronicle',
+        content: GoogleCloud(softTranslation.security.modal),
+    },
+    cloudStorage: {
+        title: 'Google Cloud Storage',
+        content: GoogleCloud(softTranslation.cloudStorage.modal),
+    },
+    cloudDatabases: {
+        title: 'Google Cloud Databases',
+        content: GoogleCloud(softTranslation.cloudDatabases.modal),
+    },
+    api: {
+        title: 'Google Api',
+        content: GoogleCloud(softTranslation.api.modal),
+    },
+    googleKubernetes: {
+        title: 'Google Kubernetes Engine',
+        content: GoogleCloud(softTranslation.googleKubernetes.modal),
+    },
+    computeEngine: {
+        title: 'Google Cloud Compute Engine',
+        content: GoogleCloud(softTranslation.computeEngine.modal),
+    },
+})
