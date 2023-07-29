@@ -137,27 +137,27 @@ export default softTranslation => ({
     },
     MicroStation: {
         title: 'MicroStation',
-        content: MicroStation,
+        content: GoogleCloud(softTranslation.microStation.modal),
     },
     Plaxis: {
         title: 'PLAXIS',
-        content: Plaxis,
+        content: GoogleCloud(softTranslation.plaxis.modal),
     },
     Staad: {
         title: 'STAAD',
-        content: Staad,
+        content: GoogleCloud(softTranslation.staad.modal),
     },
     ContextCapture: {
         title: 'ContextCapture',
-        content: ContextCapture,
+        content: GoogleCloud(softTranslation.contextCapture.modal),
     },
     SYNCHRO: {
         title: 'SYNCHRO',
-        content: SYNCHRO,
+        content: GoogleCloud(softTranslation.synchro.modal),
     },
     ProStructures: {
         title: 'ProStructures',
-        content: ProStructures,
+        content: GoogleCloud(softTranslation.proStructures.modal),
     },
     SketchUpPro: {
         title: 'SketchUp Pro',

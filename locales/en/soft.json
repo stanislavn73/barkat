@@ -655,6 +655,271 @@
         }
     },
 
+    "bentley": {
+        "resume": [
+            "Bentley Systems is a software development company based on BIM technology, serving professionals in the construction and management of global infrastructure, including roads, bridges, airports, skyscrapers, factories, power plants, and networks. Bentley provides solutions for the entire lifecycle of infrastructure assets, catering to the needs of various specialists, including engineers, architects, planners, contractors, IT managers, operators, and maintenance engineers. Each solution, comprising integrated applications and services built on an open platform, is designed to facilitate seamless information exchange between different workflows and project team members, ensuring compatibility and collaboration among engineers within the group. Bentley Systems employs over 3,500 people, with an annual revenue exceeding $700 million, serving clients in 170 countries. Since 2014, Bentley has invested over $1 billion in research, development, and acquisitions."
+        ]
+    },
+
+    "microStation": {
+        "resume": "Bentley MicroStation is a leading 2D/3D CAD software trusted by professionals in the architecture, engineering, and construction industries. With its comprehensive design and collaboration tools, MicroStation empowers users to create precise and intricate models for complex infrastructure projects.",
+        "modal": {
+            "general": "Bentley MicroStation is a versatile 2D/3D CAD software developed to meet the diverse needs of professionals in the architecture, engineering, and construction industries. Its primary purpose is to provide a comprehensive platform for creating, modeling, and managing complex infrastructure projects with precision and efficiency.",
+            "keys": [
+                {
+                    "title": "Advantages",
+                    "key": "advantages"
+                },
+                {
+                    "title": "Use Cases",
+                    "key": "useCases"
+                },
+                {
+                    "title": "Benefits for Customers",
+                    "key": "benefits"
+                }
+            ],
+            "advantages": [
+                "Interoperability: One of the key advantages of Bentley MicroStation is its robust interoperability. It supports various industry-standard file formats, making it easy to collaborate with teams and stakeholders using different CAD software. The software's open architecture allows seamless data exchange and integration with other Bentley applications, enhancing project efficiency and accuracy.",
+                "Advanced Modeling Tools: MicroStation offers a wide range of advanced modeling tools, enabling engineers and designers to create detailed and intricate 2D and 3D models. From conceptual design to final construction documentation, the software empowers users to visualize and analyze complex structures and infrastructure projects accurately.",
+                "Precise Drawing and Documentation: With MicroStation's precise drawing and documentation capabilities, professionals can generate detailed plans, layouts, and construction documentation. The software ensures that all design elements are accurately represented, facilitating smoother construction and reducing the likelihood of errors during the execution phase.",
+                "Project Visualization: Bentley MicroStation includes powerful visualization tools that allow users to create realistic renderings and visualizations of their designs. This capability helps stakeholders and clients better understand the project's final appearance, making it easier to gain approval and make informed decisions."
+            ],
+            "useCases": [
+                "Infrastructure Design and Planning: Engineers and architects use Bentley MicroStation to design and plan various infrastructure projects, such as roads, bridges, railways, airports, and buildings. The software's advanced tools assist in creating precise models, performing analysis, and evaluating different design options for optimal outcomes.",
+                "Construction Documentation: MicroStation plays a crucial role in generating detailed construction documentation, including plans, sections, and elevations. This documentation serves as a comprehensive reference for construction teams, ensuring accurate implementation of the design.",
+                "Plant and Factory Design: In the industrial sector, MicroStation is widely used for plant and factory design. It enables engineers to model complex equipment, piping systems, and structural elements, ensuring efficient layout and operational functionality.",
+                "Urban Planning and Development: Urban planners utilize Bentley MicroStation to design and visualize cityscapes, urban developments, and public spaces. The software's accurate modeling capabilities help in simulating various scenarios and making data-driven decisions to create sustainable and efficient cities."
+            ],
+            "benefits": [
+                "Enhanced Productivity: Bentley MicroStation's intuitive interface and advanced features contribute to increased productivity. It streamlines design workflows, reduces manual tasks, and allows professionals to focus on creativity and innovation.",
+                "Cost Savings: By facilitating efficient design and construction processes, MicroStation helps customers save on project costs. It minimizes errors and rework, leading to optimized resource utilization and reduced overall project expenses.",
+                "Collaborative Environment: Bentley MicroStation fosters collaboration among team members and stakeholders. Its interoperability enables seamless data exchange, leading to improved communication and coordination, which are essential for successful project delivery.",
+                "Future-Proof Investment: Bentley Systems regularly updates and enhances MicroStation to align with industry trends and technological advancements. By choosing MicroStation, customers invest in a software solution that evolves with their needs and ensures long-term sustainability.",
+                "Improved Project Outcomes: The accurate modeling and visualization capabilities of MicroStation result in better project outcomes. Customers can make well-informed decisions, deliver projects on time, and achieve high-quality designs that meet and exceed client expectations."
+            ],
+            "summary": "In summary, Bentley MicroStation offers a powerful and flexible CAD platform for professionals in the AEC industry. With its advanced features, interoperability, and precision, the software empowers users to efficiently design, model, and deliver complex infrastructure projects, leading to enhanced productivity, cost savings, and successful project outcomes."
+        }
+    },
+
+    "plaxis": {
+        "resume": "Bentley PLAXIS is a powerful geotechnical engineering software that performs finite element analysis for soil and rock structures, enabling engineers and geotechnical professionals to make informed design decisions and mitigate risks in construction projects.",
+        "modal": {
+            "general": "Bentley PLAXIS is powerful geotechnical engineering software designed to perform finite element analysis for soil, rock, and associated structures. Its primary purpose is to analyze and simulate complex geotechnical problems, including soil deformation, stability, settlement, and excavation behavior, helping engineers and geotechnical professionals make informed design decisions and mitigate risks in construction projects.",
+            "keys": [
+                {
+                    "title": "Advantages",
+                    "key": "advantages"
+                },
+                {
+                    "title": "Use Cases",
+                    "key": "useCases"
+                },
+                {
+                    "title": "Benefits for Customers",
+                    "key": "benefits"
+                }
+            ],
+            "advantages": [
+                "Geotechnical Accuracy: Bentley PLAXIS offers advanced material models and soil behavior simulations, providing high accuracy in geotechnical analysis. It allows engineers to understand the complex behavior of soil and rock under various loading and boundary conditions, ensuring precise predictions and reliable design outcomes.",
+                "Comprehensive Modeling Capabilities: The software caters to a wide range of geotechnical applications, such as tunneling, deep excavations, slope stability, foundation analysis, and soil-structure interaction. It supports both 2D and 3D analysis, enabling engineers to model and simulate real-world geotechnical scenarios with confidence.",
+                " Parametric and Sensitivity Studies: PLAXIS allows engineers to perform parametric studies, exploring the effects of various design parameters on project performance. Sensitivity analysis helps in identifying critical factors that influence project stability and performance, empowering engineers to optimize designs and minimize risks.",
+                " Seamless Integration: Bentley PLAXIS seamlessly integrates with other Bentley products, such as OpenRoads, PLAXIS 3D Connect Edition, and RAM Concept, allowing for a smooth exchange of data and fostering multidisciplinary collaboration in infrastructure and construction projects.\n"
+            ],
+            "useCases": [
+                "1. Deep Excavations: Engineers use Bentley PLAXIS to model and analyze deep excavations for basements, underground structures, and mining projects. The software helps in assessing soil deformation, lateral support systems, and the impact on nearby structures.",
+                "2. Tunneling and Underground Construction: PLAXIS is widely used for tunneling projects, including transportation and utility tunnels. It aids in assessing tunnel stability, ground settlement, and interaction with adjacent structures, ensuring safe and efficient construction.",
+                "3. Slope Stability Analysis: Geotechnical professionals use PLAXIS to analyze slope stability for embankments, natural slopes, and landfills. The software assists in evaluating the potential for slope failures and recommending stabilization measures.\n",
+                "4. Foundation Design: Engineers rely on PLAXIS for foundation analysis and design, including shallow and deep foundations. The software helps in evaluating bearing capacity, settlement, and interaction with the surrounding soil.\n"
+            ],
+            "benefits": [
+                "1. Risk Mitigation: Bentley PLAXIS enables engineers to identify and mitigate geotechnical risks early in the design process. By analyzing soil behavior and evaluating different scenarios, customers can make informed decisions to prevent potential failures and costly rework during construction.",
+                "2. Cost Savings: With PLAXIS, customers can optimize their geotechnical designs and foundation solutions, leading to cost-effective construction. The software's parametric studies and sensitivity analysis help in identifying efficient design alternatives and reducing unnecessary expenses.",
+                "3. Improved Project Performance: By accurately simulating soil-structure interaction, customers can achieve better project performance and long-term stability. PLAXIS facilitates optimized designs that enhance the safety and reliability of infrastructure projects.",
+                "4. Enhanced Engineering Insight: Bentley PLAXIS provides in-depth geotechnical insights, allowing engineers to understand soil behavior and its impact on structures comprehensively. This knowledge supports better decision-making and helps in developing robust designs.",
+                "5. Streamlined Workflows: The software's integration with other Bentley products streamlines workflows and data exchange across multiple disciplines. This integration fosters collaboration among engineering teams, contractors, and stakeholders, improving project coordination and efficiency.\n"
+            ],
+            "summary": "In conclusion, Bentley PLAXIS is a versatile geotechnical engineering software that offers accurate analysis and simulation capabilities for a wide range of projects. With its comprehensive modeling, parametric studies, and seamless integration, PLAXIS empowers engineers and geotechnical professionals to make informed decisions, mitigate risks, and optimize designs for successful construction projects."
+        }
+    },
+
+    "staad": {
+        "resume": "Bentley STAAD is a comprehensive structural analysis and design software that empowers engineers to efficiently analyze and design various types of structures, including buildings, bridges, towers, and more, ensuring safety and compliance with international standards.",
+        "modal": {
+            "general": "Bentley STAAD is a leading structural analysis and design software that caters to the needs of engineers and architects worldwide. Its primary purpose is to enable professionals to analyze and design a wide range of structures, including buildings, bridges, towers, industrial plants, and more. With its advanced analysis capabilities and user-friendly interface, STAAD ensures the creation of safe, reliable, and cost-effective structures.\n",
+            "keys": [
+                {
+                    "title": "Advantages",
+                    "key": "advantages"
+                },
+                {
+                    "title": "Use Cases",
+                    "key": "useCases"
+                },
+                {
+                    "title": "Benefits for Customers",
+                    "key": "benefits"
+                }
+            ],
+            "advantages": [
+                "1. Comprehensive Analysis: Bentley STAAD offers a comprehensive set of analysis tools that allow engineers to simulate real-world behavior of structures under various loads and environmental conditions. From static and dynamic analysis to nonlinear and seismic analysis, STAAD provides accurate and detailed insights into the performance of complex structures.",
+                "2. Integration with BIM: STAAD seamlessly integrates with Building Information Modeling (BIM) platforms, streamlining the design process and enhancing collaboration between multiple disciplines. This integration enables engineers and architects to exchange data efficiently, reducing errors and improving project coordination.",
+                "3. Efficient Design Optimization: The software provides powerful optimization tools that help engineers find the most efficient and economical designs. By iterating through different design alternatives, STAAD allows users to identify the most cost-effective structural solutions without compromising on safety and functionality.",
+                "4. Global Code Support: Bentley STAAD supports a wide range of international design codes and standards, making it a versatile tool for engineers working on projects across the globe. The software automatically checks the structural designs against the specified codes, ensuring compliance and regulatory approval.\n"
+            ],
+            "useCases": [
+                "1. Building Design and Analysis: Bentley STAAD is widely used for the analysis and design of various types of buildings, from small residential structures to large commercial complexes and skyscrapers. Engineers can analyze the stability, load-bearing capacity, and deflection of the building under different loading conditions.",
+                "2. Bridge Engineering: STAAD is a valuable tool for bridge engineers to analyze the structural behavior of different types of bridges, including highway bridges, railway bridges, and pedestrian bridges. The software helps engineers assess the bridge's performance under traffic loads, seismic forces, and temperature variations.",
+                "3. Industrial Structures: Industrial plants, such as refineries, chemical plants, and manufacturing facilities, require specialized structural analysis due to their unique requirements. Bentley STAAD facilitates the analysis and design of industrial structures, ensuring they can withstand various operational and environmental conditions.",
+                "4. Seismic Analysis: In regions prone to earthquakes, seismic analysis is critical for assessing a structure's safety and performance during seismic events. STAAD enables engineers to model seismic forces accurately and design structures to resist seismic loads effectively.\n"
+            ],
+            "benefits": [
+                "1. Enhanced Safety and Reliability: Bentley STAAD enables engineers to design structures that meet stringent safety standards and building codes. By performing detailed analysis and optimizing designs, the software ensures the safety and reliability of structures, safeguarding lives and assets.",
+                "2. Cost Savings: The efficient design optimization tools provided by STAAD allow engineers to identify cost-effective solutions, optimizing material usage and reducing construction costs. Additionally, the software minimizes the need for costly design iterations and reduces project delays.",
+                "3. Faster Project Delivery: The intuitive interface and advanced analysis capabilities of STAAD streamline the design process, allowing engineers to complete projects more efficiently. Faster project delivery translates to improved project timelines and increased client satisfaction.",
+                "4. Improved Collaboration: STAAD's BIM integration fosters collaboration among project stakeholders, including architects, engineers, and construction teams. This seamless exchange of information enhances teamwork, reduces communication errors, and results in better project outcomes.",
+                "5. Global Reach: Bentley STAAD's support for international design codes makes it an ideal choice for engineers working on projects worldwide. Whether it's a local development or an international venture, STAAD ensures compliance with relevant codes, simplifying project approvals.\n"
+            ],
+            "summary": "In conclusion, Bentley STAAD stands as a comprehensive and versatile solution for structural analysis and design, empowering engineers to create safe, innovative, and efficient structures across various industries and locations."
+        }
+    },
+
+    "contextCapture": {
+        "resume": "Bentley ContextCapture is a cutting-edge product for reality modeling that enables users to create highly detailed 3D models of infrastructure and environments from photos and laser scans, revolutionizing the way we capture and visualize reality.\n",
+        "modal": {
+            "general": "Bentley ContextCapture is a cutting-edge reality modeling software that enables users to create highly detailed 3D models from photographs and point clouds. Its primary purpose is to provide accurate and precise digital representations of real-world assets, infrastructure, and environments, allowing professionals in various industries to make informed decisions, analyze data, and optimize their projects.",
+            "keys": [
+                {
+                    "title": "Advantages",
+                    "key": "advantages"
+                },
+                {
+                    "title": "Use Cases",
+                    "key": "useCases"
+                },
+                {
+                    "title": "Benefits for Customers",
+                    "key": "benefits"
+                }
+            ],
+            "advantages": [
+                "1. Photorealistic 3D Models: ContextCapture excels in creating photorealistic 3D models with exceptional visual fidelity. Its advanced algorithms and image processing techniques ensure that the models accurately capture the details, textures, and colors of the real-world objects, providing a true-to-life representation.",
+                "2. Scalability: The software offers scalability, enabling users to work with projects of varying sizes and complexities. Whether it's a small-scale building or a large infrastructure project, ContextCapture efficiently processes vast amounts of data to generate high-quality 3D models.",
+                "3. Data Integration: ContextCapture seamlessly integrates with other Bentley software solutions and third-party applications, allowing users to leverage additional functionalities and workflows. This interoperability streamlines the design and analysis processes, enhancing productivity and collaboration among multidisciplinary teams.",
+                "4. Time and Cost Savings: By leveraging the power of automated feature extraction and cloud computing, ContextCapture significantly reduces the time and effort required to create 3D models. Moreover, the software eliminates the need for expensive and time-consuming manual surveys, resulting in substantial cost savings for the projects.\n"
+            ],
+            "useCases": [
+                "1. Infrastructure and Construction: Bentley ContextCapture is widely used in the infrastructure and construction industries for capturing existing conditions and creating as-built models. It aids in site planning, asset management, clash detection, and visualization, ensuring accurate and efficient project execution.",
+                "2. Urban Planning and Development: City planners and developers utilize ContextCapture to create detailed 3D models of urban areas, enabling them to visualize and analyze the impact of new projects, assess infrastructure needs, and plan future developments.",
+                "3. Environmental Monitoring: The software plays a crucial role in environmental monitoring and management. It helps in assessing changes in landscapes, tracking vegetation growth, analyzing erosion patterns, and monitoring natural resources.",
+                "4. Cultural Heritage Preservation: ContextCapture facilitates the preservation and documentation of cultural heritage sites by creating accurate digital replicas of historical landmarks and artifacts, aiding in restoration efforts and educational initiatives.\n"
+            ],
+            "benefits": [
+                "1. Enhanced Decision-making: Bentley ContextCapture provides customers with a powerful tool to make informed decisions based on accurate and detailed information. It allows stakeholders to visualize the project in its real-world context, identify potential issues, and explore various design alternatives.",
+                "2. Improved Project Communication: The highly detailed 3D models generated by ContextCapture enhance project communication and stakeholder engagement. Clients, regulators, and the public can easily grasp the project's vision, leading to better collaboration and support.",
+                "3. Streamlined Workflows: Integrating ContextCapture into the project workflows streamlines data processing and analysis. It reduces manual tasks, minimizes data silos, and fosters seamless data exchange between different software applications.",
+                "4. Future-Proof Solutions: Bentley's commitment to continuous software updates and improvements ensures that ContextCapture remains at the forefront of reality modeling technology. Customers can rely on cutting-edge solutions that evolve with the industry and stay ahead of emerging challenges.\n"
+            ],
+            "summary": "In conclusion, Bentley ContextCapture revolutionizes reality modeling by providing users with a comprehensive solution to capture, process, and visualize real-world data. Its advantages, versatility, and numerous use cases make it an indispensable tool for professionals across various industries.\n"
+        }
+    },
+
+    "synchro": {
+        "resume": "Bentley Synchro is a powerful product that offers 4D construction modeling and visualization solutions. It enables users to plan, manage, and execute construction projects more efficiently by integrating time and cost data with 3D models.",
+        "modal": {
+            "general": "Bentley Synchro is a sophisticated software solution that provides comprehensive 4D construction modeling and visualization capabilities. It has been designed to empower construction professionals with the tools they need to streamline their projects, enhance collaboration, and improve overall project outcomes. By integrating time and cost data with 3D models, Bentley Synchro enables users to create intelligent construction simulations, ultimately leading to more efficient planning, execution, and management of construction projects.\n",
+            "keys": [
+                {
+                    "title": "Purpose",
+                    "key": "purpose"
+                },
+                {
+                    "title": "Advantages",
+                    "key": "advantages"
+                },
+                {
+                    "title": "Use Cases",
+                    "key": "useCases"
+                },
+                {
+                    "title": "Benefits for Customers",
+                    "key": "benefits"
+                }
+            ],
+            "purpose": [
+                "The primary purpose of Bentley Synchro is to enhance project management and execution in the construction industry. It enables stakeholders to visualize projects in a dynamic 4D environment, where the fourth dimension represents time. This allows for a deeper understanding of project schedules, construction sequences, and potential clashes, leading to better decision-making throughout the project lifecycle."
+            ],
+            "advantages": [
+                "1. 4D Construction Modeling: Bentley Synchro combines 3D design data with time and cost information to create a 4D simulation of the entire construction process. This enables stakeholders to visualize the project's progress over time, identify critical stages, and assess the impact of changes on the schedule and budget.",
+                "2. Improved Collaboration: The software fosters better collaboration among project teams, including architects, engineers, contractors, and owners. With a unified platform for communication and planning, stakeholders can work together seamlessly, resolving conflicts and improving overall project efficiency.",
+                "3. Clash Detection and Resolution: Bentley Synchro's 4D simulation helps identify potential clashes between different construction elements, such as structural components, equipment, and utilities. This early detection allows for timely resolution, avoiding costly errors during construction.",
+                "4. Enhanced Schedule Management: With the ability to visualize construction sequences and potential delays, project managers can optimize schedules to ensure timely completion. This results in better project planning, resource allocation, and adherence to project milestones.",
+                "5. Cost Control: Bentley Synchro's integration of cost data enables stakeholders to assess the financial implications of project changes and make informed decisions to control costs effectively.\n"
+            ],
+            "useCases": [
+                "- Large-Scale Construction Projects: Bentley Synchro is ideal for complex infrastructure projects like highways, bridges, tunnels, and airports. It allows stakeholders to manage intricate construction sequences and coordinate various teams efficiently.",
+                "- Building Construction: In the case of commercial, residential, or industrial buildings, Bentley Synchro helps streamline construction processes, minimize disruptions, and deliver projects on time and within budget.",
+                "- Plant and Industrial Facilities: For industries such as oil and gas, power generation, and manufacturing, Bentley Synchro aids in optimizing construction workflows, ensuring safety compliance, and facilitating smooth facility commissioning.\n"
+            ],
+            "benefits": [
+                "- Increased Efficiency: Customers can expect improved project efficiency due to better planning, reduced conflicts, and optimized schedules, leading to cost savings and faster project delivery.",
+                "- Enhanced Collaboration: Bentley Synchro promotes effective communication and collaboration among project stakeholders, fostering teamwork and a cohesive approach to project execution.",
+                "- Reduced Risks: Early clash detection, accurate scheduling, and cost analysis help mitigate potential risks, minimizing costly rework and delays.",
+                "- Improved Decision-Making: With access to real-time project data and simulations, customers can make well-informed decisions throughout the project lifecycle, resulting in successful project outcomes.",
+                "- Competitive Advantage: By leveraging Bentley Synchro's advanced capabilities, customers gain a competitive edge, securing more successful bids and attracting clients who value efficient project management.\n"
+            ],
+            "summary": ""
+        }
+    },
+
+    "proStructures": {
+        "resume": "Bentley ProStructures is a comprehensive software solution designed to streamline the design, detailing, and documentation processes for structural engineering and construction projects. It offers advanced 3D modeling, powerful structural analysis capabilities, and seamless integration with other Bentley products, providing users with enhanced productivity and collaboration in the entire project lifecycle.\n",
+        "modal": {
+            "general": "Bentley ProStructures is a comprehensive software solution designed to streamline the design, detailing, and documentation processes for structural engineering and construction projects. It offers a powerful set of tools and features that enable engineers, architects, and construction professionals to efficiently model and analyze structures, including buildings, bridges, industrial plants, and other infrastructure projects. With Bentley ProStructures, users can create accurate 3D models, perform advanced structural analysis, and generate detailed drawings, providing a seamless workflow from concept to construction.\n",
+            "keys": [
+                {
+                    "title": "Purpose",
+                    "key": "purpose"
+                },
+                {
+                    "title": "Advantages",
+                    "key": "advantages"
+                },
+                {
+                    "title": "Use Cases",
+                    "key": "useCases"
+                },
+                {
+                    "title": "Benefits for Customers",
+                    "key": "benefits"
+                }
+            ],
+            "purpose": [
+                "The primary purpose of Bentley ProStructures is to enhance productivity and collaboration in the structural engineering industry. It empowers engineers and designers with efficient tools for creating complex 3D models and generating precise construction documentation. By facilitating seamless communication between project stakeholders, Bentley ProStructures ensures that the design and construction processes are well-coordinated, reducing errors, and speeding up project delivery.\n"
+            ],
+            "advantages": [
+                "1. Advanced 3D Modeling: Bentley ProStructures offers advanced 3D modeling capabilities, allowing users to create intricate and realistic representations of structural elements. The software supports parametric modeling, enabling swift modifications to the model while maintaining data consistency throughout the project.",
+                "2. Seamless Integration: Bentley ProStructures seamlessly integrates with other Bentley products, such as MicroStation and OpenRoads, creating a unified environment for multidisciplinary teams. This integration enhances collaboration and data exchange among architects, engineers, and other project stakeholders.",
+                "3. BIM-Enabled Workflow: The software supports Building Information Modeling (BIM) workflows, facilitating intelligent model-based processes that enhance project coordination and data management. BIM compatibility ensures data interoperability and reduces discrepancies between design and construction phases.",
+                "4. Comprehensive Structural Analysis: Bentley ProStructures provides powerful analysis capabilities, including static, dynamic, and finite element analysis, allowing engineers to verify the structural integrity and stability of complex structures under various load conditions.",
+                "5. Automated Drawing Generation: With Bentley ProStructures, users can generate accurate and detailed construction drawings automatically, reducing the time required for manual drafting and minimizing errors in documentation.\n"
+            ],
+            "useCases": [
+                "- Building Design and Construction: Bentley ProStructures is widely used in designing and constructing buildings of all types, ranging from residential and commercial structures to high-rise towers and industrial facilities.",
+                "- Bridge Engineering: The software plays a crucial role in designing and analyzing bridges, ensuring their safety and structural efficiency while considering factors like traffic loads and environmental conditions.",
+                "- Industrial Plants and Infrastructure: Bentley ProStructures caters to industrial plant design, including oil refineries, chemical plants, power generation facilities, and more. Its robust capabilities support the complexity of industrial structures.\n"
+            ],
+            "benefits": [
+                "- Enhanced Productivity: Bentley ProStructures streamlines the structural design process, allowing engineers and designers to create detailed models and documentation efficiently. This leads to increased productivity and shorter project timelines.",
+                "- Improved Collaboration: With its compatibility and integration with other Bentley products, Bentley ProStructures fosters better collaboration among multidisciplinary teams, resulting in seamless communication and more effective decision-making.",
+                "- Increased Accuracy: The advanced modeling and analysis tools of Bentley ProStructures ensure higher accuracy in structural design, reducing the risk of errors and avoiding costly rework during construction.",
+                "- Optimized Resource Utilization: By enabling quick changes to the design and automating drawing generation, the software optimizes resource utilization and reduces time spent on repetitive tasks.",
+                "- Cost and Time Savings: Bentley ProStructures helps minimize design errors, coordination issues, and construction delays, leading to significant cost and time savings for customers.\n"
+            ],
+            "summary": ""
+        }
+    },
+
     "civil3d1": {
         "resume": "",
         "modal": {
