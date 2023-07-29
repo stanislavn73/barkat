@@ -51,12 +51,14 @@ export default function BuySketchUpShop({
     const [db, setDB] = useState(null)
 
     const [hryvnaExchangeRate, setHryvnaExchangeRate] = useState(1)
+    const [amountEuro, setAmountEur] = useState(1)
 
     useEffect(() => {
         ;(async () => {
             const response = await fetch('/api/liqpay')
             const responseData = await response.json()
             setHryvnaExchangeRate(responseData.hryvnaExchangeRate)
+            setAmountEur(Math.ceil(priceUSD * responseData.euroDollarRatio))
         })()
     }, [])
 
@@ -92,16 +94,24 @@ export default function BuySketchUpShop({
     }, [])
 
     useEffect(() => {
+        if (
+            selectedValue === 'USD' ||
+            selectedValue === 'UAH' ||
+            selectedValue === 'EUR'
+        ) {
+            return
+        }
+
         const UAH_CURENCY = `https://free.currconv.com/api/v7/convert?q=USD_${selectedValue}&compact=ultra&apiKey=${currencyConvertKey}`
         fetch(UAH_CURENCY)
             .then(response => {
                 if (response.status === 200) {
-                    return response.json()
+                    const data = response.json()
+                    return setCurrentAmount(
+                        data[`USD_${selectedValue}`] * priceUSD
+                    )
                 }
-                throw new Error('Currency conversion error')
-            })
-            .then(data => {
-                setCurrentAmount(data[`USD_${selectedValue}`] * priceUSD)
+                return Promise.reject('Currency conversion error')
             })
             .catch(err => {
                 console.error(err)
@@ -124,21 +134,27 @@ export default function BuySketchUpShop({
     }, [orderId])
 
     async function handleChooseCurrency(currency) {
-        if (currency === 'USD') return setCurrentAmount(priceUSD)
+        if (currency === 'USD') {
+            setCurrentAmount(priceUSD)
+            return setSelectedValue('USD')
+        }
         if (currency === 'UAH') {
             setCurrentAmount(amountUAH)
             return setSelectedValue('UAH')
         }
+        if (currency === 'EUR') {
+            setCurrentAmount(amountEuro)
+            return setSelectedValue('EUR')
+        }
         const CONVERT_URL = `https://free.currconv.com/api/v7/convert?q=USD_${currency}&compact=ultra&apiKey=${currencyConvertKey}`
         try {
-            const data = await fetch(CONVERT_URL).then(response =>
-                response.json()
-            )
+            const response = await fetch(CONVERT_URL)
+            if (response.status !== 200)
+                await Promise.reject('Currency conversion error')
+            const data = response.json()
             setCurrentAmount(data[`USD_${currency}`] * priceUSD)
             setSelectedValue(currency)
         } catch (err) {
-            setCurrentAmount(priceUSD)
-            setSelectedValue('USD')
             console.error(err)
         }
     }
