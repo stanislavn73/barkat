@@ -49,23 +49,23 @@ import { GoogleCloud } from './content/GoogleCloud/GoogleCloud'
 export default softTranslation => ({
     REVIT: {
         title: 'Autodesk Revit',
-        content: Revit,
+        content: Revit(softTranslation.revit.modal),
     },
     AUTOCAD: {
         title: 'AutoCAD',
-        content: AutoCAD,
+        content: Revit(softTranslation.autocad.modal),
     },
     AUTODESK_AEC_COLLECTION: {
         title: 'Autodesk AEC Collection',
-        content: AutodeskAecCollection,
+        content: Revit(softTranslation.aec.modal),
     },
     NAVISWORKS: {
         title: 'Autodesk Navisworks',
-        content: Navisworks,
+        content: GoogleCloud(softTranslation.navisworks.modal),
     },
     CIVIL_3D: {
         title: 'Autodesk Civil 3D',
-        content: Civil3D,
+        content: GoogleCloud(softTranslation.navisworks.modal),
     },
     '3DExperience': {
         title: '3DExperience',

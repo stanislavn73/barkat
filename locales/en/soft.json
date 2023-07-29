@@ -523,7 +523,139 @@
         }
     },
 
-    "cloudStorage1": {
+    "autodesk": {
+        "resume": [
+            "Autodesk, Inc. - the world's largest provider of software for 3D design and BIM in the industrial and civil construction, engineering, media, and entertainment markets.\n",
+            "Autodesk has developed a wide range of software products for architects, engineers, and designers, with the most popular ones being Revit, AutoCAD, AutoCAD LT, Inventor Professional, AutoCAD Civil 3D, and 3ds Max. Currently, Autodesk has over 10 million users worldwide who utilize this software to save time and money, gain a competitive advantage, and transform their ideas into reality. Users not only see the model on the screen but can also experience it, leading to time and cost savings, improved quality, and the birth of innovative solutions."
+        ]
+    },
+
+    "revit": {
+        "resume": "Autodesk REVIT is a powerful Building Information Modeling (BIM) software that enables architects, engineers, and construction professionals to design, visualize, and collaborate on building projects in a 3D environment. With its comprehensive set of tools and features, REVIT streamlines the design and documentation process, improving efficiency and accuracy in the construction industry.",
+        "modal": {
+            "general": [
+                "Autodesk REVIT is a comprehensive Building Information Modeling (BIM) software that revolutionizes the way architects, engineers, and construction professionals design, collaborate, and manage building projects. Its purpose is to provide a robust platform for creating intelligent 3D models that encompass both the physical and functional aspects of a building, enabling stakeholders to make informed decisions throughout the entire project lifecycle.\n",
+                "One of the key advantages of Autodesk REVIT is its ability to streamline the design and documentation process. With its parametric modeling capabilities, changes made to one element of the model automatically update all related elements, ensuring consistency and accuracy. This significantly reduces errors, eliminates duplication of effort, and saves time. Additionally, REVIT's intelligent objects contain embedded data, allowing for automated schedules, quantities, and material takeoffs, further enhancing project efficiency.",
+                "REVIT offers a wide range of use cases across the architecture, engineering, and construction industries. Architects can utilize REVIT to create detailed 3D models, generate realistic visualizations, and produce accurate construction documentation. Structural and MEP (Mechanical, Electrical, and Plumbing) engineers can use REVIT to design and analyze building systems, optimizing performance and minimizing clashes. Contractors can leverage REVIT for construction sequencing, clash detection, and resource planning, facilitating efficient project execution.\n",
+                "The benefits for customers using Autodesk REVIT are significant. First and foremost, REVIT enables improved collaboration and coordination among project stakeholders. With the shared 3D model as a central reference point, architects, engineers, and contractors can work together seamlessly, reducing conflicts and improving communication. This results in fewer change orders, reduced rework, and enhanced project outcomes.\n",
+                "Furthermore, REVIT provides valuable insights into the project's performance, sustainability, and costs. Through simulation tools and energy analysis capabilities, users can evaluate different design options, optimize energy efficiency, and ensure compliance with industry standards and regulations. Additionally, REVIT's integrated cost estimation features help project teams accurately estimate costs, evaluate different material options, and make informed decisions that align with budgetary constraints.",
+                "In terms of visualization, REVIT offers photorealistic rendering capabilities, allowing stakeholders to visualize designs in lifelike environments. This enhances client presentations, marketing materials, and stakeholder engagement, enabling better project understanding and buy-in.\n \n",
+                "From a project management perspective, REVIT facilitates efficient collaboration and document control. Its cloud-based collaboration tools enable real-time collaboration, regardless of team members' geographic locations. Project data, including models, documents, and annotations, can be accessed and shared securely, fostering effective communication and coordination.\n",
+                "In summary, Autodesk REVIT is a powerful BIM software that empowers professionals in the architecture, engineering, and construction industries to design, collaborate, and manage building projects with efficiency and accuracy. Its advantages lie in its ability to streamline the design process, enhance collaboration, provide valuable insights, and deliver improved project outcomes.\n"
+            ]
+        }
+    },
+    "autocad": {
+        "resume": "Autodesk AutoCAD is a leading computer-aided design (CAD) software that enables professionals in various industries to create precise 2D and 3D drawings, models, and documentation. With its extensive tools and features, AutoCAD empowers designers, architects, and engineers to bring their ideas to life and enhance the efficiency and accuracy of their workflows.\n",
+        "modal": {
+            "general": [
+                "Autodesk AutoCAD is a powerful computer-aided design (CAD) software that revolutionizes the way professionals create, visualize, and document their designs. Its purpose is to provide a comprehensive set of tools and features that enable designers, architects, and engineers to generate accurate 2D and 3D models, drawings, and documentation for a wide range of industries.\n",
+                "One of the key advantages of Autodesk AutoCAD is its versatility and compatibility. AutoCAD supports various file formats, allowing users to collaborate seamlessly with colleagues, clients, and suppliers. Its extensive library of pre-built components and design resources accelerates the design process, enabling users to create complex designs with ease. AutoCAD's parametric modeling capabilities enable designers to make changes to their designs easily, with automatic updates to related elements, ensuring accuracy and efficiency.\n",
+                "AutoCAD offers a multitude of use cases across industries such as architecture, engineering, construction, manufacturing, and product design. Architects can utilize AutoCAD to create detailed floor plans, elevations, and 3D models of buildings, allowing them to visualize and communicate their design concepts effectively. Engineers can leverage AutoCAD's advanced simulation and analysis tools to optimize the performance of mechanical, electrical, and plumbing (MEP) systems. Manufacturers can use AutoCAD to generate precise product designs, create prototypes, and streamline the manufacturing process.\n",
+                "The benefits for customers using Autodesk AutoCAD are substantial. Firstly, AutoCAD enhances productivity by automating repetitive tasks and providing efficient design workflows. With its extensive range of tools and customization options, users can streamline their design processes, reduce errors, and save valuable time. AutoCAD's comprehensive documentation features, such as annotation and dimensioning tools, enable users to generate accurate and professional drawings and documentation, improving communication and reducing the risk of misunderstandings.\n",
+                "Collaboration is another significant advantage of AutoCAD. Its cloud-based collaboration tools allow multiple team members to work on a project simultaneously, regardless of their geographical location. Real-time collaboration and version control ensure that all stakeholders have access to the latest design changes and updates. This fosters effective communication, reduces project delays, and enhances teamwork.\n",
+                "AutoCAD's 3D modeling capabilities provide users with the ability to create realistic visualizations and simulations of their designs. This allows designers, architects, and engineers to explore different design options, evaluate aesthetic aspects, and identify potential issues before construction or manufacturing begins. The visualization capabilities of AutoCAD also aid in client presentations, enabling stakeholders to visualize the final product and make informed decisions.\n",
+                "In terms of accuracy and precision, AutoCAD excels. It allows users to create designs with precise measurements and control, ensuring that the final product meets the required specifications. The software's parametric constraints enable users to maintain design intent and make modifications easily while preserving accuracy throughout the design process.\n",
+                "Overall, Autodesk AutoCAD is a versatile and powerful CAD software that empowers professionals in various industries to create accurate and detailed designs. Its advantages lie in its versatility, compatibility, productivity-enhancing features, collaboration capabilities, and accurate documentation. With AutoCAD, users can bring their ideas to life, improve design efficiency, and deliver high-quality projects.\n"
+            ]
+        }
+    },
+    "aec": {
+        "resume": "Autodesk AEC Collection is a comprehensive suite of software tools designed for the architecture, engineering, and construction (AEC) industry. It offers integrated solutions for seamless project collaboration, advanced analysis, and enhanced visualization, empowering professionals to deliver high-quality building projects efficiently.\n",
+        "modal": {
+            "general": [
+                "Autodesk AEC Collection is a comprehensive suite of software tools specifically designed for the architecture, engineering, and construction (AEC) industry. It offers a wide range of advanced applications that empower professionals to design, visualize, simulate, and collaborate on building projects with increased efficiency and accuracy.\n",
+                "The purpose of Autodesk AEC Collection is to provide architects, engineers, contractors, and project managers with a complete set of integrated tools that cover the entire project lifecycle. From conceptual design to construction documentation and project management, the collection offers specialized software solutions to meet the diverse needs of the AEC industry.\n",
+                "One of the key advantages of Autodesk AEC Collection is its breadth of software offerings. It includes industry-leading applications such as Autodesk Revit, AutoCAD, Civil 3D, Navisworks, and more, which are specifically tailored to the unique requirements of architecture, engineering, and construction professionals. This comprehensive suite allows users to seamlessly move between different software programs, facilitating collaboration, data exchange, and interoperability across the entire project team.\n",
+                "The use cases for Autodesk AEC Collection are extensive. Architects can leverage software like Autodesk Revit to create accurate 3D building models, generate construction documents, and perform clash detection to identify and resolve design conflicts. Engineers can utilize applications like AutoCAD Civil 3D for civil infrastructure design, analysis, and documentation. Contractors can benefit from tools like Navisworks for advanced project coordination, 4D simulation, and construction sequencing. Additionally, project managers can use software like Autodesk BIM 360 to centralize project data, manage workflows, and enhance team collaboration.\n",
+                "The benefits for customers using Autodesk AEC Collection are significant. Firstly, the collection streamlines the design and construction processes, resulting in improved efficiency and reduced project timelines. With integrated tools and interoperable software, project teams can collaborate in real-time, enhancing communication, coordination, and decision-making.\n",
+                "Furthermore, Autodesk AEC Collection enables enhanced visualization and simulation capabilities. Users can create realistic 3D visualizations, conduct virtual walkthroughs, and perform simulations to validate design concepts, identify potential issues, and optimize building performance. This aids in minimizing costly errors and rework during the construction phase.\n",
+                "The collection also offers advanced analysis and optimization tools that help improve sustainability and energy efficiency in building projects. From energy analysis to structural analysis and optimization, professionals can utilize these tools to make informed decisions that minimize environmental impact and maximize resource efficiency.\n",
+                "Autodesk AEC Collection provides access to regular software updates and new releases, ensuring that customers have the latest technology and capabilities at their disposal. Additionally, Autodesk's extensive support network, including online resources, forums, and training materials, helps users maximize their productivity and proficiency with the software.\n",
+                "In summary, Autodesk AEC Collection is a comprehensive suite of software tools designed to meet the specific needs of the architecture, engineering, and construction industry. With its breadth of applications, streamlined workflows, enhanced collaboration capabilities, and advanced analysis tools, the collection empowers professionals to optimize project outcomes, improve efficiency, and deliver high-quality buildings and infrastructure projects.\n"
+            ]
+        }
+    },
+
+    "navisworks": {
+        "resume": "Autodesk Navisworks is a powerful project review software that allows construction professionals to visualize and analyze 3D models, detect clashes, and coordinate various disciplines. It facilitates collaboration and enhances communication among project teams, resulting in streamlined workflows and efficient project delivery.\n",
+        "modal": {
+            "general": "Autodesk Navisworks is a comprehensive project review software designed to enhance collaboration and coordination among construction professionals. Its primary purpose is to facilitate the visualization, analysis, and coordination of 3D models from various design disciplines, enabling users to identify clashes, detect potential issues, and ensure smooth project delivery.\n",
+            "keys": [
+                {
+                    "title": "Advantages",
+                    "key": "advantages"
+                },
+                {
+                    "title": "Use Cases",
+                    "key": "useCases"
+                },
+                {
+                    "title": "Benefits for Customers",
+                    "key": "benefits"
+                }
+            ],
+            "advantages": [
+                "Advanced Visualization: Navisworks allows users to combine 3D models from different sources, providing a holistic view of the entire project. This advanced visualization capability helps stakeholders better understand the design intent and make informed decisions.",
+                "Clash Detection: One of the most significant advantages of Navisworks is its clash detection feature. It automatically identifies clashes between various building elements, such as walls, pipes, ducts, and electrical systems. This early clash detection reduces costly errors and rework during the construction phase, saving time and resources.",
+                "Collaboration and Coordination: Navisworks serves as a collaboration hub, bringing together design and construction teams to work seamlessly on a single platform. It enables multidisciplinary coordination and fosters effective communication, minimizing misunderstandings and enhancing teamwork."
+            ],
+            "useCases": [
+                "Clash Resolution: Construction teams can use Navisworks to analyze clashes detected between different building elements. They can then collaborate to resolve these conflicts, ensuring a clash-free construction process and avoiding costly on-site clashes.",
+                "Construction Sequencing: Navisworks supports 4D simulation, allowing project teams to incorporate time-based data into the 3D model. This enables construction sequencing, visualizing the construction process over time, identifying potential bottlenecks, and optimizing construction schedules.",
+                "Model Coordination: With Navisworks, professionals can merge 3D models created using various software tools, such as Autodesk Revit, AutoCAD, and more. This comprehensive model coordination ensures a unified vision of the project and minimizes discrepancies in design."
+            ],
+            "benefits": [
+                "Enhanced Collaboration: Autodesk Navisworks fosters a collaborative environment, enabling seamless information exchange and collaboration among all project stakeholders. This collaboration streamlines decision-making processes and reduces project delays.",
+                "Improved Project Efficiency: The clash detection and resolution capabilities of Navisworks significantly reduce rework and change orders during construction. This leads to improved project efficiency, cost savings, and timely project completion.",
+                "Better Design Insight: By visualizing the 3D model in a comprehensive environment, customers gain a better understanding of the design intent, allowing for early design reviews and potential improvements before construction begins.",
+                "Minimized Risk: Identifying clashes and potential issues in the early stages of the project mitigates risks and prevents costly construction errors. This results in a smoother construction process, minimizing disruptions and unexpected challenges.",
+                "Increased Quality and Safety: Navisworks' advanced visualization and coordination features contribute to improved project quality and safety. By identifying clashes and design inconsistencies, potential safety hazards can be addressed proactively, ensuring a safer work environment."
+            ],
+            "summary": ""
+        }
+    },
+
+    "civil3d": {
+        "resume": "Autodesk Civil 3D is a powerful civil engineering software that enables efficient design, analysis, and documentation of infrastructure projects. With intelligent tools and dynamic modeling capabilities, it streamlines workflows and enhances collaboration for optimized project outcomes.",
+        "modal": {
+            "general": "Autodesk Civil 3D is a powerful software solution specifically designed for civil engineering and infrastructure projects. Its purpose is to streamline and automate the design, analysis, and documentation processes, enabling engineers and designers to efficiently create and manage complex 3D models of roads, land development, and other infrastructure projects.",
+            "keys": [
+                {
+                    "title": "Advantages",
+                    "key": "advantages"
+                },
+                {
+                    "title": "Use Cases",
+                    "key": "useCases"
+                },
+                {
+                    "title": "Benefits for Customers",
+                    "key": "benefits"
+                }
+            ],
+            "advantages": [
+                "Intelligent Design Tools: Civil 3D offers a wide range of intelligent design tools that automate repetitive tasks and accelerate the design process. From creating alignments and profiles to generating surfaces and corridors, these tools ensure accuracy, consistency, and efficiency throughout the project lifecycle.",
+                "Integrated Workflows: One of the significant advantages of Civil 3D is its integration with other Autodesk software, such as Revit and Navisworks. This integration allows for seamless data exchange and collaboration among different project disciplines, enhancing coordination and minimizing errors.",
+                "Dynamic Modeling: With Civil 3D, engineers can create dynamic 3D models that accurately represent real-world conditions. This enables better visualization, analysis, and simulation of design alternatives, facilitating informed decision-making and optimizing project outcomes."
+            ],
+            "useCases": [
+                "Road Design and Transportation Engineering: Civil 3D provides specialized tools for road design, including alignment layout, corridor modeling, and earthwork calculations. Engineers can efficiently design road networks, evaluate traffic flow, and generate accurate construction documentation.",
+                "Land Development and Grading: The software enables the design and grading of land development projects, such as residential subdivisions or commercial sites. It allows engineers to create complex grading designs, calculate earthwork quantities, and generate site plans, optimizing land utilization and reducing construction costs.",
+                "Stormwater Management: Civil 3D includes tools for stormwater management, enabling engineers to design and analyze drainage networks, detention ponds, and culverts. This helps ensure proper water management, reduce the risk of flooding, and comply with regulatory requirements."
+            ],
+            "benefits": [
+                "Improved Efficiency and Productivity: By automating manual tasks and providing advanced design capabilities, Civil 3D significantly improves engineering efficiency and productivity. Engineers can complete projects faster, reduce errors, and focus on value-added design tasks.",
+                "Enhanced Collaboration and Coordination: Civil 3D facilitates collaboration among project stakeholders, allowing for seamless data exchange and coordination between design, engineering, and construction teams. This minimizes communication gaps, reduces conflicts, and ensures project delivery on time and within budget.",
+                "Accurate Design Visualization: Civil 3D's 3D modeling capabilities enable accurate design visualization, allowing stakeholders to visualize the project in a realistic and interactive environment. This enhances communication, facilitates design reviews, and improves stakeholder engagement.",
+                "Cost and Time Savings: The automation features and intelligent design tools of Civil 3D help optimize project workflows and reduce errors. This leads to cost savings by minimizing rework, optimizing material quantities, and accelerating project delivery.",
+                "Compliance with Standards and Regulations: Civil 3D supports industry-standard design codes and regulations, ensuring compliance with local and international standards. This helps engineers and designers produce designs that meet regulatory requirements and avoid potential legal issues."
+            ],
+            "summary": ""
+        }
+    },
+
+    "civil3d1": {
         "resume": "",
         "modal": {
             "general": "",

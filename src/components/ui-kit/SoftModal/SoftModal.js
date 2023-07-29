@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useMemo } from 'react'
 import cx from 'classnames'
 import Img from '../Img'
 import types from './types'
@@ -15,7 +15,7 @@ const Modal = ({ onClose, isOpened, type }) => {
         isOpened && styles['soft-modal-wrapper_opened']
     )
 
-    const currentType = types(t)[type]
+    const currentType = useMemo(() => types(t), [])[type]
 
     const title = currentType?.title
     const Content = currentType?.content
