@@ -12,15 +12,21 @@ const theme = {
 const mockedUrls = ['/engineer-nets', '/agro-solutions']
 
 function App({ Component, pageProps }) {
-    const { locale } = useRouter()
-    let detectLocale =
-        locale || navigator.language || navigator.userLanguage || 'en'
+    const { locale, push, locales, pathname, ...rest } = useRouter()
 
-    let resultLocale
-    if (detectLocale.includes('ru')) resultLocale = 'ru'
-    if (detectLocale.includes('ua')) resultLocale = 'ua'
-    if (detectLocale.includes('en') || !resultLocale) resultLocale = 'en'
+    let resultLocale = locale.includes('UA') ? 'ua' : locale
 
+    useEffect(() => {
+        const newLocale = locales.find(locale =>
+            locale.includes(navigator.language)
+        )
+        if (
+            !locales.some(currentLocale => currentLocale === locale) &&
+            newLocale
+        ) {
+            push(pathname, {}, { locale: newLocale })
+        }
+    }, [])
     return (
         <ThemeProvider theme={theme}>
             <GlobalStyle />
