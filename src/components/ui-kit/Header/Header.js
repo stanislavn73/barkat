@@ -35,6 +35,12 @@ const LOGOS = {
     [routes.SUCCESS]: logoU,
 }
 
+const locales = {
+    en: 'en',
+    ru: 'ru',
+    ua: 'uk-UA',
+}
+
 function Header() {
     const [isMenuActive, setIsMenuActive] = useState(false)
     const [shrinked, setShrinked] = useState(false)
@@ -84,7 +90,7 @@ function Header() {
         shrinked && styles['header-wrapper_shrinked'],
         isMenuActive && styles['header-wrapper_active']
     )
-
+    console.log(router)
     return (
         <div className={headerCX}>
             <div className={styles['orange-line']} />
@@ -102,6 +108,7 @@ function Header() {
                     className={cx(styles.logo, styles['logo-ville'])}
                     src={logoVille}
                 />
+
                 <Img
                     className={styles['menu-icon']}
                     src={menu}
@@ -110,6 +117,53 @@ function Header() {
             </div>
             <div className={menuCX}>
                 <div className={styles.menu}>
+                    <div className={styles.language}>
+                        <div
+                            className={cx(
+                                styles.languageItem,
+                                router.locale === locales.en && styles.active
+                            )}
+                            onClick={() =>
+                                router.push(
+                                    router.pathname,
+                                    {},
+                                    { locale: locales.en }
+                                )
+                            }
+                        >
+                            <span>en</span>
+                        </div>
+                        <div
+                            className={cx(
+                                styles.languageItem,
+                                router.locale === locales.ru && styles.active
+                            )}
+                            onClick={() =>
+                                router.push(
+                                    router.pathname,
+                                    {},
+                                    { locale: locales.ru }
+                                )
+                            }
+                        >
+                            <span>ru</span>
+                        </div>
+                        <div
+                            className={cx(
+                                styles.languageItem,
+                                router.locale === locales.ua && styles.active
+                            )}
+                            onClick={() =>
+                                router.push(
+                                    router.pathname,
+                                    {},
+                                    { locale: locales.ua }
+                                )
+                            }
+                        >
+                            <span>ua</span>
+                        </div>
+                    </div>
                     {menuButtons.map(page => {
                         const menuItemCX = cx(styles['menu-item'], {
                             [styles['menu-item_active']]:

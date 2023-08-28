@@ -260,6 +260,61 @@
             padding-right: 40px;
             border: 2px solid $primary;
 
+            .language {
+                background-color: black;
+                position: absolute;
+                width: 30px;
+                left: -32px;
+                top: 0;
+                display: flex;
+                flex-direction: column;
+                color: $primary;
+                height: 100%;
+                outline: 2px solid $primary;
+                @media screen and (max-width: #{$tablet-m}) {
+                    left: 0px;
+                }
+
+                .active {
+                    color: white;
+                }
+
+                @media screen and (max-width: #{$mobile-l}) {
+                    top: 116px;
+                    height: 200px;
+                    width: 50px;
+                }
+            }
+
+            .languageItem {
+                position: relative;
+                height: 33%;
+                cursor: pointer;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border-bottom: 2px solid $primary;
+                &:last-child {
+                    border: none;
+                }
+                &:hover {
+                    color: white;
+                }
+                span {
+                    font-family: 'Algerian';
+                    font-size: 13px;
+                    display: block;
+                    transform: skew(47deg, 0deg);
+                    @media screen and (max-width: #{$tablet-m}) {
+                        transform: skew(0deg, 0deg);
+                    }
+                }
+            }
+
+            .languageMobile {
+                display: none;
+            }
+
             @media screen and (max-width: #{$big}) {
                 right: -370px;
             }
@@ -281,7 +336,7 @@
             }
 
             @media screen and (max-width: #{$tablet-m}) {
-                padding: 0;
+                padding: 0 0 0 30px;
                 transform: skew(0deg, 0deg);
                 right: 0px;
                 // padding-right: 0px;

@@ -12,7 +12,7 @@ const theme = {
 const mockedUrls = ['/engineer-nets', '/agro-solutions']
 
 function App({ Component, pageProps }) {
-    const { locale, push, locales, pathname, ...rest } = useRouter()
+    const { locale, push, locales, pathname } = useRouter()
 
     let resultLocale = locale.includes('UA') ? 'ua' : locale
 
