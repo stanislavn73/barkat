@@ -288,4 +288,8 @@ export default softTranslation => ({
         title: 'Google Cloud Compute Engine',
         content: GoogleCloud(softTranslation.computeEngine.modal),
     },
+    bard: {
+        title: 'Artificial Intelligence (AI) Google Bard',
+        content: GoogleCloud(softTranslation.bard.modal),
+    },
 })

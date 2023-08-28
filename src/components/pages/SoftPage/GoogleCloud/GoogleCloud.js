@@ -80,6 +80,12 @@ export const GoogleCloud = () => {
             type: 'computeEngine',
             text: t.computeEngine.resume,
         },
+        {
+            id: 12,
+            title: 'Artificial Intelligence (AI) Google Bard',
+            type: 'bard',
+            text: t.bard.resume,
+        },
     ]
 
     return (
