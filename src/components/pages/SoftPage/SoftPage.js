@@ -29,16 +29,6 @@ const SoftPage = () => {
             comp: <GoogleCloud />,
         },
         {
-            id: 'Autodesk',
-            title: 'Autodesk',
-            comp: <Autodesk />,
-        },
-        {
-            id: 'Bentley',
-            title: 'Bentley',
-            comp: <Bentley />,
-        },
-        {
             id: 'Dassault-systemes',
             title: 'Dassault Systèmes',
             comp: <DassaultSystemes />,
@@ -49,14 +39,24 @@ const SoftPage = () => {
             comp: <Hexagon />,
         },
         {
-            id: 'SketchUp',
-            title: 'Sketchup',
-            comp: <SketchUp />,
-        },
-        {
             id: 'TeamViewerFrontline',
             title: 'TeamViewer Frontline',
             comp: <TeamViewer />,
+        },
+        {
+            id: 'Bentley',
+            title: 'Bentley',
+            comp: <Bentley />,
+        },
+        {
+            id: 'Autodesk',
+            title: 'Autodesk',
+            comp: <Autodesk />,
+        },
+        {
+            id: 'SketchUp',
+            title: 'Sketchup',
+            comp: <SketchUp />,
         },
     ]
 
