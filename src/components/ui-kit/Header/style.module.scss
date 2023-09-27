@@ -112,7 +112,7 @@
         }
 
         .logo-ville {
-            margin-top: -140px;
+            margin-top: -103px;
 
             @media screen and (max-width: #{$laptop-s}) {
                 display: none;
@@ -201,31 +201,33 @@
     }
 
     .menu-wrapper {
-        overflow: hidden;
-
+        overflow: visible;
+        padding: 0;
         position: relative;
         align-self: flex-end;
-        padding-left: 30px;
         transition: 0.2s;
-        // top: 20px;
-        width: 1300px;
+        width: 920px;
         margin-top: -52px;
 
         display: flex;
         justify-content: flex-end;
 
+        @media screen and (min-width: #{$big}) {
+            width: 1150px;
+        }
+
         @media screen and (max-width: #{$laptop-b}) {
-            width: 1015px;
+            width: 880px;
         }
 
         @media screen and (max-width: #{$laptop-m}) {
             margin-top: -30px;
-            width: 800px;
+            width: 650px;
         }
 
         @media screen and (max-width: #{$laptop-s}) {
             margin-top: -65px;
-            width: 760px;
+            width: 600px;
         }
 
         @media screen and (max-width: #{$tablet-m}) {
@@ -233,7 +235,6 @@
             right: 0px;
             width: 100%;
             justify-content: center;
-            padding-left: 0px;
         }
 
         @media screen and (max-width: #{$mobile-l}) {
@@ -248,31 +249,31 @@
         .menu {
             height: 90px;
             display: flex;
-            // align-self: flex-end;
-            // justify-content: space-between;
             background: black;
-            padding-left: 60px;
             position: relative;
             width: 100%;
-            transform: skew(-47deg, 0deg);
             transition: 0.2s;
-            right: -90px;
-            padding-right: 40px;
+            right: 0;
             border: 2px solid $primary;
+            border-left: none;
 
             .language {
                 background-color: black;
                 position: absolute;
                 width: 30px;
-                left: -32px;
+                left: -48px;
                 top: 0;
                 display: flex;
                 flex-direction: column;
                 color: $primary;
                 height: 100%;
                 outline: 2px solid $primary;
+                transform: skew(-47deg, 0deg);
+
                 @media screen and (max-width: #{$tablet-m}) {
-                    left: 0px;
+                    position: relative;
+                    left: unset;
+                    transform: none;
                 }
 
                 .active {
@@ -280,6 +281,7 @@
                 }
 
                 @media screen and (max-width: #{$mobile-l}) {
+                    position: absolute;
                     top: 116px;
                     height: 200px;
                     width: 50px;
@@ -311,36 +313,42 @@
                 }
             }
 
+            .triangle {
+                position: absolute;
+                bottom: -2px;
+                left: -64px;
+                width: 70px;
+                height: 100%;
+                background-image: linear-gradient(
+                    to bottom right,
+                    transparent 50%,
+                    black 0
+                );
+                background-size: 100% 100%;
+                background-repeat: no-repeat;
+                background-position: left, right;
+                border-bottom: 2px solid $primary;
+                @media screen and (max-width: #{$tablet-m}) {
+                    display: none;
+                }
+            }
             .languageMobile {
                 display: none;
             }
 
-            @media screen and (max-width: #{$big}) {
-                right: -370px;
-            }
-
             @media screen and (max-width: #{$laptop-b}) {
                 height: 90px;
-                right: -150px;
-                padding-left: 20px;
             }
 
             @media screen and (max-width: #{$laptop-m}) {
-                right: -130px;
                 height: 70px;
             }
 
             @media screen and (max-width: #{$laptop-s}) {
                 height: 70px;
-                right: -100px;
             }
 
             @media screen and (max-width: #{$tablet-m}) {
-                padding: 0 0 0 30px;
-                transform: skew(0deg, 0deg);
-                right: 0px;
-                // padding-right: 0px;
-                // justify-content: center;
                 justify-content: space-around;
                 height: 50px;
                 margin-top: 20px;
@@ -360,9 +368,9 @@
             }
 
             .menu-item {
+                padding: 0;
                 text-decoration: none;
                 height: 100%;
-                padding: 0 40px;
                 width: 30%;
                 display: flex;
                 align-items: center;
@@ -370,32 +378,33 @@
                 text-align: center;
                 color: $primary;
                 transition: 0.2s;
-                transform: skew(47deg, 0deg);
                 font-size: 20px;
                 white-space: pre;
+                justify-content: center;
+
+                &:first-child {
+                    width: 120px;
+                }
+
+                &:last-child {
+                    width: 20%;
+                }
+
+                &:nth-child(5) {
+                    width: 40%;
+                }
 
                 &:not(:last-child) {
                     border-right: 2px solid $primary;
                 }
 
-                // &:last-child {
-                //   padding-right: 60px;
-                // }
-
                 @media screen and (max-width: #{$big}) {
                     font-size: 16px;
-                    width: 25%;
-
-                    &:first-child {
-                        width: 10%;
-                        padding: 0;
-                    }
                 }
 
                 @media screen and (max-width: #{$laptop-b}) {
                     font-size: 16px;
                     width: 30%;
-                    padding: 0 25px;
 
                     &:first-child {
                         width: 16%;
@@ -413,18 +422,14 @@
                 }
 
                 @media screen and (max-width: #{$tablet-m}) {
-                    transform: skew(0deg, 0deg);
                     font-size: 10px;
                     align-items: center;
-                    padding: 0 5% 0 5%;
 
                     &:first-child {
                         width: 20%;
-                        padding: 0 3%;
                     }
                     &:last-child {
                         width: 20%;
-                        padding: 0 6%;
                     }
                 }
 
@@ -432,7 +437,7 @@
                     font-size: 12px;
                     margin-bottom: 0px;
                     padding: 0 37%;
-                    width: 100%;
+                    width: 100% !important;
                     height: 50px;
                     &:not(:last-child) {
                         border: none;

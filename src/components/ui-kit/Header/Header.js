@@ -117,6 +117,7 @@ function Header() {
             </div>
             <div className={menuCX}>
                 <div className={styles.menu}>
+                    <div className={styles.triangle}></div>
                     <div className={styles.language}>
                         <div
                             className={cx(
