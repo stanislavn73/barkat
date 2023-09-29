@@ -58,7 +58,10 @@ const Autodesk = () => {
                 </div>
 
                 {tSoft.autodesk.resume.map(item => (
-                    <PlainText className={styles['soft-plain-text']}>
+                    <PlainText
+                        key={`autodesk ${item}`}
+                        className={styles['soft-plain-text']}
+                    >
                         {item}
                     </PlainText>
                 ))}

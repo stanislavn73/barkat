@@ -1,4 +1,4 @@
-import { useRef, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import cx from 'classnames'
 import Input from '../Input'
 import Img from '../Img'
@@ -30,6 +30,16 @@ const Modal = props => {
     } = state
 
     const { onClose, isOpened } = props
+
+    useEffect(() => {
+        const body = document.getElementsByTagName('body')[0]
+        if (isOpened) {
+            body.style.overflow = 'hidden'
+        } else {
+            body.style.overflow = 'auto'
+        }
+    }, [isOpened])
+
     const buttonRef = useRef()
 
     const modalCX = cx(

@@ -59,7 +59,10 @@ const Bentley = () => {
                     <SocialMedia page='Bentley' />
                 </div>
                 {tSoft.bentley.resume.map(item => (
-                    <PlainText className={styles['soft-plain-text']}>
+                    <PlainText
+                        key={`soft-plain-text ${item}`}
+                        className={styles['soft-plain-text']}
+                    >
                         {item}
                     </PlainText>
                 ))}

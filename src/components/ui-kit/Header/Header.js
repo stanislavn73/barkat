@@ -90,7 +90,7 @@ function Header() {
         shrinked && styles['header-wrapper_shrinked'],
         isMenuActive && styles['header-wrapper_active']
     )
-    console.log(router)
+
     return (
         <div className={headerCX}>
             <div className={styles['orange-line']} />

@@ -1,4 +1,5 @@
 export const GoogleCloud = modal => () => {
+    console.log(modal)
     return (
         <>
             <p>{modal.general}</p>

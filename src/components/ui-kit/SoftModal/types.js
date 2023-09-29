@@ -292,4 +292,20 @@ export default softTranslation => ({
         title: 'Artificial Intelligence (AI) Google Bard',
         content: GoogleCloud(softTranslation.bard.modal),
     },
+    workspaceStarter: {
+        title: 'Google Workspace Business Starter',
+        content: GoogleCloud(softTranslation.workspaceStarter.modal),
+    },
+    workspaceStandard: {
+        title: 'Google Workspace Business Standard',
+        content: GoogleCloud(softTranslation.workspaceStandard.modal),
+    },
+    workspaceBusinessPlus: {
+        title: 'Google Workspace Business Plus',
+        content: GoogleCloud(softTranslation.workspaceBusinessPlus.modal),
+    },
+    workspaceEnterprise: {
+        title: 'Google Workspace Enterprise',
+        content: GoogleCloud(softTranslation.workspaceEnterprise.modal),
+    },
 })

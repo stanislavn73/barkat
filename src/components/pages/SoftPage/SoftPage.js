@@ -13,6 +13,7 @@ import AllPlan from './AllPlan'
 import TeamViewer from './TeamViewer'
 import { useTranslation } from '../../layouts/Layout'
 import { GoogleCloud } from './GoogleCloud/GoogleCloud'
+import { GoogleWorkspace } from './GoogleWorkspace/GoogleWorkspace'
 
 const SoftPage = () => {
     const { t } = useTranslation('soft')
@@ -27,6 +28,11 @@ const SoftPage = () => {
             id: 'googleCloud',
             title: 'Google Cloud',
             comp: <GoogleCloud />,
+        },
+        {
+            id: 'googleWorkspace',
+            title: 'Google Workspace',
+            comp: <GoogleWorkspace />,
         },
         {
             id: 'Dassault-systemes',

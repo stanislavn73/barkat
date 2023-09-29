@@ -41,7 +41,7 @@ export const GlobalStyle = createGlobalStyle`
       
   }
 
-  h1 {
+  h1 { 
     font-size: 94px;
     line-height: 100px;
     font-weight: 500;
