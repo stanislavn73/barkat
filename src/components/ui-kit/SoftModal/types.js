@@ -65,47 +65,47 @@ export default softTranslation => ({
     },
     CIVIL_3D: {
         title: 'Autodesk Civil 3D',
-        content: GoogleCloud(softTranslation.navisworks.modal),
+        content: GoogleCloud(softTranslation.civil3d.modal),
     },
     '3DExperience': {
         title: '3DExperience',
-        content: ThreeDExperience,
+        content: GoogleCloud(softTranslation['3DExperience'].modal),
     },
-    DraftSide: {
-        title: 'DraftSide',
-        content: DraftSide,
+    draftSight: {
+        title: 'DraftSight',
+        content: GoogleCloud(softTranslation.draftSight.modal),
     },
-    Catia: {
+    catia: {
         title: 'Catia',
-        content: Catia,
+        content: GoogleCloud(softTranslation.catia.modal),
     },
-    Enovia: {
+    enovia: {
         title: 'Enovia',
-        content: Enovia,
+        content: GoogleCloud(softTranslation.enovia.modal),
     },
-    Delmia: {
+    delmia: {
         title: 'Delmia',
-        content: Delmia,
+        content: GoogleCloud(softTranslation.delmia.modal),
     },
-    Simulia: {
+    simulia: {
         title: 'Simulia',
-        content: Simulia,
+        content: GoogleCloud(softTranslation.simulia.modal),
     },
-    DassaultOil: {
-        title: 'Dassault: Нефтегазовая промышленность',
-        content: DassaultOil,
+    dassaultOil: {
+        title: softTranslation.dassaultOil.title,
+        content: GoogleCloud(softTranslation.dassaultOil.modal),
     },
-    DassaultBuilding: {
-        title: 'Dassault: Строительство',
-        content: DassaultBuilding,
+    dassaultBuilding: {
+        title: softTranslation.dassaultBuilding.title,
+        content: GoogleCloud(softTranslation.dassaultBuilding.modal),
     },
-    DassaultPlanning: {
-        title: 'Dassault: Планирование производства',
-        content: DassaultPlanning,
+    dassaultPlanning: {
+        title: softTranslation.dassaultPlanning.title,
+        content: GoogleCloud(softTranslation.dassaultPlanning.modal),
     },
-    DassaultClone: {
-        title: 'Dassault: Цифровой двойник производства',
-        content: DassaultClone,
+    dassaultClone: {
+        title: softTranslation.dassaultClone.title,
+        content: GoogleCloud(softTranslation.dassaultClone.modal),
     },
     GeoMedia: {
         title: 'GeoMedia',

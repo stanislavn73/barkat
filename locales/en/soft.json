@@ -1119,5 +1119,424 @@
             ],
             "summary": "In conclusion, Google Workspace Enterprise is a comprehensive productivity and collaboration solution that empowers large organizations with advanced features, enhanced security, customizable workflows, and seamless communication. With its robust set of productivity tools, advanced communication features, advanced security controls, extensive collaboration capabilities, and cloud storage capabilities, Google Workspace Enterprise is an ideal choice for organizations looking to elevate productivity, strengthen security measures, customize workflows, and achieve seamless collaboration at enterprise scale."
         }
+    },
+    "dassaultSystemes": "Dassault Systèmes is a developer of software for 3D design and product lifecycle management (PLM), unified under the 3DEXPERIENCE platform. 3DEXPERIENCE is a digital environment for modeling objects of the surrounding world and related sensations, enabling efficient manufacturing processes and visualizing the product's lifecycle from its creation to disposal in virtual reality. Headquartered in Velizy, France (a suburb of Paris), Dassault Systèmes is one of the world's leaders in the PLM and CAD markets, with 64 development centers, a presence in 140 countries, and support for over 250,000 corporate clients across 11 industries.",
+    "3DExperience": {
+        "about": "3DEXPERIENCE is an innovative product that offers a comprehensive and cutting-edge digital platform for 3D design, simulation, and collaboration. It enables users to create, experience, and manage the entire product lifecycle, revolutionizing the way businesses innovate and develop products.",
+        "modal": {
+            "general": "3DEXPERIENCE is a powerful software platform designed to revolutionize the product development process. It provides a comprehensive suite of tools for 3D design, simulation, and collaboration, enabling businesses to create innovative products and efficiently manage the entire product lifecycle.",
+            "keys": [
+                {
+                    "title": "Advantages",
+                    "key": "advantages"
+                },
+                {
+                    "title": "Use Cases",
+                    "key": "useCases"
+                },
+                {
+                    "title": "Benefits for Customers",
+                    "key": "benefits"
+                }
+            ],
+            "advantages": [
+                "The advantages of 3DEXPERIENCE are multifaceted. Firstly, it offers a unified platform that brings together various disciplines, allowing designers, engineers, and other stakeholders to collaborate seamlessly. This enhances communication, eliminates silos, and accelerates decision-making processes.",
+                "Secondly, 3DEXPERIENCE provides advanced simulation capabilities that enable users to perform realistic virtual tests on their designs, saving time and resources during the physical prototyping phase. This feature significantly reduces the risk of design flaws and ensures more robust, reliable products.",
+                "Thirdly, the platform enables real-time access to data, fostering concurrent engineering practices. Design modifications, analysis results, and project updates can be instantly shared and reviewed, promoting agile development and continuous improvement.\n"
+            ],
+            "useCases": [
+                "3DEXPERIENCE finds applications across a wide range of industries and sectors. In automotive engineering, it aids in designing safer and more fuel-efficient vehicles through sophisticated aerodynamic and structural simulations. Aerospace companies leverage the platform to optimize aircraft designs and enhance overall performance. For consumer goods manufacturers, 3DEXPERIENCE streamlines the development of innovative products, from concept to market.",
+                "Architecture and construction professionals also benefit from 3DEXPERIENCE by efficiently designing and visualizing complex structures, ensuring better collaboration among architects, engineers, and contractors. In healthcare, the platform enables the creation of medical devices with enhanced functionality and ergonomic design. Moreover, 3DEXPERIENCE is valuable in the energy sector for the optimization of power plant designs and renewable energy projects.\n"
+            ],
+            "benefits": [
+                "Customers adopting 3DEXPERIENCE gain a significant competitive advantage. The platform's integration of design, simulation, and collaboration tools streamlines the development process, resulting in reduced time-to-market. The ability to virtually test and validate product designs reduces costs associated with physical prototyping, saving resources and accelerating innovation.",
+                "Collaboration is enhanced through a unified digital workspace, enabling multidisciplinary teams to work in harmony and make well-informed decisions. By facilitating concurrent engineering practices, 3DEXPERIENCE empowers businesses to adapt swiftly to market demands and customer feedback.",
+                "Furthermore, the platform encourages sustainable product development by optimizing materials and resources through simulation-driven design. This not only benefits the environment but also contributes to cost savings and improved product quality.\n"
+            ],
+            "summary": "In conclusion, 3DEXPERIENCE by Dassault Systèmes is an indispensable tool for organizations aiming to remain at the forefront of innovation. It fosters collaboration, streamlines product development, and empowers businesses to create cutting-edge, sustainable products that meet the demands of the modern market."
+        }
+    },
+
+    "draftSight": {
+        "about": "DraftSight by Dassault Systèmes is a powerful 2D computer-aided design (CAD) software designed for efficient drafting, drawing, and documentation tasks. With an intuitive interface and a comprehensive set of tools, DraftSight empowers architects, engineers, designers, and professionals across various industries to create precise and detailed designs.",
+        "modal": {
+            "general": "DraftSight by Dassault Systèmes is a powerful and feature-rich 2D computer-aided design (CAD) software. It is designed to facilitate efficient and precise drafting, drawing, and documentation tasks, making it an essential tool for architects, engineers, designers, and professionals across various industries.",
+            "keys": [
+                {
+                    "title": "Advantages",
+                    "key": "advantages"
+                },
+                {
+                    "title": "Use Cases",
+                    "key": "useCases"
+                },
+                {
+                    "title": "Benefits for Customers",
+                    "key": "benefits"
+                }
+            ],
+            "advantages": [
+                "DraftSight offers several advantages that set it apart from other 2D CAD software solutions. Firstly, its intuitive user interface and comprehensive set of drawing and editing tools allow users to create and modify designs with ease. The software supports industry-standard file formats, ensuring seamless collaboration with colleagues and clients.",
+                "Secondly, DraftSight is highly customizable, allowing users to tailor the software to their specific needs. It provides support for macros and APIs, enabling the automation of repetitive tasks and the development of custom features.",
+                "Furthermore, DraftSight boasts compatibility with both Windows and macOS operating systems, offering flexibility and accessibility to users on different platforms. Its low system requirements ensure smooth performance even on older hardware, making it accessible to a wide range of users.\n"
+            ],
+            "useCases": [
+                "DraftSight finds applications in various industries and professional domains. Architects use the software to create detailed and accurate architectural drawings, including floor plans, elevations, and site plans. Engineers rely on DraftSight for precise technical drawings, schematics, and mechanical designs.",
+                "In the manufacturing sector, DraftSight aids in creating detailed mechanical parts and assemblies, ensuring precision and adherence to design specifications. Electrical engineers utilize the software for electrical circuit diagrams and wiring layouts.",
+                "Additionally, DraftSight is widely used in the construction industry for creating construction documents and plans. It is also a valuable tool for product designers, interior designers, and artists for producing detailed sketches and illustrations.\n"
+            ],
+            "benefits": [
+                "For customers, DraftSight offers numerous benefits that enhance productivity and streamline design workflows. Its affordability compared to other CAD software makes it a cost-effective solution for professionals, small businesses, and educational institutions.",
+                "The software's user-friendly interface and comprehensive toolset enable faster learning curves, allowing users to quickly get up to speed and start working on projects. Its compatibility with industry-standard file formats ensures seamless collaboration and easy exchange of design files with clients and colleagues.",
+                "DraftSight's versatility and customization options empower users to adapt the software to their specific needs, increasing efficiency and reducing the time spent on repetitive tasks. Automation capabilities through macros and APIs further boost productivity, enabling users to focus on creative and critical aspects of their work.\n"
+            ],
+            "summary": "In conclusion, DraftSight is a reliable and powerful 2D CAD software that caters to the needs of professionals in diverse industries. Its intuitive interface, comprehensive features, and compatibility make it a valuable tool for precise drafting and design tasks, delivering benefits that save time, enhance collaboration, and drive efficiency."
+        }
+    },
+
+    "catia": {
+        "about": "CATIA by Dassault Systèmes is a leading 3D computer-aided design (CAD) software widely used in various industries for product design, engineering, and simulation. It offers a comprehensive suite of tools and capabilities that empower engineers and designers to create innovative and high-quality products.",
+        "modal": {
+            "general": "CATIA is a powerful 3D computer-aided design (CAD) software that serves as a comprehensive platform for product design, engineering, and simulation. It is widely used in industries such as aerospace, automotive, manufacturing, and consumer goods to create innovative and high-quality products.",
+            "keys": [
+                {
+                    "title": "Advantages",
+                    "key": "advantages"
+                },
+                {
+                    "title": "Use Cases",
+                    "key": "useCases"
+                },
+                {
+                    "title": "Benefits for Customers",
+                    "key": "benefits"
+                }
+            ],
+            "advantages": [
+                "CATIA offers several advantages that make it a leading choice for product design and development. Firstly, its robust and intuitive 3D modeling capabilities allow engineers and designers to create complex and detailed designs with precision. The software provides a wide range of tools for sketching, surface modeling, and assembly, enabling the creation of sophisticated product assemblies.",
+                "Secondly, CATIA's integrated simulation and analysis features facilitate virtual testing, validation, and optimization of product designs. This not only reduces the need for physical prototypes but also accelerates the design iteration process, leading to faster time-to-market.",
+                "Another advantage of CATIA is its collaborative capabilities. The software allows teams to work in a collaborative environment, enabling seamless communication and concurrent engineering. This fosters better teamwork, faster decision-making, and improved overall project efficiency.",
+                "Furthermore, CATIA's compatibility with other Dassault Systèmes solutions, such as SIMULIA for advanced simulation and DELMIA for manufacturing planning, offers a comprehensive end-to-end product development ecosystem.\n"
+            ],
+            "useCases": [
+                "CATIA finds applications across various industries and use cases. In the aerospace industry, it is used for aircraft design, structural analysis, and aerodynamic simulations. Automotive companies leverage CATIA for designing vehicles, chassis, and powertrain systems.",
+                "Manufacturing companies utilize CATIA for tooling and fixture design, as well as process planning and optimization. In the consumer goods industry, CATIA is employed for designing consumer electronics, household appliances, and packaging.\n"
+            ],
+            "benefits": [
+                "For customers, CATIA offers a multitude of benefits that drive innovation and efficiency in product development. Its powerful modeling and simulation capabilities enable engineers to visualize and validate product designs before physical prototyping, leading to cost savings and reduced time-to-market.",
+                "The collaboration features of CATIA improve cross-functional teamwork, enabling seamless communication between design, engineering, and manufacturing teams. This fosters better decision-making and enhances overall product quality.",
+                "CATIA's integration with other Dassault Systèmes solutions provides customers with a holistic product development ecosystem, streamlining workflows and ensuring data integrity throughout the entire product lifecycle.",
+                "Moreover, CATIA's user-friendly interface and extensive training resources make it accessible to both experienced designers and newcomers to 3D modeling, enhancing productivity and minimizing learning curves.\n"
+            ],
+            "summary": "In conclusion, CATIA is a versatile and powerful CAD software that empowers businesses to innovate and deliver high-quality products efficiently. Its robust features, collaborative capabilities, and comprehensive ecosystem make it a preferred choice for industries seeking to stay at the forefront of product development and engineering."
+        }
+    },
+
+    "enovia": {
+        "about": "ENOVIA by Dassault Systèmes is a collaborative product lifecycle management (PLM) software that serves as a central platform for managing product data, processes, and collaboration across various teams and departments. It enables organizations to streamline product development, improve decision-making, and enhance communication throughout the entire product lifecycle.",
+        "modal": {
+            "general": "ENOVIA by Dassault Systèmes is a collaborative product lifecycle management (PLM) software that serves as a central platform for managing product data, processes, and collaboration across various teams and departments. It enables organizations to streamline product development, improve decision-making, and enhance communication throughout the entire product lifecycle.",
+            "keys": [
+                {
+                    "title": "Advantages",
+                    "key": "advantages"
+                },
+                {
+                    "title": "Use Cases",
+                    "key": "useCases"
+                },
+                {
+                    "title": "Benefits for Customers",
+                    "key": "benefits"
+                }
+            ],
+            "advantages": [
+                "ENOVIA offers several advantages that make it a valuable PLM solution for businesses. Firstly, it provides a unified and centralized database for storing all product-related data, including CAD files, documents, and bills of materials (BOM). This ensures data consistency, eliminates duplication, and enhances data security.",
+                "Secondly, ENOVIA's collaborative features enable cross-functional teams to work together seamlessly, regardless of their geographical locations. It facilitates concurrent engineering, allowing multiple teams to collaborate on design, engineering, and manufacturing tasks in real-time, which accelerates the overall product development process.",
+                "Furthermore, ENOVIA supports comprehensive change management capabilities, enabling organizations to efficiently manage product revisions, approvals, and updates. This results in improved version control and reduces the risk of errors during product development.",
+                "ENOVIA also offers sophisticated workflow management, allowing businesses to automate and optimize their product development processes. This streamlines the flow of information and tasks, reduces manual interventions, and increases process efficiency.\n"
+            ],
+            "useCases": [
+                "ENOVIA finds applications across various industries and use cases. In aerospace and defense, it facilitates complex product configurations and manages compliance with industry regulations. In automotive manufacturing, ENOVIA supports efficient collaboration between design, engineering, and supply chain teams to optimize the production process.",
+                "In consumer goods, it helps manage the development of new products and tracks changes to ensure seamless integration with manufacturing and distribution processes. In the life sciences sector, ENOVIA aids in managing product quality, regulatory compliance, and the documentation required for product approval.\n"
+            ],
+            "benefits": [
+                "For customers, ENOVIA offers numerous benefits that drive efficiency, innovation, and cost savings in product development. It provides a holistic view of product data, fostering better decision-making and allowing organizations to bring high-quality products to market faster.",
+                "The collaborative nature of ENOVIA enables global teams to work together effectively, breaking down communication barriers and promoting a culture of innovation. This results in reduced time-to-market and improved product quality.",
+                "ENOVIA's change management capabilities ensure that all stakeholders are informed of product changes promptly, avoiding delays and costly rework. This leads to increased agility in responding to market demands and changes in customer requirements.",
+                "The workflow management capabilities of ENOVIA optimize processes, leading to reduced lead times, improved resource utilization, and increased productivity. Additionally, by centralizing data and providing access control, ENOVIA enhances data security and intellectual property protection.\n"
+            ],
+            "summary": "In conclusion, ENOVIA is a comprehensive PLM software that empowers organizations to collaborate efficiently, optimize processes, and bring innovative products to market rapidly. Its advantages, use cases, and benefits make it an essential solution for businesses looking to stay competitive in today's fast-paced and dynamic market."
+        }
+    },
+
+    "delmia": {
+        "about": "DELMIA by Dassault Systèmes is a powerful digital manufacturing software that enables businesses to model, simulate, and optimize production processes. It helps companies improve manufacturing efficiency, reduce costs, and enhance overall productivity.",
+        "modal": {
+            "general": "DELMIA, developed by Dassault Systèmes, is a comprehensive digital manufacturing software designed to optimize production processes, improve manufacturing efficiency, and enhance overall productivity. It enables businesses to simulate and model complex manufacturing scenarios, allowing them to make informed decisions and achieve operational excellence.",
+            "keys": [
+                {
+                    "title": "Advantages",
+                    "key": "advantages"
+                },
+                {
+                    "title": "Use Cases",
+                    "key": "useCases"
+                },
+                {
+                    "title": "Benefits for Customers",
+                    "key": "benefits"
+                }
+            ],
+            "advantages": [
+                "DELMIA offers several key advantages that make it an essential tool for manufacturers. Firstly, it enables companies to create accurate and detailed 3D simulations of their production environments, helping them visualize and analyze manufacturing processes. This allows manufacturers to identify potential bottlenecks, optimize resource utilization, and implement improvements without disrupting actual production.",
+                "Secondly, DELMIA provides comprehensive production planning capabilities, allowing businesses to create and manage detailed production schedules. Manufacturers can simulate production scenarios, assess the impact of changes, and adjust schedules accordingly to meet customer demands and market fluctuations.",
+                "Moreover, DELMIA's powerful optimization algorithms help businesses minimize costs and improve production efficiency. By optimizing the utilization of resources, such as machines and personnel, manufacturers can streamline production workflows and reduce waste, ultimately resulting in higher profitability.\n"
+            ],
+            "useCases": [
+                "DELMIA finds applications in various industries and manufacturing scenarios. In automotive manufacturing, it assists in optimizing assembly lines, analyzing manufacturing processes, and designing ergonomic workstations for assembly workers. In aerospace and defense, DELMIA helps in simulating and validating complex manufacturing processes for aircraft and other sophisticated systems.",
+                "In the consumer goods industry, DELMIA aids in designing and optimizing production lines for fast-moving consumer goods. It enables manufacturers to plan and execute the production of food, beverages, and household items efficiently. Additionally, DELMIA is also used in electronics manufacturing to optimize assembly processes, reduce production cycle times, and ensure quality control.\n"
+            ],
+            "benefits": [
+                "DELMIA offers significant benefits to its customers, contributing to improved manufacturing operations and increased competitiveness. By leveraging digital simulations, manufacturers can reduce the time and cost associated with physical prototypes, making it easier to validate design concepts and quickly adapt to market demands.",
+                "DELMIA's production planning capabilities help manufacturers achieve optimal resource allocation, leading to improved production scheduling and reduced lead times. This, in turn, enables companies to deliver products to customers faster and respond more effectively to changes in demand.",
+                "The software's visualization and analysis tools empower manufacturers to identify inefficiencies in their production processes and implement continuous improvement strategies. With real-time visibility into production operations, businesses can make data-driven decisions, optimize performance, and increase overall productivity.",
+                "DELMIA's ability to simulate and analyze manufacturing scenarios also helps manufacturers ensure a safe and ergonomic work environment. By designing and validating assembly lines and workstations virtually, businesses can minimize the risk of workplace injuries, enhance employee satisfaction, and comply with safety regulations.\n"
+            ],
+            "summary": "In conclusion, DELMIA is a powerful digital manufacturing software that offers numerous advantages, use cases, and benefits to businesses across various industries. Its ability to optimize production processes, enhance planning, and improve resource utilization makes it an indispensable tool for manufacturers seeking to streamline operations, reduce costs, and stay competitive in today's dynamic market."
+        }
+    },
+
+    "simulia": {
+        "about": "SIMULIA, developed by Dassault Systèmes, is a powerful simulation software suite that enables engineers and designers to virtually test and validate the performance of their products and materials. It empowers businesses to optimize product designs, reduce physical prototypes, and accelerate time-to-market, leading to improved product quality and cost savings.",
+        "modal": {
+            "general": "SIMULIA, developed by Dassault Systèmes, is a powerful simulation software suite that enables engineers and designers to virtually test and validate the performance of their products and materials. It allows businesses to optimize product designs, reduce physical prototypes, and accelerate time-to-market, leading to improved product quality and cost savings.",
+            "keys": [
+                {
+                    "title": "Advantages",
+                    "key": "advantages"
+                },
+                {
+                    "title": "Use Cases",
+                    "key": "useCases"
+                },
+                {
+                    "title": "Benefits for Customers",
+                    "key": "benefits"
+                }
+            ],
+            "advantages": [
+                "SIMULIA offers several key advantages that make it an essential tool for product development and engineering. Firstly, it enables realistic and accurate simulations of product behavior under various real-world conditions, such as mechanical stress, thermal effects, and fluid flow. This allows engineers to identify potential design flaws and make informed decisions to improve product performance.",
+                "Secondly, SIMULIA's integration with other Dassault Systèmes software, such as CATIA, allows for seamless transfer of design data between different stages of the product development process. This streamlines collaboration among teams, reduces data translation errors, and ensures a smooth product development workflow.",
+                "Moreover, SIMULIA's high-performance computing capabilities enable complex simulations to be performed efficiently, even for large and sophisticated models. This allows engineers to explore multiple design iterations and scenarios rapidly, leading to faster product optimization and innovation.\n"
+            ],
+            "useCases": [
+                "SIMULIA finds applications in various industries and engineering disciplines. In the automotive industry, it helps in simulating crash tests, evaluating vehicle performance under different driving conditions, and optimizing structural designs for weight reduction and safety.",
+                "In the aerospace sector, SIMULIA is used to simulate the behavior of aircraft components under extreme loads, such as during takeoff and landing. It also assists in aerodynamic optimization, structural analysis, and fatigue life prediction of aircraft structures.",
+                "In the consumer goods industry, SIMULIA is employed to analyze the performance of products like smartphones, laptops, and household appliances under real-world usage conditions. This helps manufacturers improve product reliability and customer satisfaction.\n"
+            ],
+            "benefits": [
+                "SIMULIA offers significant benefits to its customers, contributing to better product design, reduced development costs, and faster time-to-market. By simulating product behavior in virtual environments, engineers can identify potential design issues early in the development process, reducing the need for physical prototypes and saving both time and resources.",
+                "The software's simulation capabilities also allow for a deeper understanding of product performance, leading to improved product quality and reliability. This, in turn, helps companies build customer trust and loyalty, leading to increased sales and market share.",
+                "Additionally, SIMULIA's ability to perform realistic simulations allows companies to explore innovative design concepts and optimize product performance. By rapidly iterating and evaluating design alternatives, businesses can bring new and improved products to market faster, gaining a competitive advantage.",
+                "SIMULIA's integration with other Dassault Systèmes software enhances collaboration among multidisciplinary teams, ensuring smooth data exchange and efficient decision-making. This streamlines the product development process and reduces the risk of errors caused by data translation.\n"
+            ],
+            "summary": "In conclusion, SIMULIA is a comprehensive simulation software that empowers engineers and designers to validate and optimize product designs, leading to better product performance, reduced development costs, and faster time-to-market. Its advanced simulation capabilities, seamless integration, and efficiency make it an indispensable tool for businesses seeking to innovate and stay competitive in the dynamic world of product development and engineering."
+        }
+    },
+
+    "dassaultOil": {
+        "about": "Unified Reservoir is an advanced reservoir simulation software that empowers the oil and gas industry to optimize reservoir performance, improve recovery rates, and enhance decision-making. It enables engineers and geoscientists to analyze and model complex reservoir behavior, leading to more efficient and profitable operations.",
+        "title": "Oil and gas industry (Unified Reservoir)",
+        "modal": {
+            "general": "Dassault Systèmes Unified Reservoir is an advanced reservoir simulation software designed to support the oil and gas industry in optimizing reservoir performance and increasing hydrocarbon recovery. It provides engineers and geoscientists with a comprehensive toolset to model and analyze complex reservoir behavior, enabling them to make data-driven decisions and improve reservoir management strategies.",
+            "keys": [
+                {
+                    "title": "Advantages",
+                    "key": "advantages"
+                },
+                {
+                    "title": "Use Cases",
+                    "key": "useCases"
+                },
+                {
+                    "title": "Benefits for Customers",
+                    "key": "benefits"
+                }
+            ],
+            "advantages": [
+                "The software offers several key advantages to the oil and gas industry. Firstly, Unified Reservoir facilitates accurate and realistic reservoir modeling, incorporating various geological and fluid flow parameters. This enables engineers to gain deeper insights into the reservoir's behavior, such as pressure distribution, fluid movement, and reservoir connectivity, leading to better predictions of reservoir performance.",
+                "Secondly, the software's advanced simulation capabilities allow engineers to conduct scenario-based analyses and what-if studies. This helps them understand the impact of different production strategies, well placements, and reservoir management techniques on reservoir performance, enabling them to optimize production and maximize hydrocarbon recovery.",
+                "Unified Reservoir also supports reservoir history matching, a crucial process that calibrates the model to historical data to improve its accuracy. By matching simulated results with observed field performance, engineers can validate the reservoir model and increase confidence in the predictions, leading to better decision-making and reduced production risks.\n"
+            ],
+            "useCases": [
+                "Unified Reservoir finds application in various areas of reservoir engineering and management. It assists in reservoir characterization, where engineers can interpret seismic data, well logs, and other geological information to create a detailed representation of the reservoir. This knowledge helps in understanding reservoir heterogeneity, which is critical for accurate reservoir modeling.",
+                "The software is also utilized for reservoir performance analysis, where engineers evaluate reservoir behavior under different production scenarios and identify potential bottlenecks or opportunities for improvement. This information aids in optimizing well placement, determining production rates, and designing enhanced oil recovery (EOR) processes.",
+                "Another significant use case is reservoir simulation for field development planning. Unified Reservoir enables engineers to simulate the production behavior of different reservoir development strategies over the life of the field. This helps in developing robust reservoir management plans and making informed investment decisions.\n"
+            ],
+            "benefits": [
+                "Customers leveraging Unified Reservoir enjoy several benefits that positively impact their bottom line. By accurately simulating reservoir behavior and performance, engineers can optimize hydrocarbon recovery, leading to increased production rates and extended field life. This translates into higher revenues and a more sustainable operation.",
+                "Additionally, the software's ability to analyze various production scenarios helps in risk mitigation. Engineers can identify potential challenges and uncertainties early on, allowing them to devise proactive strategies to overcome obstacles and improve reservoir management practices.",
+                "Unified Reservoir's user-friendly interface and robust analytical capabilities contribute to improved collaboration among multi-disciplinary teams, facilitating better decision-making and fostering innovation. This, in turn, results in faster field development, reduced operational costs, and improved operational efficiency.\n"
+            ],
+            "summary": "In conclusion, Dassault Systèmes Unified Reservoir is a powerful software solution that empowers the oil and gas industry to optimize reservoir performance, increase hydrocarbon recovery, and make data-driven decisions. Its accurate simulation capabilities, scenario-based analysis, and support for reservoir history matching make it a valuable tool for engineers and geoscientists in improving reservoir management and achieving successful field development."
+        }
+    },
+
+    "dassaultBuilding": {
+        "about": "Dassault Systèmes' Creative Building Design offers a powerful and innovative solution for architects and designers to visualize, simulate, and optimize building projects. With advanced 3D modeling and simulation capabilities, it enables creative exploration and efficient collaboration throughout the entire building design process.",
+        "title": "Creative Building Design",
+        "modal": {
+            "general": "Creative Building Design, developed by Dassault Systèmes, serves as a comprehensive software solution tailored to architects, engineers, and designers engaged in the building and construction industry. Its primary purpose is to empower professionals with advanced tools for 3D modeling, simulation, and collaboration, enabling them to envision, refine, and optimize building projects from concept to construction.",
+            "keys": [
+                {
+                    "title": "Advantages",
+                    "key": "advantages"
+                },
+                {
+                    "title": "Use Cases",
+                    "key": "useCases"
+                },
+                {
+                    "title": "Benefits for Customers",
+                    "key": "benefits"
+                }
+            ],
+            "advantages": [
+                "1. Intuitive 3D Modeling: Creative Building Design offers an intuitive and user-friendly 3D modeling environment, empowering architects and designers to create complex building structures with ease. The software's rich library of parametric objects and components streamlines the design process and fosters creativity.",
+                "2. Accurate Simulation and Analysis: With advanced simulation capabilities, the software enables architects and engineers to perform detailed analyses of building structures, material properties, and environmental factors. From structural integrity to energy efficiency, these simulations help optimize the building's performance and safety.",
+                "3. Seamless Collaboration: Creative Building Design supports seamless collaboration among multidisciplinary teams, architects, contractors, and clients. Real-time sharing of design data, models, and project updates enhances communication and ensures everyone is on the same page throughout the design and construction phases.",
+                "4. Resource Optimization: The software's parametric modeling and simulation features facilitate iterative design processes, allowing professionals to optimize resource utilization, minimize waste, and reduce costs. This leads to more sustainable and cost-effective building solutions.",
+                "5. Design Visualization and Presentation: Creative Building Design enables stunning visualizations of architectural designs, offering photorealistic renderings and virtual tours. These high-quality representations aid in client presentations, marketing, and obtaining necessary approvals.\n"
+            ],
+            "useCases": [
+                "1. Architectural Design and Visualization: Architects leverage Creative Building Design to ideate and visualize their architectural concepts, transforming ideas into tangible and photorealistic representations. They can explore various design options and evaluate their impact on the building's aesthetics and functionality.",
+                "2. Structural Engineering and Analysis: Structural engineers utilize the software's simulation capabilities to analyze the structural integrity of buildings, predicting behavior under different loads and environmental conditions. This ensures safe and robust construction designs.",
+                "3. Sustainability and Energy Efficiency: Creative Building Design allows designers to assess the energy performance of buildings, identifying energy-efficient solutions and incorporating sustainable design elements, such as solar panels, green roofs, and natural lighting.",
+                "4. Collaborative Design Reviews: Project teams conduct collaborative design reviews using the software, facilitating feedback and suggestions from stakeholders, contractors, and clients. This iterative process results in optimized designs and reduced rework.",
+                "5. Urban Planning and Smart Cities: Planners and urban designers use the software to model and visualize urban landscapes, enabling informed decision-making for smart city initiatives, efficient infrastructure planning, and improved public spaces.\n"
+            ],
+            "benefits": [
+                "1. Enhanced Design Efficiency: Creative Building Design streamlines the design process, reducing the time and effort required to create complex building models. This leads to increased productivity and faster project completion.",
+                "2. Improved Collaboration:Effective collaboration among project stakeholders improves project outcomes and minimizes misunderstandings. Creative Building Design fosters smooth communication and promotes better teamwork.",
+                "3. Cost and Resource Savings: By optimizing designs and materials through simulations, customers can save costs on construction and reduce material wastage, making projects more budget-friendly and sustainable.",
+                "4. Higher Quality and Safety: The software's simulation capabilities and accuracy contribute to improved building quality, durability, and safety. Customers can deliver reliable and high-performing structures to meet stringent industry standards.",
+                "5.Informed Decision-Making: Access to detailed simulations and data-driven insights empowers customers to make well-informed decisions, resulting in better design choices, optimized resource allocation, and successful project outcomes.\n"
+            ],
+            "summary": ""
+        }
+    },
+
+    "dassaultPlanning": {
+        "about": "DELMIA Ortems is a powerful production planning and scheduling software that enables businesses to optimize their manufacturing processes, improve resource allocation, and enhance overall operational efficiency.",
+        "title": "Production planning DELMIA Ortems",
+        "modal": {
+            "general": "DELMIA Ortems is a comprehensive production planning and scheduling software solution developed by Dassault Systèmes. Its primary purpose is to optimize manufacturing processes, improve production efficiency, and streamline resource allocation to ensure timely and cost-effective production.",
+            "keys": [
+                {
+                    "title": "Advantages",
+                    "key": "advantages"
+                },
+                {
+                    "title": "Use Cases",
+                    "key": "useCases"
+                },
+                {
+                    "title": "Benefits for Customers",
+                    "key": "benefits"
+                }
+            ],
+            "advantages": [
+                "1. Advanced Planning Capabilities: DELMIA Ortems provides advanced planning algorithms and optimization tools to help businesses create precise production plans that meet demand while minimizing inventory levels and production costs. The software considers various constraints, such as machine capacities, resource availability, and production lead times, to ensure efficient planning.",
+                "2. Real-time Scheduling: With its real-time scheduling capabilities, DELMIA Ortems allows manufacturers to adapt quickly to unforeseen changes in production schedules. It enables dynamic rescheduling in response to production disruptions, material availability, or changes in demand, ensuring optimal resource utilization and minimal downtime.",
+                "3. Resource Optimization: The software optimizes resource allocation by balancing workloads across machines, work centers, and production lines. It helps identify bottlenecks and underutilized resources, enabling businesses to improve overall production efficiency and throughput.",
+                "4. Enhanced Visibility and Collaboration: DELMIA Ortems offers a centralized platform for collaboration between different teams involved in the production process. It provides real-time visibility into production schedules, allowing better coordination between planners, production supervisors, and operators.",
+                "5. Scenario Analysis and What-If Simulations: The software enables businesses to perform scenario analysis and what-if simulations to evaluate the impact of different production scenarios. This capability helps in making informed decisions, optimizing production plans, and managing risks.\n"
+            ],
+            "useCases": [
+                "1. Production Planning: DELMIA Ortems is used for long-term and short-term production planning, considering factors like customer demand, inventory levels, and available resources. It helps in creating feasible production schedules that align with business objectives and production capacities.",
+                "2. Shop Floor Scheduling: Manufacturers utilize DELMIA Ortems for shop floor scheduling to optimize production in real-time. It enables them to dynamically adjust schedules based on changing demands, resource availability, and disruptions, ensuring smooth production flow.",
+                "3. Resource Management: The software is employed for effective resource management, ensuring that machines, equipment, and labor are utilized efficiently. It helps in reducing idle time, minimizing production bottlenecks, and maximizing resource utilization.",
+                "4. Demand Management: DELMIA Ortems assists in managing demand fluctuations by aligning production plans with customer orders. It allows manufacturers to respond quickly to changes in demand, preventing stockouts and overproduction.",
+                "5. Constraint-Based Planning: Manufacturers with complex production environments utilize DELMIA Ortems for constraint-based planning. The software considers various constraints like machine capabilities, tool availability, and lead times to create optimal production schedules.\n"
+            ],
+            "benefits": [
+                "1. Increased Production Efficiency: By optimizing production schedules and resource allocation, DELMIA Ortems helps businesses achieve higher production efficiency, reducing idle time and waste.",
+                "2. Improved On-Time Delivery: The software's real-time scheduling and adaptive capabilities ensure that production schedules align with customer demands, leading to improved on-time delivery performance.",
+                "3. Cost Savings: Through better resource utilization and inventory management, DELMIA Ortems enables cost savings for businesses, minimizing inventory carrying costs and production downtime.",
+                "4. Enhanced Decision-Making: The ability to perform scenario analysis and what-if simulations empowers businesses to make data-driven decisions, leading to more effective production planning and risk management.",
+                "5. Streamlined Collaboration: DELMIA Ortems facilitates collaboration and communication between different teams, enabling smooth coordination and reducing production-related communication gaps.\n"
+            ],
+            "summary": ""
+        }
+    },
+
+    "draftSight1": {
+        "about": "",
+        "modal": {
+            "general": "",
+            "keys": [
+                {
+                    "title": "Advantages",
+                    "key": "advantages"
+                },
+                {
+                    "title": "Use Cases",
+                    "key": "useCases"
+                },
+                {
+                    "title": "Benefits for Customers",
+                    "key": "benefits"
+                }
+            ],
+            "advantages": [],
+            "useCases": [],
+            "benefits": [],
+            "summary": ""
+        }
+    },
+
+    "dassaultClone": {
+        "title": "Digital twin of production",
+        "about": "Digital twin is a cutting-edge technology that creates a virtual representation of a physical object or system. It enables real-time monitoring, analysis, and simulation, providing valuable insights for optimization and predictive maintenance.",
+        "modal": {
+            "general": "Dassault Systèmes' Digital Twin is an advanced software technology that creates a virtual representation of a physical object, process, or system. The main purpose of the Digital Twin is to provide a real-time and dynamic simulation of the physical entity, allowing for monitoring, analysis, optimization, and predictive maintenance.",
+            "keys": [
+                {
+                    "title": "Advantages",
+                    "key": "advantages"
+                },
+                {
+                    "title": "Use Cases",
+                    "key": "useCases"
+                },
+                {
+                    "title": "Benefits for Customers",
+                    "key": "benefits"
+                }
+            ],
+            "advantages": [
+                "1. Real-time Monitoring and Analysis: The Digital Twin enables real-time monitoring and analysis of the physical entity. By collecting data from sensors and other sources, it provides valuable insights into the performance, behavior, and condition of the real-world object or system.",
+                "2. Predictive Maintenance: With the ability to continuously monitor the physical entity, the Digital Twin can predict potential issues or failures. This enables proactive maintenance, reducing downtime and preventing costly breakdowns.",
+                "3. Optimization and Simulation: The Digital Twin allows for simulation and optimization of the physical entity's performance under various conditions. Manufacturers can test different scenarios and identify the most efficient processes and configurations.",
+                "4. Virtual Testing and Prototyping: Digital Twin technology facilitates virtual testing and prototyping, reducing the need for physical prototypes. This accelerates product development and saves time and resources.",
+                "5. Data-Driven Decision Making: By providing real-time data and insights, the Digital Twin empowers businesses to make data-driven decisions, enhancing efficiency and productivity.\n"
+            ],
+            "useCases": [
+                "1. Manufacturing Industry: In the manufacturing sector, the Digital Twin is used to simulate and optimize production processes. It helps identify bottlenecks, improve manufacturing efficiency, and reduce waste.",
+                "2. Aerospace and Defense: Digital Twins are utilized in aerospace and defense for testing and simulating aircraft performance, analyzing structural integrity, and predicting maintenance requirements.",
+                "3. Healthcare: In the healthcare field, Digital Twins are used to create virtual models of human organs or systems. This allows for personalized medicine, surgical planning, and medical research.",
+                "4. Energy and Utilities: Digital Twins play a crucial role in the energy sector by optimizing energy production and distribution, predicting equipment failures, and improving safety.",
+                "5. Smart Cities: Digital Twins are used to create virtual representations of entire cities, enabling urban planners to optimize traffic flow, energy consumption, and urban development.\n"
+            ],
+            "benefits": [
+                "1. Improved Efficiency and Productivity: The Digital Twin helps customers optimize their processes, reduce downtime, and streamline operations, leading to increased efficiency and productivity.",
+                "2. Cost Savings: With predictive maintenance and virtual testing, customers can save on maintenance costs, avoid unplanned downtime, and optimize resource utilization.",
+                "3. Enhanced Product Development: Digital Twins facilitate faster and more efficient product development by allowing for virtual prototyping and testing, reducing time-to-market.",
+                "4. Better Decision Making: Real-time data and simulations enable informed decision-making, leading to more accurate predictions and improved overall performance.",
+                "5. Increased Safety and Reliability: By predicting potential issues and failures, the Digital Twin contributes to enhanced safety and reliability, particularly in critical industries like aerospace and healthcare.\n"
+            ],
+            "summary": "In conclusion, Dassault Systèmes' Digital Twin technology empowers businesses across various sectors to enhance efficiency, optimize processes, and make data-driven decisions, ultimately leading to improved productivity, reduced costs, and greater competitiveness."
+        }
     }
 }
