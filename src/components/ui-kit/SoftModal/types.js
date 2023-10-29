@@ -107,33 +107,33 @@ export default softTranslation => ({
         title: softTranslation.dassaultClone.title,
         content: GoogleCloud(softTranslation.dassaultClone.modal),
     },
-    GeoMedia: {
+    geoMedia: {
         title: 'GeoMedia',
-        content: GeoMedia,
+        content: GoogleCloud(softTranslation.geoMedia.modal),
     },
-    ErdasImagine: {
+    erdasImagine: {
         title: 'Erdas Imagine',
-        content: ErdasImagine,
+        content: GoogleCloud(softTranslation.erdasImagine.modal),
     },
-    ImagineStation: {
-        title: 'Imagine Station',
-        content: ImagineStation,
+    imageStation: {
+        title: 'Image Station',
+        content: GoogleCloud(softTranslation.imageStation.modal),
     },
-    ErdasApollo: {
+    erdasApollo: {
         title: 'Erdas Apollo',
-        content: ErdasApollo,
+        content: GoogleCloud(softTranslation.erdasApollo.modal),
     },
-    MAppEnterprise: {
+    mAppEnterprise: {
         title: 'M.App Enterprise',
-        content: MAppEnterprise,
+        content: GoogleCloud(softTranslation.mAppEnterprise.modal),
     },
-    Luciad: {
+    luciad: {
         title: 'Luciad',
-        content: Luciad,
+        content: GoogleCloud(softTranslation.luciad.modal),
     },
-    GenPlan: {
-        title: 'Цифровой Генплан',
-        content: GenPlan,
+    genPlan: {
+        title: softTranslation.genPlan.title,
+        content: GoogleCloud(softTranslation.genPlan.modal),
     },
     MicroStation: {
         title: 'MicroStation',
@@ -159,33 +159,33 @@ export default softTranslation => ({
         title: 'ProStructures',
         content: GoogleCloud(softTranslation.proStructures.modal),
     },
-    SketchUpPro: {
+    sketchUpPro: {
         title: 'SketchUp Pro',
-        content: SketchUpPro,
+        content: GoogleCloud(softTranslation.sketchUpPro.modal),
     },
-    SketchUpShop: {
+    sketchUpShop: {
         title: 'SketchUp Shop',
-        content: SketchUpShop,
+        content: GoogleCloud(softTranslation.sketchUpShop.modal),
     },
-    SketchUpEducation: {
-        title: 'SketchUp для высшего образования',
-        content: SketchUpEducation,
+    sketchUpEducation: {
+        title: softTranslation.sketchUpEducation.title,
+        content: GoogleCloud(softTranslation.sketchUpEducation.modal),
     },
-    SketchUpStudio: {
+    sketchUpStudio: {
         title: 'SketchUp Studio',
-        content: SketchUpStudio,
+        content: GoogleCloud(softTranslation.sketchUpStudio.modal),
     },
-    ExtensionWarehouse: {
+    extensionWarehouse: {
         title: 'Extension Warehouse',
-        content: ExtensionWarehouse,
+        content: GoogleCloud(softTranslation.extensionWarehouse.modal),
     },
-    SketchUpForInternet: {
-        title: 'SketchupUp для интернета',
-        content: SketchUpForInternet,
+    sketchUpFree: {
+        title: 'SketchupUp Free',
+        content: GoogleCloud(softTranslation.sketchUpFree.modal),
     },
-    TrimbleConnect: {
+    trimbleConnect: {
         title: 'Trimble Connect',
-        content: TrimbleConnect,
+        content: GoogleCloud(softTranslation.trimbleConnect.modal),
     },
     AllPlanArchitecture: {
         title: 'Allplan Architecture',

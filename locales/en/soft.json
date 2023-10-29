@@ -1471,31 +1471,6 @@
         }
     },
 
-    "draftSight1": {
-        "about": "",
-        "modal": {
-            "general": "",
-            "keys": [
-                {
-                    "title": "Advantages",
-                    "key": "advantages"
-                },
-                {
-                    "title": "Use Cases",
-                    "key": "useCases"
-                },
-                {
-                    "title": "Benefits for Customers",
-                    "key": "benefits"
-                }
-            ],
-            "advantages": [],
-            "useCases": [],
-            "benefits": [],
-            "summary": ""
-        }
-    },
-
     "dassaultClone": {
         "title": "Digital twin of production",
         "about": "Digital twin is a cutting-edge technology that creates a virtual representation of a physical object or system. It enables real-time monitoring, analysis, and simulation, providing valuable insights for optimization and predictive maintenance.",
@@ -1537,6 +1512,552 @@
                 "5. Increased Safety and Reliability: By predicting potential issues and failures, the Digital Twin contributes to enhanced safety and reliability, particularly in critical industries like aerospace and healthcare.\n"
             ],
             "summary": "In conclusion, Dassault Systèmes' Digital Twin technology empowers businesses across various sectors to enhance efficiency, optimize processes, and make data-driven decisions, ultimately leading to improved productivity, reduced costs, and greater competitiveness."
+        }
+    },
+    "hexagon": "Hexagon is a global leader in the field of sensor, software, and autonomous solutions. Hexagon's technologies shape urban and industrial ecosystems that are becoming increasingly interconnected and autonomous, providing a scalable and predictable future. Such solutions are already in demand for organizing large datasets into easily readable visual representations. Hexagon Geospatial specializes in the development of geospatial solutions and specialized applications for the collection, analysis, and visualization of location-based data, enabling greater efficiency, productivity, and quality in industries such as public safety, government and municipal management, transportation, photogrammetry, engineering communications, and telecommunications. Hexagon Geospatial division creates solutions that visualize location information and provide an intelligent 5D digital reality with an understanding of what was, what is, what could be, what should be, and ultimately, what will be.",
+
+    "geoMedia": {
+        "about": "GeoMedia by Hexagon is a powerful geospatial software solution designed to seamlessly integrate, analyze, and visualize complex geographic data. With GeoMedia, users can efficiently manage geospatial information, perform advanced spatial analysis, and create informative maps and reports for informed decision-making.",
+        "modal": {
+            "general": "",
+            "keys": [],
+            "advantages": [],
+            "useCases": [],
+            "benefits": [],
+            "summaryArray": [
+                "GeoMedia is a powerful and flexible GIS management platform that allows for the integration of data from various sources and collaborative analysis to obtain clear, structured information. GeoMedia merges digital and geographic data to create a unified information system, providing simultaneous access to geospatial data in virtually any form and presenting them in a unified map format for efficient processing, analysis, visualization, and joint utilization.",
+                "The functionality of GeoMedia makes it an ideal platform for extracting information from arrays of dynamically changing data, as well as for assisting in making well-founded, more rational decisions. ",
+                "Simple data access:",
+                "GeoMedia is the top choice for GIS software users who wish to directly connect to databases with server components they are already using, such as Oracle, SQL Server, and PostGIS data servers, without the need for additional importing or conversion. Furthermore, GeoMedia offers the possibility to access numerous common geodata formats, most CAD model formats, Esri ArcView, GeoDatabase files, KML, plain text files, and OGC (Open Geospatial Consortium) web services like WMS, WMTS, and WFS. GeoMedia also incorporates the ERDAS APOLLO catalog browser for spatial search, retrieval, and display of data and images directly within the map window.",
+                "Data quality assurance and validation:",
+                "GeoMedia provides numerous options for ensuring high-quality data within your GIS throughout its entire usage. It optimizes the addition of large volumes of information into your enterprise database, ensuring data completeness (attribute filling and geometry accuracy) and alignment with the data model used by your organization. The platform enables the integration of various types of data from multiple sources into a single high-quality information system. After data integration, GeoMedia allows for tracking and controlling changes made by users, establishing quality assurance checkpoints before database updates. This streamlines work with conflicting or ambiguous changes.",
+                "GeoMedia offers intelligent object modeling capabilities that recognize relationships among objects representing real-world entities in networks, such as sewage, water, electric, or gas nodes. The recognition of these elements using GeoMedia during the editing process enhances operator productivity and helps ensure changes align with existing business processes, ensuring accurate display of existing networks in your GIS system. GeoMedia also allows for temporal queries and visualizations that precisely identify network changes over specific time periods and analyze possible real-world causes and consequences.",
+                "Dynamic data analysis:",
+                "GeoMedia empowers you to perform complex analysis to extract information from data stored across various platforms and numerous different files simultaneously. The solution permits the creation of queries of unlimited complexity, enabling queries to be created and merged dynamically to pass results from one query to another.",
+                "When data changes, GeoMedia automatically updates results, providing you with a dynamic representation of the real situation depicted by your data. This capability can also be used for conducting powerful \"what-if\" analysis during strategic planning. While competing GIS platforms might offer similar analytical concatenation, they rely on creating intermediate files to achieve the same result. With this static approach, if source data changes, the GIS cannot automatically reflect those changes in query results it provides. This requires re-executing the entire analysis to obtain results reflecting the current state of the data.",
+                "Thanks to these unique advantages in analysis, GeoMedia serves as an ideal platform for managing linear networks and infrastructures, which form the basis for enterprises operating and maintaining roads, railways, pipelines, and waterways. These analytical capabilities enable you to track network information and conduct specialized analysis for more well-founded decisions regarding public safety, service priorities, and resource allocation. GeoMedia supports the maintenance and analysis of both single-level and multi-level networks with linear links and routing. Its multi-level linear referencing system (MLRS) supports multiple geometric network representations synchronized with event data and other information to ensure reliable analysis.",
+                "Every time you need to find a location or address within your analysis, geocoding and coordinate matching by GeoMedia are performed quickly and accurately, working with your data regardless of your location.",
+                "GeoMedia allows you to accurately determine the location within your network, using both building rooftops and axis lines as references. GeoMedia supports a wide range of coordinate systems from around the world and easily performs transformations of vector and raster data into the chosen Coordinate Reference System (CRS) for your map.",
+                "Enterprise Performance",
+                "Performance and accuracy are crucial aspects of capturing and editing vector objects for corporate geospatial databases. GeoMedia offers a set of specialized functionalities for creating, processing, and maintaining geospatial information. The platform supports essential day-to-day operations needed for storing cartographic information.",
+                "GeoMedia simplifies the work for organizations with a large number of concurrent users. You can easily exchange geospatial content within departments or the entire enterprise. If your department follows style standards, text properties, or structured analysis and queries, the manager can ensure consistency across the group by setting and providing centralized access to these standards and queries.",
+                "Interface Personalization",
+                "GeoMedia's user-friendly graphical interface is well-organized and optimized to minimize mouse movement and button clicks, enhancing productivity and reducing costs.",
+                "GeoMedia allows you to modify and customize interface aspects, making it easier to optimize specific workflow processes. Individuals can also adapt the user interface to their specific needs and goals. You can also hide interface parts, avoiding clutter in the visible workspace and providing faster recognition and access to work functions and tools.",
+                "Unified Solution",
+                "GeoMedia unites the entire portfolio of products for geospatial work and presents a comprehensive, unified solution for supporting your enterprise's geospatial needs.",
+                "Flexible Offerings",
+                "For the GeoMedia platform, three product levels are available. These levels allow you to acquire the functionality you need. It also makes it easier to customize the software volume according to your GIS management needs, analysis requirements, and budget.",
+                "Three GeoMedia Product Levels",
+                "GeoMedia Essentials enables querying and analyzing various sources of geospatial data, additionally providing simple image preparation capabilities.",
+                "GeoMedia Advantage encompasses all the functionalities of GeoMedia Essentials and is well-suited for data collection and editing, processing and analyzing elevation and relief data including LiDAR data, as well as providing data validation and complex raster analysis tools. Four commands that were previously available only at the GeoMedia Professional level are now also available at the GeoMedia Advantage level: \"Insert Area by Edges,\" \"Insert Interactive Area by Edges,\" \"Dimensions,\" and \"Insert Dimensions.\"",
+                "GeoMedia Professional includes all the features of the previous levels and provides multi-user management and data analysis across the enterprise. Manage linear networks, create professional cartographic maps, perform advanced object editing, manage parcel storage, conduct engineering network analysis, track and manage changes. Hexagon Geospatial offers additional capabilities to extend the core capabilities of GeoMedia levels.",
+                "GeoMedia Transportation Manager provides tools to help professionals in municipalities, airports, seaports, Departments of Transportation (DOTs), railroad companies, water transport agencies, and pipeline operations effectively analyze their transportation infrastructure. This extension includes capabilities for tracking network information and conducting specialized analyses. Additionally, users can build a linear network model supporting both Multilevel Linear Referencing System (MLRS) and applications for routing vehicles. (Only available for GeoMedia Professional level).",
+                "GeoMedia Mapping Manager provides enhanced cartographic capabilities and GIS mapping automation for producing cartographic products and building cartographically accurate outputs. (Only available for GeoMedia Professional level).",
+                "GeoMedia 3D offers three-dimensional visualization within GeoMedia. The extension meets the growing demand for realistic three-dimensional representations of geospatial data, adding a 3D map window through which you can visualize, navigate, analyze, and interact with 3D data in GeoMedia. The GeoMedia 3D map window seamlessly integrates into the GeoMedia interface, providing full and simultaneous access to all standard 2D analysis capabilities of GeoMedia. (Available across all GeoMedia levels).",
+                "GeoMedia Motion Video Analyst Professional integrates full-motion video into the geospatial environment, dynamically projecting video onto GIS data. (Available across all GeoMedia levels).",
+                "GeoMedia Image offers advanced capabilities for image enhancement, registration, extraction, and preservation.",
+                "GeoMedia Image Professional provides an extended set of GeoMedia Image capabilities, including a variety of additional commands and an integrated high-performance application for illumination tables.",
+                "ImageStation Stereo for GeoMedia expands GeoMedia capabilities for feature collection by providing a stereo window for displaying images and 3D object data with smooth panning, dynamic zooming, and real-time image enhancement.",
+                "ImageStation DTM for GeoMedia offers a toolkit for collecting and editing terrain data to create surface files for photogrammetric, cartographic, and engineering workflows.",
+                "ImageStation OrthoPro provides a high-performance system for orthorectifying images, including ortho-planning, orthorectification, tone balancing, mosaicking, true ortho capabilities, automatic seamline generation, and quality assessment.",
+                "ImageStation PixelQue provides tools for quality checking and enhancement of orthophotos and mosaics, allowing users to systematically review and mark errors, correct mistakes, and perform image enhancements for individual elements or projects.",
+                "Seamless GIS Integration.",
+                "GeoMedia enables you to easily make real-time geospatial information flowing through your organization accessible for processing and analysis. This allows you to conduct various analyses (from very simple to highly complex) of data from diverse sources.",
+                "The platform connects directly to the geospatial databases already utilized by your organization. GeoMedia enables in-depth analysis and dynamic updates of results. The flexible structure of levels and extensions allows adaptation of the system to your specific business requirements. GeoMedia empowers you to create intelligent, intuitively understandable maps, revealing information previously inaccessible in your data, facilitating informed and rational decision-making.",
+                "Extensions for GeoMedia.",
+                "Hexagon Geospatial offers additional capabilities to enhance the core functionalities of GeoMedia levels.",
+                "GeoMedia Transportation Manager provides tools to help professionals in municipalities, airports, seaports, Departments of Transportation (DOTs), railroad companies, water transport agencies, and pipeline operations effectively analyze their transportation infrastructure. This extension includes capabilities for tracking network information and conducting specialized analyses. Additionally, users can build a linear network model supporting both Multilevel Linear Referencing System (MLRS) and applications for routing vehicles. (Available only for GeoMedia Professional level).",
+                "GeoMedia Mapping Manager offers enhanced cartographic capabilities and GIS mapping automation for producing cartographic products and creating cartographically accurate outputs. (Available only for GeoMedia Professional level).",
+                "GeoMedia 3D provides three-dimensional visualization within GeoMedia. The extension meets the growing demand for realistic three-dimensional representations of geospatial data, adding a 3D map window through which you can visualize, navigate, analyze, and interact with 3D data in GeoMedia. The GeoMedia 3D map window seamlessly integrates into the GeoMedia interface, providing full and simultaneous access to all standard 2D analysis capabilities of GeoMedia. (Available across all GeoMedia levels).",
+                "GeoMedia Motion Video Analyst Professional integrates full-motion video into the geospatial environment, dynamically projecting video onto GIS data. (Available across all GeoMedia levels).",
+                "GeoMedia Image offers advanced capabilities for image enhancement, registration, extraction, and preservation.",
+                "GeoMedia Image Professional provides an extended set of GeoMedia Image capabilities, including numerous additional commands and an integrated high-performance application for illumination tables.",
+                "ImageStation Stereo for GeoMedia expands GeoMedia capabilities for feature collection by providing a stereo window for displaying images and 3D object data with smooth panning, dynamic zooming, and real-time image enhancement.",
+                "ImageStation DTM for GeoMedia offers a toolkit for collecting and editing terrain data to create surface files for photogrammetric, cartographic, and engineering workflows.",
+                "ImageStation OrthoPro provides a high-performance system for orthorectifying images, including ortho-planning, orthorectification, tone balancing, mosaicking, true ortho capabilities, automatic seamline generation, and quality assessment.",
+                "ImageStation PixelQue provides tools for quality checking and enhancement of orthophotos and mosaics, allowing users to systematically review and mark errors, correct mistakes, and perform image enhancements for individual elements or projects.",
+                "Seamless GIS Integration.",
+                "GeoMedia enables you to easily make real-time geospatial information flowing through your organization accessible for processing and analysis. This allows you to conduct various analyses (from very simple to highly complex) of data from diverse sources.",
+                "The platform connects directly to the geospatial databases already utilized by your organization. GeoMedia enables in-depth analysis and dynamic updates of results. The flexible structure of levels and extensions allows adaptation of the system to your specific business requirements. GeoMedia empowers you to create intelligent, intuitively understandable maps, revealing information previously inaccessible in your data, facilitating informed and rational decision-making."
+            ]
+        }
+    },
+
+    "erdasImagine": {
+        "about": "ERDAS IMAGINE by Hexagon is a leading geospatial software suite that empowers users to visualize, analyze, and interpret geospatial data from a wide range of sources. It offers powerful remote sensing capabilities, enabling professionals to extract valuable insights for applications such as land use planning, environmental monitoring, and disaster management.",
+        "modal": {
+            "general": "",
+            "keys": [],
+            "advantages": [],
+            "useCases": [],
+            "benefits": [],
+            "summaryArray": [
+                "Purpose:",
+                "ERDAS IMAGINE by Hexagon is a powerful remote sensing and image processing software designed to extract valuable information from geospatial data. Its primary purpose is to facilitate the analysis, interpretation, and visualization of various types of remotely sensed imagery, such as satellite and aerial images, to support a wide range of applications in agriculture, forestry, environmental monitoring, urban planning, and more.",
+                "Advantages:",
+                "1. Comprehensive Toolbox: ERDAS IMAGINE offers a comprehensive set of tools for image preprocessing, enhancement, classification, and analysis, making it a one-stop solution for geospatial professionals.",
+                "2. Multi-Sensor Support: It can seamlessly handle data from different sensors and platforms, allowing users to work with a variety of remote sensing data sources.",
+                "3. Advanced Algorithms: The software incorporates advanced algorithms for image classification, change detection, terrain analysis, and more, ensuring high-quality results.",
+                "4. Integration Capabilities: ERDAS IMAGINE can integrate with other geospatial software and data sources, enhancing its interoperability and compatibility.",
+                "Use Cases:",
+                "ERDAS IMAGINE finds applications in numerous fields, including:",
+                "1. Agriculture: Monitoring crop health, estimating yield, and assessing irrigation needs.",
+                "2. Forestry: Analyzing forest cover, tracking deforestation, and managing forest resources.",
+                "3. Environmental Monitoring: Monitoring land use changes, detecting pollution, and assessing habitat health.",
+                "4.Urban Planning: Creating land-use maps, assessing infrastructure development, and analyzing urban growth.",
+                "5.Natural Resource Management: Managing water resources, mineral exploration, and land conservation.",
+                "6. Disaster Management: Assessing the impact of natural disasters and planning response strategies.",
+                "Benefits for Customers:",
+                "1. Data-Driven Decision-Making:  ERDAS IMAGINE empowers users to make informed decisions based on accurate and up-to-date geospatial information.",
+                "2. Cost Savings: Efficient analysis and resource management lead to cost savings in various sectors, including agriculture, forestry, and urban planning.",
+                "3. Improved Productivity: Automation and powerful tools streamline workflows, boosting productivity for geospatial professionals.",
+                "4. Enhanced Accuracy: Advanced algorithms and data fusion techniques ensure precise results for critical applications.",
+                "5. Sustainability: Supporting sustainable practices by enabling better resource management and environmental monitoring."
+            ]
+        }
+    },
+
+    "imageStation": {
+        "about": "ImageStation by Hexagon is a comprehensive photogrammetric software solution designed for the extraction of precise geospatial information from aerial and satellite imagery. It offers advanced capabilities for image processing, 3D feature collection, and terrain modeling, making it an essential tool for mapping, infrastructure development, and environmental monitoring.",
+        "modal": {
+            "general": "",
+            "keys": [],
+            "advantages": [],
+            "useCases": [],
+            "benefits": [],
+            "summaryArray": [
+                "ImageStation by Hexagon: Empowering Geospatial Imagery Processing",
+                "Purpose:",
+                "ImageStation by Hexagon is a versatile software solution designed to empower geospatial professionals in the processing, analysis, and management of imagery data. Its primary purpose is to facilitate the efficient handling and extraction of valuable information from a wide range of image sources, including aerial and satellite imagery. This software is a valuable asset for industries and organizations involved in mapping, remote sensing, infrastructure development, and environmental monitoring.",
+                "Advantages:",
+                "1. Comprehensive Image Processing: ImageStation offers a comprehensive suite of tools for image pre-processing, enhancement, orthorectification, and mosaicking. These tools ensure that raw imagery data can be transformed into high-quality, georeferenced images suitable for analysis and visualization.",
+                "2. Multi-Sensor Support: The software is equipped to handle imagery from various sensors and platforms, ensuring compatibility with diverse data sources. This feature enables users to work with a wide range of geospatial data.",
+                "3. Advanced Photogrammetry: ImageStation incorporates advanced photogrammetry algorithms for precise georeferencing, 3D modeling, and terrain analysis. This accuracy is critical for applications like land surveying and infrastructure planning.",
+                "4. Customizable Workflows: Users can create and customize automated workflows tailored to their specific needs. This streamlines repetitive tasks and increases productivity.",
+                "5. Integration Capabilities: ImageStation seamlessly integrates with other geospatial software and data formats, facilitating data sharing and collaboration within organizations.",
+                "Use Cases:",
+                "ImageStation is employed in various fields, including but not limited to:",
+                "1. Mapping and Cartography: It is extensively used for creating accurate maps, topographic charts, and orthophoto mosaics for land management and urban planning.",
+                "2. Infrastructure Development: ImageStation plays a crucial role in designing infrastructure projects such as roads, bridges, and utilities by providing accurate terrain models and construction site monitoring.",
+                "3. Agriculture: Precision agriculture relies on geospatial data for crop monitoring, yield prediction, and irrigation management.",
+                "4. Natural Resource Management: It aids in monitoring forests, water bodies, and mineral resources, supporting sustainable resource management.",
+                "5. Environmental Monitoring: ImageStation assists in tracking changes in the environment, such as deforestation, urban expansion, and land use changes.",
+                "Benefits for Customers:",
+                "1. Enhanced Productivity: ImageStation automates time-consuming image processing tasks, allowing users to focus on data analysis and decision-making.",
+                "2. Accurate Geospatial Data: The advanced photogrammetry and orthorectification capabilities of ImageStation ensure high-precision results, vital for applications requiring precise location information.",
+                "3. Cost Savings: By streamlining workflows and reducing the need for manual intervention, organizations can save both time and resources.",
+                "4. Improved Decision-Making: Access to geospatial imagery and data empowers organizations to make informed decisions related to land management, infrastructure planning, and environmental conservation.",
+                "5. Interoperability: ImageStation's compatibility with various data formats and other geospatial tools makes it a valuable asset for organizations looking to integrate geospatial data into their existing systems.",
+                "6. Sustainability: Through effective environmental monitoring and resource management, ImageStation contributes to sustainable practices and conservation efforts.",
+                "In conclusion, ImageStation by Hexagon is a robust software solution that caters to the diverse needs of geospatial professionals across various industries. Its advanced image processing capabilities, accuracy, and versatility make it an indispensable tool for organizations seeking to harness the power of geospatial data for better decision-making and sustainable development."
+            ]
+        }
+    },
+
+    "erdasApollo": {
+        "about": "ERDAS APOLLO by Hexagon is a robust geospatial data management and delivery system that allows organizations to efficiently catalog, search, and distribute geospatial data across their enterprise. With ERDAS APOLLO, users can easily access and share critical geospatial information, enhancing collaboration and decision-making processes.",
+        "modal": {
+            "general": "",
+            "keys": [],
+            "advantages": [],
+            "useCases": [],
+            "benefits": [],
+            "summaryArray": [
+                "ERDAS APOLLO by Hexagon: Elevating Geospatial Data Management",
+                "ERDAS APOLLO by Hexagon is a robust software solution designed for the management and dissemination of geospatial data. Its primary objective is to provide organizations and enterprises with an efficient means of storing, organizing, accessing, and sharing geospatial data, making this process as streamlined and user-friendly as possible. ERDAS APOLLO simplifies geospatial data management tasks, enhancing accessibility and expanding the possibilities for data utilization.",
+                "Advantages:",
+                "1. Powerful Geospatial Data Management: ERDAS APOLLO offers extensive capabilities for organizing and managing geospatial data of all scales and formats. This includes storage, indexing, search, and data updating.",
+                "2. Fast and Convenient Access: The platform provides rapid access to geospatial data through a web interface, enabling users to easily find and utilize the information they need.",
+                "3. Multi-User Environment: ERDAS APOLLO supports concurrent usage by multiple users, making it an ideal solution for large organizations and teams.",
+                "4. Geospatial Analytics: The platform integrates with other geospatial analytics tools, allowing for complex data analysis and the creation of informative cartographic products.",
+                "5. Security and Access Control: ERDAS APOLLO ensures a high level of data security and flexible access control, protecting information from unauthorized access.",
+                "Use Cases:",
+                "ERDAS APOLLO finds applications in various sectors, including but not limited to:",
+                "1. Government Geospatial Data: Government organizations can use ERDAS APOLLO for centralized storage and management of geospatial data, ensuring data availability to various departments and agencies.",
+                "2. Environmental Monitoring: For organizations involved in monitoring and assessing the environment, ERDAS APOLLO provides storage and analysis of geospatial data necessary for making informed decisions.",
+                "3. Business Geospatial Solutions: Commercial enterprises can utilize the platform to create geospatial solutions such as mapping applications and monitoring systems.",
+                "4. Real Estate Management: ERDAS APOLLO can serve as a tool for managing real estate information, including land data, buildings, and geospatial attributes.",
+                "5. Telecommunications and Communication: Companies in the telecommunications sector can use ERDAS APOLLO for network planning, optimization, and monitoring.",
+                "Benefits for Customers:",
+                "1. Enhanced Geospatial Data Management: ERDAS APOLLO provides customers with efficient and reliable geospatial data management, reducing time and resource losses.",
+                "2. Quick Data Access: The platform enables customers to instantly access the data they need, increasing productivity and decision-making efficiency.",
+                "3. Data Integration and Analysis: ERDAS APOLLO seamlessly integrates with other geoinformation tools, expanding customer capabilities in data analysis and the creation of valuable cartographic products.",
+                "4. Data Protection: The platform ensures data security, safeguarding valuable geospatial information from unauthorized access.",
+                "5. Flexibility and Scalability: ERDAS APOLLO can be tailored to meet customer needs and scales, providing a dependable and satisfying solution.",
+                "ERDAS APOLLO by Hexagon is a pivotal tool for organizations and enterprises dealing with geospatial data. With its assistance, customers can manage data, analyze it, and make informed decisions—essential factors for success in today's world, where geoinformation plays a crucial role across numerous fields.",
+                ""
+            ]
+        }
+    },
+
+    "mAppEnterprise": {
+        "about": "M.App Enterprise by Hexagon is a powerful geospatial platform that empowers organizations to create, deploy, and manage location-based applications and solutions. It enables users to harness the full potential of geospatial data for better decision-making, analysis, and collaboration across various industries.",
+        "modal": {
+            "general": "",
+            "keys": [],
+            "advantages": [],
+            "useCases": [],
+            "benefits": [],
+            "summaryArray": [
+                "M.App Enterprise by Hexagon: Empowering Geospatial Analysis and Visualization",
+                "Purpose:",
+                "M.App Enterprise by Hexagon is an innovative software solution designed for geospatial data analysis and visualization. Its primary purpose is to provide organizations and enterprises with a tool to create, analyze, and share geospatial information in the form of interactive web applications and maps. M.App Enterprise simplifies working with geospatial data, making it accessible for making informed decisions across various industries.",
+                "Advantages:",
+                "1. Interactive Web Applications:M.App Enterprise allows users to create interactive web applications for visualizing and analyzing geospatial data. This enables users to interact with information on web maps in a user-friendly manner.",
+                "2. Geoanalytics: The platform provides powerful geoanalytics tools for discovering patterns and trends in geospatial data. This aids in making data-driven decisions.",
+                "3. Effortless Data Exchange:M.App Enterprise supports easy data exchange with other systems and formats, facilitating collaboration and integration with existing systems.",
+                "4. Data Management: The platform allows organizations to manage and store geospatial data in a structured and efficient manner.",
+                "5. Mobile Accessibility: M.App Enterprise is designed to be accessible on mobile devices, making it convenient to access geospatial data in the field.",
+                "Use Cases: ",
+                "M.App Enterprise is employed across various industries, including but not limited to:",
+                "1. Urban Planning: Municipal authorities can use M.App Enterprise to create web applications for urban planning, including infrastructure placement and public amenity locations.",
+                "2. Agriculture: In agriculture, M.App Enterprise helps track crops, plan fertilizer application, and monitor soil treatment.",
+                "3. Environmental Monitoring: The platform is utilized for environmental monitoring, including tracking changes in forests, urban expansion, and alterations in water resources.",
+                "4. Telecommunications: Telecommunication companies can use M.App Enterprise for network planning and optimization.",
+                "5. Infrastructure Monitoring: Enterprises managing infrastructure assets can create monitoring and maintenance tools using M.App Enterprise.",
+                "Benefits for Customers:",
+                "1. Enhanced Decision-Making: M.App Enterprise empowers organizations to make informed decisions based on geospatial data, improving efficiency and effectiveness.",
+                "2. Operational Efficiency: The platform automates many geospatial analytical tasks, increasing productivity and saving time.",
+                "3. Seamless Data Exchange: Easy data exchange with other systems streamlines collaboration and ensures that data flows smoothly across the organization.",
+                "4. Mobile Accessibility: The ability to use M.App Enterprise on mobile devices enhances accessibility and usability in the field.",
+                "5. Customizability: M.App Enterprise can be tailored to specific needs and industries, providing organizations with precise solutions that match their requirements.",
+                "In conclusion, M.App Enterprise by Hexagon is a powerful tool for geospatial data analysis and visualization, enabling organizations to derive valuable insights from geospatial data and make informed decisions across a wide range of industries. With its robust features and capabilities, this platform opens up new possibilities for harnessing the power of geospatial data in modern business and management.",
+                ""
+            ]
+        }
+    },
+
+    "luciad": {
+        "about": "Luciad by Hexagon is a cutting-edge geospatial software platform that provides real-time situational awareness and high-performance visualization of complex location-based data. It empowers users in fields such as aviation, defense, and maritime to make informed decisions quickly by offering a clear and dynamic view of critical information.",
+        "modal": {
+            "general": "",
+            "keys": [],
+            "advantages": [],
+            "useCases": [],
+            "benefits": [],
+            "summaryArray": [
+                "Luciad by Hexagon: Elevating Geospatial Data Processing",
+                "Luciad, developed by Hexagon, is a powerful software solution for processing and visualizing geospatial data. The primary objective of this software is to provide organizations with a means to efficiently analyze, visualize, and process various types and volumes of geospatial data. Luciad enables users to leverage geospatial data for making informed decisions across multiple industries.",
+                "Advantages:",
+                "1. Real-time Visualization: Luciad offers real-time geospatial data visualization, allowing users to quickly respond to changes and analyze data in real-time.",
+                "2. Support for Various Data Sources: The platform integrates with various geospatial data sources, including satellite imagery, sensor data, cartographic data, and more.",
+                "3. High Performance: Luciad operates efficiently even with large volumes of data, ensuring high performance and fast processing speeds.",
+                "4. Analytical Capabilities: The platform provides users with powerful data analysis tools, facilitating data-driven decision-making.",
+                "5. Interactivity: Luciad enables users to interact with geospatial data, creating interactive applications and providing convenient web-based access.",
+                "Use Cases:",
+                "Luciad is applied across various industries, including but not limited to:",
+                "1. Aviation: In aviation, Luciad is used for navigation, monitoring, and air traffic management, as well as analyzing meteorological conditions.",
+                "2. Defense and Security: In the defense and security sector, Luciad is used for analyzing military operations, border monitoring, and security events.",
+                "3. Transportation and Logistics: In transportation and logistics, Luciad is employed for tracking vehicles, optimizing routes, and monitoring cargo deliveries.",
+                "4. Energy: In the energy sector, Luciad helps visualize and analyze energy distribution and power plant infrastructure.",
+                "5. Geology and Exploration: In geological research and exploration, Luciad aids in analyzing geological data and exploring mineral deposits.",
+                "Benefits for Customers:",
+                "1. Effortless Geospatial Data Visualization: Luciad enables customers to effortlessly visualize geospatial data, enhancing their understanding and analysis of spatial information.",
+                "2. Robust Data Analysis: The platform empowers customers with comprehensive data analysis capabilities, contributing to well-informed decision-making.",
+                "3. Speed and Efficiency: Luciad operates efficiently, ensuring that customers can process and analyze large datasets without delays.",
+                "4. Enhanced Decision-Making: Customers benefit from improved decision-making processes, as they can rely on accurate and up-to-date geospatial information.",
+                "5. Interactivity and Accessibility: Luciad's interactivity and web-based access make it convenient for customers to interact with geospatial data and build user-friendly applications.",
+                "Luciad by Hexagon is a versatile software solution that enhances the processing and visualization of geospatial data, making it a valuable asset for organizations across various industries. Whether it's for real-time navigation, critical defense operations, efficient logistics management, or data-driven decision-making, Luciad empowers users to harness the power of geospatial data for better outcomes.",
+                ""
+            ]
+        }
+    },
+
+    "genPlan": {
+        "title": "Digital General Plan",
+        "about": "Instruments for creating a digital general plan and GIS systems for enterprises",
+        "modal": {
+            "general": "",
+            "keys": [],
+            "advantages": [],
+            "useCases": [],
+            "benefits": [],
+            "summaryArray": [
+                "GeoMedia is a powerful, flexible GIS management platform that allows you to integrate data from various sources and collaboratively analyze it to obtain clear, structured information.",
+                "GeoMedia combines digital and geographic data to create a unified information system, providing simultaneous access to geospatial data in almost any format and displaying it in a unified map format for efficient processing, analysis, presentation, and joint use.",
+                "GeoMedia's functionality makes it an ideal platform for extracting information from a range of dynamically changing data and assisting in making well-founded, more rational decisions.",
+                "Easy Data Access",
+                "GeoMedia is the best choice of GIS software for users who want to directly connect to databases with server components they are already using, such as Oracle, SQL Server, and PostGIS data servers, without the need for additional importing or conversion.",
+                "Furthermore, GeoMedia offers the possibility to access numerous common geodata formats, most CAD model formats, Esri ArcView, and GeoDatabase files, KML, plain text files, and OGC (Open Geospatial Consortium) web services like WMS, WMTS, and WFS. GeoMedia also includes the ERDAS APOLLO catalog browser for spatial search, retrieval, and display of data and images directly within the map window.",
+                "Data Quality Checking and Assurance",
+                "GeoMedia offers numerous options to ensure high data quality throughout its use in your GIS. GeoMedia optimizes the integration of large volumes of information into your enterprise database, ensuring data completeness (attribute filling and geometric accuracy) and alignment with your organization's data model. The platform allows you to accept and integrate various types of data from multiple sources into a unified high-quality information system. After data integration, GeoMedia enables you to track and control changes made by users and establish a quality assurance checkpoint before updating the database. This simplifies working with conflicting or ambiguous changes.",
+                "GeoMedia provides capabilities for intelligent object modeling, recognizing relationships between objects representing real-world entities in a network, such as sewer, water, electrical, or gas nodes. Recognition of these elements using GeoMedia during editing enhances operator productivity and ensures alignment with existing business processes for accurate representation of existing networks in your GIS system. GeoMedia also offers the ability to perform temporal queries and visualizations, allowing for precise identification of changes in the network over a specific time period and analysis of potential real-world causes and effects.",
+                "Dynamic Data Analysis",
+                "GeoMedia provides you with the capability to perform complex analyses to extract information from data stored in multiple databases on different platforms and in various files simultaneously. The solution allows for creating queries of unlimited complexity, combining and merging queries so that the results of one query are dynamically passed to another.",
+                "When data changes, GeoMedia automatically updates the results, providing you with a dynamic view of the real situation reflected in your data. This capability can also be used for conducting powerful \"what-if\" analyses during strategic planning.",
+                "While competing GIS platforms may allow for the same type of analytical concatenation as GeoMedia, they rely on creating intermediate files to achieve the same result. When executing one query, the results are stored in a temporary file, and the data in this file is used for the next query. If the source data changes, the GIS cannot automatically reflect these changes in the query results it provides to you. With such a static approach, you must repeat the entire analysis to obtain results that reflect the current data state.",
+                "Thanks to these unique analysis capabilities, GeoMedia is an ideal platform for managing linear networks and communications, which form the foundation for enterprises that operate and maintain roads, railways, transit, pipelines, and waterways, as well as for creating digital site plans for infrastructure-rich enterprises.",
+                "These analysis capabilities allow you to track information about your networks and perform specialized analyses to make more informed decisions regarding public safety, service priorities, and resource allocation. GeoMedia supports the maintenance and analysis of both single-level and multi-level networks with linear references and routing. Its Multi-Level Linear Referencing System (MLRS) supports multiple geometric network representations synchronized with event data and other information to ensure accurate analysis.",
+                "Every time you need to find a location or address as part of your analysis, GeoMedia performs geocoding and coordinate matching quickly and accurately, working with your data regardless of your location.",
+                "GeoMedia enables you to accurately determine the location in your network, whether based on building footprints or centerlines. GeoMedia supports a wide range of coordinate systems from around the world and effortlessly transforms vector and raster data into the Coordinate Reference System (CRS) selected for your map.",
+                "Enterprise Performance",
+                "Performance and accuracy are important aspects of capturing and editing vector objects for corporate geospatial databases. GeoMedia provides a set of specialized functionalities for creating, processing, and maintaining geospatial information. The platform supports essential day-to-day operations required for managing cartographic information.",
+                "GeoMedia streamlines the work of organizations with a large number of concurrent users. You can easily share geospatial content within your department or enterprise. If your department has standards for style, text properties, or structured analysis and queries, a manager can ensure consistency across the entire group by setting these standards and queries, centralizing them, and providing shared access. ",
+                "Interface Personalization",
+                "GeoMedia's easy-to-use graphical user interface is well-organized and optimized to minimize mouse movements and button clicks, enhancing productivity and reducing costs.",
+                "GeoMedia allows you to modify and customize interface aspects, simplifying the optimization of specific workflows. Individuals can also adapt the user interface to their specific needs and goals. You can also hide parts of the interface, keeping the workspace uncluttered and providing quicker recognition and access to working functions and tools.",
+                "Unified Solution",
+                "GeoMedia integrates the entire portfolio of products for working with geospatial data, providing a comprehensive single solution for supporting your enterprise's geospatial needs.",
+                "Flexible Offerings",
+                "Three product levels are available for the GeoMedia platform. These levels enable you to acquire the functionality you need, making it easier to tailor the software to your GIS management needs, analysis requirements, and budget.",
+                "Three GeoMedia Product Levels",
+                "1. GeoMedia Essentials allows you to query and analyze various geospatial data sources and provides simple image preparation capabilities.",
+                "2. GeoMedia Advantage includes all the features of GeoMedia Essentials and is ideal for data collection and editing, processing and analyzing elevation and terrain data, including LiDAR data. It also includes data validation tools and advanced raster analysis capabilities. Four commands that were previously only available at the GeoMedia Professional level are now also available at the GeoMedia Advantage level: \"Insert Area by Edges,\" \"Insert Interactive Area by Edges,\" \"Dimensions,\" and \"Insert Dimensions.\"",
+                "3. GeoMedia Professional encompasses all the functionality of the previous levels and provides multi-user data management and analysis across the entire enterprise. Manage linear networks, create professional cartographic maps, conduct advanced object editing, oversee parcel management, perform engineering network analysis, track and manage changes, integrate data from multiple sources, and design and use spatial models.",
+                "Extensions for GeoMedia",
+                "Hexagon Geospatial offers additional capabilities to expand the core capabilities of GeoMedia levels.",
+                "GeoMedia Transportation Manager provides tools to help professionals in municipalities, airports, seaports, departments of transportation (DOTs), railway companies, water transportation agencies, and pipeline operations efficiently analyze their transportation infrastructure. This extension includes capabilities for tracking network information and conducting specialized analyses. Additionally, users can build a linear network model that supports both the Multi-Level Linear Referencing System (MLRS) and applications for vehicle routing. (Available only for GeoMedia Professional).",
+                "GeoMedia Mapping Manager  provides advanced cartographic capabilities and GIS cartography automation for producing cartographic products and creating cartographically accurate products. (Available only for GeoMedia Professional).",
+                "GeoMedia 3D offers three-dimensional visualization in GeoMedia. The extension meets the growing demand for realistic three-dimensional representations of geospatial data by adding a 3D map window through which you can visualize, navigate, analyze, and interact with 3D data in GeoMedia. The GeoMedia 3D map window seamlessly integrates into the GeoMedia interface, providing full and simultaneous access to all standard 2D analysis capabilities in GeoMedia. (All levels of GeoMedia).",
+                "GeoMedia Motion Video Analyst Professional integrates full-motion video into the geospatial environment, dynamically overlaying video onto GIS data. (All levels of GeoMedia).",
+                "GeoMedia Image provides advanced capabilities for image enhancement, registration, extraction, and preservation.",
+                "GeoMedia Image Professional provides an extended set of GeoMedia Image capabilities, including numerous additional commands and an integrated high-performance lighting spreadsheet application.",
+                "ImageStation Stereo for GeoMedia extends GeoMedia capabilities for collecting objects, providing a stereo map window for displaying images and 3D object data with smooth panning, dynamic zooming, and real-time image enhancements.",
+                "ImageStation DTM for GeoMedia  provides a set of tools for collecting and editing terrain data to create surface files for photogrammetric, cartographic, and engineering workflows.",
+                "ImageStation OrthoPro offers a high-performance system for orthorectifying images, including project ortho-planning, orthorectification, tone balancing, mosaicking, true ortho capabilities, automatic seamline generation, and quality assessment.",
+                "ImageStation PixelQue provides tools for inspecting and improving the quality of orthophoto plans and mosaics, allowing users to systematically review and mark errors, correct mistakes, and perform image enhancements for individual elements or projects.",
+                "Seamless GIS Integration",
+                "GeoMedia helps you easily make dynamic real-time geospatial information, passing through your organization, available for processing and analysis. This allows you to conduct various analyses (from very simple to very complex) of data from diverse sources.",
+                "The platform directly connects to geospatial databases already in use by your organization. GeoMedia enables in-depth analysis and dynamic result updates. The flexible structure of levels and extensions allows you to adapt the system to your specific business requirements. GeoMedia enables you to create intelligent, intuitive maps, revealing information previously hidden in your data, facilitating informed and rational decision-making."
+            ]
+        }
+    },
+    "sketchUp": "Trimble has been creating unique solutions for over 40 years to help customers grow their businesses. With over 2,000 unique patents and research and development centers in more than 15 countries, Trimble complements the development of its products with strategic acquisitions to bring the latest technologies to a wider market. In the company's portfolio are cutting-edge solutions for the efficient transformation of industries such as agriculture, construction, geospatial analysis, transportation, and logistics.",
+
+    "sketchUpFree": {
+        "about": "SketchUp Free is a user-friendly 3D modeling software that allows users to create and design various projects with ease. It offers a wide range of powerful tools for both beginners and professionals, making it an ideal choice for architectural, interior, and product design.",
+        "modal": {
+            "general": "",
+            "keys": [],
+            "advantages": [],
+            "useCases": [],
+            "benefits": [],
+            "summaryArray": [
+                "SketchUp for the Web is the embodiment of your ideas in object modeling using a new browser tab.",
+                "The SketchUp web modeling tool is an enhanced version of the desktop application, utilizing the same underlying technology. By saving projects to Trimble Connect, you can always access the most up-to-date version of your model and view its change history. SketchUp for the Web also performs automatic saving, allowing you to recover modeling stages when needed.",
+                "Fast modeling in 3 simple steps:",
+                "1. Open any browser.",
+                "2. Launch SketchUp.",
+                "3. Bring your ideas to life.",
+                "Create a 3D preliminary project before heading to the material store.",
+                "Creating references:",
+                "Develop a 3D preliminary project before heading to the material store.",
+                "SketchUp models serve as a valuable reference in your project:",
+                "- Save important views and send them to your phone or tablet.",
+                "- Create reference drawings for printing and sharing with other team members.",
+                "- Integration with other systems.",
+                "- Integration with Google Drive and Microsoft OneDrive.",
+                "- Works with Chromebooks and any internet-connected computers.",
+                "- Available in the G Suite Marketplace for Education or the Microsoft Education Store."
+            ]
+        }
+    },
+
+    "sketchUpShop": {
+        "about": "SketchUp Shop is a versatile 3D modeling software designed for professionals and enthusiasts alike. With a rich set of features and a user-friendly interface, it empowers users to create stunning 3D models and designs for various industries",
+        "modal": {
+            "general": "",
+            "keys": [],
+            "advantages": [],
+            "useCases": [],
+            "benefits": [],
+            "summaryArray": [
+                "SketchUp Shop is a versatile and user-friendly 3D modeling software designed to empower professionals, enthusiasts, and students with the tools they need to bring their creative ideas to life in the world of 3D design. The primary purpose of SketchUp Shop is to provide a comprehensive platform for designing, modeling, and visualizing 3D projects across various industries, including architecture, interior design, engineering, product design, and more. It offers a wide range of advanced features and benefits that cater to both beginners and experienced 3D designers, making it a valuable tool for anyone looking to explore the realms of 3D modeling.",
+                "Advantages of SketchUp Shop:",
+                "1. User-Friendly Interface: SketchUp Shop prides itself on its intuitive and user-friendly interface. Its simplicity makes it accessible to beginners while still offering powerful features for experienced users.",
+                "2. Web-Based: Being a web-based application means you can access your projects from anywhere with an internet connection, allowing for greater flexibility and collaboration.",
+                "3. Wide Range of Tools: SketchUp Shop provides an extensive set of tools and features that enable you to create detailed 3D models, including drawing, extruding, pushing, and pulling objects with ease.",
+                "4. Integration: It seamlessly integrates with other Google services such as Google Drive, making it easier to store and share your 3D projects with collaborators.",
+                "5. Trimble Connect Integration: SketchUp Shop also allows you to save your projects to Trimble Connect, facilitating real-time collaboration and version control, which is especially beneficial for large-scale projects or team-based work.",
+                "6. Extensive 3D Warehouse: Users have access to the 3D Warehouse, a vast online library of pre-made 3D models that can be imported into your projects, saving time and effort.",
+                "Use Cases of SketchUp Shop:",
+                "1. Architectural Design: Architects use SketchUp Shop to create detailed 3D models of buildings, allowing them to visualize and communicate their designs effectively.",
+                "2. Interior Design: Interior designers can use SketchUp Shop to plan and visualize interior spaces, experimenting with furniture arrangements and color schemes.",
+                "3. Product Design: Product designers can create prototypes and product models with precise dimensions, aiding in the development and testing of new products.",
+                "4. Engineering: Engineers can use SketchUp Shop to visualize and analyze complex mechanical and structural designs.",
+                "5. Education: SketchUp Shop is also an invaluable tool in educational settings, helping students learn the principles of 3D modeling and design.",
+                "Benefits for Customers:",
+                "1. Cost-Efficiency: SketchUp Shop offers a more cost-effective solution compared to some of the more expensive 3D modeling software on the market. It's an excellent choice for those looking for professional-level features without breaking the bank.",
+                "2. Accessibility: The web-based nature of SketchUp Shop means customers can access their projects from multiple devices, making it easy to work on designs whether they're in the office, at home, or on the go.",
+                "3. Collaboration: The integration with Trimble Connect and Google Drive allows for seamless collaboration, making it easy for multiple team members to work on the same project simultaneously.",
+                "4. Versatility: SketchUp Shop caters to a wide range of industries, making it a versatile tool for professionals in architecture, design, engineering, and more.",
+                "5. Learning Resources: SketchUp offers a wealth of online tutorials, forums, and a vibrant community that can assist customers in honing their 3D modeling skills.",
+                "In summary, SketchUp Shop is a user-friendly, cost-effective, and versatile 3D modeling solution that empowers professionals and enthusiasts to bring their creative ideas to life. Its web-based platform, extensive toolset, and integration options make it a valuable asset for a variety of industries and design projects.\n"
+            ]
+        }
+    },
+
+    "sketchUpPro": {
+        "about": "SketchUp Pro is a professional-grade 3D modeling software that offers advanced tools and features for architects, designers, and engineers. With its powerful capabilities, it enables users to create intricate 3D designs and precise architectural models with ease.",
+        "modal": {
+            "general": "",
+            "keys": [],
+            "advantages": [],
+            "useCases": [],
+            "benefits": [],
+            "summaryArray": [
+                "SketchUp Pro is a professional-grade 3D modeling software that serves as a powerful tool for architects, designers, engineers, and other creative professionals. The primary purpose of SketchUp Pro is to provide a comprehensive platform for designing, modeling, and visualizing complex 3D projects with precision and efficiency. It is geared towards users who require advanced features and tools to create detailed architectural models, interior designs, product prototypes, and more.",
+                "Advantages:",
+                "1. Precision Modeling: SketchUp Pro offers precise modeling capabilities, allowing users to create intricate 3D designs with accurate measurements and dimensions.",
+                "2. Advanced Features: It provides access to advanced features such as 2D documentation, dynamic components, and solid modeling, enabling users to tackle complex projects effectively.",
+                "3. Extensive Plugin Library: SketchUp Pro supports a wide range of plugins and extensions, enhancing its functionality and allowing users to customize their workflow.",
+                "4. Import and Export Options: Users can import and export various file formats, facilitating collaboration with professionals who use different software.",
+                "5. Integration: It seamlessly integrates with other design and modeling tools, streamlining the workflow for professionals who work with multiple software applications.",
+                "6. Dynamic Components: SketchUp Pro allows users to create dynamic 3D models with interactive components, making it ideal for architectural walkthroughs and presentations.",
+                "Use Cases:",
+                "1. Architectural Design: Architects use SketchUp Pro to create detailed building models, plan layouts, and visualize structural designs.",
+                "2. Interior Design: Interior designers rely on SketchUp Pro to design and visualize interior spaces, experiment with furniture layouts, and select materials.",
+                "3. Product Design: Industrial and product designers use the software to prototype and model new products with precision and accuracy.",
+                "4. Engineering: Engineers utilize SketchUp Pro for mechanical and structural engineering projects, including prototyping and simulation.",
+                "5. Construction: Construction professionals can create detailed construction plans, explore design alternatives, and collaborate with architects and engineers.",
+                "6. Education: SketchUp Pro is also used in educational settings to teach 3D modeling principles, architecture, and design concepts.",
+                "Benefits for Customers:",
+                "1. Professional Quality: SketchUp Pro delivers professional-grade results, allowing customers to create high-quality 3D models and designs for their projects.",
+                "2. Efficiency: The software streamlines the design process with advanced features, reducing the time and effort required to complete complex projects.",
+                "3. Customization: Users can tailor SketchUp Pro to their specific needs by utilizing a vast library of plugins and extensions, enhancing their workflow.",
+                "4. Collaboration: Its compatibility with various file formats and integration with other design tools enable seamless collaboration with colleagues and clients.",
+                "5. Precise Measurements: Architects and engineers can rely on SketchUp Pro for precise measurements and accurate representations of their designs.",
+                "6. Versatility: SketchUp Pro is versatile, catering to a wide range of industries, ensuring it remains a valuable asset for professionals in architecture, design, engineering, and construction.",
+                "In summary, SketchUp Pro is a robust 3D modeling software tailored for professionals, offering advanced features, customization options, and precise modeling capabilities. It serves as an essential tool for architects, designers, engineers, and other creative professionals across various industries, helping them bring their design visions to life with accuracy and efficiency.\n"
+            ]
+        }
+    },
+
+    "sketchUpStudio": {
+        "about": "SketchUp Studio is an all-in-one 3D design and modeling solution that empowers professionals with tools for architectural, interior, and product design. With features like Trimble Connect integration and advanced rendering options, it streamlines the design workflow and enhances collaboration.",
+        "modal": {
+            "general": "",
+            "keys": [],
+            "advantages": [],
+            "useCases": [],
+            "benefits": [],
+            "summaryArray": [
+                "SketchUp Studio is a robust software package designed for three-dimensional modeling and visualization, specifically tailored to professionals in the fields of architecture, design, and construction. The primary goal of SketchUp Studio is to provide renowned experts and creative teams with the tools to create, edit, and present complex projects with maximum precision and efficiency.",
+                "Advantages:",
+                "1. Integrated Toolset: SketchUp Studio includes a rich set of tools for modeling, visualization, and editing, allowing professionals to work in a single environment without the need for additional software.",
+                "2. Enhanced Visualization: The V-Ray visualization tool included in the Studio package enables the creation of impressive, realistic images and animations for impactful presentations.",
+                "3. LayOut Application: LayOut is a tool for creating professional documents, diagrams, and reports, making SketchUp Studio ideal for generating project documentation.",
+                "4. Real-Time Collaboration: Trimble Connect, a collaboration tool, streamlines teamwork and information exchange by enabling real-time collaboration and data sharing among team members.",
+                "5. Integration with Other Software: SketchUp Studio easily integrates with other programs, such as AutoCAD and Revit, simplifying data exchange and collaboration with colleagues who use different tools.",
+                "Use Cases:",
+                "1. Architectural Design: Architects use SketchUp Studio to create detailed architectural models, layout designs, and project visualizations.",
+                "2. Interior Design: Interior designers can efficiently plan and visualize interior spaces with high quality.",
+                "3. Landscape Design:Landscape architects utilize SketchUp Studio to create detailed landscape and garden designs.",
+                "4. Construction Management: Construction managers employ SketchUp Studio to produce project documentation and visualize construction projects. ",
+                "5. Product Design: Product designers can use the software to create 3D models of products and their prototypes.",
+                "Benefits for Customers:",
+                "1. Integrated Efficiency: SketchUp Studio combines all necessary tools for 3D modeling and visualization in one package, streamlining workflows and increasing efficiency.",
+                "2. Professional Visualization: The V-Ray visualization tool allows for the creation of impressive, photorealistic images and animations, enhancing the quality of presentations.",
+                "3. Effortless Document Creation: LayOut simplifies the process of generating professional documents and reports, eliminating the need for additional software.",
+                "4. Seamless Collaboration: Trimble Connect facilitates collaboration and communication, ensuring that team members can work together effectively, even in real-time.",
+                "5. Compatibility with Other Tools: Integration with various software programs makes data sharing and collaboration with colleagues who use different tools hassle-free.",
+                "In summary, SketchUp Studio is an integrated package for 3D modeling and visualization, assisting professionals from various fields in creating, editing, and presenting their projects with impressive quality and productivity. This tool enhances collaboration within teams and contributes to high-quality design and visualization."
+            ]
+        }
+    },
+
+    "sketchUpEducation": {
+        "title": "SketchUp for Higher Education",
+        "about": "SketchUp for Higher Education offers a comprehensive 3D modeling and design platform tailored for academic institutions. It equips students and educators with powerful tools to foster creativity, enhance architectural understanding, and facilitate collaborative learning in the field of design and architecture.",
+        "modal": {
+            "general": "",
+            "keys": [],
+            "advantages": [],
+            "useCases": [],
+            "benefits": [],
+            "summaryArray": [
+                "SketchUp Studio: Empowering Creativity and Collaboration",
+                "SketchUp Studio is a comprehensive software suite designed to cater to the needs of professionals in the fields of architecture, design, and construction. Its primary purpose is to empower creative teams and experts by providing them with a versatile set of tools for 3D modeling, visualization, and project collaboration. SketchUp Studio aims to streamline workflows, enhance project quality, and foster effective teamwork.",
+                "Advantages:",
+                "1. Integrated Toolset: SketchUp Studio boasts a rich array of modeling, visualization, and editing tools all within a unified environment. This integration eliminates the need for users to rely on multiple software applications.",
+                "2. Enhanced Visualization: The inclusion of the V-Ray visualization tool allows users to create stunning, photorealistic images and animations, significantly elevating the quality of project presentations.",
+                "3. LayOut Application: LayOut is a valuable tool for creating professional documents, diagrams, and reports, making it an ideal choice for generating project documentation and design presentations.",
+                "4. Real-Time Collaboration: Trimble Connect, a collaborative platform, facilitates seamless teamwork and data exchange, enabling team members to work together in real-time and share project information effortlessly.",
+                "5. Integration with Other Software: SketchUp Studio easily integrates with other programs such as AutoCAD and Revit, simplifying data interchange and collaboration with colleagues using different tools.",
+                "Use Cases:",
+                "1. Architectural Design: Architects utilize SketchUp Studio to create intricate architectural models, design layouts, and project visualizations.",
+                "2. Interior Design: Interior designers efficiently plan and visualize interior spaces with exceptional quality.",
+                "3. Landscape Design: Landscape architects employ SketchUp Studio to create detailed landscape and garden designs.",
+                "4. Construction Management: Construction managers use SketchUp Studio for project documentation and visualizing construction projects.",
+                "5. Product Design: Product designers create 3D models of products and prototypes, aiding in product development.",
+                "Benefits for Customers:",
+                "1. Integrated Efficiency: SketchUp Studio consolidates all essential 3D modeling and visualization tools in one package, simplifying workflows and boosting productivity.",
+                "2. Professional Visualization: The V-Ray visualization tool empowers users to craft impressive, photorealistic visuals and animations, enhancing the impact of presentations.",
+                "3. Effortless Document Creation: LayOut streamlines the process of producing professional documents and reports, eliminating the need for additional software.",
+                "4. Seamless Collaboration: Trimble Connect enhances collaboration and communication, ensuring team members can work together effectively, even in real-time, leading to streamlined project management.",
+                "5. Compatibility with Other Tools: Integration with various software programs makes data sharing and collaboration with colleagues who use different tools hassle-free.",
+                "In summary, SketchUp Studio is an integrated 3D modeling and visualization package that empowers professionals from various fields to create, edit, and present their projects with impressive quality and efficiency. This tool enhances collaboration within teams and contributes to high-quality design and visualization, making it an invaluable asset for creative and technical professionals alike.\n"
+            ]
+        }
+    },
+
+    "trimbleConnect": {
+        "about": "Trimble Connect is a powerful collaboration platform that enables teams to seamlessly share, manage, and collaborate on project data in real-time. With its intuitive interface and robust features, Trimble Connect streamlines communication and enhances efficiency across various industries.",
+        "modal": {
+            "general": "",
+            "keys": [],
+            "advantages": [],
+            "useCases": [],
+            "benefits": [],
+            "summaryArray": [
+                "Trimble Connect: Transforming Collaboration in Construction and Beyond",
+                "Purpose:",
+                "Trimble Connect is a powerful collaboration platform designed to revolutionize project management and collaboration within the construction industry and various other sectors. Its primary purpose is to streamline communication, improve data sharing, and enhance collaboration among project stakeholders, ultimately leading to more efficient and successful projects.",
+                "Advantages:",
+                "1. Centralized Data Management: Trimble Connect acts as a centralized repository for all project-related data, including models, documents, and schedules. This eliminates the need for dispersed data storage and ensures that all stakeholders have access to the most up-to-date information.",
+                "2. Real-Time Collaboration: The platform facilitates real-time collaboration among team members, allowing them to work together seamlessly regardless of their physical location. This reduces delays, enhances decision-making, and boosts productivity.",
+                "3. Integration with BIM: Trimble Connect integrates seamlessly with Building Information Modeling (BIM) tools, allowing for the easy sharing and collaboration of 3D models. This is especially valuable in construction and architecture, where BIM is widely used.",
+                "4. Document Management: Users can manage and share project-related documents efficiently, ensuring that all team members have access to the latest versions of plans, specifications, and reports.",
+                "5. Task Management: Trimble Connect offers robust task management features, enabling users to assign and track tasks, monitor progress, and set deadlines, leading to better project organization.",
+                "Use Cases:",
+                "1. Construction: Trimble Connect is extensively used in the construction industry for project coordination, data sharing, and collaboration among contractors, architects, engineers, and subcontractors.",
+                "2. Architecture: Architects utilize the platform for sharing design models, drawings, and project documentation, allowing for streamlined communication with clients and contractors.",
+                "3. Manufacturing: Manufacturers employ Trimble Connect to manage design data, collaborate with suppliers, and oversee the production process, resulting in improved product quality and efficiency.",
+                "4. Infrastructure Development: Trimble Connect is valuable in infrastructure projects, facilitating collaboration between civil engineers, surveyors, and infrastructure planners.",
+                "5. Facilities Management: After construction, the platform supports facilities management by providing a centralized location for building information, maintenance schedules, and documentation.",
+                "Benefits for Customers:",
+                "1. Enhanced Collaboration: Trimble Connect breaks down communication barriers and fosters collaboration among project stakeholders, reducing miscommunication and errors.",
+                "2. Efficient Project Management: The platform streamlines project management by offering tools for data sharing, task management, and document control, leading to better project organization and scheduling.",
+                "3. Improved Decision-Making: Real-time access to project data and the ability to collaborate with stakeholders helps teams make informed decisions quickly, reducing delays and costs.",
+                "4. Data Security: Trimble Connect prioritizes data security, ensuring that sensitive project information is protected, even when shared with external partners.",
+                "5. Cost Savings: Efficient project management, reduced errors, and improved collaboration contribute to cost savings in terms of time and resources.",
+                "In conclusion, Trimble Connect is a game-changing collaboration platform that enhances project management and communication across a variety of industries, with a primary focus on construction. Its ability to centralize data, facilitate real-time collaboration, and streamline project management makes it an indispensable tool for project stakeholders looking to improve efficiency, reduce costs, and achieve successful outcomes.\n"
+            ]
+        }
+    },
+
+    "extensionWarehouse": {
+        "about": "Extension Warehouse is a comprehensive marketplace for SketchUp extensions, offering a vast library of plugins and add-ons to enhance your 3D modeling experience. It provides users with easy access to a wide range of tools and features that expand the capabilities of SketchUp.",
+        "modal": {
+            "general": "",
+            "keys": [],
+            "advantages": [],
+            "useCases": [],
+            "benefits": [],
+            "summaryArray": [
+                "Extension Warehouse: Enhancing Your SketchUp Experience",
+                "Extension Warehouse is an online resource specifically designed for SketchUp users to easily find, install, and use various extensions and plugins for the software. The primary purpose of Extension Warehouse is to provide users with additional functional capabilities and tools that expand their abilities when creating 3D models.",
+                "Advantages:",
+                "1. Security and Verification: All extensions hosted on Extension Warehouse are reviewed and approved by the SketchUp team before they become available to users. This ensures a high level of security and reliability.",
+                "2. Convenience and Simplicity: Extension Warehouse is seamlessly integrated into the SketchUp software interface, making searching for, installing, and updating extensions incredibly convenient and straightforward.",
+                "3. Diverse Selection of Extensions: The resource offers a wide range of extensions and plugins, including tools for modeling, visualization, animation, architectural design, and much more.",
+                "4. Updates: Extension Warehouse also notifies users of updates to extensions, ensuring that they always have access to the latest versions and features.",
+                "5. Community and Support: The SketchUp user community actively shares experiences and tips on using extensions, and Extension Warehouse provides support and discussion for each extension.",
+                "Use Cases:",
+                "1. Architectural Design: Architects use extensions to quickly create complex architectural details and visualize projects.",
+                "2. Interior Design: Interior designers can use extensions to create interior solutions and 3D models.",
+                "3. Product Modeling: Product designers can find useful extensions for creating 3D models of products and prototypes.",
+                "4. Landscape Design: Landscape architects use extensions for designing and visualizing landscapes.",
+                "5. Visualization: Visualizers use extensions to create captivating visualizations and animations of their projects for better client presentations.",
+                "Benefits for Users:",
+                "1. Enhanced Modeling: With extensions, users can extend SketchUp's functionality and create more complex and creative 3D models.",
+                "2. Increased Productivity: Extensions enable users to perform tasks faster and more efficiently, simplifying their project work.",
+                "3. Visualization and Animation: Some extensions allow users to create engaging visualizations and animations of their projects, improving client engagement.",
+                "4. Time Savings: Extensions help users avoid the need to create complex objects manually, saving time and effort.",
+                "5. Extended Community: Extension Warehouse brings SketchUp users together and provides an opportunity to exchange experiences and tips, fostering skill improvement.",
+                "Extension Warehouse is an indispensable tool for SketchUp users, expanding the software's capabilities and providing access to a plethora of useful extensions and plugins. This helps improve productivity, expand possibilities, and refine skills in creating 3D models for various industries and professions.\n"
+            ]
         }
     }
 }
