@@ -93,34 +93,34 @@ export default function BuySketchUpShop({
         })()
     }, [])
 
-    useEffect(() => {
-        if (
-            selectedValue === 'USD' ||
-            selectedValue === 'UAH' ||
-            selectedValue === 'EUR'
-        ) {
-            return
-        }
-
-        const UAH_CURENCY = `https://free.currconv.com/api/v7/convert?q=USD_${selectedValue}&compact=ultra&apiKey=${currencyConvertKey}`
-        fetch(UAH_CURENCY)
-            .then(response => {
-                if (response.status === 200) {
-                    const data = response.json()
-                    return setCurrentAmount(
-                        data[`USD_${selectedValue}`] * priceUSD
-                    )
-                }
-                return Promise.reject('Currency conversion error')
-            })
-            .catch(err => {
-                console.error(err)
-                setCurrentAmount(priceUSD)
-                setSelectedValue('USD')
-            })
-        const savedData = localStorage.getItem('USER_DATA_DATABASE')
-        if (savedData) setUserData(JSON.parse(savedData))
-    }, [])
+    // useEffect(() => {
+    //     if (
+    //         selectedValue === 'USD' ||
+    //         selectedValue === 'UAH' ||
+    //         selectedValue === 'EUR'
+    //     ) {
+    //         return
+    //     }
+    //
+    //     const UAH_CURENCY = `https://free.currconv.com/api/v7/convert?q=USD_${selectedValue}&compact=ultra&apiKey=${currencyConvertKey}`
+    //     fetch(UAH_CURENCY)
+    //         .then(response => {
+    //             if (response.status === 200) {
+    //                 const data = response.json()
+    //                 return setCurrentAmount(
+    //                     data[`USD_${selectedValue}`] * priceUSD
+    //                 )
+    //             }
+    //             return Promise.reject('Currency conversion error')
+    //         })
+    //         .catch(err => {
+    //             console.error(err)
+    //             setCurrentAmount(priceUSD)
+    //             setSelectedValue('USD')
+    //         })
+    //     const savedData = localStorage.getItem('USER_DATA_DATABASE')
+    //     if (savedData) setUserData(JSON.parse(savedData))
+    // }, [])
 
     useEffect(() => {
         localStorage.setItem(
@@ -146,17 +146,7 @@ export default function BuySketchUpShop({
             setCurrentAmount(amountEuro)
             return setSelectedValue('EUR')
         }
-        const CONVERT_URL = `https://free.currconv.com/api/v7/convert?q=USD_${currency}&compact=ultra&apiKey=${currencyConvertKey}`
-        try {
-            const response = await fetch(CONVERT_URL)
-            if (response.status !== 200)
-                await Promise.reject('Currency conversion error')
-            const data = response.json()
-            setCurrentAmount(data[`USD_${currency}`] * priceUSD)
-            setSelectedValue(currency)
-        } catch (err) {
-            console.error(err)
-        }
+        setSelectedValue(currency)
     }
 
     function handleChangeCheckbox(e) {

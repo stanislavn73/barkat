@@ -9,7 +9,7 @@ import softStyles from '../SoftPage.module.scss'
 
 const ButtonsSection = () => {
     const {
-        t: { contactUsButton },
+        t: { checkPrice },
     } = useTranslation('common')
     return (
         <>
@@ -29,9 +29,7 @@ const ButtonsSection = () => {
                         className={styles.buttonContainer}
                         onClick={handleOpenForm}
                     >
-                        <div className={softStyles.button}>
-                            {contactUsButton}
-                        </div>
+                        <div className={softStyles.button}>{checkPrice}</div>
                     </div>
                 )}
             </ModalConsumer>

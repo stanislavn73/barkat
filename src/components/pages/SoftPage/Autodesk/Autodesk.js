@@ -67,7 +67,7 @@ const Autodesk = () => {
                 ))}
 
                 <PlainText className={styles['soft-plain-text']}>
-                    <a href='https://www.autodesk.ru/'>www.autodesk.ru</a>
+                    <a href='https://www.autodesk.com'>www.autodesk.com</a>
                 </PlainText>
                 <div className={styles['soft-items-wrapper']}>
                     {allPlanItems.map(item => (

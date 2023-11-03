@@ -37,7 +37,6 @@ const sketchupItems = [
     },
     {
         id: 7,
-        title: 'SketchUp для высшего образования',
         type: 'sketchUpEducation',
         buyIt: true,
     },
@@ -82,11 +81,7 @@ const SketchUp = () => {
                             <ModalConsumer>
                                 {({ handleOpenSoftModal }) => (
                                     <div
-                                        className={`${
-                                            title.includes('SketchUp')
-                                                ? styles['title_SketchUp']
-                                                : styles.title
-                                        }`}
+                                        className={styles.title}
                                         onClick={handleOpenSoftModal(type)}
                                     >
                                         {title || tSoft[type].title}

@@ -9,5 +9,21 @@
         "10": "Payment Success"
     },
     "contactUsButton": "Contact us",
-    "buyButton": "Buy"
+    "checkPrice": "Check the price",
+    "buyButton": "Buy",
+    "consultation": {
+        "name": "Name",
+        "surName": "Surname",
+        "company": "Company",
+        "title": "Title",
+        "phone": "Phone",
+        "question": "Describe question",
+        "send": "Send",
+        "sending": "Sending...",
+        "sent": "Success!",
+        "error": "Error! Bad connection",
+        "formName": "Order consultation",
+        "emailError": "Enter correct email",
+        "phoneError": "Enter correct phone"
+    }
 }
