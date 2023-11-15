@@ -1,1 +1,1 @@
-export { TeamViewerXPick } from './TeamViewerXPick'
+export { TeamViewer } from './TeamViewer'

@@ -115,7 +115,7 @@ export default function Terracota() {
                         <OpenModalButton />
                     </div>
                     <div>
-                        <p>
+                        <div>
                             <SubTitle>Конструкция:</SubTitle>
                             <p>
                                 • Плиты облицовки устанавливаются на
@@ -130,8 +130,8 @@ export default function Terracota() {
                                 • Допускается применение следующих типовых
                                 подсистем: рядовая, межэтажная{' '}
                             </p>
-                        </p>
-                        <p>
+                        </div>
+                        <div>
                             <SubTitle>Преимущества:</SubTitle>
                             <p>
                                 • Минимальная номенклатура крепежа — один
@@ -151,7 +151,7 @@ export default function Terracota() {
                                 • Универсальное решение для рядовой и межэтажной
                                 подсистемы{' '}
                             </p>
-                        </p>
+                        </div>
                     </div>
                 </div>
             </Padded>

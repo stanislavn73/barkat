@@ -111,21 +111,6 @@
                         opacity: 0.6;
                     }
 
-                    &_SketchUp {
-                        font-weight: 500;
-                        width: 100%;
-                        text-align: center;
-                        font-size: 24px;
-                        color: blue;
-                        text-decoration: underline;
-                        margin-bottom: 15px;
-                        &:hover {
-                            cursor: url('../../../../public/images/pointer.png'),
-                                auto;
-                            opacity: 0.6;
-                        }
-                    }
-
                     @media screen and (max-width: #{$mobile-l}) {
                         text-align: left;
                     }
@@ -144,20 +129,25 @@
                         font-size: 14px;
                     }
                 }
-
-                .button {
-                    padding: 13px 20px;
-                    color: white;
-                    background: $primary;
-                    transition: 0.2s;
-
-                    &:hover {
-                        cursor: pointer;
-                        opacity: 0.8;
-                    }
-                }
             }
         }
+        .button {
+            padding: 13px 20px;
+            color: white;
+            background: $primary;
+            transition: 0.2s;
+
+            &:hover {
+                cursor: pointer;
+                opacity: 0.8;
+            }
+        }
+    }
+
+    .tableContainer {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
     }
 }
 

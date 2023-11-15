@@ -1,0 +1,29 @@
+{
+    "header": {
+        "1": "Main",
+        "2": "About Us",
+        "4": "Ventilated facades\n Barkat-Stein",
+        "5": "3D-Solutions (BIM, PLM, GIS)\n Barkat-3d-ville",
+        "8": "Events",
+        "9": "Buy SketchUp",
+        "10": "Payment Success"
+    },
+    "contactUsButton": "Contact us",
+    "checkPrice": "Check the price",
+    "buyButton": "Buy",
+    "consultation": {
+        "name": "Name",
+        "surName": "Surname",
+        "company": "Company",
+        "title": "Title",
+        "phone": "Phone",
+        "question": "Describe question",
+        "send": "Send",
+        "sending": "Sending...",
+        "sent": "Success!",
+        "error": "Error! Bad connection",
+        "formName": "Order consultation",
+        "emailError": "Enter correct email",
+        "phoneError": "Enter correct phone"
+    }
+}

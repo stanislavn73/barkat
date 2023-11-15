@@ -71,7 +71,7 @@ export default function PorcelainTile() {
                         <OpenModalButton />
                     </div>
                     <div>
-                        <p>
+                        <div>
                             <SubTitle>Конструкция:</SubTitle>
                             <p>
                                 • Линейка, состоящая из стартовых, угловых и
@@ -89,8 +89,8 @@ export default function PorcelainTile() {
                                 • Допускается применение следующих типовых
                                 подсистем: рядовая, межэтажная{' '}
                             </p>
-                        </p>
-                        <p>
+                        </div>
+                        <div>
                             <SubTitle>Преимущества:</SubTitle>
                             <p>
                                 • Универсальное портфолио профилей и
@@ -120,7 +120,7 @@ export default function PorcelainTile() {
                                 повреждения облицовки вследствие сезонных
                                 перепадов температуры{' '}
                             </p>
-                        </p>
+                        </div>
                     </div>
                 </div>
             </Padded>

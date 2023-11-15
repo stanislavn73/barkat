@@ -43,148 +43,149 @@ import BuySketchUpPro from './content/BuyButtons/BuySketchUpPro'
 import BuySketchUpStudio from './content/BuyButtons/BuySketchUpStudio'
 import BuySketchUpHigher from './content/BuyButtons/BuySketchUpHigher'
 import UserAgreement from './content/UserAgreement'
-import { TeamViewerXPick } from './content/TeamViewer'
+import { TeamViewer } from './content/TeamViewer'
+import { GoogleCloud } from './content/GoogleCloud/GoogleCloud'
 
-export default {
+export default softTranslation => ({
     REVIT: {
         title: 'Autodesk Revit',
-        content: Revit,
+        content: Revit(softTranslation.revit.modal),
     },
     AUTOCAD: {
         title: 'AutoCAD',
-        content: AutoCAD,
+        content: Revit(softTranslation.autocad.modal),
     },
     AUTODESK_AEC_COLLECTION: {
         title: 'Autodesk AEC Collection',
-        content: AutodeskAecCollection,
+        content: Revit(softTranslation.aec.modal),
     },
     NAVISWORKS: {
         title: 'Autodesk Navisworks',
-        content: Navisworks,
+        content: GoogleCloud(softTranslation.navisworks.modal),
     },
     CIVIL_3D: {
         title: 'Autodesk Civil 3D',
-        content: Civil3D,
+        content: GoogleCloud(softTranslation.civil3d.modal),
     },
     '3DExperience': {
         title: '3DExperience',
-        content: ThreeDExperience,
+        content: GoogleCloud(softTranslation['3DExperience'].modal),
     },
-    DraftSide: {
-        title: 'DraftSide',
-        content: DraftSide,
+    draftSight: {
+        title: 'DraftSight',
+        content: GoogleCloud(softTranslation.draftSight.modal),
     },
-    Catia: {
+    catia: {
         title: 'Catia',
-        content: Catia,
+        content: GoogleCloud(softTranslation.catia.modal),
     },
-    Enovia: {
+    enovia: {
         title: 'Enovia',
-        content: Enovia,
+        content: GoogleCloud(softTranslation.enovia.modal),
     },
-    Delmia: {
+    delmia: {
         title: 'Delmia',
-        content: Delmia,
+        content: GoogleCloud(softTranslation.delmia.modal),
     },
-    Simulia: {
+    simulia: {
         title: 'Simulia',
-        content: Simulia,
+        content: GoogleCloud(softTranslation.simulia.modal),
     },
-    DassaultOil: {
-        title: 'Dassault: Нефтегазовая промышленность',
-        content: DassaultOil,
+    dassaultOil: {
+        title: softTranslation.dassaultOil.title,
+        content: GoogleCloud(softTranslation.dassaultOil.modal),
     },
-    DassaultBuilding: {
-        title: 'Dassault: Строительство',
-        content: DassaultBuilding,
+    dassaultBuilding: {
+        title: softTranslation.dassaultBuilding.title,
+        content: GoogleCloud(softTranslation.dassaultBuilding.modal),
     },
-    DassaultPlanning: {
-        title: 'Dassault: Планирование производства',
-        content: DassaultPlanning,
+    dassaultPlanning: {
+        title: softTranslation.dassaultPlanning.title,
+        content: GoogleCloud(softTranslation.dassaultPlanning.modal),
     },
-    DassaultClone: {
-        title: 'Dassault: Цифровой двойник производства',
-        content: DassaultClone,
+    dassaultClone: {
+        title: softTranslation.dassaultClone.title,
+        content: GoogleCloud(softTranslation.dassaultClone.modal),
     },
-    GeoMedia: {
+    geoMedia: {
         title: 'GeoMedia',
-        content: GeoMedia,
+        content: GoogleCloud(softTranslation.geoMedia.modal),
     },
-    ErdasImagine: {
+    erdasImagine: {
         title: 'Erdas Imagine',
-        content: ErdasImagine,
+        content: GoogleCloud(softTranslation.erdasImagine.modal),
     },
-    ImagineStation: {
-        title: 'Imagine Station',
-        content: ImagineStation,
+    imageStation: {
+        title: 'Image Station',
+        content: GoogleCloud(softTranslation.imageStation.modal),
     },
-    ErdasApollo: {
+    erdasApollo: {
         title: 'Erdas Apollo',
-        content: ErdasApollo,
+        content: GoogleCloud(softTranslation.erdasApollo.modal),
     },
-    MAppEnterprise: {
+    mAppEnterprise: {
         title: 'M.App Enterprise',
-        content: MAppEnterprise,
+        content: GoogleCloud(softTranslation.mAppEnterprise.modal),
     },
-    Luciad: {
+    luciad: {
         title: 'Luciad',
-        content: Luciad,
+        content: GoogleCloud(softTranslation.luciad.modal),
     },
-    GenPlan: {
-        title: 'Цифровой Генплан',
-        content: GenPlan,
+    genPlan: {
+        title: softTranslation.genPlan.title,
+        content: GoogleCloud(softTranslation.genPlan.modal),
     },
     MicroStation: {
         title: 'MicroStation',
-        content: MicroStation,
+        content: GoogleCloud(softTranslation.microStation.modal),
     },
     Plaxis: {
         title: 'PLAXIS',
-        content: Plaxis,
+        content: GoogleCloud(softTranslation.plaxis.modal),
     },
     Staad: {
         title: 'STAAD',
-        content: Staad,
+        content: GoogleCloud(softTranslation.staad.modal),
     },
     ContextCapture: {
         title: 'ContextCapture',
-        content: ContextCapture,
+        content: GoogleCloud(softTranslation.contextCapture.modal),
     },
     SYNCHRO: {
         title: 'SYNCHRO',
-        content: SYNCHRO,
+        content: GoogleCloud(softTranslation.synchro.modal),
     },
     ProStructures: {
         title: 'ProStructures',
-        content: ProStructures,
+        content: GoogleCloud(softTranslation.proStructures.modal),
     },
-    SketchUpPro: {
+    sketchUpPro: {
         title: 'SketchUp Pro',
-        content: SketchUpPro,
+        content: GoogleCloud(softTranslation.sketchUpPro.modal),
     },
-    SketchUpShop: {
+    sketchUpShop: {
         title: 'SketchUp Shop',
-        content: SketchUpShop,
+        content: GoogleCloud(softTranslation.sketchUpShop.modal),
     },
-    SketchUpEducation: {
-        title: 'SketchUp для высшего образования',
-        content: SketchUpEducation,
+    sketchUpEducation: {
+        title: softTranslation.sketchUpEducation.title,
+        content: GoogleCloud(softTranslation.sketchUpEducation.modal),
     },
-    SketchUpStudio: {
+    sketchUpStudio: {
         title: 'SketchUp Studio',
-        content: SketchUpStudio,
+        content: GoogleCloud(softTranslation.sketchUpStudio.modal),
     },
-    ExtensionWarehouse: {
+    extensionWarehouse: {
         title: 'Extension Warehouse',
-        content: ExtensionWarehouse,
+        content: GoogleCloud(softTranslation.extensionWarehouse.modal),
     },
-    SketchUpForInternet: {
-        title: 'SketchupUp для интернета',
-        content: SketchUpForInternet,
+    sketchUpFree: {
+        title: 'SketchupUp Free',
+        content: GoogleCloud(softTranslation.sketchUpFree.modal),
     },
-    TrimbleConnect: {
+    trimbleConnect: {
         title: 'Trimble Connect',
-        content: TrimbleConnect,
+        content: GoogleCloud(softTranslation.trimbleConnect.modal),
     },
     AllPlanArchitecture: {
         title: 'Allplan Architecture',
@@ -227,7 +228,84 @@ export default {
         content: BuySketchUpHigher,
     },
     xPick: {
-        title: 'Купить TeamViewer Frontline xPick',
-        content: TeamViewerXPick,
+        title: 'TeamViewer Frontline xPick',
+        content: TeamViewer(softTranslation.xPick.modal),
     },
-}
+    xAssist: {
+        title: 'TeamViewer Frontline xAssist',
+        content: TeamViewer(softTranslation.xAssist.modal),
+    },
+    xMake: {
+        title: 'TeamViewer Frontline xMake',
+        content: TeamViewer(softTranslation.xMake.modal),
+    },
+    xInspect: {
+        title: 'TeamViewer Frontline xInspect',
+        content: TeamViewer(softTranslation.xInspect.modal),
+    },
+
+    stratoZone: {
+        title: 'Google Cloud Stratozone',
+        content: GoogleCloud(softTranslation.stratoZone.modal),
+    },
+    vmWare: {
+        title: 'Google Cloud VMWare Engine',
+        content: GoogleCloud(softTranslation.vmWare.modal),
+    },
+    bigQuery: {
+        title: 'Big Query Machine Learning',
+        content: GoogleCloud(softTranslation.bigQuery.modal),
+    },
+    networking: {
+        title: 'Google Cloud Networking',
+        content: GoogleCloud(softTranslation.networking.modal),
+    },
+    distributedCloud: {
+        title: 'Distributed Cloud',
+        content: GoogleCloud(softTranslation.distributedCloud.modal),
+    },
+    security: {
+        title: 'Security and Identity Chronicle',
+        content: GoogleCloud(softTranslation.security.modal),
+    },
+    cloudStorage: {
+        title: 'Google Cloud Storage',
+        content: GoogleCloud(softTranslation.cloudStorage.modal),
+    },
+    cloudDatabases: {
+        title: 'Google Cloud Databases',
+        content: GoogleCloud(softTranslation.cloudDatabases.modal),
+    },
+    api: {
+        title: 'Google Api',
+        content: GoogleCloud(softTranslation.api.modal),
+    },
+    googleKubernetes: {
+        title: 'Google Kubernetes Engine',
+        content: GoogleCloud(softTranslation.googleKubernetes.modal),
+    },
+    computeEngine: {
+        title: 'Google Cloud Compute Engine',
+        content: GoogleCloud(softTranslation.computeEngine.modal),
+    },
+    bard: {
+        title: 'Artificial Intelligence (AI) Google Bard',
+        content: GoogleCloud(softTranslation.bard.modal),
+    },
+    workspaceStarter: {
+        title: 'Google Workspace Business Starter',
+        content: GoogleCloud(softTranslation.workspaceStarter.modal),
+    },
+    workspaceStandard: {
+        title: 'Google Workspace Business Standard',
+        content: GoogleCloud(softTranslation.workspaceStandard.modal),
+    },
+    workspaceBusinessPlus: {
+        title: 'Google Workspace Business Plus',
+        content: GoogleCloud(softTranslation.workspaceBusinessPlus.modal),
+    },
+    workspaceEnterprise: {
+        title: 'Google Workspace Enterprise',
+        content: GoogleCloud(softTranslation.workspaceEnterprise.modal),
+    },
+})

@@ -69,7 +69,7 @@ export default function ArtificalStone() {
                         <OpenModalButton />
                     </div>
                     <div>
-                        <p>
+                        <div>
                             <SubTitle>Конструкция:</SubTitle>
                             <p>
                                 • Искуственный камень монтируется беззатирочным
@@ -86,8 +86,8 @@ export default function ArtificalStone() {
                                 • Конструкция рядового профиля предусматривает
                                 пружинный зажим для верхнего гребня камня{' '}
                             </p>
-                        </p>
-                        <p>
+                        </div>
+                        <div>
                             <SubTitle>Преимущества:</SubTitle>
                             <p>
                                 • Монтаж в любое время года независимо от
@@ -123,7 +123,7 @@ export default function ArtificalStone() {
                                 • Универсальное решение для рядовой и межэтажной
                                 подсистемы
                             </p>
-                        </p>
+                        </div>
                     </div>
                 </div>
             </Padded>

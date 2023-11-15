@@ -1,10 +1,11 @@
-import { useRef, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import cx from 'classnames'
 import Input from '../Input'
 import Img from '../Img'
 
 import * as closeIcon from '../../../../public/images/icons/close.png'
 import styles from './Modal.module.scss'
+import { useTranslation } from '../../layouts/Layout'
 
 const Modal = props => {
     const [state, setState] = useState({
@@ -30,6 +31,16 @@ const Modal = props => {
     } = state
 
     const { onClose, isOpened } = props
+
+    useEffect(() => {
+        const body = document.getElementsByTagName('body')[0]
+        if (isOpened) {
+            body.style.overflow = 'hidden'
+        } else {
+            body.style.overflow = 'auto'
+        }
+    }, [isOpened])
+
     const buttonRef = useRef()
 
     const modalCX = cx(
@@ -37,6 +48,18 @@ const Modal = props => {
         isOpened && styles['modal-wrapper_opened']
     )
 
+    const {
+        t: { consultation },
+    } = useTranslation('common')
+    // "consultation": {
+    //     "name": "Ім‘я",
+    //       "surName":"Прізвище",
+    //       "company": "Компанія",
+    //       "title": "Посада",
+    //       "phone": "Телефон",
+    //       "question": "Опишіть питання",
+    //       "send": "Відправити"
+    // }
     const handleTextChange = key => e => {
         if (key === 'email') {
             const emailRegExp =
@@ -66,7 +89,7 @@ const Modal = props => {
             return setErrors(prev => ({ ...prev, email: true }))
         }
 
-        buttonRef.current.innerText = 'Отправка...'
+        buttonRef.current.innerText = consultation.sending
         const msg = {
             subject: 'Новый заказ',
             html: `
@@ -95,13 +118,13 @@ const Modal = props => {
                 throw new Error(response)
             }
 
-            buttonRef.current.innerText = 'Отправлено!'
+            buttonRef.current.innerText = consultation.sent
         } catch (error) {
-            buttonRef.current.innerText = 'Ошибка! Плохое соединение'
+            buttonRef.current.innerText = consultation.error
             console.error('ERROR', error)
         } finally {
             setTimeout(() => {
-                buttonRef.current.innerText = 'Отправить'
+                buttonRef.current.innerText = consultation.send
             }, 1500)
         }
     }
@@ -117,18 +140,18 @@ const Modal = props => {
                 <div className={styles['top-black-line']} />
                 <div className={styles['modal-content-wrapper']}>
                     <div className={styles['modal-title']}>
-                        Заказать консультацию
+                        {consultation.formName}
                     </div>
                     <div className={styles['inputs-wrapper']}>
                         <Input
                             className={styles['modal-input']}
-                            title='Имя'
+                            title={consultation.name}
                             value={name}
                             onChange={handleTextChange('name')}
                         />
                         <Input
                             className={styles['modal-input']}
-                            title='Фамилия'
+                            title={consultation.surName}
                             value={surname}
                             onChange={handleTextChange('surname')}
                         />
@@ -136,13 +159,13 @@ const Modal = props => {
                     <div className={styles['inputs-wrapper']}>
                         <Input
                             className={styles['modal-input']}
-                            title='Компания'
+                            title={consultation.company}
                             value={companyName}
                             onChange={handleTextChange('companyName')}
                         />
                         <Input
                             className={styles['modal-input']}
-                            title='Должность'
+                            title={consultation.title}
                             value={profession}
                             onChange={handleTextChange('profession')}
                         />
@@ -154,22 +177,22 @@ const Modal = props => {
                             value={email}
                             onChange={handleTextChange('email')}
                             error={!!errors.email}
-                            errorMessage={'Введите правильный почтовый ящик'}
+                            errorMessage={consultation.emailError}
                         />
 
                         <Input
                             className={styles['modal-input']}
-                            title='Телефон'
+                            title={consultation.phone}
                             value={phoneNumber}
                             onChange={handleTextChange('phoneNumber')}
                             error={!!errors.phoneNumber}
-                            errorMessage={'Введите правильный телефон'}
+                            errorMessage={consultation.phoneError}
                         />
                     </div>
                     <div className={styles['textarea-wrapper']}>
                         <Input
                             className={styles['modal-input']}
-                            title='Интересующий вопрос'
+                            title={consultation.question}
                             value={target}
                             onChange={handleTextChange('target')}
                             multiline
@@ -189,7 +212,7 @@ const Modal = props => {
                             onClick={sendData}
                             ref={buttonRef}
                         >
-                            Отправить
+                            {consultation.send}
                         </div>
                     </div>
                     <div className={styles['bottom-black-line']} />

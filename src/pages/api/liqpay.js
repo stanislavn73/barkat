@@ -9,8 +9,12 @@ const fetchLiqPay = async (req, res) => {
 
         const data = await response.json()
         const dollar = data.find(curr => curr.ccy === 'USD')
+        const euro = data.find(curr => curr.ccy === 'EUR')
 
-        res.status(200).send({ hryvnaExchangeRate: dollar.sale })
+        res.status(200).send({
+            hryvnaExchangeRate: dollar.sale,
+            euroDollarRatio: euro.sale / dollar.sale,
+        })
     } catch (err) {
         console.error(err)
         res.status(400).send({ err, message: "Can't fetch liqpay currencies" })

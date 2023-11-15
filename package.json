@@ -24,13 +24,14 @@
         "crypto-js": "^4.0.0",
         "dayjs": "^1.10.4",
         "dotenv": "^16.0.3",
-        "eslint-config-next": "^13.3.4",
-        "file-loader": "^6.2.0",
+        "eslint-config-next": "^13.4.12",
         "file-saver": "^2.0.2",
         "firebase": "^9.17.2",
         "gsap": "^3.5.1",
-        "next": "^13.3.4",
+        "next": "^13.4.2",
         "next-fonts": "^1.4.0",
+        "next-translate": "^2.0.5",
+        "next-translate-plugin": "^2.0.5",
         "payment-icons": "^1.2.1",
         "prettier": "^2.3.0",
         "react": "^18.2.0",
@@ -47,6 +48,6 @@
     },
     "devDependencies": {
         "babel-plugin-styled-components": "^1.11.1",
-        "eslint": "^8.40.0"
+        "eslint": "^8.46.0"
     }
 }

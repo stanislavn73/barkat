@@ -10,30 +10,29 @@ import Hexagon from './Hexagon'
 import Bentley from './Bentley'
 import SketchUp from './SketchUp'
 import AllPlan from './AllPlan'
-// import TeamViewer from './TeamViewer'
+import TeamViewer from './TeamViewer'
+import { useTranslation } from '../../layouts/Layout'
+import { GoogleCloud } from './GoogleCloud/GoogleCloud'
+import { GoogleWorkspace } from './GoogleWorkspace/GoogleWorkspace'
 
 const SoftPage = () => {
+    const { t } = useTranslation('soft')
+    const solutionsAnchorTitle = t.solutions.title
     const anchors = [
         {
             id: '3d-solutions',
-            title: '3D-решения',
+            title: solutionsAnchorTitle,
             comp: <FirstScreen />,
         },
-
         {
-            id: 'AllPlan',
-            title: 'AllPlan',
-            comp: <AllPlan />,
+            id: 'googleCloud',
+            title: 'Google Cloud',
+            comp: <GoogleCloud />,
         },
         {
-            id: 'Autodesk',
-            title: 'Autodesk',
-            comp: <Autodesk />,
-        },
-        {
-            id: 'Bentley',
-            title: 'Bentley',
-            comp: <Bentley />,
+            id: 'googleWorkspace',
+            title: 'Google Workspace',
+            comp: <GoogleWorkspace />,
         },
         {
             id: 'Dassault-systemes',
@@ -46,15 +45,25 @@ const SoftPage = () => {
             comp: <Hexagon />,
         },
         {
+            id: 'TeamViewerFrontline',
+            title: 'TeamViewer Frontline',
+            comp: <TeamViewer />,
+        },
+        {
+            id: 'Bentley',
+            title: 'Bentley',
+            comp: <Bentley />,
+        },
+        {
+            id: 'Autodesk',
+            title: 'Autodesk',
+            comp: <Autodesk />,
+        },
+        {
             id: 'SketchUp',
             title: 'Sketchup',
             comp: <SketchUp />,
         },
-        // {
-        //     id: 'TeamViewerFrontline',
-        //     title: 'TeamViewer Frontline',
-        //     comp: <TeamViewer />,
-        // },
     ]
 
     const [activeAnchor, setActiveAnchor] = useState(anchors[0].id)

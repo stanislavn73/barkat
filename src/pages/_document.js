@@ -3,8 +3,6 @@ import { ServerStyleSheet } from 'styled-components'
 import Document, { Html, Head, Main, NextScript } from 'next/document'
 import { ServerStyleSheets } from '@material-ui/styles'
 
-// import * as favicon from '../../public/favicon.ico'
-
 export default class MyDocument extends Document {
     static async getInitialProps(ctx) {
         const sheet = new ServerStyleSheet()
@@ -45,7 +43,7 @@ export default class MyDocument extends Document {
           <link rel="icon" type="image/png" sizes="16x16" href={favicon16} />
           <link rel="manifest" href="/site.webmanifest" /> */}
 
-                    <link rel='shortcut icon' href='/favicon.ico' />
+                    <link rel='icon' href='/favicon.ico' />
 
                     <link
                         rel='stylesheet'

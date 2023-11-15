@@ -1,13 +1,7 @@
 import Router, { useRouter } from 'next/router'
-import React, { useEffect } from 'react'
+import React, { createContext, useContext, useEffect, useState } from 'react'
 import { ThemeProvider } from 'styled-components'
 import { GlobalStyle } from '../components/GlobalStyle'
-
-import ua from '../../lang/ua.json'
-import ru from '../../lang/ru.json'
-import en from '../../lang/en.json'
-
-const messages = { ua, en, ru }
 
 const theme = {
     colors: {
@@ -16,27 +10,31 @@ const theme = {
 }
 
 const mockedUrls = ['/engineer-nets', '/agro-solutions']
-export default function MyApp({ Component, pageProps }) {
-    const { locale } = useRouter()
 
-    const handleRouteChange = url => {
-        if (mockedUrls.includes(url)) Router.push('/')
-    }
+function App({ Component, pageProps }) {
+    const { locale, push, locales, pathname } = useRouter()
+
+    let resultLocale = locale.includes('UA') ? 'ua' : locale
 
     useEffect(() => {
-        Router.events.on('routeChangeComplete', handleRouteChange)
-        return () => {
-            Router.events.off('routeChangeComplete', handleRouteChange)
+        const newLocale = locales.find(locale =>
+            locale.includes(navigator.language)
+        )
+        if (
+            !locales.some(currentLocale => currentLocale === locale) &&
+            newLocale
+        ) {
+            push(pathname, {}, { locale: newLocale })
         }
-    }, [Router])
-
+    }, [])
     return (
         <ThemeProvider theme={theme}>
             <GlobalStyle />
             <title>Barkat Stein</title>
-            {/*<IntlProvider locale={locale} messages={messages[locale]}>*/}
-            <Component {...pageProps} />
-            {/*</IntlProvider>*/}
+
+            <Component {...pageProps} locale={resultLocale} />
         </ThemeProvider>
     )
 }
+
+export default App
