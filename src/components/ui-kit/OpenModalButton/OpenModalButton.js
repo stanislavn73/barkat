@@ -1,7 +1,8 @@
-import { ModalConsumer } from '../../layouts/Layout'
+import { ModalConsumer, useTranslation } from '../../layouts/Layout'
 import styles from './styles.module.scss'
 
 export default function OpenModalButton() {
+    const { t } = useTranslation('common')
     return (
         <ModalConsumer>
             {({ handleOpenForm }) => {
@@ -10,7 +11,7 @@ export default function OpenModalButton() {
                         className={styles['modal-open-button']}
                         onClick={handleOpenForm}
                     >
-                        Написать нам
+                        {t.contactUsButton}
                     </div>
                 )
             }}

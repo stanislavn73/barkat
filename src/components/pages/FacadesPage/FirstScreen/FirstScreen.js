@@ -2,26 +2,27 @@ import FullPage from '../../../ui-kit/FullPage/FullPage'
 import PageImageTitle from '../../../ui-kit/PageImageTitle/PageImageTitle'
 import { HeaderThumb } from '../../../ui-kit/Header'
 import * as backgroundImage from '../../../../../public/images/pages/facades/1.jpg'
+import { useTranslation } from '../../../layouts/Layout'
+
 import styles from './FirstScreen.module.scss'
+import { get } from '../../../utils/facades/get'
 
-const screenTitle = 'Фасады'
-const subTitle =
-    'Надежный партнер в мире навесных вентилированных фасадов (НВФ, вентфасадов)  из доломита, мрамора, керамогранита, клинкера, терракотовых панелей и искусственного камня,  что широко используются на рынке гражданского и коммерческого строительства, и повышающих энергоэффективность и архитектурную привлекательность зданий и сооружений. Применение НВФ позволяет реализовывать сложные и нестандартные архитектурные решения.'
+function ProjectsFirstScreen({ id }) {
+    const { t } = useTranslation('facades')
 
-function ProjectsFirstScreen() {
     return (
         <FullPage className={styles['block-wrapper']}>
             <HeaderThumb />
             <PageImageTitle
                 src={backgroundImage}
-                title={screenTitle}
-                subTitle={subTitle}
+                title={t.screenTitle}
+                subTitle={t.subTitle}
             />
             <div className={styles['bottom-line-facades']}>
                 <div className={styles.padded}>
                     <div className={styles['thumb-content-wrapper']}>
                         <div className={styles['title-flag']}>
-                            <div>О вентфасадах</div>
+                            <div>{get(t, `${id}.title`)}</div>
                         </div>
                     </div>
                 </div>

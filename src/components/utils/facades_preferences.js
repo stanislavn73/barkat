@@ -13,51 +13,51 @@ import * as putty from '../../../public/images/icons/putty-knife.png'
 
 export default [
     {
+        id: 'museum',
         icon: museum,
-        text: 'Архитектурная/инвестиционная привлекательность фасада/здания',
     },
     {
+        id: 'snow',
         icon: snow,
-        text: 'Энергоэфективность (зимой – экономия на отоплении)',
     },
     {
         icon: sun,
-        text: 'Энергоэфективность (летом – экономия на кондиционировании)',
+        id: 'sun',
     },
     {
+        id: 'stain',
         icon: stain,
-        text: 'Устойчивость к соляным налетам',
     },
     {
+        id: 'town',
         icon: town,
-        text: 'Применение в высотном строительстве (до 100 м)',
     },
     {
+        id: 'fire',
         icon: fire,
-        text: 'Пожарная безопасность',
     },
     {
+        id: 'plant',
         icon: plant,
-        text: 'Экологичность',
     },
     {
+        id: 'seismic',
         icon: seismic,
-        text: 'Сейсмоустойчивость',
     },
     {
+        id: 'heat',
         icon: heat,
-        text: 'Монтаж независящий от погоды',
     },
     {
+        id: 'brick',
         icon: brick,
-        text: 'Высокая скорость монтажа',
     },
     {
+        id: 'repair',
         icon: repair,
-        text: 'Взаимозаменяемость фасадного камня, ремонтопригодность',
     },
     {
+        id: 'putty',
         icon: putty,
-        text: 'Долговечный, восстанавливаемый, поддающийся чистке',
     },
 ]

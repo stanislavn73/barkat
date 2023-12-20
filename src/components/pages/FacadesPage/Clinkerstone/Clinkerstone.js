@@ -20,78 +20,45 @@ import catalog from '../../../../../public/images/facades/clinkerstone/catalog.p
 
 import styles from './Clinkerstone.module.scss'
 import { FacadesWrapper } from '../FacadesWrapper'
+import { useTranslation } from '../../../layouts/Layout'
+import { get } from '../../../utils/facades/get'
 
-export default function Clinkerstone() {
+export default function Clinkerstone({ id }) {
+    const { t } = useTranslation('facades')
+    const trans = get(t, id)
+    const subTitles = get(trans, 'subTitle')
+    const imagesTitles = get(trans, 'imagesTitles')
+
     return (
         <FacadesWrapper className={styles['facades-sixth-block']}>
             <FullPage>
-                <Title>Фасад КЛИНКЕРСТОУН</Title>
+                <Title>{get(trans, 'title')}</Title>
                 <ImageSlides data={facadesClinkerstoneSlides} />
             </FullPage>
             <Padded>
-                <SubTitle>КЛИНКЕРСТОУН как строительный материал</SubTitle>
-                <p>
-                    Клинкерстоун – камень под кирпич или «дикий» камень –
-                    нестареющая классика – материал, позволяющий воплотить в
-                    жизнь «полет фантазии» каждого архитектора. Конструктивно
-                    заданные горизонтальные и вертикальные швы клинкера дарят
-                    фасаду богатый четко очерченный рисунок идеальной кирпичной
-                    кладки. Широта оттенков и фактур камня, а также возможность
-                    использования объемных декоративных элементов (карнизов,
-                    колонн, балюстрад и других) позволяют реализовать
-                    архитектурные идеи любой сложности.
-                </p>
-                <p>
-                    Клинкерстоун – вариант керамического камня, изготовление
-                    которого производится по не совсем привычной схеме, а
-                    именно: во-первых, большую часть материала получают
-                    экструзионным методом, во-вторых, при обжиге клинкер минует
-                    фазу витрификации. В итоге готовый продукт имеет хоть и
-                    гладкую, но не глянцевую поверхность и сохраняет сходство с
-                    клинкерным кирпичом. Поскольку в сырье не добавляются
-                    химические красители, тон камня зависит от минерального
-                    состава глины. Терракотовые оттенки получаются благодаря
-                    примеси железа. Черные, серые, серо-голубые цвета дает
-                    углерод. Камни выпускаются с неровными сколами,
-                    закругленными краями, прямоугольные. Могут имитировать
-                    кирпич, старые стены, «дикий» камень и т.д. Так как габариты
-                    плитки намного меньше, чем кирпича – за счет толщины,
-                    плотность изделия должна быть выше, чтобы достигнуть
-                    необходимой прочности. Добиваются этого за счет прессования
-                    под высоким давлением и более высокой температуры обжига –
-                    1100–1450 ˚С против 800–1000 ˚С. Клинкерстоун –
-                    низкопористый материал, имеет высокую водостойкость и
-                    морозостойкость; очень плохо впитывает влагу – не более
-                    2–3%, а, значит, не становится жертвой ее замерзания в
-                    порах. Цветовая гамма изделий приближена к естественной,
-                    однако это не исключает любых экзотических оттенков. Причем
-                    красящие пигменты добавляют в исходное сырье, так что
-                    солнечные лучи никак не воздействуют на облицовку. Для
-                    фасадной облицовки выпускают не только рядовую плитку, но и
-                    доборные элементы для оформления угла. Очень часто эти
-                    материалы комбинируют по цвету, желая придать зданию более
-                    интересный вид. Как и полагается керамической плитке,
-                    клинкер нечувствителен к бактериям, грибкам, плесени и
-                    совершенно пожаробезопасен.
-                </p>
-                <SubTitle>Цветовая гамма и виды камня, каталог</SubTitle>
+                <SubTitle>{subTitles[0]}</SubTitle>
+                {get(trans, 'textArray').map(text => (
+                    <p key={text}>{text}</p>
+                ))}
+
+                <SubTitle>{subTitles[1]}</SubTitle>
                 <div className={styles['clinkerstone-images-wrapper']}>
                     <div className={styles['clinkerstone-image-item']}>
                         <FullscreenImg src={coral_star} />
                         <div className={styles['clinkerstone-image-title']}>
-                            Кораловая звезда
+                            {imagesTitles[0]}
                         </div>
                     </div>
                     <div className={styles['clinkerstone-image-item']}>
                         <FullscreenImg src={marrakesh_dust} />
                         <div className={styles['clinkerstone-image-title']}>
-                            Пыль Марракеша
+                            {imagesTitles[1]}
                         </div>
                     </div>
                     <div className={styles['clinkerstone-image-item']}>
                         <FullscreenImg src={silver_rose} />
                         <div className={styles['clinkerstone-image-title']}>
-                            Серебряная роза
+                            {imagesTitles[2]}
                         </div>
                     </div>
                 </div>
@@ -99,27 +66,23 @@ export default function Clinkerstone() {
                     <div className={styles['clinkerstone-image-item']}>
                         <FullscreenImg src={snow_brick} />
                         <div className={styles['clinkerstone-image-title']}>
-                            Зимний кирпич
+                            {imagesTitles[3]}
                         </div>
                     </div>
                     <div className={styles['clinkerstone-image-item']}>
                         <FullscreenImg src={argon_wall} />
                         <div className={styles['clinkerstone-image-title']}>
-                            Аргон настенный
+                            {imagesTitles[4]}
                         </div>
                     </div>
                     <div className={styles['clinkerstone-image-item']}>
                         <DownloadCatalog
+                            className={styles['marble-download-catalog']}
                             file={catalog}
-                            name='Каталог Клинкерстоун'
                         />
                     </div>
                 </div>
-                <SubTitle>
-                    Металлическая подсистема навесного вентилируемого фасада под
-                    облицовку клинкерным камнем, установлеваемая на кляммерных
-                    планках с применением затирочных смесей
-                </SubTitle>
+                <SubTitle>{subTitles[2]}</SubTitle>
                 <div
                     className={`${styles['clinkerstone-system-wrapper']} ${styles['facades-system-wrapper']}`}
                 >
@@ -129,50 +92,18 @@ export default function Clinkerstone() {
                     />
                     <div>
                         <div>
-                            <SubTitle>Конструкция:</SubTitle>
-                            <p>
-                                • Клинкерный камень монтируется между
-                                горизонтально установленными стартовыми и/или
-                                рядовыми профилями из нержавеющей стали{' '}
-                            </p>
-                            <p>
-                                • Швы между плитками герметизируются при помощи
-                                затирочной смеси. Горизонтальный шов на
-                                терморазрыве заполняется силиконовым герметиком
-                                в цвет затирки{' '}
-                            </p>
-                            <p>
-                                • Для удерживания затирочных смесей в
-                                вертикальном шве применена стальная
-                                перфорированная лента{' '}
-                            </p>
-                        </div>
-                        <div>
-                            <SubTitle>Преимущества:</SubTitle>
-                            <p>
-                                • Перфорация в рядовом профиле удерживает
-                                затирку – нет необходимости устанавливать
-                                дополнительную перфоленту в горизонтальном шве{' '}
-                            </p>
-                            <p>
-                                • Заклепочное крепление в верхней части рядового
-                                и стартового профиля – удобный монтаж и снижение
-                                нагрузки на заклепку{' '}
-                            </p>
-                            <p>• Визуальная имитация кирпичной кладки </p>
-                            <p>
-                                • Универсальное решение для рядовой и межэтажной
-                                подсистемы{' '}
-                            </p>
-                            <p>• Широкий выбор вида камня толщиной от 14 мм </p>
+                            <SubTitle>
+                                {get(trans, 'constructionsGrout.title')}
+                            </SubTitle>
+                            {get(trans, 'constructionsGrout.textArray').map(
+                                text => (
+                                    <p key={text}>{text}</p>
+                                )
+                            )}
                         </div>
                     </div>
                 </div>
-                <SubTitle>
-                    Металлическая подсистема навесного вентилируемого фасада под
-                    облицовку клинкерным камнем, установлеваемая на кляммерных
-                    планках сухим методом
-                </SubTitle>
+                <SubTitle>{subTitles[3]}</SubTitle>
                 <div
                     className={`${styles['clinkerstone-system-wrapper']} ${styles['facades-system-wrapper']}`}
                 >
@@ -182,39 +113,22 @@ export default function Clinkerstone() {
                     </div>
                     <div>
                         <div>
-                            <SubTitle>Конструкция:</SubTitle>
-                            <p>
-                                • Клинкерный камень монтируется беззатирочным
-                                методом между горизонтально расположенными
-                                стартовыми и/или рядовыми профилями из
-                                нержавеющей стали{' '}
-                            </p>
-                            <p>
-                                • Крепление клинкерных профилей к несущим
-                                осуществляется при помощи заклепок из
-                                нержавеющей стали{' '}
-                            </p>
-                            <p>
-                                • Конструкция рядового профиля предусматривает
-                                пружинный зажим для верхнего гребня плитки{' '}
-                            </p>
+                            <SubTitle>
+                                {get(trans, 'constructionsDry.title')}
+                            </SubTitle>
+                            {get(trans, 'constructionsDry.textArray').map(
+                                text => (
+                                    <p key={text}>{text}</p>
+                                )
+                            )}
                         </div>
                         <div>
-                            <SubTitle>Преимущества:</SubTitle>
-                            <p>
-                                • Монтаж в любое время года независимо от
-                                условий окружающей среды{' '}
-                            </p>
-                            <p>
-                                • Заклепочное крепление в верхней части
-                                кляммерной планки – удобный монтаж и снижение
-                                нагрузки на заклепку{' '}
-                            </p>
-                            <p>
-                                • Локальная ремонтопригодность – каждая
-                                отдельная плитка может быть оперативно извлечена
-                                или заменена{' '}
-                            </p>
+                            <SubTitle>
+                                {get(trans, 'advantagesDry.title')}
+                            </SubTitle>
+                            {get(trans, 'advantagesDry.textArray').map(text => (
+                                <p key={text}>{text}</p>
+                            ))}
                         </div>
                     </div>
                 </div>

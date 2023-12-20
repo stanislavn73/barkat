@@ -18,55 +18,47 @@ import catalog from '../../../../../public/images/facades/marble/catalog.pdf'
 
 import styles from './MarbleBlock.module.scss'
 import { FacadesWrapper } from '../FacadesWrapper'
+import { useTranslation } from '../../../layouts/Layout'
+import { get } from '../../../utils/facades/get'
 
-export default function MarbleBlock() {
+export default function MarbleBlock({ id }) {
+    const { t } = useTranslation('facades')
+    const trans = get(t, id)
+
     return (
         <FacadesWrapper className={styles['facades-sixth-block']}>
             <FullPage>
-                <Title>Фасад МРАМОР / ДОЛОМИТ / ТРАВЕРТИН</Title>
+                <Title>{get(trans, 'title')}</Title>
                 <ImageSlides data={facadesMarbleSlides} styles={styles} />
             </FullPage>
             <Padded>
-                <SubTitle>Юрский мрамор как строительный материал</SubTitle>
-                <p>
-                    В последние годы фасадные панели из натурального мрамора
-                    стали одними из наших самых востребованных продуктов.
-                    Вентилируемый фасад из мрамора способен качественно
-                    преобразить любой объект как коммерческого, так и
-                    гражданского строительства. Исторически мрамор юрского
-                    периода добывался и использовался в качестве строительного
-                    материала еще со времен Римской империи. Долгую историю
-                    успеха натурального камня демонстрируют сегодня остатки
-                    стен, башен и бань, которые до сих пор можно найти во многих
-                    уголках Европы. Различные находки из недавнего прошлого,
-                    такие как Römertherme или Römerkastell в Вайсенбурге, ясно
-                    показывают это.
-                </p>
-                <SubTitle>Цветовая гамма и виды камня, каталог</SubTitle>
-                <SubTitle>Юрский мрамор:</SubTitle>
+                <SubTitle>{get(trans, 'subTitle')[0]}</SubTitle>
+                <p>{get(trans, 'desc')}</p>
+                <SubTitle>{get(trans, 'subTitle')[1]}</SubTitle>
+                <SubTitle>{get(trans, 'subTitle')[2]}</SubTitle>
                 <div className={styles['marble-images-wrapper']}>
                     <div className={styles['marble-image-item']}>
                         <FullscreenImg src={skin_marble} />
                         <div className={styles['marble-image-title']}>
-                            Мрамор бежевый, пескоструйный
+                            {get(trans, 'imagesTitles')[0]}
                         </div>
                     </div>
                     <div className={styles['marble-image-item']}>
                         <FullscreenImg src={gray_marble} />
                         <div className={styles['marble-image-title']}>
-                            Мрамор серый, пескоструйная обработка
+                            {get(trans, 'subTitle')[1]}
                         </div>
                     </div>
                     <div className={styles['marble-image-item']}>
                         <FullscreenImg src={gray_marble_blurred} />
                         <div className={styles['marble-image-title']}>
-                            Мрамор серый, матовый
+                            {get(trans, 'subTitle')[2]}
                         </div>
                     </div>
                 </div>
                 <div className={styles['mable-horizontal-wrapper']}>
                     <div>
-                        <SubTitle>Дитфуртский доломит:</SubTitle>
+                        <SubTitle>{get(trans, 'subTitle')[3]}</SubTitle>
                         <div className={styles['marble-images-wrapper']}>
                             <div className={styles['marble-image-item']}>
                                 <FullscreenImg src={dolomite} />
@@ -74,7 +66,7 @@ export default function MarbleBlock() {
                         </div>
                     </div>
                     <div>
-                        <SubTitle>Дитфуртский травертин:</SubTitle>
+                        <SubTitle>{get(trans, 'subTitle')[4]}</SubTitle>
                         <div className={styles['marble-images-wrapper']}>
                             <div className={styles['marble-image-item']}>
                                 <FullscreenImg src={traverteen} />
@@ -86,16 +78,11 @@ export default function MarbleBlock() {
                             <DownloadCatalog
                                 className={styles['marble-download-catalog']}
                                 file={catalog}
-                                name='Каталог Мрамор / Доломит / Травертин'
                             />
                         </div>
                     </div>
                 </div>
-                <SubTitle>
-                    Металлическая подсистема навесного вентилируемого фасада под
-                    облицовку мраморными плитами с пропилом, устанавливаемая
-                    скрытым способом на кляммерных планках
-                </SubTitle>
+                <SubTitle>{get(trans, 'subTitle')[5]}</SubTitle>
                 <div
                     className={`${styles['marble-system-wrapper']} ${styles['facades-system-wrapper']}`}
                 >
@@ -105,38 +92,20 @@ export default function MarbleBlock() {
                     </div>
                     <div>
                         <div>
-                            <SubTitle>Конструкция:</SubTitle>
-                            <p>
-                                • Мраморные облицовочные плиты с пропилом
-                                крепятся к подсистеме при помощи кляммерных
-                                планок
-                            </p>
-                            <p>
-                                • Крепление кляммерных планок к несущим профилям
-                                осуществляется при помощи алюминиевых заклепок
-                            </p>
-                            <p>
-                                • Несущие профили крепятся с помощью кронштейнов
-                                либо к плоскости стены (для рядовой подсистемы)
-                                либо к плитам перекрытия (для межэтажной
-                                подсистемы){' '}
-                            </p>
+                            <SubTitle>
+                                {get(trans, 'constructions.title')}
+                            </SubTitle>
+                            {get(trans, 'constructions.textArray').map(item => (
+                                <p key={item}>{item}</p>
+                            ))}
                         </div>
                         <div>
-                            <SubTitle>Преимущества:</SubTitle>
-                            <p>
-                                • Монтаж в любое время года независимо от
-                                условий окружающей среды{' '}
-                            </p>
-                            <p>
-                                • Заклепочное крепление в верхней части
-                                кляммерной планки – удобный монтаж и снижение
-                                нагрузки на заклепку{' '}
-                            </p>
-                            <p>
-                                • Универсальное решение для рядовой и межэтажной
-                                подсистемы
-                            </p>
+                            <SubTitle>
+                                {get(trans, 'advantages.title')}
+                            </SubTitle>
+                            {get(trans, 'advantages.textArray').map(item => (
+                                <p key={item}>{item}</p>
+                            ))}
                         </div>
                     </div>
                 </div>

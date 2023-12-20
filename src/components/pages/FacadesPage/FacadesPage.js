@@ -18,53 +18,43 @@ const FacadesPage = () => {
     const anchors = [
         {
             id: 'main',
-            title: 'О фасадах',
-            comp: <FirstScreen />,
+            Comp: FirstScreen,
         },
         {
             id: 'about',
-            title: 'О вентфасадах',
-            comp: <SecondScreen />,
+            Comp: SecondScreen,
         },
         {
             id: 'advantages',
-            title: 'Преимущества',
-            comp: <ThirdScreen />,
+            Comp: ThirdScreen,
         },
         {
             id: 'designing',
-            title: 'Разработка',
-            comp: <FourthBlock />,
+            Comp: FourthBlock,
         },
         {
             id: 'about-system',
-            title: 'О системе',
-            comp: <FivethBlock />,
+            Comp: FivethBlock,
         },
         {
             id: 'marble',
-            title: 'Фасад МРАМОР / ДОЛОМИТ / ТРАВЕРТИН',
-            comp: <MarbleBlock />,
+            Comp: MarbleBlock,
         },
         {
             id: 'clinkerstone',
-            title: 'Фасад КЛИНКЕРСТОУН',
-            comp: <ClinkerstoneBlock />,
+            Comp: ClinkerstoneBlock,
         },
         {
             id: 'terracota',
-            title: 'Фасад ТЕРРАКОТОВЫЕ ПАНЕЛИ',
-            comp: <TerracotaBlock />,
+            Comp: TerracotaBlock,
         },
         {
             id: 'porcelain-tile',
-            title: 'Фасад КЕРАМОГРАНИТ',
-            comp: <PorcelainTileBlock />,
+            Comp: PorcelainTileBlock,
         },
         {
             id: 'artifical-stone',
-            title: 'Фасад ИСКУССТВЕННЫЙ КАМЕНЬ',
-            comp: <ArtificalStoneBlock />,
+            Comp: ArtificalStoneBlock,
         },
     ]
 
@@ -77,13 +67,9 @@ const FacadesPage = () => {
     return (
         <>
             <AnchorMenu anchors={anchors} activeAnchor={activeAnchor} />
-            {anchors.map(anchor => (
-                <Anchor
-                    key={anchor.id}
-                    id={anchor.id}
-                    onPositionChange={handleAnchorReact}
-                >
-                    {anchor.comp}
+            {anchors.map(({ id, Comp }) => (
+                <Anchor key={id} id={id} onPositionChange={handleAnchorReact}>
+                    <Comp id={id} />
                 </Anchor>
             ))}
         </>

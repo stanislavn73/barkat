@@ -16,32 +16,25 @@ import catalog from '../../../../../public/images/facades/porcelian-tile/catalog
 
 import styles from './PorcelainTile.module.scss'
 import { FacadesWrapper } from '../FacadesWrapper'
+import { get } from '../../../utils/facades/get'
+import { useTranslation } from '../../../layouts/Layout'
 
-export default function PorcelainTile() {
+export default function PorcelainTile({ id }) {
+    const { t } = useTranslation('facades')
+    const trans = get(t, id)
+
     return (
         <FacadesWrapper className={styles['porcelian-tile-block']}>
             <FullPage>
-                <Title>Фасад КЕРАМОГРАНИТ</Title>
+                <Title>{get(trans, 'title')}</Title>
                 <ImageSlides data={facadesPorcelianTileSlides} />
             </FullPage>
             <Padded>
-                <SubTitle>КЕРАМОГРАНИТ как строительный материал</SubTitle>
-                <p>
-                    Оптимальное решение: навесные вентилируемые фасады из
-                    керамогранита, главное преимущество которого заключается в
-                    идеальном соотношении качества и стоимости. Затраты на
-                    материал себя полностью окупают, так как данный вид отделки
-                    вентилируемого фасада обладает рядом достоинств перед
-                    альтернативными конструкциями: такая облицовка в течение
-                    десятилетий сохраняется в первоначальном виде, не изменяет
-                    своего оттенка, не требует дополнительных расходов на
-                    содержание, остается чрезвычайно устойчивой к воздействию
-                    окружающей среды; сохраняет влагостойкость, морозостойкость,
-                    прочность и экономичность. При этом отделка из керамогранита
-                    предоставляет широкий простор для воображения многих
-                    архитекторов и дизайнеров.
-                </p>
-                <SubTitle>Цветовая гамма КЕРАМОГРАНИТ, каталог</SubTitle>
+                <SubTitle>{get(trans, 'subTitle')[0]}</SubTitle>
+                {get(trans, 'descArray').map(item => (
+                    <p key={item}>{item}</p>
+                ))}
+                <SubTitle>{get(trans, 'subTitle')[1]}</SubTitle>
                 <div className={styles['porcelian-tile-images-wrapper']}>
                     <div className={styles['porcelian-tile-image-item']}>
                         <FullscreenImg src={porcelian_tile_type} />
@@ -58,11 +51,7 @@ export default function PorcelainTile() {
                         />
                     </div>
                 </div>
-                <SubTitle>
-                    Металлическая подсистема навесного вентилируемого фасада под
-                    облицовку керамогранитом, установленного в кляммерах из
-                    нержавеющей стали видимым способом
-                </SubTitle>
+                <SubTitle>{get(trans, 'subTitle')[2]}</SubTitle>
                 <div
                     className={`${styles['porcelian-tile-system-wrapper']} ${styles['facades-system-wrapper']}`}
                 >
@@ -72,54 +61,20 @@ export default function PorcelainTile() {
                     </div>
                     <div>
                         <div>
-                            <SubTitle>Конструкция:</SubTitle>
-                            <p>
-                                • Линейка, состоящая из стартовых, угловых и
-                                рядовых кляммеров позволяет крепить к
-                                направляющим профилям плиты облицовки форматом
-                                до 1200х600 мм, толщиной от 8 до 12 мм с
-                                выраженным рустом 8 мм{' '}
-                            </p>
-                            <p>
-                                • Крепление кляммеров к направляющим профилям
-                                осуществляется при помощи заклепок из
-                                нержавеющей стали{' '}
-                            </p>
-                            <p>
-                                • Допускается применение следующих типовых
-                                подсистем: рядовая, межэтажная{' '}
-                            </p>
+                            <SubTitle>
+                                {get(trans, 'constructions.title')}
+                            </SubTitle>
+                            {get(trans, 'constructions.textArray').map(item => (
+                                <p key={item}>{item}</p>
+                            ))}
                         </div>
                         <div>
-                            <SubTitle>Преимущества:</SubTitle>
-                            <p>
-                                • Универсальное портфолио профилей и
-                                соединителей системы позволяет решать
-                                разнообразные архитектурные задачи{' '}
-                            </p>
-                            <p>
-                                • Система гарантирует надежность подсистемы при
-                                расстояниях от стены до облицовки от 97 до 458
-                                мм{' '}
-                            </p>
-                            <p>
-                                • Направляющая в виде т-профиля позволяет
-                                добиться отсутствия заклёпок на его лицевой
-                                части, что исключает сложности при монтаже
-                                облицовки{' '}
-                            </p>
-                            <p>
-                                • При шахматной раскладке облицовки или для
-                                дополнительной жесткости предусмотрено
-                                формирование вертикально-горизонтальной или
-                                горизонтально-вертикальной подсистемы{' '}
-                            </p>
-                            <p>
-                                • Низкий коэффициент теплового расширения
-                                элементов подсистемы снижает риск деформации и
-                                повреждения облицовки вследствие сезонных
-                                перепадов температуры{' '}
-                            </p>
+                            <SubTitle>
+                                {get(trans, 'advantages.title')}
+                            </SubTitle>
+                            {get(trans, 'advantages.textArray').map(item => (
+                                <p key={item}>{item}</p>
+                            ))}
                         </div>
                     </div>
                 </div>
