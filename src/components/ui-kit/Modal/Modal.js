@@ -8,6 +8,7 @@ import styles from './Modal.module.scss'
 import { useTranslation } from '../../layouts/Layout'
 
 const Modal = props => {
+    console.log('modal')
     const [state, setState] = useState({
         name: '',
         surname: '',
