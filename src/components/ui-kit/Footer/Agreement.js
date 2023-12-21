@@ -18,7 +18,7 @@ export default function UserAgreement() {
                                 styles.underlined
                             )}
                         >
-                            Пользовательское соглашение
+                            Публічний договір
                         </p>
                     </div>
                 )}

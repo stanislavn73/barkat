@@ -208,7 +208,7 @@ export default softTranslation => ({
         content: PrivacyPolicy,
     },
     UserAgreement: {
-        title: 'Договор публичной оферты ООО "Баркат-Штейн"',
+        title: 'Публічний договір (ОФЕРТА)',
         content: UserAgreement,
     },
     BuySketchUpShop: {
