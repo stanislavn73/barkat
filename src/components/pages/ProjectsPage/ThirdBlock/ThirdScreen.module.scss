@@ -12,7 +12,7 @@
 
         .text-block {
             width: 500px;
-            height: 300px;
+            //height: 300px;
             border: 12px solid #c9643b94;
 
             margin-top: 70px;
@@ -77,9 +77,8 @@
         }
 
         .image-block {
-            position: absolute;
-            bottom: 0px;
-            right: 0px;
+            position: relative;
+            left: 234px;
             height: 500px;
             width: 70%;
             z-index: 2;

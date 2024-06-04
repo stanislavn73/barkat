@@ -9,7 +9,6 @@ export default function Img({ src, className, ...rest }) {
 
     function handleImageClick(state) {
         return () => {
-            console.log('clicked', state)
             setIsFull(state)
         }
     }
@@ -22,7 +21,6 @@ export default function Img({ src, className, ...rest }) {
                         className={styles['fullscreen-image']}
                         onClick={handleImageClick(false)}
                     >
-                        {console.log('rendered')}
                         <Image src={src} {...rest} loading='lazy' />
                     </div>,
                     document.body

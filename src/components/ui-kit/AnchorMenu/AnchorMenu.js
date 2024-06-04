@@ -2,9 +2,12 @@ import React, { useRef } from 'react'
 import cx from 'classnames'
 
 import styles from './AnchorMenu.module.scss'
+import { useTranslation } from '../../layouts/Layout'
+import { get } from '../../utils/facades/get'
 
 function AnchorMenu({ anchors, activeAnchor }) {
     const activeAnchorRef = useRef(activeAnchor)
+    const { t } = useTranslation('facades')
 
     const handleScrollToAnchor = (id, index) => () => {
         const element = document.getElementById(id)
@@ -34,7 +37,9 @@ function AnchorMenu({ anchors, activeAnchor }) {
                         onClick={handleScrollToAnchor(anchor.id, index)}
                     >
                         <div className={styles['dot']} />
-                        <div className={styles['title']}>{anchor.title}</div>
+                        <div className={styles['title']}>
+                            {get(t, `${anchor.id}.title`) || anchor.title}
+                        </div>
                     </div>
                 )
             })}

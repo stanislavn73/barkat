@@ -24,9 +24,10 @@ function Eventpage() {
                 <div className={styles['social-media-block']}>
                     <Img className={styles.logo} src={logoVille} />
                 </div>
+
                 <div className={styles['social-media-block']}>
-                    <div className={styles['soft-block-title']}>Autodesk</div>
-                    <SocialMedia page='Autodesk' />
+                    <div className={styles['soft-block-title']}>Google</div>
+                    <SocialMedia page='Google' />
                 </div>
                 <div className={styles['social-media-block']}>
                     <div className={styles['soft-block-title']}>
@@ -39,16 +40,20 @@ function Eventpage() {
                     <SocialMedia page='Hexagon' />
                 </div>
                 <div className={styles['social-media-block']}>
+                    <div className={styles['soft-block-title']}>TeamViewer</div>
+                    <SocialMedia page='Teamviewer' />
+                </div>
+                <div className={styles['social-media-block']}>
                     <div className={styles['soft-block-title']}>Bentley</div>
                     <SocialMedia page='Bentley' />
                 </div>
                 <div className={styles['social-media-block']}>
-                    <div className={styles['soft-block-title']}>SketchUp</div>
-                    <SocialMedia page='SketchUp' />
+                    <div className={styles['soft-block-title']}>Autodesk</div>
+                    <SocialMedia page='Autodesk' />
                 </div>
                 <div className={styles['social-media-block']}>
-                    <div className={styles['soft-block-title']}>AllPlan</div>
-                    <SocialMedia page='AllPlan' />
+                    <div className={styles['soft-block-title']}>SketchUp</div>
+                    <SocialMedia page='SketchUp' />
                 </div>
             </Padded>
         </>

@@ -2,6 +2,14 @@ import React from 'react'
 import styles from './Social.module.scss'
 
 const linksObject = {
+    Google: {
+        facebook: 'https://www.facebook.com/profile.php?id=100083137796657',
+        linkedin: 'https://www.linkedin.com/company/google-mentor/',
+    },
+    Teamviewer: {
+        facebook: 'https://www.facebook.com/profile.php?id=100079155813143',
+        linkedin: 'https://www.linkedin.com/company/vr-team-centre/\n',
+    },
     logo: {
         facebook: 'https://www.facebook.com/Barkat-Stein-100872801796847',
         insta: 'https://www.instagram.com/barkat_stein/?hl=ru',
