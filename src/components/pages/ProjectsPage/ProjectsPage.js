@@ -8,32 +8,34 @@ import SecondScreen from './SecondScreen'
 import ThirdScreen from './ThirdBlock'
 import FourthBlock from './FourthBlock'
 import FifthBlock from './FifthBlock'
+import { useTranslation } from '../../layouts/Layout'
 
 const anchors = [
     {
-        id: 'first',
+        id: 'projects',
         title: 'Наши проекты',
     },
     {
-        id: 'second',
+        id: 'about',
         title: 'О нас',
     },
     {
-        id: 'third',
+        id: 'products',
         title: 'Продукция',
     },
     {
-        id: 'fourth',
+        id: 'projects',
         title: 'Проекты',
     },
     {
-        id: 'fifth',
+        id: 'advantages',
         title: 'Преимущества',
     },
 ]
 
 const ProjectsPage = () => {
     const [activeAnchor, setActiveAnchor] = useState('first')
+    const { t } = useTranslation('facades')
 
     const handleAnchorReact = id => {
         setActiveAnchor(id)
@@ -42,19 +44,19 @@ const ProjectsPage = () => {
     return (
         <>
             <AnchorMenu anchors={anchors} activeAnchor={activeAnchor} />
-            <Anchor id='first' onPositionChange={handleAnchorReact}>
+            <Anchor id='projects' onPositionChange={handleAnchorReact}>
                 <FirstScreen />
             </Anchor>
-            <Anchor id='second' onPositionChange={handleAnchorReact}>
+            <Anchor id='about' onPositionChange={handleAnchorReact}>
                 <SecondScreen />
             </Anchor>
-            <Anchor id='third' onPositionChange={handleAnchorReact}>
+            <Anchor id='products' onPositionChange={handleAnchorReact}>
                 <ThirdScreen />
             </Anchor>
-            <Anchor id='fourth' onPositionChange={handleAnchorReact}>
+            <Anchor id='projects' onPositionChange={handleAnchorReact}>
                 <FourthBlock />
             </Anchor>
-            <Anchor id='fifth' onPositionChange={handleAnchorReact}>
+            <Anchor id='advantages' onPositionChange={handleAnchorReact}>
                 <FifthBlock />
             </Anchor>
         </>

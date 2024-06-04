@@ -1,1 +1,17 @@
-{}
+{
+    "projects": {
+        "title": "Наши проекты"
+    },
+    "about": {
+        "title": "О нас"
+    },
+    "products": {
+        "title": "Продукция"
+    },
+    "projects": {
+        "title": "Проекты"
+    },
+    "advantages": {
+        "title": "Преимущества"
+    }
+}

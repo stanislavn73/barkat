@@ -12,39 +12,48 @@ import * as icon5 from '../../../../../public/images/pages/facades/7.png'
 import * as icon6 from '../../../../../public/images/pages/facades/8.png'
 
 import styles from './FourthBlock.module.scss'
+import { useTranslation } from '../../../layouts/Layout'
+import { get } from '../../../utils/facades/get'
 
 const icons = [
     {
         icon: icon1,
+        id: 'icon1',
         text: 'Подробная спецификация элементов',
     },
     {
         icon: icon2,
+        id: 'icon2',
         text: 'Прочностной расчет',
     },
     {
         icon: icon3,
+        id: 'icon3',
         text: 'Схемы раскладки облицовочного камня по всей площади фасада',
     },
     {
         icon: icon4,
+        id: 'icon4',
         text: 'Выполнение чертежей узлов примыкания, технических решений',
     },
     {
         icon: icon5,
+        id: 'icon5',
         text: 'Разработка монтажных схем на элементы системы с воздушным каналом и облицовочным камнем',
     },
     {
         icon: icon6,
+        id: 'icon6',
         text: 'Разработка проекта КМД',
     },
 ]
 
-function ProjectsFourthBlock() {
+function ProjectsFourthBlock({ id }) {
+    const { t } = useTranslation('facades')
     return (
         <FullPage className={styles['facades-icons-block-wrapper']} min>
             <Padded className={styles['facades-fourth-padded']}>
-                <Title className={styles.title}>Разработка</Title>
+                <Title className={styles.title}>{get(t, `${id}.title`)}</Title>
                 <div className={styles['icons-wrapper-facades-four']}>
                     {icons.map((el, index) => (
                         <div className={styles['icons-block-item']} key={index}>
@@ -53,7 +62,7 @@ function ProjectsFourthBlock() {
                                 className={styles['icons-block-icon']}
                             />
                             <div className={styles['icons-block-text']}>
-                                {el.text}
+                                {get(t, `${id}.${el.id}`)}
                             </div>
                         </div>
                     ))}

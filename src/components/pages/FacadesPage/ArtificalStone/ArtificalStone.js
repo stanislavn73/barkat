@@ -15,49 +15,34 @@ import catalog from '../../../../../public/images/facades/artifical-stone/catalo
 
 import styles from './ArtificalStone.module.scss'
 import { FacadesWrapper } from '../FacadesWrapper'
+import { useTranslation } from '../../../layouts/Layout'
+import { get } from '../../../utils/facades/get'
 
-export default function ArtificalStone() {
+export default function ArtificalStone({ id }) {
+    const { t } = useTranslation('facades')
+    const trans = get(t, id)
+
     return (
         <FacadesWrapper className={styles['artifical-stone-block']}>
             <FullPage>
-                <Title>Фасад ИСКУССТВЕННЫЙ КАМЕНЬ</Title>
+                <Title>{get(trans, 'title')}</Title>
                 <ImageSlides data={facadesArtificalStoneSlides} />
             </FullPage>
             <Padded>
-                <SubTitle>
-                    ИСКУССТВЕННЫЙ КАМЕНЬ как строительный материал
-                </SubTitle>
-                <p>
-                    Оптимальное и одно из самых бюджетных решений: навесные
-                    вентфасады с икусственного камня.
-                </p>
-                <p>
-                    Базовым материалом фасадного камня является цемент с
-                    добавлением гранитной крошки, что обеспечивает ему прочность
-                    и долговечность. Широкий выбор цветов и удобная система
-                    монтажа предоставляют безграничные возможности для создания
-                    внешнего вида дома. Благодаря особой форме элементов, данный
-                    вид вентфасада имитирует кирпичную кладку, позволяет
-                    выполнить оформление архитектурных деталей фасада дома, а
-                    также полностью совместим с другими фасадными материалами.
-                </p>
-                <SubTitle>Цветовая гамма ИСКУСВЕННОГО КАМНЯ</SubTitle>
+                <SubTitle>{get(trans, 'subTitle')[0]}</SubTitle>
+                {get(trans, 'descArray').map(item => (
+                    <p key={item}>{item}</p>
+                ))}
+                <SubTitle>{get(trans, 'subTitle')[1]}</SubTitle>
                 <div className={styles['artifical-stone-images-wrapper']}>
                     <div className={styles['artifical-stone-image-item']}>
                         <FullscreenImg src={artifical_stone_type} />
                     </div>
                     <div className={styles['artifical-stone-download-item']}>
-                        <DownloadCatalog
-                            file={catalog}
-                            name='Каталог Искусственный камень'
-                        />
+                        <DownloadCatalog file={catalog} />
                     </div>
                 </div>
-                <SubTitle>
-                    Металлическая подсистема навесного вентилируемого фасада под
-                    облицовку терракотовыми панелями, установленных на
-                    универсальные кляммеры из нержавеющей стали
-                </SubTitle>
+                <SubTitle>{get(trans, 'subTitle')[2]}</SubTitle>
                 <div
                     className={cx(
                         styles['artifical-stone-system-wrapper'],
@@ -70,59 +55,20 @@ export default function ArtificalStone() {
                     </div>
                     <div>
                         <div>
-                            <SubTitle>Конструкция:</SubTitle>
-                            <p>
-                                • Искуственный камень монтируется беззатирочным
-                                методом между горизонтально расположенными
-                                стартовыми и/или рядовыми профилями из
-                                нержавеющей стали{' '}
-                            </p>
-                            <p>
-                                • Крепление вертикальных профилей к несущим
-                                осуществляется при помощи заклепок из
-                                нержавеющей стали{' '}
-                            </p>
-                            <p>
-                                • Конструкция рядового профиля предусматривает
-                                пружинный зажим для верхнего гребня камня{' '}
-                            </p>
+                            <SubTitle>
+                                {get(trans, 'constructions.title')}
+                            </SubTitle>
+                            {get(trans, 'constructions.textArray').map(item => (
+                                <p key={item}>{item}</p>
+                            ))}
                         </div>
                         <div>
-                            <SubTitle>Преимущества:</SubTitle>
-                            <p>
-                                • Монтаж в любое время года независимо от
-                                условий окружающей среды{' '}
-                            </p>
-                            <p>
-                                • Заклепочное крепление в верхней части рядового
-                                и стартового профиля – удобный монтаж и снижение
-                                нагрузки на заклепку{' '}
-                            </p>
-                            <p>
-                                • Локальная ремонтопригодность – каждая
-                                отдельная плитка может быть оперативно извлечена
-                                или заменена{' '}
-                            </p>
-                            <p>
-                                • Пружинный зажим верхней части камня в рядовом
-                                профиле гасит вибрации и повышает надёжность
-                                крепления{' '}
-                            </p>
-                            <p>
-                                • Фиксирующий язычок в рядовом профиле
-                                препятствует выдуванию облицовки в районах с
-                                повышенной ветровой нагрузкой, а также
-                                затрудняет несанкционированный демонтаж{' '}
-                            </p>
-                            <p>
-                                • Применение фирменных шаблонов увеличивает
-                                скорость и повышает точность монтажа рядового
-                                профиля{' '}
-                            </p>
-                            <p>
-                                • Универсальное решение для рядовой и межэтажной
-                                подсистемы
-                            </p>
+                            <SubTitle>
+                                {get(trans, 'advantages.title')}
+                            </SubTitle>
+                            {get(trans, 'advantages.textArray').map(item => (
+                                <p key={item}>{item}</p>
+                            ))}
                         </div>
                     </div>
                 </div>

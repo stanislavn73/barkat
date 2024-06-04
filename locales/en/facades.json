@@ -1,0 +1,228 @@
+{
+    "screenTitle": "Facades",
+    "subTitle": "A reliable partner in the world of ventilated facade systems (VFS) made from dolomite, marble, ceramic granite, clinker, terracotta panels, and artificial stone, widely used in the civil and commercial construction market, enhancing the energy efficiency and architectural attractiveness of buildings and structures. The application of VFS enables the realization of complex and unconventional architectural solutions.'",
+    "main": {
+        "title": "About facades"
+    },
+    "about": {
+        "title": "About ventilated facades",
+        "snow": "Energy efficiency (winter - heating savings)",
+        "sun": "Energy efficiency (summer - air conditioning savings)",
+        "museum": "Architectural/investment attractiveness of the facade/building",
+        "town": "Application in high-rise construction (up to 100 m)",
+        "stain": "Resistance to salt deposits",
+        "fire": "Fire safety",
+        "heat": "All-weather installation",
+        "plant": "Environmental friendliness",
+        "seismic": "Seismic resistance",
+        "repair": "Interchangeability of facade stones, repairability",
+        "putty": "Durable, renewable, easy to clean",
+        "brick": "High installation speed"
+    },
+    "advantages": {
+        "title": "All advantages",
+        "textArray": [
+            "Significant reduction in building heating costs",
+            "Durability: the service life of ventilated facade systems - up to 50 years without repairs",
+            "Resistance of the facade system to atmospheric influences",
+            "Quick installation of the facade system at any time of the year",
+            "The use of a ventilated facade eliminates the problem of wall overheating in the summer months",
+            "Repairability in case of partial damage",
+            "Ability to use various facing materials",
+            "Wide range of color combinations (RAL color chart)",
+            "High thermal and acoustic insulation characteristics of the system.",
+            "Thanks to the insulation layer, the 'dew point' is moved beyond the load-bearing wall of the building."
+        ]
+    },
+    "designing": {
+        "title": "Designing",
+        "icon1": "Detailed component specification",
+        "icon2": "Strength calculations",
+
+        "icon3": "Layout diagrams for facing stone across the entire facade area",
+
+        "icon4": "Preparation of drawings for connection details and technical solutions",
+
+        "icon5": "Development of installation schemes for system elements with an air channel and facing stone",
+
+        "icon6": "Development of the KMD project"
+    },
+    "about-system": {
+        "title": "About system",
+        "textArray": [
+            "A ventilated facade is a system consisting of facing materials that are attached to a framework made of galvanized steel or aluminum, which is then fixed to the load-bearing surface of the wall or to the floor slabs. There is an open gap between the facing and the wall, allowing air to circulate freely, removing condensation and moisture from the structures. The modern concept of ventilated facade systems is commonly attributed to Germany. Starting in the 1950s, extensive scientific research was conducted there, leading to the development of structural components and the installation technology for ventilated facades. All attachment elements of the ventilated facade system are universal, enabling the solution of complex architectural and design challenges, from classical to contemporary.",
+            "For additional insulation of building walls, mineral wool insulation is attached to the wall using disc-shaped anchors. The size of the gap between the insulation and the building facade can vary from 20 to 50 mm according to various sources. This allows rising air currents to circulate between the facing material and the insulation, drying out the insulation layer in case it gets wet. To prevent fibers from being blown out of the insulation, especially when using insulation with an 'uncoated' surface, it is covered with a moisture and wind-resistant, vapor-permeable membrane (film). However, this is not a mandatory requirement for the installation of ventilated facade systems.",
+            "The air gap between the wall and the decorative panel significantly reduces the heat transfer of the building. This system helps retain heat indoors, prevents the occurrence of moisture, and significantly reduces the amount of construction material required for building walls, leading to cost savings in construction and facilitating the entire construction process."
+        ]
+    },
+    "marble": {
+        "title": "Marble / Dolomite / Travertine facade",
+        "subTitle": [
+            "Jurassic marble as a building material",
+            "Color palette and stone types, catalog",
+            "Jurassic marble",
+            "Ditfurt dolomite:",
+            "Ditfurt travertine:",
+            "Metal substructure for a ventilated façade for cladding with marble slabs with a groove, which is installed using a concealed method on fastening plates"
+        ],
+        "imagesTitles": [
+            "Beige marble with sandblasted finish",
+            "Gray marble with sandblasted finish",
+            "Gray matte marble"
+        ],
+        "desc": "In recent years, façade panels made of natural marble have become one of our most demanded products. A ventilated marble façade is capable of qualitatively transforming any object, whether it is for commercial or civil construction. Historically, Jurassic marble has been mined and used as a building material since the time of the Roman Empire. The long history of success of natural stone is demonstrated today by the remains of walls, towers, and baths that can still be found in many corners of Europe. Various recent discoveries, such as Römertherme or Römerkastell in Weissenburg, clearly demonstrate this.",
+        "constructions": {
+            "title": "Construction:",
+            "textArray": [
+                "Marble cladding slabs with a groove are attached to the substructure using fastening plates.",
+                "Fastening the fastening plates to the load-bearing profiles is done using aluminum rivets.",
+                "Load-bearing profiles are attached using brackets either to the wall surface (for the row subsystem) or to the floor slabs (for the inter-floor subsystem)."
+            ]
+        },
+        "advantages": {
+            "title": "Advantages:",
+            "textArray": [
+                "Installation can be done at any time of the year, regardless of environmental conditions.",
+                "Rivet fastening at the top of the fastening plate allows for convenient installation and reduces the load on the rivet.",
+                "A universal solution for both row and inter-floor subsystems."
+            ]
+        }
+    },
+    "clinkerstone": {
+        "title": "Clinkerstone facade",
+        "subTitle": [
+            "Clinkerstone as a Building Material",
+            "Color palette and stone types, catalog",
+            "Metal substructure for a ventilated clinker stone facade cladding, installed on clamping plates using grouting mixtures.",
+            "Metal substructure for a ventilated clinker stone facade cladding, installed on clamping plates using the dry method."
+        ],
+        "textArray": [
+            "Clinkerstone, also known as stone for brick or 'wild' stone, is a timeless classic material that allows architects to bring to life the 'flight of imagination.' The constructionally defined horizontal and vertical seams of clinker provide the facade with a rich and precisely defined pattern, resembling perfect brickwork. The wide range of stone shades and textures, as well as the possibility of using volumetric decorative elements (cornices, columns, balustrades, and others), allows for the realization of architectural ideas of any complexity.",
+            "Clinkerstone is a type of ceramic stone manufactured using a somewhat unconventional method: firstly, a large part of the material is obtained by extrusion, and secondly, during firing, clinker bypasses the vitrification phase. As a result, the finished product has a smooth but not glossy surface and retains similarity to clinker brick. Since no chemical dyes are added to the raw material, the stone's color depends on the clay's mineral composition. Terracotta shades are achieved through iron admixtures. Carbon provides black, gray, and gray-blue colors. Stones are produced with uneven chips, rounded edges, and rectangular shapes. They can mimic brick, old walls, 'wild' stone, and more. Since the dimensions of the tiles are much smaller than bricks, the density of the product must be higher to achieve the necessary strength, achieved through high-pressure pressing and higher firing temperatures - 1100-1450°C as opposed to 800-1000°C. Clinkerstone is a low-porous material with high water and frost resistance; it absorbs moisture very poorly, not more than 2-3%, and therefore does not fall victim to freezing in the pores. The color palette of the products is close to natural but does not exclude any exotic shades. Moreover, coloring pigments are added to the original raw material, so sunlight does not affect the cladding. For facade cladding, not only regular tiles are produced, but also additional elements for corner decoration. Very often, these materials are combined by color to give the building a more interesting appearance. As is typical for ceramic tiles, clinker is insensitive to bacteria, fungi, mold, and is completely fire-safe."
+        ],
+        "imagesTitles": [
+            "Coral Star",
+            "Marrakech Dust",
+            "Silver Rose",
+            "Winter Brick",
+            "Argon Wall"
+        ],
+        "constructionsGrout": {
+            "title": "Construction:",
+            "textArray": [
+                "- Clinker stone is mounted without grouting between horizontally positioned starting and/or row stainless steel profiles.",
+                "- Clinker profiles are fastened to load-bearing elements using stainless steel rivets.",
+                "- The row profile design includes a spring clamp for the upper ridge of the tile."
+            ]
+        },
+        "constructionsDry": {
+            "title": "Construction:",
+            "textArray": [
+                "- Clinker stone is mounted without grouting between horizontally positioned starting and/or row stainless steel profiles.",
+                "- Clinker profiles are fastened to load-bearing elements using stainless steel rivets.",
+                "- The row profile design includes a spring clamp for the upper ridge of the tile."
+            ]
+        },
+        "advantagesDry": {
+            "title": "Advantages:",
+            "textArray": [
+                "- Installation can be done at any time of the year, regardless of environmental conditions.",
+                "- Rivet fastening at the top of the clamping plate – convenient installation and reduced load on the rivet.",
+                "- Local repairability – each individual tile can be quickly removed or replaced."
+            ]
+        }
+    },
+    "terracota": {
+        "title": "Facade Terracotta Panels",
+        "subTitle": [
+            "TERRACOTTA PANELS as a building material",
+            "Color Range of TERRACOTTA PANELS, catalog",
+            "Metal substructure of the ventilated façade cladding with terracotta panels installed on universal stainless steel clamps"
+        ],
+        "descArray": [
+            "The ideal solution: ventilated façades made of terracotta ceramic panels.",
+            "Aesthetics, cost-effectiveness, and environmental sustainability are the basis for the growing popularity of ventilated terracotta façades. The modern color and shape elements of the panels give the building a memorable appearance and help architects bring their ideas to life. Thanks to the rich variety of colors, formats, and surface textures in the Barkat-Stein ventilated façade system, it provides an ideal foundation for creative freedom in planning new or renovating old buildings. Clients with specific requirements can also find what they need since one of the company's strengths is custom manufacturing.",
+            "For over 2000 years, ceramics have been the 'original material for architects.' Colored tiles and ceramic decorations were already used in construction by the Etruscans. The concept of 'ceramics' includes all inorganic non-metallic materials that are first formed and then fired.",
+            "The main component of the mass for ceramic tiles is clay, formed as a result of erosion from rocks containing feldspar minerals (such as granite) under the influence of wind, water, and seasonal temperature fluctuations. Clay consists of fine-grained minerals, with clay minerals (layered silicates) giving clay its plastic properties. Due to specific requirements for the ceramic production process and the clay product itself (50-70%), other raw materials such as feldspar (15-25%), chamotte (10-20%), and kaolin (0-10%) need to be added. The processing includes the homogeneous mixing of all components. The resulting mass is further processed as part of the ceramic production process. When forming tiles, two main methods are distinguished: dry pressing on one hand and extrusion on the other. In the forming process, the prepared mass, in the form of granules or in a plasticized state, is pressed into a mold or through a mold at very high pressure. The choice of the forming method depends on the required properties of the final product. Barkat-Stein supplies terracotta ceramics produced by both methods."
+        ],
+        "constructions": {
+            "title": "Construction:",
+            "textArray": [
+                "• Cladding panels are installed in rows on universal clamps",
+                "• Clamps are directly attached to the load-bearing profile of the substructure with stainless steel rivets",
+                "• The following standard substructures are allowed: row and interfloor"
+            ]
+        },
+        "advantages": {
+            "title": "Advantages:",
+            "textArray": [
+                "• Minimal fastener variety – one universal clamp provides multiple solutions",
+                "• Horizontal and vertical cladding panel installation is possible",
+                "• Universal clamping for panels from different manufacturers",
+                "• Quick installation and removal of panels",
+                "• Universal solution for row and interfloor substructures"
+            ]
+        }
+    },
+    "porcelain-tile": {
+        "title": "Ceramic Granite Facade",
+        "subTitle": [
+            "CERAMIC GRANITE as a building material",
+            "Color Range of CERAMIC GRANITE, catalog",
+            "Metal substructure of the ventilated facade cladding with ceramic granite, installed in stainless steel clamps in a visible way"
+        ],
+        "descArray": [
+            "The optimal solution: ventilated facades made of ceramic granite, the main advantage of which is the perfect balance between quality and cost. The material costs are fully justified because this type of ventilated facade finish has several advantages over alternative structures: it retains its original appearance for decades, does not change its color, does not require additional maintenance costs, remains extremely resistant to environmental influences, retains moisture resistance, frost resistance, durability, and cost-effectiveness. At the same time, ceramic granite finishing provides ample room for the imagination of many architects and designers."
+        ],
+        "constructions": {
+            "title": "Construction:",
+            "textArray": [
+                "• A lineup consisting of starting, corner, and row clamps allows for attaching cladding panels with dimensions up to 1200x600 mm, thicknesses ranging from 8 to 12 mm, with an expressed rustication of 8 mm, to guiding profiles",
+                "• Clamps are attached to the guiding profiles using stainless steel rivets",
+                "• The following standard substructures are allowed: row and interfloor"
+            ]
+        },
+        "advantages": {
+            "title": "Advantages:",
+            "textArray": [
+                "• A universal portfolio of profiles and connectors in the system allows solving various architectural tasks",
+                "• The system ensures the reliability of the substructure at distances from the wall to the cladding ranging from 97 to 458 mm",
+                "• The guiding profile in the form of a T-profile allows for no rivets on its front side, eliminating difficulties during cladding installation",
+                "• For chessboard layout of cladding or for additional rigidity, the formation of a vertical-horizontal or horizontal-vertical substructure is provided",
+                "• A low coefficient of thermal expansion of substructure elements reduces the risk of deformation and damage to the cladding due to seasonal temperature fluctuations."
+            ]
+        }
+    },
+    "artifical-stone": {
+        "title": "Facade ARTIFICIAL STONE",
+        "subTitle": [
+            "ARTIFICIAL STONE as a building material",
+            "Color Range of ARTIFICIAL STONE",
+            "Metal substructure of the ventilated facade cladding with terracotta panels, installed on universal stainless steel clamps"
+        ],
+        "descArray": [
+            "An optimal and one of the most budget-friendly solutions: ventilated facades with artificial stone.",
+            "The base material for facade stone is cement with the addition of granite chips, which ensures its strength and durability. A wide range of colors and a convenient installation system provide limitless possibilities for creating the exterior of a house. Thanks to the special shape of the elements, this type of ventilated facade mimics brickwork, allows for the decoration of architectural details of the house facade, and is fully compatible with other facade materials."
+        ],
+        "constructions": {
+            "title": "Construction:",
+            "textArray": [
+                "• Artificial stone is installed using a jointless method between horizontally placed starting and/or row profiles made of stainless steel",
+                "• Vertical profiles are fastened to the load-bearing structure using stainless steel rivets",
+                "• The construction of the row profile includes a spring clamp for the upper ridge of the stone"
+            ]
+        },
+        "advantages": {
+            "title": "Advantages:",
+            "textArray": [
+                "• Installation can be done at any time of the year regardless of environmental conditions",
+                "• Rivet fastening at the upper part of the row and starting profile - convenient installation and reduced load on the rivet",
+                "• Local repair ability - each individual tile can be promptly removed or replaced",
+                "• The spring clamp of the upper part of the stone in the row profile dampens vibrations and increases fastening reliability",
+                "• The fixing tongue in the row profile prevents the cladding from being blown off in areas with increased wind loads and makes unauthorized disassembly more difficult",
+                "• The use of branded templates speeds up installation and increases the accuracy of the row profile installation",
+                "• A universal solution for both row and interfloor substructures"
+            ]
+        }
+    }
+}

@@ -173,13 +173,31 @@ export default function BuySketchUpShop({
     const handleSubmit = async e => {
         // e.preventDefault()
         try {
+            const { name, email, phone, company, website } = userData
             const formatToday = dayjs().format('MM.DD.YYYY')
             await setDoc(doc(db, formatToday, userData.email), {
-                username: userData.name,
-                email: userData.email,
-                phone: userData.phone,
+                username: name,
+                email: email,
+                phone: phone,
                 timestamp: dayjs().format('MMMM D, YYYY h:mm A'),
                 orderId,
+            })
+
+            const url = `${process.env.SENDGRID_URL}/api/send`
+            const msg = {
+                subject: 'Неоплаченый заказ',
+                html: `
+            <div>
+            <div>ФИО: <strong>${name}</strong>
+            <div>Вид деятельности: <strong>${company}</strong></div>
+            <div>Сайт: <strong>${website}</strong></div>
+            <div>имейл: <strong>${email}</strong></div>
+            <div>телефон: <strong>${phoneNumber}</strong></div>
+             </div>`,
+            }
+            await fetch(url, {
+                method: 'POST',
+                body: JSON.stringify(msg),
             })
         } catch (err) {
             console.error('error: ', err)
