@@ -5,15 +5,13 @@ import AnchorMenu from '../../ui-kit/AnchorMenu'
 
 import FirstScreen from './FirstScreen'
 import Autodesk from './Autodesk'
-import DassaultSystemes from './Dassault'
 import Hexagon from './Hexagon'
 import Bentley from './Bentley'
 import SketchUp from './SketchUp'
-import AllPlan from './AllPlan'
 import TeamViewer from './TeamViewer'
-import { useTranslation } from '../../layouts/Layout'
 import { GoogleCloud } from './GoogleCloud/GoogleCloud'
 import { GoogleWorkspace } from './GoogleWorkspace/GoogleWorkspace'
+import { useTranslation } from '../../layouts/Layout'
 
 const SoftPage = () => {
     const { t } = useTranslation('soft')
@@ -33,11 +31,6 @@ const SoftPage = () => {
             id: 'googleWorkspace',
             title: 'Google Workspace',
             comp: <GoogleWorkspace />,
-        },
-        {
-            id: 'Dassault-systemes',
-            title: 'Dassault Systèmes',
-            comp: <DassaultSystemes />,
         },
         {
             id: 'Hexagon-geospatial',

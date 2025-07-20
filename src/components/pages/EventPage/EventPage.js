@@ -30,12 +30,6 @@ function Eventpage() {
                     <SocialMedia page='Google' />
                 </div>
                 <div className={styles['social-media-block']}>
-                    <div className={styles['soft-block-title']}>
-                        Dassault Systèmes
-                    </div>
-                    <SocialMedia page='Dassault' />
-                </div>
-                <div className={styles['social-media-block']}>
                     <div className={styles['soft-block-title']}>Hexagon</div>
                     <SocialMedia page='Hexagon' />
                 </div>

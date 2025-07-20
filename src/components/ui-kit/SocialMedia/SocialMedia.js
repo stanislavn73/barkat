@@ -20,11 +20,6 @@ const linksObject = {
         insta: 'https://www.instagram.com/bim_maker/?igshid=fnhm7gyiwqr8',
         linkedin: 'https://www.linkedin.com/showcase/66204395/admin/',
     },
-    Dassault: {
-        facebook:
-            'https://www.facebook.com/Dassault-Smart-Plant-114738053613652',
-        linkedin: 'https://www.linkedin.com/showcase/66914293/admin/',
-    },
     AllPlan: {
         facebook: 'https://www.facebook.com/BIMmakers-103432894707756',
         insta: 'https://www.instagram.com/bim_maker/?igshid=fnhm7gyiwqr8',
