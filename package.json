@@ -18,6 +18,9 @@
         "url": "https://gitlab.com/vladnovod7/dilianka/issues"
     },
     "homepage": "https://gitlab.com/vladnovod7/dilianka#readme",
+    "engines": {
+        "node": "22.x"
+    },
     "dependencies": {
         "@material-ui/core": "^4.11.3",
         "classnames": "^2.2.6",
