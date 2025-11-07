@@ -3,7 +3,7 @@ const config = {
     defaultLocale: 'en',
     pages: {
         '*': ['common'],
-        // '/': ['home'],
+        '/': ['home'],
         // '/about_us': ['about'],
         '/soft': ['soft'],
     },

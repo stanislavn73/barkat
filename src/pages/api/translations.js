@@ -10,10 +10,14 @@ const facadesEn = require('./../../../locales/en/facades.json')
 const facadesRu = require('./../../../locales/ru/facades.json')
 const facadesUa = require('../../../locales/ua/facades.json')
 
+const homeEn = require('./../../../locales/en/home.json')
+const homeRu = require('./../../../locales/ru/home.json')
+const homeUa = require('../../../locales/ua/home.json')
+
 const translate = {
-    en: { soft: en, common: commonEn, facades: facadesEn },
-    ru: { soft: ru, common: commonRu, facades: facadesRu },
-    ua: { soft: ua, common: commonUa, facades: facadesUa },
+    en: { soft: en, common: commonEn, facades: facadesEn, home: homeEn },
+    ru: { soft: ru, common: commonRu, facades: facadesRu, home: homeRu },
+    ua: { soft: ua, common: commonUa, facades: facadesUa, home: homeUa },
 }
 
 const fetchTranslations = async (req, res) => {

@@ -1,0 +1,23 @@
+{
+    "slider": {
+        "initialTitle": "Barkat Stein"
+    },
+    "sections": {
+        "facadeChallengers": {
+            "title": "Barkat-Stein",
+            "subTitle": "Facade Challengers"
+        },
+        "digitalTwin": {
+            "title": "Barkat-3D-Ville",
+            "subTitle": "Digital Twin Conceptors"
+        },
+        "engineering": {
+            "title": "Barkat-Engineering",
+            "subTitle": "Internal engineering network's modernizers"
+        },
+        "agrospatial": {
+            "title": "Barkat-Agrospatial",
+            "subTitle": "Making Farmers Digital"
+        }
+    }
+}
