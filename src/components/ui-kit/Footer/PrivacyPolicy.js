@@ -1,4 +1,4 @@
-import { useTranslation } from 'next-i18next'
+import useTranslation from 'next-translate/useTranslation'
 import { ModalConsumer } from '../../layouts/Layout'
 import visa from 'payment-icons/min/flat/visa.svg'
 import masterCard from 'payment-icons/min/flat/mastercard.svg'

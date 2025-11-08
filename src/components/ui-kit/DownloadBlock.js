@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { useTranslation } from 'next-i18next'
+import useTranslation from 'next-translate/useTranslation'
 
 import downloadIcon from '../../../public/images/icons/download.png'
 

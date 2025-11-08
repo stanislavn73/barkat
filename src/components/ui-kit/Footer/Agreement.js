@@ -1,4 +1,4 @@
-import { useTranslation } from 'next-i18next'
+import useTranslation from 'next-translate/useTranslation'
 import { ModalConsumer } from '../../layouts/Layout'
 import cx from 'classnames'
 import styles from './PrivacyPolicy.module.scss'

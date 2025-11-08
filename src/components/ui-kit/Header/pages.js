@@ -1,7 +1,7 @@
 import about from '../../../../public/images/pages/About_us_first.jpg'
 
 import dynamic from 'next/dynamic'
-import { useTranslation } from 'next-i18next'
+import useTranslation from 'next-translate/useTranslation'
 
 const LoadingComponent = () => {
     const { t } = useTranslation('common')
