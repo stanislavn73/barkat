@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import { useTranslation } from 'next-i18next'
 
 import downloadIcon from '../../../public/images/icons/download.png'
 
@@ -51,6 +52,8 @@ const Icon = styled(Image)`
 const Text = styled.div``
 
 const Header = () => {
+    const { t } = useTranslation('common')
+
     return (
         <BlockWrapper>
             <WowBlock delay={0.4}>
@@ -58,7 +61,7 @@ const Header = () => {
                     <WrapperIcon>
                         <Icon src={downloadIcon} />
                     </WrapperIcon>
-                    <Text>О компании (Ру)</Text>
+                    <Text>{t('downloadBlock.aboutCompanyRu')}</Text>
                 </DownloadItem>
             </WowBlock>
             <WowBlock delay={0.5}>
@@ -66,7 +69,7 @@ const Header = () => {
                     <WrapperIcon>
                         <Icon src={downloadIcon} />
                     </WrapperIcon>
-                    <Text>About company (En)</Text>
+                    <Text>{t('downloadBlock.aboutCompanyEn')}</Text>
                 </DownloadItem>
             </WowBlock>
         </BlockWrapper>

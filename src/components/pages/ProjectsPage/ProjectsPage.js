@@ -10,32 +10,32 @@ import FourthBlock from './FourthBlock'
 import FifthBlock from './FifthBlock'
 import { useTranslation } from '../../layouts/Layout'
 
-const anchors = [
-    {
-        id: 'projects',
-        title: 'Наши проекты',
-    },
-    {
-        id: 'about',
-        title: 'О нас',
-    },
-    {
-        id: 'products',
-        title: 'Продукция',
-    },
-    {
-        id: 'projects',
-        title: 'Проекты',
-    },
-    {
-        id: 'advantages',
-        title: 'Преимущества',
-    },
-]
-
 const ProjectsPage = () => {
     const [activeAnchor, setActiveAnchor] = useState('first')
-    const { t } = useTranslation('facades')
+    const { t } = useTranslation('projects')
+
+    const anchors = [
+        {
+            id: 'projects',
+            title: t.anchors.projects,
+        },
+        {
+            id: 'about',
+            title: t.anchors.about,
+        },
+        {
+            id: 'products',
+            title: t.anchors.products,
+        },
+        {
+            id: 'projects',
+            title: t.anchors.projects,
+        },
+        {
+            id: 'advantages',
+            title: t.anchors.advantages,
+        },
+    ]
 
     const handleAnchorReact = id => {
         setActiveAnchor(id)

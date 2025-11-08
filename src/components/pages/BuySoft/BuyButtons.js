@@ -3,6 +3,7 @@ import React from 'react'
 import { ModalConsumer } from '../../layouts/Layout'
 import * as dayjs from 'dayjs'
 import * as isBetween from 'dayjs/plugin/isBetween'
+import useTranslation from 'next-translate/useTranslation'
 dayjs.extend(isBetween)
 import styles from './BuySketchup.module.scss'
 
@@ -16,6 +17,7 @@ const useHead = makeStyles(theme => ({
 }))
 
 export default function buyButtons({ mobileButtons, handleSetColumn }) {
+    const { t } = useTranslation('buy-sketchup')
     const discountValid = dayjs().isBetween('2021-05-17', dayjs('2021-07-01'))
     const discount = discountValid ? 699 : null
     const buyButtons = [
@@ -53,7 +55,7 @@ export default function buyButtons({ mobileButtons, handleSetColumn }) {
                                 className={styles.footer}
                                 onClick={() => handleOpenForm('')}
                             >
-                                FREE
+                                {t('free')}
                             </div>
                         </TableCell>
                     )}
@@ -84,19 +86,19 @@ export default function buyButtons({ mobileButtons, handleSetColumn }) {
                                                 </strike>
                                                 {discount}
                                                 <p className={styles.text}>
-                                                    USD в год
+                                                    {t('perYear')}
                                                 </p>
                                             </>
                                         ) : (
                                             <>
                                                 {item.price}
                                                 <p className={styles.text}>
-                                                    USD в год
+                                                    {t('perYear')}
                                                 </p>
                                                 <div
                                                     className={styles.buy_text}
                                                 >
-                                                    Купить
+                                                    {t('buy')}
                                                 </div>
                                             </>
                                         )}

@@ -1,24 +1,27 @@
 import React, { useEffect } from 'react'
 import FullPage from '../ui-kit/FullPage'
+import useTranslation from 'next-translate/useTranslation'
 import styles from './SoftPage/SoftPage.module.scss'
 
 const PaymentSuccess = () => {
+    const { t: commonT } = useTranslation('common')
+    const { t: formsT } = useTranslation('forms')
     useEffect(() => {
         const { name, company, email, phone, website, orderId, product } =
             JSON.parse(localStorage.getItem('USER_DATA_DATABASE')) || {}
 
         const state = {
-            subject: 'Заказ оплачен',
+            subject: formsT('email.paidOrder'),
             html: `
             <div>
-            <div>имя: <strong>${name}</strong>
-            <div>компания: <strong>${company}</strong></div>
-            <div>профессия: <strong>Покупатель</strong></div>
-            <div>имейл: <strong>${email}</strong></div>
-            <div>телефон: <strong>${phone}</strong></div>
-            <div>вебсайт: <strong>${website}</strong></div>
+            <div>${commonT('consultation.name')}: <strong>${name}</strong>
+            <div>${commonT('consultation.company')}: <strong>${company}</strong></div>
+            <div>${commonT('consultation.title')}: <strong>${commonT('paymentSuccess.buyer')}</strong></div>
+            <div>${formsT('email.email')}: <strong>${email}</strong></div>
+            <div>${formsT('email.phone')}: <strong>${phone}</strong></div>
+            <div>${formsT('userDataForm.website')}: <strong>${website}</strong></div>
             <div>orderId: <strong>${orderId}</strong></div>
-            <div>продукт: <strong>${product}</strong></div>
+            <div>${commonT('paymentSuccess.product')}: <strong>${product}</strong></div>
              </div>`,
         }
         ;(async () => {
@@ -42,8 +45,8 @@ const PaymentSuccess = () => {
     return (
         <FullPage>
             <div className={styles['soft-block-title']}>
-                Оплата прошла успешно.
-                <br /> С Вами свяжутся в ближайшее время
+                {commonT('paymentSuccess.title')}
+                <br /> {commonT('paymentSuccess.subtitle')}
             </div>
         </FullPage>
     )

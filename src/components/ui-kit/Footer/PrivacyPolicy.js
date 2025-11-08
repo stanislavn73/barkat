@@ -1,3 +1,4 @@
+import { useTranslation } from 'next-i18next'
 import { ModalConsumer } from '../../layouts/Layout'
 import visa from 'payment-icons/min/flat/visa.svg'
 import masterCard from 'payment-icons/min/flat/mastercard.svg'
@@ -7,6 +8,8 @@ import cx from 'classnames'
 import styles from './PrivacyPolicy.module.scss'
 
 export default function PrivacyPolicy() {
+    const { t } = useTranslation('common')
+
     return (
         <div className={styles['label-wrapper']}>
             <ModalConsumer>
@@ -22,7 +25,7 @@ export default function PrivacyPolicy() {
                                 styles.underlined
                             )}
                         >
-                            Политика конфиденциальности
+                            {t('footer.privacyPolicyLink')}
                         </p>
                         <div>
                             <Img

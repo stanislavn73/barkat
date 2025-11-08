@@ -41,17 +41,17 @@ function createData(
     }
 }
 
-export const rows = [
+export const getRows = (t) => [
     createData(
-        'Платформа для 3D моделирования',
-        'Только для web',
-        'Только для web',
-        'Рабочий стол + web',
-        'Рабочий стол + web',
-        'Рабочий стол + web'
+        t('tableRows.row1_platform'),
+        t('tableRows.row1_webOnly'),
+        t('tableRows.row1_webOnly'),
+        t('tableRows.row1_desktopAndWeb'),
+        t('tableRows.row1_desktopAndWeb'),
+        t('tableRows.row1_desktopAndWeb')
     ),
     createData(
-        'Использование офлайн',
+        t('tableRows.row2_offlineUse'),
         closeMark,
         closeMark,
         checkMark,
@@ -59,7 +59,7 @@ export const rows = [
         checkMark
     ),
     createData(
-        ['Sefaira', '(энергетический анализ)'],
+        [t('tableRows.row3_sefaira'), t('tableRows.row3_sefairaDescription')],
         closeMark,
         closeMark,
         closeMark,
@@ -67,7 +67,7 @@ export const rows = [
         checkMark
     ),
     createData(
-        ['V-Ray', '(интерактивный рендер)'],
+        [t('tableRows.row4_vray'), t('tableRows.row4_vrayDescription')],
         closeMark,
         closeMark,
         closeMark,
@@ -75,7 +75,7 @@ export const rows = [
         checkMark
     ),
     createData(
-        ['Scan Essentials', '(работа с облаками точек)'],
+        [t('tableRows.row5_scanEssentials'), t('tableRows.row5_scanEssentialsDescription')],
         closeMark,
         closeMark,
         closeMark,
@@ -83,7 +83,7 @@ export const rows = [
         checkMark
     ),
     createData(
-        ['PreDesign', '(инструмент для анализа погодных условий)'],
+        [t('tableRows.row6_preDesign'), t('tableRows.row6_preDesignDescription')],
         closeMark,
         closeMark,
         checkMark,
@@ -91,7 +91,7 @@ export const rows = [
         checkMark
     ),
     createData(
-        ['LayOut', '(профессиональные чертежи)'],
+        [t('tableRows.row7_layout'), t('tableRows.row7_layoutDescription')],
         closeMark,
         closeMark,
         checkMark,
@@ -99,71 +99,71 @@ export const rows = [
         checkMark
     ),
     createData(
-        'Облачное хранилище',
-        '10 ГБ Trimble Connect',
-        'Неограниченное использование Trimble Connect',
-        'Неограниченное использование Trimble Connect',
-        'Неограниченное использование Trimble Connect',
-        'Неограниченное использование Trimble Connect'
+        t('tableRows.row8_cloudStorage'),
+        t('tableRows.row8_storage10gb'),
+        t('tableRows.row8_storageUnlimited'),
+        t('tableRows.row8_storageUnlimited'),
+        t('tableRows.row8_storageUnlimited'),
+        t('tableRows.row8_storageUnlimited')
     ),
     createData(
-        'Поддержка',
-        'Почта',
-        'Почта, сообщество',
-        'Телефон, почта, сообщество',
-        'Телефон, почта, сообщество',
-        'Почта, сообщество'
+        t('tableRows.row9_support'),
+        t('tableRows.row9_supportEmail'),
+        t('tableRows.row9_supportEmailCommunity'),
+        t('tableRows.row9_supportPhoneEmailCommunity'),
+        t('tableRows.row9_supportPhoneEmailCommunity'),
+        t('tableRows.row9_supportEmailCommunity')
     ),
     createData(
-        'Средство просмотра',
-        'Стандартный просмотр моделей на устройствах IOS и Android',
-        'Стандартный просмотр моделей на устройствах IOS и Android',
-        'Стандартное + Мобильное средство просмотра в дополненной реальности на устройствах IOS и Android',
-        'Стандартное + Мобильное средство просмотра в дополненной реальности на устройствах IOS и Android',
-        'Стандартное + Мобильное средство просмотра в дополненной реальности на устройствах IOS и Android'
+        t('tableRows.row10_viewer'),
+        t('tableRows.row10_viewerStandard'),
+        t('tableRows.row10_viewerStandard'),
+        t('tableRows.row10_viewerArPlus'),
+        t('tableRows.row10_viewerArPlus'),
+        t('tableRows.row10_viewerArPlus')
     ),
     createData(
-        'Просмотр с помощью гарнитуры XR',
+        t('tableRows.row11_xrHeadset'),
         closeMark,
         closeMark,
-        'Hololens, WMR, Oculus Rift, Oculus Quest, HTC Vive, Steam VR',
-        'Hololens, WMR, Oculus Rift, Oculus Quest, HTC Vive, Steam VR',
-        'Hololens, WMR, Oculus Rift, Oculus Quest, HTC Vive, Steam VR'
+        t('tableRows.row11_xrHeadsetDevices'),
+        t('tableRows.row11_xrHeadsetDevices'),
+        t('tableRows.row11_xrHeadsetDevices')
     ),
     createData(
-        'Взаимодействие систем',
-        'Базовое',
-        'Продвинутое',
-        'Профессиональное',
-        'Профессиональное',
-        'Профессиональное'
+        t('tableRows.row12_systemInteraction'),
+        t('tableRows.row12_interactionBasic'),
+        t('tableRows.row12_interactionAdvanced'),
+        t('tableRows.row12_interactionProfessional'),
+        t('tableRows.row12_interactionProfessional'),
+        t('tableRows.row12_interactionProfessional')
     ),
     createData(
-        'Расширяемость',
+        t('tableRows.row13_extensibility'),
         closeMark,
         closeMark,
-        'Core Ruby API и Extension Warehouse',
-        'Core Ruby API и Extension Warehouse',
-        'Core Ruby API и Extension Warehouse'
+        t('tableRows.row13_extensibilityRubyApi'),
+        t('tableRows.row13_extensibilityRubyApi'),
+        t('tableRows.row13_extensibilityRubyApi')
     ),
     createData(
-        '3D Warehouse',
-        'Ограниченные загрузки',
-        'Неограниченное количество загрузок',
-        'Неограниченное количество загрузок',
-        'Неограниченное количество загрузок',
-        'Неограниченное количество загрузок'
+        t('tableRows.row14_3dWarehouse'),
+        t('tableRows.row14_warehouseLimited'),
+        t('tableRows.row14_warehouseUnlimited'),
+        t('tableRows.row14_warehouseUnlimited'),
+        t('tableRows.row14_warehouseUnlimited'),
+        t('tableRows.row14_warehouseUnlimited')
     ),
     createData(
-        'Пользовательские стили, материалы, обводка',
+        t('tableRows.row15_customStyles'),
         closeMark,
-        'Базовое',
-        'Продвинутое',
-        'Продвинутое',
-        'Продвинутое'
+        t('tableRows.row15_stylesBasic'),
+        t('tableRows.row15_stylesAdvanced'),
+        t('tableRows.row15_stylesAdvanced'),
+        t('tableRows.row15_stylesAdvanced')
     ),
     createData(
-        'Style Builder',
+        t('tableRows.row16_styleBuilder'),
         closeMark,
         closeMark,
         checkMark,
@@ -171,19 +171,19 @@ export const rows = [
         checkMark
     ),
     createData(
-        'Типы лицензий',
-        'Бесплатно',
-        'Годовая подписка',
-        'Годовая подписка',
-        'Годовая подписка',
-        'Годовая подписка'
+        t('tableRows.row17_licenseTypes'),
+        t('tableRows.row17_licenseFree'),
+        t('tableRows.row17_licenseAnnual'),
+        t('tableRows.row17_licenseAnnual'),
+        t('tableRows.row17_licenseAnnual'),
+        t('tableRows.row17_licenseAnnual')
     ),
     createData(
-        'Динамические компоненты',
+        t('tableRows.row18_dynamicComponents'),
         closeMark,
         closeMark,
-        'Создание и редактирование',
-        'Создание и редактирование',
+        t('tableRows.row18_dynamicCreateEdit'),
+        t('tableRows.row18_dynamicCreateEdit'),
         closeMark
     ),
 ]

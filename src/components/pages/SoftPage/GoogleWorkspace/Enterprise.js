@@ -1,9 +1,5 @@
-import {
-    ModalConsumer,
-    TranslationContext,
-    useTranslation,
-} from '../../../layouts/Layout'
-import React, { useContext } from 'react'
+import { ModalConsumer, useTranslation } from '../../../layouts/Layout'
+import React from 'react'
 import styles from './CardStyles.module.scss'
 import softStyles from '../SoftPage.module.scss'
 
@@ -39,368 +35,121 @@ const ButtonsSection = () => {
 }
 
 export const Enterprise = () => {
-    const { locale } = useContext(TranslationContext)
+    const { t } = useTranslation('google-workspace')
 
-    if (locale === 'ua')
-        return (
-            <div className={styles.tableBody}>
-                <ButtonsSection />
+    return (
+        <div className={styles.tableBody}>
+            <ButtonsSection />
 
-                <p>
-                    <strong>Gmail</strong> Робоча адреса електронної пошти
-                </p>
+            <p>
+                <strong>Gmail</strong> {t.enterprise.gmail}
+            </p>
 
-                <p>
-                    <strong>Meet</strong> Відеозустрічі на 250 учасників + запис
-                    відеозустрічей, відстеження відвідуваності, заглушення
-                    шумів, прямі трансляції для користувачів корпоративного
-                    домену
-                </p>
+            <p>
+                <strong>Meet</strong> {t.enterprise.meet}
+            </p>
 
-                <p>
-                    <strong>Chat</strong> Сервіс для спілкування в командах
-                </p>
+            <p>
+                <strong>Chat</strong> {t.enterprise.chat}
+            </p>
 
-                <p>
-                    <strong>Календар</strong> Спільні календарі
-                </p>
+            <p>
+                <strong>Calendar</strong> {t.enterprise.calendar}
+            </p>
 
-                <p>
-                    <strong>Диск</strong> Необмежене хмарне сховище&nbsp;
-                </p>
+            <p>
+                <strong>Drive</strong> {t.enterprise.drive}
+            </p>
 
-                <p>
-                    <strong>Документи</strong> Робота з текстовими файлами
-                </p>
+            <p>
+                <strong>Docs</strong> {t.enterprise.docs}
+            </p>
 
-                <p>
-                    <strong>Таблиці</strong> Створення таблиць
-                </p>
+            <p>
+                <strong>Sheets</strong> {t.enterprise.sheets}
+            </p>
 
-                <p>
-                    <strong>Презентації</strong> Інструмент для створення
-                    презентацій
-                </p>
+            <p>
+                <strong>Slides</strong> {t.enterprise.slides}
+            </p>
 
-                <p>
-                    <strong>Форми</strong> Інструмент для створення опитувань
-                </p>
+            <p>
+                <strong>Forms</strong> {t.enterprise.forms}
+            </p>
 
-                <p>
-                    <strong>Сайти</strong> Конструктор сайтів
-                </p>
+            <p>
+                <strong>Sites</strong> {t.enterprise.sites}
+            </p>
 
-                <p>
-                    <strong>Google Keep</strong> Загальні нотатки
-                </p>
+            <p>
+                <strong>Google Keep</strong> {t.enterprise.googleKeep}
+            </p>
 
-                <p>
-                    <strong>Currents</strong> Ефективна взаємодія
-                </p>
+            <p>
+                <strong>Currents</strong> {t.enterprise.currents}
+            </p>
 
-                <p>
-                    <strong>Apps Script </strong> Інтеграція з Google Workspace,
-                    а також розширення та автоматизація можливостей
-                </p>
+            <p>
+                <strong>Apps Script</strong> {t.enterprise.appsScript}
+            </p>
 
-                <p>
-                    <strong>Cloud Search</strong> Ефективний пошук у сервісах
-                    Google Workspace
-                </p>
+            <p>
+                <strong>Cloud Search</strong> {t.enterprise.cloudSearch}
+            </p>
 
-                <p className={styles.subTitle}>Безпека та управління</p>
+            <p className={styles.subTitle}>{t.enterprise.securityTitle}</p>
 
-                <p>
-                    <strong>Пріоритетна цілодобова підтримка</strong>
-                </p>
+            <p>
+                <strong>{t.enterprise.prioritySupport}</strong>
+            </p>
 
-                <p>Реагування на серйозні проблеми протягом 1 години</p>
+            <p>{t.enterprise.criticalResponse}</p>
 
-                <p>Уповноважений консультант Google (щонайменше 1000 місць)</p>
+            <p>{t.enterprise.googleConsultant}</p>
 
-                <p>
-                    <strong>Консоль адміністратора</strong> Інструменти
-                    забезпечення безпеки та керування доменом
-                </p>
+            <p>
+                <strong>Admin Console</strong> {t.enterprise.adminConsole}
+            </p>
 
-                <p>
-                    Налаштовуються правила зберігання та архівування для листів
-                    та чатів
-                </p>
+            <p>{t.enterprise.retentionRules}</p>
 
-                <p>Регіони зберігання даних для Google Workspace</p>
+            <p>{t.enterprise.dataRegions}</p>
 
-                <p>Центр безпеки Google Workspace</p>
+            <p>{t.enterprise.securityCenter}</p>
 
-                <p>Захист від втрати даних для Gmail</p>
+            <p>{t.enterprise.dlpGmail}</p>
 
-                <p>Захист від втрати даних для Диска</p>
+            <p>{t.enterprise.dlpDrive}</p>
 
-                <p>Сертифікати, що розміщуються S/MIME для Gmail</p>
+            <p>{t.enterprise.smimeCertificates}</p>
 
-                <p>
-                    Інтеграція Gmail із підтримуваними засобами архівування від
-                    сторонніх розробників
-                </p>
-
-                <p>
-                    Контроль доступу корпоративного класу із примусовим
-                    використанням електронних ключів
-                </p>
-
-                <p>Аналіз журналів Gmail у BigQuery</p>
-
-                <p>Програма "Додатковий захист"</p>
-
-                <p>
-                    <strong>Сейф</strong> Зберігання, архівування та пошук даних
-                </p>
-
-                <p>
-                    Надання електронних документів: зберігання електронної
-                    пошти, чатів та файлів
-                </p>
-
-                <p>Звіти про дії користувачів</p>
-
-                <p>
-                    <strong>Cloud Identity Premium</strong> Керування обліками
-                    користувача, пристроями та програмами
-                </p>
-
-                <p>
-                    <strong>Керування кінцевими точками</strong> Дистанційне
-                    керування мобільними пристроями
-                </p>
-
-                <p>Контекстно-залежний доступ</p>
-            </div>
-        )
+            <p>{t.enterprise.gmailIntegration}</p>
 
-    if (locale === 'ru')
-        return (
-            <div className={styles.tableBody}>
-                <ButtonsSection />
+            <p>{t.enterprise.enterpriseAccessControls}</p>
 
-                <p>
-                    <strong>Gmail </strong>Рабочий адрес электронной почты
-                </p>
+            <p>{t.enterprise.gmailLogs}</p>
 
-                <p>
-                    <strong>Meet </strong>Видеовстречи на 250 участников +
-                    записи видеовстреч, отслеживание посещаемости, подавления
-                    шумов, прямые трансляции для пользователей по корпоративному
-                    домену
-                </p>
+            <p>{t.enterprise.advancedProtection}</p>
 
-                <p>
-                    <strong>Chat </strong>Сервис для общения в командах
-                </p>
+            <p>
+                <strong>Vault</strong> {t.enterprise.vault}
+            </p>
 
-                <p>
-                    <strong>Календарь</strong> Общие календари
-                </p>
-
-                <p>
-                    <strong>Диск </strong>Неограниченное облачное
-                    хранилище&nbsp;
-                </p>
-
-                <p>
-                    <strong>Документы</strong> Работа с текстовыми файлами
-                </p>
-
-                <p>
-                    <strong>Таблицы</strong> Создание таблиц
-                </p>
-
-                <p>
-                    <strong>Презентации</strong> Инструмент для создания
-                    презентаций
-                </p>
-
-                <p>
-                    <strong>Формы</strong> Инструмент для создания опросов
-                </p>
-
-                <p>
-                    <strong>Сайты</strong> Конструктор сайтов
-                </p>
-
-                <p>
-                    <strong>Google Keep</strong> Общие заметки
-                </p>
-
-                <p>
-                    <strong>Currents</strong> Эффективное взаимодействие
-                </p>
-
-                <p>
-                    <strong>Apps Script </strong>Интеграция с Workspace, а также
-                    расширение и автоматизация возможностей
-                </p>
-
-                <p>
-                    <strong>Cloud Search</strong> Эффективный поиск в сервисах
-                    Workspace
-                </p>
-
-                <p className='lead display-4'>Безопасность и управление</p>
-
-                <p>
-                    <strong>
-                        Приоритетная круглосуточная поддержка&nbsp;&nbsp;
-                    </strong>
-                </p>
-
-                <p>Реагирование на серьезные проблемы в течение 1 часа</p>
-
-                <p>Уполномоченный консультант Google (не менее 1000 мест)</p>
-
-                <p>
-                    <strong>Консоль администратора </strong>Инструменты
-                    обеспечения безопасности и управления доменом
-                </p>
-
-                <p>
-                    Настраиваемые правила хранения и архивирования для писем и
-                    чатов
-                </p>
-
-                <p>Регионы хранения данных для Workspace</p>
-
-                <p>Центр безопасности Workspace</p>
-
-                <p>Защита от потери данных для Gmail</p>
-
-                <p>Защита от потери данных для Диска</p>
-
-                <p>Размещаемые сертификаты S/MIME для Gmail</p>
-
-                <p>
-                    Интеграция Gmail с поддерживаемыми средствами архивирования
-                    от сторонних разработчиков
-                </p>
-
-                <p>
-                    Контроль доступа корпоративного класса с принудительным
-                    использованием электронных ключей
-                </p>
-
-                <p>Анализ журналов Gmail в BigQuery</p>
-
-                <p>Программа "Дополнительная защита"</p>
-
-                <p>
-                    <strong>Сейф </strong>Хранение, архивирование и поиск данных
-                </p>
-
-                <p>
-                    Предоставление электронных документов: хранение электронной
-                    почты, чатов и файлов
-                </p>
-
-                <p>Отчеты о действиях пользователей</p>
-
-                <p>
-                    <strong>Cloud Identity Premium</strong> Управление
-                    пользовательскими аккаунтами, устройствами и приложениями
-                </p>
-
-                <p>
-                    <strong>Управление конечными точками</strong> Удаленное
-                    управление мобильными устройствами
-                </p>
-
-                <p>Контекстно-зависимый доступ</p>
-            </div>
-        )
-
-    if (locale === 'en')
-        return (
-            <div className={styles.tableBody}>
-                <ButtonsSection />
-
-                <p>
-                    <strong>Gmail</strong> Work email address
-                </p>
-                <p>
-                    <strong>Meet</strong> Video meetings with up to 250
-                    participants + video meeting recordings, attendance
-                    tracking, noise suppression, live streaming for users within
-                    the corporate domain.
-                </p>
-                <p>
-                    <strong>Chat</strong> Team communication service
-                </p>
-                <p>
-                    <strong>Calendar</strong> Shared calendars
-                </p>
-                <p>
-                    <strong>Drive</strong> Unlimited cloud storage.
-                </p>
-                <p>
-                    <strong>Docs</strong> Work with text files
-                </p>
-                <p>
-                    <strong>Sheets</strong> Create spreadsheets
-                </p>
-                <p>
-                    <strong>Slides</strong> Presentation creation tool
-                </p>
-                <p>
-                    <strong>Forms</strong> Tool for creating surveys
-                </p>
-                <p>
-                    <strong>Sites</strong> Website builder
-                </p>
-                <p>
-                    <strong>Google</strong> Keep Shared notes
-                </p>
-                <p>
-                    <strong>Currents</strong> Effective collaboration
-                </p>
-                <p>
-                    <strong>Apps</strong> Script Integration with Workspace, as
-                    well as extension and automation capabilities
-                </p>
-                <p>
-                    <strong>Cloud</strong> Search Efficient search across
-                    Workspace services.
-                </p>
-                <p>Security and Management</p>
-                <p>Priority 24/7 support.</p>
-                <p>1-hour response to critical issues.</p>
-                <p>Dedicated Google consultant (minimum of 1000 seats).</p>
-                <p>Admin Console: Security and domain management tools.</p>
-                <p>
-                    Customizable storage and archiving rules for emails and
-                    chats.
-                </p>
-                <p>Data storage regions for Workspace.</p>
-                <p>Workspace Security Center.</p>
-                <p>Data Loss Prevention for Gmail.</p>
-                <p>Data Loss Prevention for Drive.</p>
-                <p>Hosted S/MIME certificates for Gmail.</p>
-                <p>
-                    Gmail integration with supported third-party archiving
-                    solutions.
-                </p>
-                <p>
-                    Enterprise-grade access controls with enforced electronic
-                    key usage.
-                </p>
-                <p>Gmail logs analysis in BigQuery.</p>
-                <p>&quot;Advanced Protection&quot; program.</p>
-                <p>Vault: Data storage, archiving, and search.</p>
-                <p>E-Discovery: Storage of emails, chats, and files.</p>
-                <p>User activity reports.</p>
-                <p>
-                    Cloud Identity Premium: User account, device, and
-                    application management.
-                </p>
-                <p>Endpoint Management: Remote management of mobile devices.</p>
-                <p>Context-aware access.</p>
-            </div>
-        )
+            <p>{t.enterprise.eDiscovery}</p>
+
+            <p>{t.enterprise.userReports}</p>
+
+            <p>
+                <strong>Cloud Identity Premium</strong>{' '}
+                {t.enterprise.cloudIdentityPremium}
+            </p>
+
+            <p>
+                <strong>Endpoint Management</strong>{' '}
+                {t.enterprise.endpointManagement}
+            </p>
+
+            <p>{t.enterprise.contextAwareAccess}</p>
+        </div>
+    )
 }

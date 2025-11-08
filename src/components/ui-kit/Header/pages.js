@@ -1,36 +1,42 @@
 import about from '../../../../public/images/pages/About_us_first.jpg'
 
 import dynamic from 'next/dynamic'
+import { useTranslation } from 'next-i18next'
+
+const LoadingComponent = () => {
+    const { t } = useTranslation('common')
+    return <p>{t('loading')}</p>
+}
 
 const BuySketchUp = dynamic(() => import('../../pages/BuySoft/BuySketchUp'), {
-    loading: () => <p>Loading...</p>,
+    loading: LoadingComponent,
 })
 const PaymentSuccess = dynamic(() => import('../../pages/PaymentSuccess'), {
-    loading: () => <p>Loading...</p>,
+    loading: LoadingComponent,
 })
 
 const EventPage = dynamic(() => import('../../pages/EventPage/EventPage'), {
-    loading: () => <p>Loading...</p>,
+    loading: LoadingComponent,
 })
 
 const ProjectsPage = dynamic(
     () => import('../../pages/ProjectsPage/ProjectsPage'),
     {
-        loading: () => <p>Loading...</p>,
+        loading: LoadingComponent,
     }
 )
 const HomePage = dynamic(() => import('../../pages/HomePage'), {
-    loading: () => <p>Loading...</p>,
+    loading: LoadingComponent,
 })
 
 const FacadesPage = dynamic(
     () => import('../../pages/FacadesPage/FacadesPage'),
     {
-        loading: () => <p>Loading...</p>,
+        loading: LoadingComponent,
     }
 )
 const SoftPage = dynamic(() => import('../../pages/SoftPage'), {
-    loading: () => <p>Loading...</p>,
+    loading: LoadingComponent,
 })
 
 export const PAGES = [

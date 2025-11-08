@@ -1,8 +1,11 @@
+import { useTranslation } from 'next-i18next'
 import { ModalConsumer } from '../../layouts/Layout'
 import cx from 'classnames'
 import styles from './PrivacyPolicy.module.scss'
 
 export default function UserAgreement() {
+    const { t } = useTranslation('common')
+
     return (
         <div className={styles['label-wrapper']}>
             <ModalConsumer>
@@ -18,7 +21,7 @@ export default function UserAgreement() {
                                 styles.underlined
                             )}
                         >
-                            Публічний договір
+                            {t('footer.publicContract')}
                         </p>
                     </div>
                 )}

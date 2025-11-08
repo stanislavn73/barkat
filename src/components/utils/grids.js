@@ -1,34 +1,34 @@
-export const projectsGrid = [
+export const getProjectsGrid = (t) => [
     {
         image : 'https://dekorin.me/wp-content/uploads/2017/11/5-dvuhetajnii-krasivii-dom.jpg',
-        title : 'Личный дом маршала Альтарийского'
+        title : t.projectTitle
     },
     {
         image : 'https://dekorin.me/wp-content/uploads/2017/11/5-dvuhetajnii-krasivii-dom.jpg',
-        title : 'Личный дом маршала Альтарийского'
+        title : t.projectTitle
     },
     {
         image : 'https://dekorin.me/wp-content/uploads/2017/11/5-dvuhetajnii-krasivii-dom.jpg',
-        title : 'Личный дом маршала Альтарийского'
+        title : t.projectTitle
     },
     {
         image : 'https://dekorin.me/wp-content/uploads/2017/11/5-dvuhetajnii-krasivii-dom.jpg',
-        title : 'Личный дом маршала Альтарийского'
+        title : t.projectTitle
     },
     {
         image : 'https://dekorin.me/wp-content/uploads/2017/11/5-dvuhetajnii-krasivii-dom.jpg',
-        title : 'Личный дом маршала Альтарийского'
+        title : t.projectTitle
     },
     {
         image : 'https://dekorin.me/wp-content/uploads/2017/11/5-dvuhetajnii-krasivii-dom.jpg',
-        title : 'Личный дом маршала Альтарийского'
+        title : t.projectTitle
     },
     {
         image : 'https://dekorin.me/wp-content/uploads/2017/11/5-dvuhetajnii-krasivii-dom.jpg',
-        title : 'Личный дом маршала Альтарийского'
+        title : t.projectTitle
     },
     {
         image : 'https://dekorin.me/wp-content/uploads/2017/11/5-dvuhetajnii-krasivii-dom.jpg',
-        title : 'Личный дом маршала Альтарийского'
+        title : t.projectTitle
     }
 ];

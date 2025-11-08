@@ -1,0 +1,77 @@
+{
+    "title": "Купити софт",
+    "free": "БЕЗКОШТОВНО",
+    "perYear": "USD на рік",
+    "buy": "Купити",
+    "tableHeaders": {
+        "options": "Можливості",
+        "sketchUpFree": "SketchUp Free",
+        "sketchUpShop": "SketchUp Shop",
+        "sketchUpPro": "SketchUp Pro",
+        "sketchUpStudio": "SketchUp Studio",
+        "sketchUpEducation": "SketchUp для освіти"
+    },
+    "tableRows": {
+        "row1_platform": "Платформа для 3D моделювання",
+        "row1_webOnly": "Тільки для web",
+        "row1_desktopAndWeb": "Робочий стіл + web",
+
+        "row2_offlineUse": "Використання офлайн",
+
+        "row3_sefaira": "Sefaira",
+        "row3_sefairaDescription": "(енергетичний аналіз)",
+
+        "row4_vray": "V-Ray",
+        "row4_vrayDescription": "(інтерактивний рендер)",
+
+        "row5_scanEssentials": "Scan Essentials",
+        "row5_scanEssentialsDescription": "(робота з хмарами точок)",
+
+        "row6_preDesign": "PreDesign",
+        "row6_preDesignDescription": "(інструмент для аналізу погодних умов)",
+
+        "row7_layout": "LayOut",
+        "row7_layoutDescription": "(професійні креслення)",
+
+        "row8_cloudStorage": "Хмарне сховище",
+        "row8_storage10gb": "10 ГБ Trimble Connect",
+        "row8_storageUnlimited": "Необмежене використання Trimble Connect",
+
+        "row9_support": "Підтримка",
+        "row9_supportEmail": "Пошта",
+        "row9_supportEmailCommunity": "Пошта, спільнота",
+        "row9_supportPhoneEmailCommunity": "Телефон, пошта, спільнота",
+
+        "row10_viewer": "Засіб перегляду",
+        "row10_viewerStandard": "Стандартний перегляд моделей на пристроях IOS і Android",
+        "row10_viewerArPlus": "Стандартний + Мобільний засіб перегляду в доповненій реальності на пристроях IOS і Android",
+
+        "row11_xrHeadset": "Перегляд за допомогою гарнітури XR",
+        "row11_xrHeadsetDevices": "Hololens, WMR, Oculus Rift, Oculus Quest, HTC Vive, Steam VR",
+
+        "row12_systemInteraction": "Взаємодія систем",
+        "row12_interactionBasic": "Базове",
+        "row12_interactionAdvanced": "Просунуте",
+        "row12_interactionProfessional": "Професійне",
+
+        "row13_extensibility": "Розширюваність",
+        "row13_extensibilityRubyApi": "Core Ruby API і Extension Warehouse",
+
+        "row14_3dWarehouse": "3D Warehouse",
+        "row14_warehouseLimited": "Обмежені завантаження",
+        "row14_warehouseUnlimited": "Необмежена кількість завантажень",
+
+        "row15_customStyles": "Користувацькі стилі, матеріали, обведення",
+        "row15_stylesBasic": "Базове",
+        "row15_stylesAdvanced": "Просунуте",
+
+        "row16_styleBuilder": "Style Builder",
+
+        "row17_licenseTypes": "Типи ліцензій",
+        "row17_licenseFree": "Безкоштовно",
+        "row17_licenseAnnual": "Річна підписка",
+
+        "row18_dynamicComponents": "Динамічні компоненти",
+        "row18_dynamicCreateEdit": "Створення та редагування"
+    }
+}

@@ -7,12 +7,12 @@ import * as mobilefirst from '../../../../public/images/pages/2.2.jpg'
 
 import styles from './PageImageTitle.module.scss'
 
-function PageImageTitle({ src, title, subTitle }) {
+function PageImageTitle({ src, title, subTitle, useMobileImage = false }) {
     const [mobileSize, setMobileSize] = useState(false)
     const { t } = useTranslation('common')
 
     const handleMobileDetect = e => {
-        if (e.target.outerWidth < 400 && title === 'Наши проекты') {
+        if (e.target.outerWidth < 400 && useMobileImage) {
             return setMobileSize(true)
         }
         setMobileSize(false)
@@ -20,13 +20,13 @@ function PageImageTitle({ src, title, subTitle }) {
 
     useEffect(() => {
         window.addEventListener('resize', handleMobileDetect)
-        if (window.outerWidth < 400 && title === 'Наши проекты') {
+        if (window.outerWidth < 400 && useMobileImage) {
             setMobileSize(true)
         } else {
             setMobileSize(false)
         }
         return () => removeEventListener('resize', handleMobileDetect)
-    }, [])
+    }, [useMobileImage])
 
     return (
         <div className={styles['image-title-wrapper']}>

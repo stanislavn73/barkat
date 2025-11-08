@@ -1,0 +1,29 @@
+{
+    "userDataForm": {
+        "fullName": "Ф.И.О.",
+        "activityType": "Вид деятельности",
+        "individual": "Физлицо",
+        "company": "Компания",
+        "website": "Сайт",
+        "email": "E-Mail",
+        "contactPhone": "Конт. тел."
+    },
+    "buyForm": {
+        "userAgreementText": "Нажимая купить Вы принимаете условия",
+        "userAgreementLink": "пользовательского соглашения",
+        "buyButton": "Купить за {amount} {currency}",
+        "perYear": "{currency} в год",
+        "free": "БЕСПЛАТНО"
+    },
+    "email": {
+        "unpaidOrder": "Неоплаченый заказ",
+        "paidOrder": "Заказ оплачен",
+        "newOrder": "Новый заказ",
+        "fullName": "ФИО",
+        "activityType": "Вид деятельности",
+        "website": "Сайт",
+        "email": "имейл",
+        "phone": "телефон",
+        "question": "вопрос"
+    }
+}

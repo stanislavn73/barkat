@@ -13,7 +13,7 @@
     "buyButton": "Придбати",
     "downloadButton": "Дивіться деталі",
     "consultation": {
-        "name": "Ім‘я",
+        "name": "Ім'я",
         "surName": "Прізвище",
         "company": "Компанія",
         "title": "Посада",
@@ -22,9 +22,44 @@
         "send": "Відправити",
         "sending": "Відправка...",
         "sent": "Успіх!",
-        "error": "Помилка. Погане з‘єднання",
+        "error": "Помилка. Погане з'єднання",
         "formName": "Замовити консультацію",
         "emailError": "Введіть правильний імейл",
         "phoneError": "Введіть правильний телефон"
+    },
+    "modals": {
+        "privacyPolicy": "Політика конфіденційності ТОВ \"Баркат-Штейн\"",
+        "userAgreement": "Публічний договір (ОФЕРТА)",
+        "buySketchUpShop": "Купити SketchUp Shop",
+        "buySketchUpPro": "Купити SketchUp Pro",
+        "buySketchUpStudio": "Купити SketchUp Studio",
+        "buySketchUpHigher": "Купити SketchUp для вищої освіти"
+    },
+    "paymentSuccess": {
+        "title": "Оплата пройшла успішно.",
+        "subtitle": "З Вами зв'яжуться найближчим часом",
+        "buyer": "Покупець",
+        "product": "Продукт"
+    },
+    "loading": "Завантаження...",
+    "navigation": {
+        "aboutUs": "Про нас",
+        "engineeringNetworks": "Інженерні мережі",
+        "ventilatedFasades": "Вентфасади",
+        "threeDSolutions": "3D рішення"
+    },
+    "anchors": {
+        "aboutUs": "Про нас",
+        "projects": "Проекти",
+        "advantages": "Переваги"
+    },
+    "footer": {
+        "writeToUs": "Написати нам",
+        "privacyPolicyLink": "Політика конфіденційності",
+        "publicContract": "Публічний договір"
+    },
+    "downloadBlock": {
+        "aboutCompanyRu": "О компании (Ру)",
+        "aboutCompanyEn": "About company (En)"
     }
 }

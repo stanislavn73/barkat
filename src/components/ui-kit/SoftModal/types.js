@@ -12,7 +12,7 @@ import UserAgreement from './content/UserAgreement'
 import { TeamViewer } from './content/TeamViewer'
 import { GoogleCloud } from './content/GoogleCloud/GoogleCloud'
 
-export default softTranslation => ({
+export default (softTranslation, commonTranslation) => ({
     REVIT: {
         title: 'Autodesk Revit',
         content: Revit(softTranslation.revit.modal),
@@ -130,27 +130,27 @@ export default softTranslation => ({
         content: AllplanLinear,
     },
     PrivacyPolicy: {
-        title: 'Политика конфиденциальности ООО "Баркат-Штейн"',
+        title: commonTranslation.modals.privacyPolicy,
         content: PrivacyPolicy,
     },
     UserAgreement: {
-        title: 'Публічний договір (ОФЕРТА)',
+        title: commonTranslation.modals.userAgreement,
         content: UserAgreement,
     },
     BuySketchUpShop: {
-        title: 'Купить SketchUp Shop',
+        title: commonTranslation.modals.buySketchUpShop,
         content: BuySketchUpShop,
     },
     BuySketchUpPro: {
-        title: 'Купить SketchUp Pro',
+        title: commonTranslation.modals.buySketchUpPro,
         content: BuySketchUpPro,
     },
     BuySketchUpStudio: {
-        title: 'Купить SketchUp Studio',
+        title: commonTranslation.modals.buySketchUpStudio,
         content: BuySketchUpStudio,
     },
     BuySketchUpHigher: {
-        title: 'Купить SketchUp для высшего образования',
+        title: commonTranslation.modals.buySketchUpHigher,
         content: BuySketchUpHigher,
     },
     xPick: {

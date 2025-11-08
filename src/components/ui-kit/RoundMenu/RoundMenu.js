@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { useRouter } from 'next/router'
+import { useTranslation } from 'next-i18next'
 import cx from 'classnames'
 
 import logo from '../../../../public/images/Logo_new.svg'
@@ -11,6 +12,7 @@ import styles from './styles.module.scss'
 import Img from '../Img'
 
 function RoundMenu({ children, className }) {
+    const { t } = useTranslation('common')
     const [isActive, setIsActive] = useState(false)
     const [isDisplay, setIsDisplay] = useState(false)
     useEffect(() => {
@@ -44,7 +46,7 @@ function RoundMenu({ children, className }) {
                             router.push('/about_us')
                         }}
                     >
-                        <div>О нас</div>
+                        <div>{t('navigation.aboutUs')}</div>
                     </a>
                     <a
                         href='#'
@@ -55,7 +57,7 @@ function RoundMenu({ children, className }) {
                             router.push('/soft')
                         }}
                     >
-                        <div>Инженерные сети</div>
+                        <div>{t('navigation.engineeringNetworks')}</div>
                     </a>
                     <a
                         href='#'
@@ -66,7 +68,7 @@ function RoundMenu({ children, className }) {
                             router.push('/facades')
                         }}
                     >
-                        <div>Вентфасады</div>
+                        <div>{t('navigation.ventilatedFasades')}</div>
                     </a>
                     <a
                         href='#'
@@ -77,7 +79,7 @@ function RoundMenu({ children, className }) {
                             router.push('/soft')
                         }}
                     >
-                        <div>3D решения</div>
+                        <div>{t('navigation.threeDSolutions')}</div>
                     </a>
                     <a href='#'>
                         <Img src={logo} />

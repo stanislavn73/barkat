@@ -1,0 +1,77 @@
+{
+    "title": "Buy Software",
+    "free": "FREE",
+    "perYear": "USD per year",
+    "buy": "Buy",
+    "tableHeaders": {
+        "options": "Options",
+        "sketchUpFree": "SketchUp Free",
+        "sketchUpShop": "SketchUp Shop",
+        "sketchUpPro": "SketchUp Pro",
+        "sketchUpStudio": "SketchUp Studio",
+        "sketchUpEducation": "SketchUp for Education"
+    },
+    "tableRows": {
+        "row1_platform": "3D Modeling Platform",
+        "row1_webOnly": "Web only",
+        "row1_desktopAndWeb": "Desktop + Web",
+
+        "row2_offlineUse": "Offline Use",
+
+        "row3_sefaira": "Sefaira",
+        "row3_sefairaDescription": "(energy analysis)",
+
+        "row4_vray": "V-Ray",
+        "row4_vrayDescription": "(interactive rendering)",
+
+        "row5_scanEssentials": "Scan Essentials",
+        "row5_scanEssentialsDescription": "(point cloud processing)",
+
+        "row6_preDesign": "PreDesign",
+        "row6_preDesignDescription": "(weather analysis tool)",
+
+        "row7_layout": "LayOut",
+        "row7_layoutDescription": "(professional drawings)",
+
+        "row8_cloudStorage": "Cloud Storage",
+        "row8_storage10gb": "10 GB Trimble Connect",
+        "row8_storageUnlimited": "Unlimited Trimble Connect usage",
+
+        "row9_support": "Support",
+        "row9_supportEmail": "Email",
+        "row9_supportEmailCommunity": "Email, community",
+        "row9_supportPhoneEmailCommunity": "Phone, email, community",
+
+        "row10_viewer": "Viewer",
+        "row10_viewerStandard": "Standard model viewing on iOS and Android devices",
+        "row10_viewerArPlus": "Standard + Mobile AR viewer on iOS and Android devices",
+
+        "row11_xrHeadset": "XR Headset Viewing",
+        "row11_xrHeadsetDevices": "Hololens, WMR, Oculus Rift, Oculus Quest, HTC Vive, Steam VR",
+
+        "row12_systemInteraction": "System Interaction",
+        "row12_interactionBasic": "Basic",
+        "row12_interactionAdvanced": "Advanced",
+        "row12_interactionProfessional": "Professional",
+
+        "row13_extensibility": "Extensibility",
+        "row13_extensibilityRubyApi": "Core Ruby API and Extension Warehouse",
+
+        "row14_3dWarehouse": "3D Warehouse",
+        "row14_warehouseLimited": "Limited downloads",
+        "row14_warehouseUnlimited": "Unlimited downloads",
+
+        "row15_customStyles": "Custom Styles, Materials, Edge",
+        "row15_stylesBasic": "Basic",
+        "row15_stylesAdvanced": "Advanced",
+
+        "row16_styleBuilder": "Style Builder",
+
+        "row17_licenseTypes": "License Types",
+        "row17_licenseFree": "Free",
+        "row17_licenseAnnual": "Annual subscription",
+
+        "row18_dynamicComponents": "Dynamic Components",
+        "row18_dynamicCreateEdit": "Create and edit"
+    }
+}

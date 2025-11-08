@@ -1,0 +1,77 @@
+{
+    "title": "Купить софт",
+    "free": "БЕСПЛАТНО",
+    "perYear": "USD в год",
+    "buy": "Купить",
+    "tableHeaders": {
+        "options": "Возможности",
+        "sketchUpFree": "SketchUp Free",
+        "sketchUpShop": "SketchUp Shop",
+        "sketchUpPro": "SketchUp Pro",
+        "sketchUpStudio": "SketchUp Studio",
+        "sketchUpEducation": "SketchUp для образования"
+    },
+    "tableRows": {
+        "row1_platform": "Платформа для 3D моделирования",
+        "row1_webOnly": "Только для web",
+        "row1_desktopAndWeb": "Рабочий стол + web",
+
+        "row2_offlineUse": "Использование офлайн",
+
+        "row3_sefaira": "Sefaira",
+        "row3_sefairaDescription": "(энергетический анализ)",
+
+        "row4_vray": "V-Ray",
+        "row4_vrayDescription": "(интерактивный рендер)",
+
+        "row5_scanEssentials": "Scan Essentials",
+        "row5_scanEssentialsDescription": "(работа с облаками точек)",
+
+        "row6_preDesign": "PreDesign",
+        "row6_preDesignDescription": "(инструмент для анализа погодных условий)",
+
+        "row7_layout": "LayOut",
+        "row7_layoutDescription": "(профессиональные чертежи)",
+
+        "row8_cloudStorage": "Облачное хранилище",
+        "row8_storage10gb": "10 ГБ Trimble Connect",
+        "row8_storageUnlimited": "Неограниченное использование Trimble Connect",
+
+        "row9_support": "Поддержка",
+        "row9_supportEmail": "Почта",
+        "row9_supportEmailCommunity": "Почта, сообщество",
+        "row9_supportPhoneEmailCommunity": "Телефон, почта, сообщество",
+
+        "row10_viewer": "Средство просмотра",
+        "row10_viewerStandard": "Стандартный просмотр моделей на устройствах IOS и Android",
+        "row10_viewerArPlus": "Стандартное + Мобильное средство просмотра в дополненной реальности на устройствах IOS и Android",
+
+        "row11_xrHeadset": "Просмотр с помощью гарнитуры XR",
+        "row11_xrHeadsetDevices": "Hololens, WMR, Oculus Rift, Oculus Quest, HTC Vive, Steam VR",
+
+        "row12_systemInteraction": "Взаимодействие систем",
+        "row12_interactionBasic": "Базовое",
+        "row12_interactionAdvanced": "Продвинутое",
+        "row12_interactionProfessional": "Профессиональное",
+
+        "row13_extensibility": "Расширяемость",
+        "row13_extensibilityRubyApi": "Core Ruby API и Extension Warehouse",
+
+        "row14_3dWarehouse": "3D Warehouse",
+        "row14_warehouseLimited": "Ограниченные загрузки",
+        "row14_warehouseUnlimited": "Неограниченное количество загрузок",
+
+        "row15_customStyles": "Пользовательские стили, материалы, обводка",
+        "row15_stylesBasic": "Базовое",
+        "row15_stylesAdvanced": "Продвинутое",
+
+        "row16_styleBuilder": "Style Builder",
+
+        "row17_licenseTypes": "Типы лицензий",
+        "row17_licenseFree": "Бесплатно",
+        "row17_licenseAnnual": "Годовая подписка",
+
+        "row18_dynamicComponents": "Динамические компоненты",
+        "row18_dynamicCreateEdit": "Создание и редактирование"
+    }
+}
