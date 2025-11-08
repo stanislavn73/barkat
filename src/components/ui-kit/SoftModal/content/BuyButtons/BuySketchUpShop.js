@@ -1,12 +1,11 @@
 import React, { useEffect, useState } from 'react'
 import { Checkbox, Box, Radio } from '@material-ui/core'
-import { ModalConsumer } from '../../../../layouts/Layout'
+import { ModalConsumer, useTranslation } from '../../../../layouts/Layout'
 import { currencies } from './currencies'
 import UserDataForm from './UserDataForm'
 import { initializeApp } from 'firebase/app'
 import { useLiqPay } from './effects/useLiqPay'
 import { getFirestore, doc, setDoc } from 'firebase/firestore'
-import useTranslation from 'next-translate/useTranslation'
 
 import styles from './BuySketchUpShop.module.scss'
 import dayjs from 'dayjs'
@@ -18,12 +17,12 @@ function UserAgreementLink() {
         <ModalConsumer>
             {({ handleOpenSoftModal }) => (
                 <span>
-                    {t('buyForm.userAgreementText')}{' '}
+                    {t.buyForm.userAgreementText}{' '}
                     <span
                         onClick={handleOpenSoftModal('UserAgreement')}
                         className='policy_link'
                     >
-                        {t('buyForm.userAgreementLink')}
+                        {t.buyForm.userAgreementLink}
                     </span>
                 </span>
             )}
@@ -188,14 +187,14 @@ export default function BuySketchUpShop({
 
             const url = `${process.env.SENDGRID_URL}/api/send`
             const msg = {
-                subject: t('email.unpaidOrder'),
+                subject: t.email.unpaidOrder,
                 html: `
             <div>
-            <div>${t('email.fullName')}: <strong>${name}</strong>
-            <div>${t('email.activityType')}: <strong>${company}</strong></div>
-            <div>${t('email.website')}: <strong>${website}</strong></div>
-            <div>${t('email.email')}: <strong>${email}</strong></div>
-            <div>${t('email.phone')}: <strong>${phone}</strong></div>
+            <div>${t.email.fullName}: <strong>${name}</strong>
+            <div>${t.email.activityType}: <strong>${company}</strong></div>
+            <div>${t.email.website}: <strong>${website}</strong></div>
+            <div>${t.email.email}: <strong>${email}</strong></div>
+            <div>${t.email.phone}: <strong>${phone}</strong></div>
              </div>`,
             }
             await fetch(url, {
@@ -262,10 +261,9 @@ export default function BuySketchUpShop({
                     <input
                         className={`${styles.footer} ${styles.send_payment}`}
                         type='submit'
-                        value={t('buyForm.buyButton', {
-                            amount: Math.floor(currentAmount * 100) / 100,
-                            currency: selectedValue
-                        })}
+                        value={t.buyForm.buyButton
+                            .replace('{amount}', Math.floor(currentAmount * 100) / 100)
+                            .replace('{currency}', selectedValue)}
                     />
                 </Box>
             </form>
