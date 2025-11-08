@@ -1,11 +1,12 @@
 const withFonts = require('next-fonts')
+const nextTranslate = require('next-translate-plugin')
 
 require('dotenv').config()
 
 const plugins = [withFonts]
 
 const nextConfig = () =>
-    plugins.reduce((acc, next) => next(acc), {
+    nextTranslate(plugins.reduce((acc, next) => next(acc), {
         webpack: config => {
             config.module.rules.push({
                 test: /\.(|mp4|pdf|webm)$/,
@@ -32,8 +33,7 @@ const nextConfig = () =>
         i18n: {
             locales: ['en', 'ru', 'ua'],
             defaultLocale: 'en',
-            localeDetection: true,
         },
-    })
+    }))
 
 module.exports = nextConfig

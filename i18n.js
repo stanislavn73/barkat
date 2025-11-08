@@ -1,5 +1,5 @@
 const config = {
-    locales: ['ua', 'ru', 'en'],
+    locales: ['en', 'ru', 'ua'],
     defaultLocale: 'en',
     pages: {
         '*': ['common', 'forms'],
