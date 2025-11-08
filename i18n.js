@@ -1,11 +1,13 @@
 const config = {
-    locales: ['ua', 'ru', 'en'],
+    locales: ['en', 'ru', 'ua'],
     defaultLocale: 'en',
     pages: {
-        '*': ['common'],
-        // '/': ['home'],
-        // '/about_us': ['about'],
-        '/soft': ['soft'],
+        '*': ['common', 'forms', 'legal'],
+        '/': ['home'],
+        '/about_us': ['projects'],
+        '/soft': ['soft', 'google-workspace'],
+        '/buy-sketchup': ['buy-sketchup'],
+        '/payment-success': ['forms'],
     },
 }
 

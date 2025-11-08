@@ -52,6 +52,9 @@ const Modal = props => {
     const {
         t: { consultation },
     } = useTranslation('common')
+    const {
+        t: forms,
+    } = useTranslation('forms')
     // "consultation": {
     //     "name": "Ім‘я",
     //       "surName":"Прізвище",
@@ -92,20 +95,20 @@ const Modal = props => {
 
         buttonRef.current.innerText = consultation.sending
         const msg = {
-            subject: 'Новый заказ',
+            subject: forms.email.newOrder,
             html: `
             <div>
-            <div>имя: <strong>${name}</strong>
-            <div>фамилия: <strong>${surname}</div>
-            <div>компания: <strong>${companyName}</strong></div>
+            <div>${consultation.name}: <strong>${name}</strong>
+            <div>${consultation.surName}: <strong>${surname}</div>
+            <div>${consultation.company}: <strong>${companyName}</strong></div>
 
-            <div>профессия: <strong>${profession}</strong></div>
+            <div>${consultation.title}: <strong>${profession}</strong></div>
 
-            <div>имейл: <strong>${email}</strong></div>
+            <div>${forms.email.email}: <strong>${email}</strong></div>
 
-            <div>телефон: <strong>${phoneNumber}</strong></div>
- 
-            <div>вопрос: <strong>${target}</strong></div>
+            <div>${forms.email.phone}: <strong>${phoneNumber}</strong></div>
+
+            <div>${forms.email.question}: <strong>${target}</strong></div>
             </div>`,
         }
 

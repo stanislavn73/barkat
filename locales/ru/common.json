@@ -26,5 +26,40 @@
         "error": "Ошибка! Плохое соединение",
         "emailError": "Введите правильный почтовый ящик",
         "phoneError": "Введите правильный телефон"
+    },
+    "modals": {
+        "privacyPolicy": "Политика конфиденциальности ООО \"Баркат-Штейн\"",
+        "userAgreement": "Публічний договір (ОФЕРТА)",
+        "buySketchUpShop": "Купить SketchUp Shop",
+        "buySketchUpPro": "Купить SketchUp Pro",
+        "buySketchUpStudio": "Купить SketchUp Studio",
+        "buySketchUpHigher": "Купить SketchUp для высшего образования"
+    },
+    "paymentSuccess": {
+        "title": "Оплата прошла успешно.",
+        "subtitle": "С Вами свяжутся в ближайшее время",
+        "buyer": "Покупатель",
+        "product": "Продукт"
+    },
+    "loading": "Загрузка...",
+    "navigation": {
+        "aboutUs": "О нас",
+        "engineeringNetworks": "Инженерные сети",
+        "ventilatedFasades": "Вентфасады",
+        "threeDSolutions": "3D решения"
+    },
+    "anchors": {
+        "aboutUs": "О нас",
+        "projects": "Проекты",
+        "advantages": "Преимущества"
+    },
+    "footer": {
+        "writeToUs": "Написать нам",
+        "privacyPolicyLink": "Политика конфиденциальности",
+        "publicContract": "Публічний договір"
+    },
+    "downloadBlock": {
+        "aboutCompanyRu": "О компании (Ру)",
+        "aboutCompanyEn": "About company (En)"
     }
 }

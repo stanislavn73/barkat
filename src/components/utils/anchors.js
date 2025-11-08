@@ -1,19 +1,19 @@
 import idea from '../../../public/images/icons/idea.png'
 
-export const AboutPageAnchors = [
+export const getAboutPageAnchors = (t) => [
     {
         id: 'about',
         icon: idea,
-        title: 'О нас',
+        title: t('anchors.aboutUs'),
     },
     {
         id: 'projects',
         icon: idea,
-        title: 'Проекты',
+        title: t('anchors.projects'),
     },
     {
         id: 'mission',
         icon: idea,
-        title: 'Преимущества',
+        title: t('anchors.advantages'),
     },
 ]

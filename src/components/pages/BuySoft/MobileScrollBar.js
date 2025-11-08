@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from 'react'
 import Title from '../../ui-kit/Title'
+import useTranslation from 'next-translate/useTranslation'
 import styles from './BuySketchup.module.scss'
 
 export default function MobileScrollBar({ handleShowColumn, buttons }) {
+    const { t } = useTranslation('buy-sketchup')
     const [width, setWidth] = useState()
     const [buttonBarStyles, setButtonBarStyles] = useState(buttons)
     let primaryColor = '#c9643b'
@@ -16,12 +18,12 @@ export default function MobileScrollBar({ handleShowColumn, buttons }) {
                 item.buttonColor = 'white'
                 return item
             })
-            .filter(item => item.title !== 'Опции')
+            .filter(item => item.title !== t('tableHeaders.options'))
         setButtonBarStyles(newButtons)
     }, [])
 
     useEffect(() => {
-        if (window.innerWidth <= 850 && buttonBarStyles[0].title !== 'Опции') {
+        if (window.innerWidth <= 850 && buttonBarStyles[0] && buttonBarStyles[0].title !== t('tableHeaders.options')) {
             handleClick(1)
         }
     }, [width])
@@ -46,7 +48,7 @@ export default function MobileScrollBar({ handleShowColumn, buttons }) {
 
     return (
         <div className={styles.mobile_header}>
-            <Title className={styles['title-mobile']}>Купить софт</Title>
+            <Title className={styles['title-mobile']}>{t('title')}</Title>
             {width <= breakPoint && (
                 <nav className={styles.nav_scroll}>
                     <div className={styles.button_container}>

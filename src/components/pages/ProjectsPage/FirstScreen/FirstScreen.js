@@ -2,18 +2,20 @@ import React from 'react'
 import FullPage from '../../../ui-kit/FullPage/FullPage'
 import PageImageTitle from '../../../ui-kit/PageImageTitle/PageImageTitle'
 import { HeaderThumb } from '../../../ui-kit/Header'
+import { useTranslation } from '../../../layouts/Layout'
 import * as backgroundImage from '../../../../../public/images/pages/About_us_first.jpg'
 import styles from './FirstScreen.module.scss'
 
-const screenTitle = 'Наши проекты'
-
 function ProjectsFirstScreen() {
+    const { t } = useTranslation('projects')
+
     return (
         <FullPage>
             <HeaderThumb />
             <PageImageTitle
                 src={backgroundImage}
-                title={screenTitle}
+                title={t.ourProjects}
+                useMobileImage
                 subTitle={
                     'Решения из портфеля Barkat-Stein установлены и внедрены в ряде компаний и объектов,\
                 что у всех «на слуху» в различных сферах промышленности: от вент.фасадов и\

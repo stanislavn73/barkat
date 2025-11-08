@@ -2,9 +2,16 @@ import React from 'react';
 import cx from 'classnames';
 import Input from '../Input';
 import Img from '../Img';
+import useTranslation from 'next-translate/useTranslation';
 
 import * as closeIcon from '../../../assets/images/icons/close.png';
 import './Modal.module.less';
+
+// Functional wrapper to use hooks
+function ModalWithTranslation(props) {
+    const { t } = useTranslation('common');
+    return <Modal {...props} t={t} />;
+}
 
 class Modal extends React.PureComponent {
     state = {
@@ -33,7 +40,7 @@ class Modal extends React.PureComponent {
 
     render() {
         const { companyName, name, email, phoneNumber, target } = this.state;
-        const { onClose, isOpened } = this.props;
+        const { onClose, isOpened, t } = this.props;
 
         const modalCX = cx({
             'modal-wrapper': true,
@@ -50,17 +57,17 @@ class Modal extends React.PureComponent {
                     />
                     <div className='top-black-line' />
                     <div className='modal-content-wrapper'>
-                        <div className='modal-title'>Заказать консультацию</div>
+                        <div className='modal-title'>{t('consultation.formName')}</div>
                         <div className='inputs-wrapper'>
                             <Input
                                 className='modal-input'
-                                title='Имя'
+                                title={t('consultation.name')}
                                 value={companyName}
                                 onChange={this.handleTextChange('name')}
                             />
                             <Input
                                 className='modal-input'
-                                title='Фамилия'
+                                title={t('consultation.surName')}
                                 value={name}
                                 onChange={this.handleTextChange('surname')}
                             />
@@ -68,13 +75,13 @@ class Modal extends React.PureComponent {
                         <div className='inputs-wrapper'>
                             <Input
                                 className='modal-input'
-                                title='Компания'
+                                title={t('consultation.company')}
                                 value={companyName}
                                 onChange={this.handleTextChange('companyName')}
                             />
                             <Input
                                 className='modal-input'
-                                title='Должность'
+                                title={t('consultation.title')}
                                 value={name}
                                 onChange={this.handleTextChange('profession')}
                             />
@@ -88,7 +95,7 @@ class Modal extends React.PureComponent {
                             />
                             <Input
                                 className='modal-input'
-                                title='Телефон'
+                                title={t('consultation.phone')}
                                 value={phoneNumber}
                                 onChange={this.handleTextChange('phoneNumber')}
                             />
@@ -96,7 +103,7 @@ class Modal extends React.PureComponent {
                         <div className='textarea-wrapper'>
                             <Input
                                 className='modal-input'
-                                title='Интересующий вопрос'
+                                title={t('consultation.question')}
                                 value={target}
                                 onChange={this.handleTextChange('target')}
                                 multiline
@@ -109,7 +116,7 @@ class Modal extends React.PureComponent {
                                 className='submit-button'
                                 onClick={this.sendData}
                             >
-                                Отправить
+                                {t('consultation.send')}
                             </div>
                         </div>
                         <div className='bottom-black-line' />
@@ -120,4 +127,4 @@ class Modal extends React.PureComponent {
     }
 }
 
-export default Modal;
+export default ModalWithTranslation;

@@ -26,5 +26,40 @@
         "formName": "Order consultation",
         "emailError": "Enter correct email",
         "phoneError": "Enter correct phone"
+    },
+    "modals": {
+        "privacyPolicy": "Privacy Policy of Barkat-Stein LLC",
+        "userAgreement": "Public Contract (OFFER)",
+        "buySketchUpShop": "Buy SketchUp Shop",
+        "buySketchUpPro": "Buy SketchUp Pro",
+        "buySketchUpStudio": "Buy SketchUp Studio",
+        "buySketchUpHigher": "Buy SketchUp for Higher Education"
+    },
+    "paymentSuccess": {
+        "title": "Payment completed successfully.",
+        "subtitle": "We will contact you shortly",
+        "buyer": "Buyer",
+        "product": "Product"
+    },
+    "loading": "Loading...",
+    "navigation": {
+        "aboutUs": "About Us",
+        "engineeringNetworks": "Engineering Networks",
+        "ventilatedFasades": "Ventilated Facades",
+        "threeDSolutions": "3D Solutions"
+    },
+    "anchors": {
+        "aboutUs": "About Us",
+        "projects": "Projects",
+        "advantages": "Advantages"
+    },
+    "footer": {
+        "writeToUs": "Write to Us",
+        "privacyPolicyLink": "Privacy Policy",
+        "publicContract": "Public Contract"
+    },
+    "downloadBlock": {
+        "aboutCompanyRu": "About company (Ru)",
+        "aboutCompanyEn": "About company (En)"
     }
 }

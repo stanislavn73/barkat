@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { Checkbox, Box, Radio } from '@material-ui/core'
-import { ModalConsumer } from '../../../../layouts/Layout'
+import { ModalConsumer, useTranslation } from '../../../../layouts/Layout'
 import { currencies } from './currencies'
 import UserDataForm from './UserDataForm'
 import { initializeApp } from 'firebase/app'
@@ -12,16 +12,17 @@ import dayjs from 'dayjs'
 import Img from '../../../Img'
 
 function UserAgreementLink() {
+    const { t } = useTranslation('forms')
     return (
         <ModalConsumer>
             {({ handleOpenSoftModal }) => (
                 <span>
-                    Нажимая купить Вы принимаете условия{' '}
+                    {t.buyForm.userAgreementText}{' '}
                     <span
                         onClick={handleOpenSoftModal('UserAgreement')}
                         className='policy_link'
                     >
-                        пользовательского соглашения
+                        {t.buyForm.userAgreementLink}
                     </span>
                 </span>
             )}
@@ -41,6 +42,7 @@ export default function BuySketchUpShop({
     priceUSD = 119,
     product = 'SketchUpShop',
 }) {
+    const { t } = useTranslation('forms')
     const [selectedValue, setSelectedValue] = useState('USD')
     const [currentAmount, setCurrentAmount] = useState(priceUSD)
     const [userAgreementCheckbox, setUserAgreementCheckbox] = useState(false)
@@ -185,14 +187,14 @@ export default function BuySketchUpShop({
 
             const url = `${process.env.SENDGRID_URL}/api/send`
             const msg = {
-                subject: 'Неоплаченый заказ',
+                subject: t.email.unpaidOrder,
                 html: `
             <div>
-            <div>ФИО: <strong>${name}</strong>
-            <div>Вид деятельности: <strong>${company}</strong></div>
-            <div>Сайт: <strong>${website}</strong></div>
-            <div>имейл: <strong>${email}</strong></div>
-            <div>телефон: <strong>${phoneNumber}</strong></div>
+            <div>${t.email.fullName}: <strong>${name}</strong>
+            <div>${t.email.activityType}: <strong>${company}</strong></div>
+            <div>${t.email.website}: <strong>${website}</strong></div>
+            <div>${t.email.email}: <strong>${email}</strong></div>
+            <div>${t.email.phone}: <strong>${phone}</strong></div>
              </div>`,
             }
             await fetch(url, {
@@ -259,9 +261,9 @@ export default function BuySketchUpShop({
                     <input
                         className={`${styles.footer} ${styles.send_payment}`}
                         type='submit'
-                        value={`Купить за ${
-                            Math.floor(currentAmount * 100) / 100
-                        } ${selectedValue}`}
+                        value={t.buyForm.buyButton
+                            .replace('{amount}', Math.floor(currentAmount * 100) / 100)
+                            .replace('{currency}', selectedValue)}
                     />
                 </Box>
             </form>

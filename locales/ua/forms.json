@@ -1,0 +1,29 @@
+{
+    "userDataForm": {
+        "fullName": "П.І.Б.",
+        "activityType": "Вид діяльності",
+        "individual": "Фізособа",
+        "company": "Компанія",
+        "website": "Сайт",
+        "email": "E-Mail",
+        "contactPhone": "Конт. тел."
+    },
+    "buyForm": {
+        "userAgreementText": "Натискаючи купити Ви приймаєте умови",
+        "userAgreementLink": "користувацької угоди",
+        "buyButton": "Купити за {amount} {currency}",
+        "perYear": "{currency} на рік",
+        "free": "БЕЗКОШТОВНО"
+    },
+    "email": {
+        "unpaidOrder": "Несплачене замовлення",
+        "paidOrder": "Замовлення оплачено",
+        "newOrder": "Нове замовлення",
+        "fullName": "ПІБ",
+        "activityType": "Вид діяльності",
+        "website": "Сайт",
+        "email": "імейл",
+        "phone": "телефон",
+        "question": "питання"
+    }
+}

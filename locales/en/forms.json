@@ -1,0 +1,29 @@
+{
+    "userDataForm": {
+        "fullName": "Full Name",
+        "activityType": "Activity Type",
+        "individual": "Individual",
+        "company": "Company",
+        "website": "Website",
+        "email": "E-Mail",
+        "contactPhone": "Contact Phone"
+    },
+    "buyForm": {
+        "userAgreementText": "By clicking buy you accept the terms of",
+        "userAgreementLink": "user agreement",
+        "buyButton": "Buy for {amount} {currency}",
+        "perYear": "{currency} per year",
+        "free": "FREE"
+    },
+    "email": {
+        "unpaidOrder": "Unpaid Order",
+        "paidOrder": "Order Paid",
+        "newOrder": "New Order",
+        "fullName": "Full Name",
+        "activityType": "Activity Type",
+        "website": "Website",
+        "email": "Email",
+        "phone": "Phone",
+        "question": "Question"
+    }
+}

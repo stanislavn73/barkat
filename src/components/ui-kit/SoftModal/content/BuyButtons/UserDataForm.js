@@ -5,15 +5,17 @@ import {
     Select,
     TextField,
 } from '@material-ui/core'
+import useTranslation from 'next-translate/useTranslation'
 
 import styles from './BuySketchUpShop.module.scss'
 
 const UserDataForm = ({ handleChangeUserData, userData }) => {
+    const { t } = useTranslation('forms')
     return (
         <Box className={styles.textfield_container}>
             <TextField
                 autoFocus
-                label='Ф.И.О.'
+                label={t('userDataForm.fullName')}
                 name='name'
                 onChange={handleChangeUserData}
                 required
@@ -32,7 +34,7 @@ const UserDataForm = ({ handleChangeUserData, userData }) => {
                 value={userData.company}
             /> */}
             <FormControl name='control' variant='standard'>
-                <InputLabel id='activity-label'>Вид деятельности</InputLabel>
+                <InputLabel id='activity-label'>{t('userDataForm.activityType')}</InputLabel>
                 <Select
                     native
                     name='company'
@@ -44,14 +46,14 @@ const UserDataForm = ({ handleChangeUserData, userData }) => {
                 >
                     <option aria-label='None' value='' />
 
-                    <option value={'Физлицо'}>Физлицо</option>
-                    <option value={'Компания'}>Компания</option>
+                    <option value={t('userDataForm.individual')}>{t('userDataForm.individual')}</option>
+                    <option value={t('userDataForm.company')}>{t('userDataForm.company')}</option>
                 </Select>
             </FormControl>
-            {userData.company === 'Компания' && (
+            {userData.company === t('userDataForm.company') && (
                 <TextField
                     autoFocus
-                    label='Сайт'
+                    label={t('userDataForm.website')}
                     required
                     name='website'
                     onChange={handleChangeUserData}
@@ -62,7 +64,7 @@ const UserDataForm = ({ handleChangeUserData, userData }) => {
             )}
             <TextField
                 autoFocus
-                label='E-Mail'
+                label={t('userDataForm.email')}
                 required
                 name='email'
                 onChange={handleChangeUserData}
@@ -72,7 +74,7 @@ const UserDataForm = ({ handleChangeUserData, userData }) => {
             />
             <TextField
                 autoFocus
-                label='Конт. тел.'
+                label={t('userDataForm.contactPhone')}
                 required
                 name='phone'
                 onChange={handleChangeUserData}

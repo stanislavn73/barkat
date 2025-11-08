@@ -8,37 +8,11 @@ import FirstScreen from './FirstScreen/FirstScreen'
 import HoverFrame from './HoverFrame'
 import BuyButtons from './BuyButtons'
 import cx from 'classnames'
+import useTranslation from 'next-translate/useTranslation'
 
 import styles from './BuySketchup.module.scss'
 import MobileScrollBar from './MobileScrollBar'
-import { rows } from './tableData'
-
-const buyItems = [
-    {
-        title: 'Опции',
-        hideMobileRow: false,
-    },
-    {
-        title: 'SketchUp Free',
-        hideMobileColumn: false,
-    },
-    {
-        title: 'SketchUp Shop',
-        hideMobileColumn: false,
-    },
-    {
-        title: 'SketchUp Pro',
-        hideMobileColumn: false,
-    },
-    {
-        title: 'SketchUp Studio',
-        hideMobileColumn: false,
-    },
-    {
-        title: 'SketchUp для высшего образования',
-        hideMobileColumn: false,
-    },
-]
+import { getRows } from './tableData'
 
 const useStyles = makeStyles(theme => ({
     table: {
@@ -53,6 +27,37 @@ const useStyles = makeStyles(theme => ({
 }))
 
 export default function BuySketchUp() {
+    const { t } = useTranslation('buy-sketchup')
+
+    const buyItems = [
+        {
+            title: t('tableHeaders.options'),
+            hideMobileRow: false,
+        },
+        {
+            title: t('tableHeaders.sketchUpFree'),
+            hideMobileColumn: false,
+        },
+        {
+            title: t('tableHeaders.sketchUpShop'),
+            hideMobileColumn: false,
+        },
+        {
+            title: t('tableHeaders.sketchUpPro'),
+            hideMobileColumn: false,
+        },
+        {
+            title: t('tableHeaders.sketchUpStudio'),
+            hideMobileColumn: false,
+        },
+        {
+            title: t('tableHeaders.sketchUpEducation'),
+            hideMobileColumn: false,
+        },
+    ]
+
+    const rows = getRows(t)
+
     const [column, setColumn] = useState(-1)
     const [mobileColumnShowed, setMobileColumnShowed] = useState(buyItems)
 
@@ -65,7 +70,7 @@ export default function BuySketchUp() {
 
     function handleShowMobileTable(index) {
         let newState = [...mobileColumnShowed].map(item => {
-            if (item.title === 'Опции') {
+            if (item.title === t('tableHeaders.options')) {
                 item.hideMobileRow = true
             } else {
                 item.hideMobileColumn = true
@@ -105,7 +110,7 @@ export default function BuySketchUp() {
                                     >
                                         <div
                                             className={
-                                                item.title === 'Опции'
+                                                item.title === t('tableHeaders.options')
                                                     ? styles['options_element']
                                                     : styles['head_element']
                                             }

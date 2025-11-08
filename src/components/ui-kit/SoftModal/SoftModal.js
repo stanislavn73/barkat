@@ -9,6 +9,7 @@ import styles from './SoftModal.module.scss'
 
 const Modal = ({ onClose, isOpened, type }) => {
     const { t } = useTranslation('soft')
+    const { t: commonT } = useTranslation('common')
 
     useEffect(() => {
         const body = document.getElementsByTagName('body')[0]
@@ -24,7 +25,7 @@ const Modal = ({ onClose, isOpened, type }) => {
         isOpened && styles['soft-modal-wrapper_opened']
     )
 
-    const currentType = useMemo(() => types(t), [t])[type]
+    const currentType = useMemo(() => types(t, commonT), [t, commonT])[type]
 
     const title = currentType?.title
     const Content = currentType?.content
