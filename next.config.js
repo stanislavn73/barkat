@@ -34,6 +34,15 @@ const nextConfig = () =>
             locales: ['en', 'ru', 'ua'],
             defaultLocale: 'en',
         },
+        async redirects() {
+            return [
+                {
+                    source: '/uk-UA/:path*',
+                    destination: '/ua/:path*',
+                    permanent: true,
+                },
+            ]
+        },
     }))
 
 module.exports = nextConfig
