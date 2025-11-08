@@ -30,7 +30,7 @@ const nextConfig = () =>
             ignoreDuringBuilds: true,
         },
         i18n: {
-            locales: ['en', 'ru', 'uk-UA'],
+            locales: ['en', 'ru', 'ua'],
             defaultLocale: 'en',
             localeDetection: true,
         },

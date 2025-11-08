@@ -14,8 +14,6 @@ const mockedUrls = ['/engineer-nets', '/agro-solutions']
 function App({ Component, pageProps }) {
     const { locale, push, locales, pathname } = useRouter()
 
-    let resultLocale = locale.includes('UA') ? 'ua' : locale
-
     useEffect(() => {
         const newLocale = locales.find(locale =>
             locale.includes(navigator.language)
@@ -32,7 +30,7 @@ function App({ Component, pageProps }) {
             <GlobalStyle />
             <title>Barkat Stein</title>
 
-            <Component {...pageProps} locale={resultLocale} />
+            <Component {...pageProps} locale={locale} />
         </ThemeProvider>
     )
 }
