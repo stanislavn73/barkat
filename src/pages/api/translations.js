@@ -30,10 +30,14 @@ const googleWorkspaceEn = require('./../../../locales/en/google-workspace.json')
 const googleWorkspaceRu = require('./../../../locales/ru/google-workspace.json')
 const googleWorkspaceUa = require('../../../locales/ua/google-workspace.json')
 
+const legalEn = require('./../../../locales/en/legal.json')
+const legalRu = require('./../../../locales/ru/legal.json')
+const legalUa = require('../../../locales/ua/legal.json')
+
 const translate = {
-    en: { soft: softEn, common: commonEn, facades: facadesEn, forms: formsEn, home: homeEn, 'buy-sketchup': buySketchupEn, projects: projectsEn, 'google-workspace': googleWorkspaceEn },
-    ru: { soft: softRu, common: commonRu, facades: facadesRu, forms: formsRu, home: homeRu, 'buy-sketchup': buySketchupRu, projects: projectsRu, 'google-workspace': googleWorkspaceRu },
-    ua: { soft: softUa, common: commonUa, facades: facadesUa, forms: formsUa, home: homeUa, 'buy-sketchup': buySketchupUa, projects: projectsUa, 'google-workspace': googleWorkspaceUa },
+    en: { soft: softEn, common: commonEn, facades: facadesEn, forms: formsEn, home: homeEn, 'buy-sketchup': buySketchupEn, projects: projectsEn, 'google-workspace': googleWorkspaceEn, legal: legalEn },
+    ru: { soft: softRu, common: commonRu, facades: facadesRu, forms: formsRu, home: homeRu, 'buy-sketchup': buySketchupRu, projects: projectsRu, 'google-workspace': googleWorkspaceRu, legal: legalRu },
+    ua: { soft: softUa, common: commonUa, facades: facadesUa, forms: formsUa, home: homeUa, 'buy-sketchup': buySketchupUa, projects: projectsUa, 'google-workspace': googleWorkspaceUa, legal: legalUa },
 }
 
 const fetchTranslations = async (req, res) => {
