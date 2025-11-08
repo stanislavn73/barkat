@@ -50,6 +50,12 @@
         "babel-plugin-styled-components": "^1.11.1",
         "eslint": "^8.46.0"
     },
+    "overrides": {
+        "@material-ui/core": {
+            "react": "$react",
+            "react-dom": "$react-dom"
+        }
+    },
     "engines": {
         "node": "22.x"
     }
