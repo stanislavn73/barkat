@@ -7,12 +7,33 @@ const plugins = [withFonts]
 
 const nextConfig = () =>
     nextTranslate(plugins.reduce((acc, next) => next(acc), {
+        images: {
+            disableStaticImages: true,
+        },
         webpack: config => {
             config.module.rules.push({
-                test: /\.(|mp4|pdf|webm)$/,
-                type: 'asset',
+                test: /\.(mp4|pdf|webm)$/,
+                type: 'asset/resource',
                 generator: {
-                    filename: 'static/chunks/[path][name].[hash][ext]',
+                    filename: 'static/chunks/[name].[hash][ext]',
+                },
+            })
+
+            // Handle images
+            config.module.rules.push({
+                test: /\.(png|jpg|jpeg|gif|webp)$/i,
+                type: 'asset/resource',
+                generator: {
+                    filename: 'static/media/[name].[hash][ext]',
+                },
+            })
+
+            // Handle SVGs
+            config.module.rules.push({
+                test: /\.svg$/,
+                type: 'asset/resource',
+                generator: {
+                    filename: 'static/media/[name].[hash][ext]',
                 },
             })
 
