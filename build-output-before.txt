@@ -1,0 +1,35 @@
+
+> dilianka@1.0.0 build
+> next build
+
+- info Skipping linting
+- info Checking validity of types...
+- info Creating an optimized production build...
+Browserslist: caniuse-lite is outdated. Please run:
+  npx browserslist@latest --update-db
+  Why you should do it regularly: https://github.com/browserslist/browserslist#browsers-data-updating
+Warning: For production Image Optimization with Next.js, the optional 'sharp' package is strongly recommended. Run 'yarn add sharp', and Next.js will use it automatically for Image Optimization.
+Read more: https://nextjs.org/docs/messages/sharp-missing-in-production
+Failed to compile.
+
+./public/images/facades/porcelian-tile/system/system.jpg
+Error: Call retries were exceeded
+    at ExperimentalWorker.initialize (/home/user/barkat/node_modules/next/dist/compiled/jest-worker/index.js:1:16346)
+    at ExperimentalWorker._onExit (/home/user/barkat/node_modules/next/dist/compiled/jest-worker/index.js:1:17280)
+    at Worker.emit (node:events:519:28)
+    at Worker.emit (node:domain:489:12)
+    at [kOnExit] (node:internal/worker:318:10)
+    at Worker.<computed>.onexit (node:internal/worker:232:20)
+
+Import trace for requested module:
+./public/images/facades/porcelian-tile/system/system.jpg
+./src/components/pages/FacadesPage/PorcelainTile/PorcelainTile.js
+./src/components/pages/FacadesPage/PorcelainTile/index.js
+./src/components/pages/FacadesPage/FacadesPage.js
+./src/components/pages/FacadesPage/index.js
+
+Cannot read properties of undefined (reading 'get')
+during rendering of asset asset/resource|/home/user/barkat/node_modules/next/dist/build/webpack/loaders/next-image-loader/index.js??ruleSet[1].rules[2]!/home/user/barkat/public/images/facades/porcelian-tile/system/system.jpg
+
+
+> Build failed because of webpack errors

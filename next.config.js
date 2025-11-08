@@ -8,7 +8,7 @@ const plugins = [withFonts]
 const nextConfig = () =>
     nextTranslate(plugins.reduce((acc, next) => next(acc), {
         images: {
-            disableStaticImages: true,
+            unoptimized: true,
         },
         webpack: config => {
             config.module.rules.push({
@@ -16,24 +16,6 @@ const nextConfig = () =>
                 type: 'asset/resource',
                 generator: {
                     filename: 'static/chunks/[name].[hash][ext]',
-                },
-            })
-
-            // Handle images
-            config.module.rules.push({
-                test: /\.(png|jpg|jpeg|gif|webp)$/i,
-                type: 'asset/resource',
-                generator: {
-                    filename: 'static/media/[name].[hash][ext]',
-                },
-            })
-
-            // Handle SVGs
-            config.module.rules.push({
-                test: /\.svg$/,
-                type: 'asset/resource',
-                generator: {
-                    filename: 'static/media/[name].[hash][ext]',
                 },
             })
 
