@@ -54,6 +54,14 @@
         "@material-ui/core": {
             "react": "$react",
             "react-dom": "$react-dom"
+        },
+        "react-slick": {
+            "react": "$react",
+            "react-dom": "$react-dom"
+        },
+        "react-test-renderer": {
+            "react": "$react",
+            "react-dom": "$react-dom"
         }
     },
     "engines": {
