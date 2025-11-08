@@ -1,6 +1,4 @@
-import useTranslation from 'next-translate/useTranslation'
-
-import { ModalConsumer } from '../../layouts/Layout'
+import { ModalConsumer, useTranslation } from '../../layouts/Layout'
 
 import SocialMediaFooter from './SocialMediaFooter'
 
@@ -49,7 +47,7 @@ function Footer({ page }) {
                                     className={styles['footer-button']}
                                     onClick={handleOpenForm}
                                 >
-                                    {t('footer.writeToUs')}
+                                    {t.footer.writeToUs}
                                 </div>
                             )}
                         </ModalConsumer>

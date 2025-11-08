@@ -1,5 +1,4 @@
-import useTranslation from 'next-translate/useTranslation'
-import { ModalConsumer } from '../../layouts/Layout'
+import { ModalConsumer, useTranslation } from '../../layouts/Layout'
 import cx from 'classnames'
 import styles from './PrivacyPolicy.module.scss'
 
@@ -21,7 +20,7 @@ export default function UserAgreement() {
                                 styles.underlined
                             )}
                         >
-                            {t('footer.publicContract')}
+                            {t.footer.publicContract}
                         </p>
                     </div>
                 )}

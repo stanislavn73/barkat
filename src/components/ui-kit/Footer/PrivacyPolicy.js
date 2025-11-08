@@ -1,5 +1,4 @@
-import useTranslation from 'next-translate/useTranslation'
-import { ModalConsumer } from '../../layouts/Layout'
+import { ModalConsumer, useTranslation } from '../../layouts/Layout'
 import visa from 'payment-icons/min/flat/visa.svg'
 import masterCard from 'payment-icons/min/flat/mastercard.svg'
 import Img from '../Img'
@@ -25,7 +24,7 @@ export default function PrivacyPolicy() {
                                 styles.underlined
                             )}
                         >
-                            {t('footer.privacyPolicyLink')}
+                            {t.footer.privacyPolicyLink}
                         </p>
                         <div>
                             <Img
