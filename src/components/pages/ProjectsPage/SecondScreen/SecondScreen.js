@@ -16,7 +16,7 @@ function ProjectsSecondScreen() {
                 </Padded>
             </div>
             <div className={styles['screen-wrapper']}>
-                <Img className={styles.screen} src={backgroundImage} />
+                <Img className={styles.screen} src={backgroundImage} alt="" />
             </div>
         </FullPage>
     )

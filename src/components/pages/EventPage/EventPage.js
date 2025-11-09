@@ -13,7 +13,7 @@ function Eventpage() {
             <FirstScreen />
             <Padded className={styles['soft-block-padded']}>
                 <div className={styles['social-media-block']}>
-                    <Img className={styles.logo} src={logo} />
+                    <Img className={styles.logo} src={logo} alt="Barkat logo" />
                 </div>
                 <div className={styles['social-media-block']}>
                     <div className={styles['soft-block-title']}>
@@ -22,7 +22,7 @@ function Eventpage() {
                     <SocialMedia page='logo' />
                 </div>
                 <div className={styles['social-media-block']}>
-                    <Img className={styles.logo} src={logoVille} />
+                    <Img className={styles.logo} src={logoVille} alt="Barkat Ville logo" />
                 </div>
 
                 <div className={styles['social-media-block']}>

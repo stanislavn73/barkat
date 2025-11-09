@@ -67,7 +67,7 @@ const Hexagon = () => {
                 <div className={styles['soft-items-wrapper']}>
                     {allPlanItems.map(({ id, type, title }) => (
                         <div key={id} className={styles['soft-item']}>
-                            <Img className={styles['logo']} src={HexagonLogo} />
+                            <Img className={styles['logo']} src={HexagonLogo} alt="Hexagon logo" />
                             <ModalConsumer>
                                 {({ handleOpenSoftModal }) => (
                                     <div

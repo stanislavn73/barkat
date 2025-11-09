@@ -6,11 +6,11 @@ import Link from 'next/link'
 import Img from '../Img'
 import { PAGES } from './pages'
 
-import * as menu from '../../../../public/images/icons/menu.png'
-import * as close from '../../../../public/images/icons/close.png'
-import * as logo from '../../../../public/images/logo.png'
-import * as logoU from '../../../../public/images/logo_u.png'
-import * as logoVille from '../../../../public/images/logo-ville.png'
+import menu from '../../../../public/images/icons/menu.png'
+import close from '../../../../public/images/icons/close.png'
+import logo from '../../../../public/images/logo.png'
+import logoU from '../../../../public/images/logo_u.png'
+import logoVille from '../../../../public/images/logo-ville.png'
 
 import styles from './style.module.scss'
 import { useTranslation } from '../../layouts/Layout'
@@ -38,7 +38,7 @@ const LOGOS = {
 const locales = {
     en: 'en',
     ru: 'ru',
-    ua: 'uk-UA',
+    ua: 'ua',
 }
 
 function Header() {
@@ -97,22 +97,25 @@ function Header() {
             <div className={styles['header-contacts-wrapper']}>
                 <Link href={logoPage.route} className={styles['menu-item']}>
                     <>
-                        <Img className={styles['logo']} src={logo} />
+                        <Img className={styles['logo']} src={logo} alt="Barkat logo" />
                         <Img
                             className={cx(styles.logo, styles['logo-mobile'])}
                             src={LOGOS[router.route]}
+                            alt="Barkat logo"
                         />
                     </>
                 </Link>
                 <Img
                     className={cx(styles.logo, styles['logo-ville'])}
                     src={logoVille}
+                    alt="Barkat Ville logo"
                 />
 
                 <Img
                     className={styles['menu-icon']}
                     src={menu}
                     onClick={handleMenuClick}
+                    alt="Open menu"
                 />
             </div>
             <div className={menuCX}>
@@ -188,6 +191,7 @@ function Header() {
                     className={styles['close-icon']}
                     src={close}
                     onClick={handleClose}
+                    alt="Close menu"
                 />
             </div>
         </div>

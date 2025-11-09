@@ -29,7 +29,7 @@
     },
     "modals": {
         "privacyPolicy": "Политика конфиденциальности ООО \"Баркат-Штейн\"",
-        "userAgreement": "Публічний договір (ОФЕРТА)",
+        "userAgreement": "Публичный договор (ОФЕРТА)",
         "buySketchUpShop": "Купить SketchUp Shop",
         "buySketchUpPro": "Купить SketchUp Pro",
         "buySketchUpStudio": "Купить SketchUp Studio",
@@ -56,7 +56,7 @@
     "footer": {
         "writeToUs": "Написать нам",
         "privacyPolicyLink": "Политика конфиденциальности",
-        "publicContract": "Публічний договір"
+        "publicContract": "Публичный договор"
     },
     "downloadBlock": {
         "aboutCompanyRu": "О компании (Ру)",
