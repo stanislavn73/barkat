@@ -38,7 +38,7 @@ const LOGOS = {
 const locales = {
     en: 'en',
     ru: 'ru',
-    ua: 'uk-UA',
+    ua: 'ua',
 }
 
 function Header() {
