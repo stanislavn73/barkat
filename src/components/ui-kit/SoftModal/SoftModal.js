@@ -25,7 +25,11 @@ const Modal = ({ onClose, isOpened, type }) => {
         isOpened && styles['soft-modal-wrapper_opened']
     )
 
-    const currentType = useMemo(() => types(t, commonT), [t, commonT])[type]
+    // Only compute modal types when modal is opened and translations exist
+    const currentType = useMemo(() => {
+        if (!isOpened || !t) return null
+        return types(t, commonT)[type]
+    }, [t, commonT, type, isOpened])
 
     const title = currentType?.title
     const Content = currentType?.content
