@@ -45,7 +45,11 @@ function ProjectsFourthBlock({ data, styles: customStyles }) {
                         {project.title && (
                             <div className={styles.title}>{project.title}</div>
                         )}
-                        <Img src={project.thumbnail} />
+                        <Img
+                            src={project.thumbnail}
+                            alt={project.title || 'Project image'}
+                            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                        />
                     </div>
                 )
             })}

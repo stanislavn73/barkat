@@ -20,7 +20,7 @@ export default function DownloadCatalog({ className, file, name = 'catalog' }) {
             className={cx(styles['download-wrapper'], className)}
             onClick={handleDownload}
         >
-            <Image className={styles['icon']} src={pdf_icon} />
+            <Image className={styles['icon']} src={pdf_icon} alt="PDF" width={50} height={50} />
             <span>{get(t, 'downloadButton')}</span>
         </div>
     )

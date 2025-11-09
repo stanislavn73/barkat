@@ -47,7 +47,7 @@ class ProjectPage extends React.PureComponent {
         return (
             <Wrapper>
                 <ArrowWrapper onClick={this.handleGoBack}>
-                    <Arrow src={arrowImg} />
+                    <Arrow src={arrowImg} alt="Back" width={40} height={40} />
                 </ArrowWrapper>
                 <Slider
                     fullsize

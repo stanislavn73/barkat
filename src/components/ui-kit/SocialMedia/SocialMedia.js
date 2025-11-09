@@ -1,5 +1,9 @@
 import React from 'react'
+import Image from 'next/image'
 import styles from './Social.module.scss'
+import facebookIcon from '../../../../public/images/social/facebook.svg'
+import instagramIcon from '../../../../public/images/social/instagram.svg'
+import linkedinIcon from '../../../../public/images/social/linkedin.svg'
 
 const linksObject = {
     Google: {
@@ -49,20 +53,47 @@ export default function SocialMedia({ page }) {
                     className={styles['facebook']}
                     target='_blank'
                     href={linksObject[page].facebook}
-                ></a>
+                    rel="noopener noreferrer"
+                >
+                    <Image
+                        src={facebookIcon}
+                        alt="Facebook"
+                        width={60}
+                        height={60}
+                        style={{ cursor: 'pointer' }}
+                    />
+                </a>
 
                 {linksObject[page].hasOwnProperty('insta') && (
                     <a
                         className={styles['insta']}
                         target='_blank'
                         href={linksObject[page].insta}
-                    ></a>
+                        rel="noopener noreferrer"
+                    >
+                        <Image
+                            src={instagramIcon}
+                            alt="Instagram"
+                            width={60}
+                            height={60}
+                            style={{ cursor: 'pointer' }}
+                        />
+                    </a>
                 )}
                 <a
                     className={styles['linkedin']}
                     target='_blank'
                     href={linksObject[page].linkedin}
-                ></a>
+                    rel="noopener noreferrer"
+                >
+                    <Image
+                        src={linkedinIcon}
+                        alt="LinkedIn"
+                        width={60}
+                        height={60}
+                        style={{ cursor: 'pointer' }}
+                    />
+                </a>
             </div>
         </>
     )

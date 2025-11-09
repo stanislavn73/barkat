@@ -59,7 +59,7 @@ const Header = () => {
             <WowBlock delay={0.4}>
                 <DownloadItem>
                     <WrapperIcon>
-                        <Icon src={downloadIcon} />
+                        <Icon src={downloadIcon} alt="Download" width={20} height={20} />
                     </WrapperIcon>
                     <Text>{t('downloadBlock.aboutCompanyRu')}</Text>
                 </DownloadItem>
@@ -67,7 +67,7 @@ const Header = () => {
             <WowBlock delay={0.5}>
                 <DownloadItem>
                     <WrapperIcon>
-                        <Icon src={downloadIcon} />
+                        <Icon src={downloadIcon} alt="Download" width={20} height={20} />
                     </WrapperIcon>
                     <Text>{t('downloadBlock.aboutCompanyEn')}</Text>
                 </DownloadItem>

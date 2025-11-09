@@ -66,12 +66,17 @@ const SliderComponent = ({ slides, titlesControl }) => {
                 className={cx(styles.arrow, styles.left)}
                 onClick={handleSlide('left')}
             >
-                <Img src={prevArrowImg} />
+                <Img src={prevArrowImg} alt="Previous" width={60} height={60} />
             </div>
             <Slider {...settings} ref={sliderRef}>
                 {slides.map(slide => (
                     <div className={styles['slider-item']} key={slide}>
-                        <Img src={slide} />
+                        <Img
+                            src={slide}
+                            alt="Slide"
+                            priority={false}
+                            sizes="100vw"
+                        />
                     </div>
                 ))}
             </Slider>
@@ -79,7 +84,7 @@ const SliderComponent = ({ slides, titlesControl }) => {
                 className={styles['arrow right']}
                 onClick={handleSlide('right')}
             >
-                <Img src={nextArrowImg} />
+                <Img src={nextArrowImg} alt="Next" width={60} height={60} />
             </div>
         </div>
     )
