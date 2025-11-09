@@ -4,10 +4,13 @@ import Padded from '../../../ui-kit/Padded'
 import PlainText from '../../../ui-kit/PlainText'
 import Bold from '../../../ui-kit/Bold'
 import Img from '../../../ui-kit/Img'
+import { useTranslation } from '../../../layouts/Layout'
 import * as imageBlock from '../../../../../public/images/pages/About_us_third.jpg'
 import styles from './ThirdScreen.module.scss'
 
 function ProjectsThirdScreen() {
+    const { t } = useTranslation('projects')
+
     return (
         <div className={styles['third-screen-wrapper']}>
             <FullPage className={styles['third-fullpage-projects']}>
@@ -15,42 +18,19 @@ function ProjectsThirdScreen() {
                     <div className={styles['text-block']}>
                         <div className={styles.text}>
                             <PlainText>
-                                <Bold>Группа компаний BARKAT</Bold> - Value
-                                Increasing Partner в сфере поставок фасадных и
-                                инженерных материалов на рынке гражданского и
-                                коммерческого строительства, а также IT-решений
-                                в таких сферах как: агро-, авиа-, металлургия,
-                                нефтегаз, горная добыча, машиностроение и многих
-                                других. Компания разделена на несколько основных
-                                подразделений:
+                                {t.companyInfo.intro}
                             </PlainText>
                             <PlainText>
-                                - <Bold>Barkat-Stein</Bold> – эксперт в мире
-                                облицовочных материалов из мрамора, доломита,
-                                клинкера, терракотовых панелей и керамогранита
-                                по оформлению вентилированных фасадов и
-                                внутреннего интерьера. Архитектурные решения
-                                Barkat-Stein повысят инвестиционную
-                                привлекательность любого строительного объекта.
+                                - {t.companyInfo.barkatStein}
                             </PlainText>
                             <PlainText>
-                                - <Bold>Barkat-3D-Ville</Bold> – надежный
-                                партнер по поставке и внедрению программного
-                                обеспечения для управления геоданными (GIS),
-                                3D-проектирования (CAD) и управления жизненным
-                                циклом продукции (PLM), а также инструментов
-                                технологии BIM.
+                                - {t.companyInfo.barkat3DVille}
                             </PlainText>
                             <PlainText>
-                                - <Bold>Barkat-Engineering</Bold> – эксперт по
-                                автоматизации внутренних инженерных сетей зданий
-                                и сооружений.
+                                - {t.companyInfo.barkatEngineering}
                             </PlainText>
                             <PlainText>
-                                - <Bold>Barkat-Agrospatial</Bold> – по принципу
-                                «MAKING FARMERS DIGITAL» наши эксперты внедряют
-                                цифровые IT-решения в агросферу, такие как
-                                передовые системы агромониторинга.
+                                - {t.companyInfo.barkatAgrospatial}
                             </PlainText>
                         </div>
                     </div>
@@ -61,10 +41,10 @@ function ProjectsThirdScreen() {
                         src={imageBlock}
                     />
                     <div className={styles['image-block-title']}>
-                        Barkat stein
+                        {t.companyInfo.imageTitle}
                     </div>
                 </div>
-                <div className={styles['back-title']}>Barkat-stein</div>
+                <div className={styles['back-title']}>{t.companyInfo.backTitle}</div>
             </FullPage>
         </div>
     )

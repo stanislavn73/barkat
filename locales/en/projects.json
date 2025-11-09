@@ -1,6 +1,34 @@
 {
   "ourProjects": "Our Projects",
   "projectTitle": "Personal House of Marshal Altariyskiy",
+  "firstScreen": {
+    "subtitle": "Solutions from the Barkat-Stein portfolio are installed and implemented in a number of companies and facilities that are 'well-known' in various industries: from ventilated facades and engineering equipment on landmark civil and commercial construction sites to software solutions such as: - 'Digital Rock / Unified Reservoir' (in the oil and gas industry), - 'BIM Level 3' (in construction), - 'Virtual Factory' (in manufacturing industries), - '3D Printing' (in digital additive manufacturing), 'GEOMEDIA' (agricultural monitoring systems)",
+    "aboutUs": "About Us"
+  },
+  "achievements": {
+    "yearsExperience": "years of experience",
+    "countries": "countries",
+    "vendors": "vendors",
+    "products": "products"
+  },
+  "companyInfo": {
+    "intro": "BARKAT Group of Companies - Value Increasing Partner in the field of facade and engineering materials supply in the civil and commercial construction market, as well as IT solutions in such areas as: agriculture, aviation, metallurgy, oil and gas, mining, mechanical engineering and many others. The company is divided into several main divisions:",
+    "barkatStein": "Barkat-Stein – expert in the world of facing materials made of marble, dolomite, clinker, terracotta panels and porcelain tiles for ventilated facades and interior design. Barkat-Stein architectural solutions will increase the investment attractiveness of any construction project.",
+    "barkat3DVille": "Barkat-3D-Ville – reliable partner for supply and implementation of software for geodata management (GIS), 3D design (CAD) and product lifecycle management (PLM), as well as BIM technology tools.",
+    "barkatEngineering": "Barkat-Engineering – expert in automation of internal engineering networks of buildings and structures.",
+    "barkatAgrospatial": "Barkat-Agrospatial – following the principle 'MAKING FARMERS DIGITAL' our experts implement digital IT solutions in the agricultural sector, such as advanced agricultural monitoring systems.",
+    "imageTitle": "Barkat stein",
+    "backTitle": "Barkat-stein"
+  },
+  "advantages": {
+    "title": "Our Advantages",
+    "sales": "sales",
+    "audit": "audit",
+    "implementation": "implementation",
+    "directorTitle": "commercial director of the group of companies",
+    "quote": "If a partner's business has become more efficient - this is the highest rating for us",
+    "directorName": "Alexander Barkat"
+  },
   "anchors": {
     "projects": "Our Projects",
     "about": "About Us",
