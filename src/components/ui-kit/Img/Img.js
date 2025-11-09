@@ -4,7 +4,7 @@ import cx from 'classnames'
 import styles from './img.module.scss'
 import { v4 as uuidv4 } from 'uuid'
 
-export default function Img({ src, className, ...rest }) {
+export default function Img({ src, className, alt, ...rest }) {
     const id = useRef(uuidv4())
 
     return (
@@ -12,7 +12,7 @@ export default function Img({ src, className, ...rest }) {
             // style={{ height: 'auto' }}
             src={src}
             className={cx(styles.adjust, className)}
-            alt={id}
+            alt={alt || ''}
             {...rest}
             loading='lazy'
         />

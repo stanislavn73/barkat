@@ -97,22 +97,25 @@ function Header() {
             <div className={styles['header-contacts-wrapper']}>
                 <Link href={logoPage.route} className={styles['menu-item']}>
                     <>
-                        <Img className={styles['logo']} src={logo} />
+                        <Img className={styles['logo']} src={logo} alt="Barkat logo" />
                         <Img
                             className={cx(styles.logo, styles['logo-mobile'])}
                             src={LOGOS[router.route]}
+                            alt="Barkat logo"
                         />
                     </>
                 </Link>
                 <Img
                     className={cx(styles.logo, styles['logo-ville'])}
                     src={logoVille}
+                    alt="Barkat Ville logo"
                 />
 
                 <Img
                     className={styles['menu-icon']}
                     src={menu}
                     onClick={handleMenuClick}
+                    alt="Open menu"
                 />
             </div>
             <div className={menuCX}>
@@ -188,6 +191,7 @@ function Header() {
                     className={styles['close-icon']}
                     src={close}
                     onClick={handleClose}
+                    alt="Close menu"
                 />
             </div>
         </div>

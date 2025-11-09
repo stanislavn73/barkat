@@ -73,7 +73,7 @@ const Bentley = () => {
                 <div className={styles['soft-items-wrapper']}>
                     {allPlanItems.map(item => (
                         <div key={item.id} className={styles['soft-item']}>
-                            <Img className={styles['logo']} src={BentleyLogo} />
+                            <Img className={styles['logo']} src={BentleyLogo} alt="Bentley logo" />
                             <ModalConsumer>
                                 {({ handleOpenSoftModal }) => (
                                     <div
