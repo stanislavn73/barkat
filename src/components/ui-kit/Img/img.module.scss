@@ -41,6 +41,18 @@
     }
 }
 
+// Global animation for inline styles
+:global {
+    @keyframes shimmer {
+        0% {
+            background-position: -200% 0;
+        }
+        100% {
+            background-position: 200% 0;
+        }
+    }
+}
+
 /* Pulse animation for skeleton */
 .skeletonPulse {
     animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;

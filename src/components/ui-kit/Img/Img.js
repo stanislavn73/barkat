@@ -84,27 +84,23 @@ export default function Img({
         delete imageProps.blurDataURL
     }
 
-    // Wrapper for skeleton loading
-    const containerStyle = fill
-        ? { position: 'relative', width: '100%', height: '100%' }
-        : width && height
-        ? { position: 'relative', width, height, display: 'inline-block' }
-        : { position: 'relative', display: 'inline-block' }
+    // Inline skeleton loader that doesn't affect layout
+    const imageStyle = {
+        ...imageProps.style,
+        opacity: isLoading ? 0 : 1,
+        transition: 'opacity 0.3s ease-in-out',
+        ...(isLoading && {
+            background: 'linear-gradient(90deg, #f0f0f0 0%, #e0e0e0 20%, #f0f0f0 40%, #f0f0f0 100%)',
+            backgroundSize: '200% 100%',
+            animation: 'shimmer 1.5s infinite',
+        }),
+    }
 
     return (
-        <div className={styles.imageContainer} style={containerStyle}>
-            {isLoading && !imageError && (
-                <div className={cx(styles.skeleton, styles.skeletonPulse)} />
-            )}
-            <Image
-                {...imageProps}
-                className={cx(styles.adjust, className, isLoading ? undefined : styles.imageLoaded)}
-                style={{
-                    ...imageProps.style,
-                    opacity: isLoading ? 0 : 1,
-                    transition: 'opacity 0.3s ease-in-out',
-                }}
-            />
-        </div>
+        <Image
+            {...imageProps}
+            className={cx(styles.adjust, className)}
+            style={imageStyle}
+        />
     )
 }
