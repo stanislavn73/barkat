@@ -1,4 +1,4 @@
-import { useRef, useState } from 'react'
+import { useRef, useState, useEffect } from 'react'
 import Image from 'next/image'
 import cx from 'classnames'
 import styles from './img.module.scss'
@@ -21,6 +21,15 @@ export default function Img({
     const id = useRef(uuidv4())
     const [isLoading, setIsLoading] = useState(true)
     const [imageError, setImageError] = useState(false)
+    const previousSrc = useRef(src)
+
+    // Reset loading state when src changes (for carousels)
+    useEffect(() => {
+        if (previousSrc.current !== src) {
+            setIsLoading(true)
+            previousSrc.current = src
+        }
+    }, [src])
 
     // Default blur placeholder for JPEG/PNG images
     const defaultBlurDataURL = 'data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAgGBgcGBQgHBwcJCQgKDBQNDAsLDBkSEw8UHRofHh0aHBwgJC4nICIsIxwcKDcpLDAxNDQ0Hyc5PTgyPC4zNDL/2wBDAQkJCQwLDBgNDRgyIRwhMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjL/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWEREiMxUf/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyJckliyjqTzSlT54b6bk+h0R//2Q=='
@@ -71,8 +80,13 @@ export default function Img({
         imageProps.loading = 'lazy'
     }
 
-    // Add loading callbacks
-    imageProps.onLoadingComplete = () => setIsLoading(false)
+    // Add loading callbacks - use onLoad instead of onLoadingComplete to avoid flashing
+    const handleLoad = () => {
+        // Small delay to ensure smooth transition
+        setTimeout(() => setIsLoading(false), 50)
+    }
+
+    imageProps.onLoad = handleLoad
     imageProps.onError = () => {
         setIsLoading(false)
         setImageError(true)
@@ -84,23 +98,11 @@ export default function Img({
         delete imageProps.blurDataURL
     }
 
-    // Inline skeleton loader that doesn't affect layout
-    const imageStyle = {
-        ...imageProps.style,
-        opacity: isLoading ? 0 : 1,
-        transition: 'opacity 0.3s ease-in-out',
-        ...(isLoading && {
-            background: 'linear-gradient(90deg, #f0f0f0 0%, #e0e0e0 20%, #f0f0f0 40%, #f0f0f0 100%)',
-            backgroundSize: '200% 100%',
-            animation: 'shimmer 1.5s infinite',
-        }),
-    }
-
     return (
         <Image
             {...imageProps}
-            className={cx(styles.adjust, className)}
-            style={imageStyle}
+            className={cx(styles.adjust, className, isLoading && styles.loading)}
+            style={imageProps.style}
         />
     )
 }
