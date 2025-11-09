@@ -11,7 +11,8 @@ export default function buySoft({ locale, translations }) {
 }
 
 export async function getStaticProps({ locale }) {
-    const translations = loadTranslations(locale)
+    // Only load the namespaces this page actually uses
+    const translations = loadTranslations(locale, ['common', 'buy-sketchup', 'forms', 'legal'])
 
     return {
         props: {

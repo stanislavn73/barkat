@@ -1,40 +1,50 @@
 /**
- * Load all translations for a given locale at build time
- * This replaces the client-side API call to /api/translations
+ * Load specific translation namespaces for a given locale at build time
+ * @param {string} locale - The locale to load translations for
+ * @param {string[]} namespaces - Array of namespace names to load (e.g., ['common', 'forms'])
+ * @returns {object} Object containing only the requested translation namespaces
  */
-function loadTranslations(locale) {
+function loadTranslations(locale, namespaces = null) {
     // Normalize locale (uk-UA -> ua)
     const normalizedLocale = locale === 'uk-UA' ? 'ua' : locale
 
-    try {
-        const soft = require(`../../locales/${normalizedLocale}/soft.json`)
-        const common = require(`../../locales/${normalizedLocale}/common.json`)
-        const facades = require(`../../locales/${normalizedLocale}/facades.json`)
-        const about = require(`../../locales/${normalizedLocale}/about.json`)
-        const forms = require(`../../locales/${normalizedLocale}/forms.json`)
-        const home = require(`../../locales/${normalizedLocale}/home.json`)
-        const buySketchup = require(`../../locales/${normalizedLocale}/buy-sketchup.json`)
-        const projects = require(`../../locales/${normalizedLocale}/projects.json`)
-        const googleWorkspace = require(`../../locales/${normalizedLocale}/google-workspace.json`)
-        const legal = require(`../../locales/${normalizedLocale}/legal.json`)
+    // If no namespaces specified, load all (backward compatibility)
+    const allNamespaces = [
+        'soft',
+        'common',
+        'facades',
+        'about',
+        'forms',
+        'home',
+        'buy-sketchup',
+        'projects',
+        'google-workspace',
+        'legal',
+    ]
 
-        return {
-            soft,
-            common,
-            facades,
-            about,
-            forms,
-            home,
-            'buy-sketchup': buySketchup,
-            projects,
-            'google-workspace': googleWorkspace,
-            legal,
+    const namespacesToLoad = namespaces || allNamespaces
+
+    try {
+        const translations = {}
+
+        for (const namespace of namespacesToLoad) {
+            try {
+                // Convert namespace name to file name (e.g., 'buy-sketchup' -> 'buy-sketchup.json')
+                const fileName = `${namespace}.json`
+                translations[namespace] = require(`../../locales/${normalizedLocale}/${fileName}`)
+            } catch (error) {
+                console.warn(
+                    `Warning: Could not load namespace '${namespace}' for locale '${normalizedLocale}'`
+                )
+            }
         }
+
+        return translations
     } catch (error) {
         console.error(`Failed to load translations for locale: ${locale}`, error)
         // Fallback to English if locale not found
         if (normalizedLocale !== 'en') {
-            return loadTranslations('en')
+            return loadTranslations('en', namespaces)
         }
         throw error
     }

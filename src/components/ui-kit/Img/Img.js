@@ -1,4 +1,4 @@
-import { useRef } from 'react'
+import { useRef, useState } from 'react'
 import Image from 'next/image'
 import cx from 'classnames'
 import styles from './img.module.scss'
@@ -19,6 +19,8 @@ export default function Img({
     ...rest
 }) {
     const id = useRef(uuidv4())
+    const [isLoading, setIsLoading] = useState(true)
+    const [imageError, setImageError] = useState(false)
 
     // Default blur placeholder for JPEG/PNG images
     const defaultBlurDataURL = 'data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAgGBgcGBQgHBwcJCQgKDBQNDAsLDBkSEw8UHRofHh0aHBwgJC4nICIsIxwcKDcpLDAxNDQ0Hyc5PTgyPC4zNDL/2wBDAQkJCQwLDBgNDRgyIRwhMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjL/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWEREiMxUf/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyJckliyjqTzSlT54b6bk+h0R//2Q=='
@@ -33,7 +35,6 @@ export default function Img({
 
     const imageProps = {
         src,
-        className: cx(styles.adjust, className),
         alt: alt || '',
         quality,
         ...rest
@@ -70,5 +71,40 @@ export default function Img({
         imageProps.loading = 'lazy'
     }
 
-    return <Image {...imageProps} />
+    // Add loading callbacks
+    imageProps.onLoadingComplete = () => setIsLoading(false)
+    imageProps.onError = () => {
+        setIsLoading(false)
+        setImageError(true)
+    }
+
+    // For static imports with blur, Next.js handles it automatically
+    if (src && typeof src === 'object' && src.blurDataURL) {
+        imageProps.placeholder = 'blur'
+        delete imageProps.blurDataURL
+    }
+
+    // Wrapper for skeleton loading
+    const containerStyle = fill
+        ? { position: 'relative', width: '100%', height: '100%' }
+        : width && height
+        ? { position: 'relative', width, height, display: 'inline-block' }
+        : { position: 'relative', display: 'inline-block' }
+
+    return (
+        <div className={styles.imageContainer} style={containerStyle}>
+            {isLoading && !imageError && (
+                <div className={cx(styles.skeleton, styles.skeletonPulse)} />
+            )}
+            <Image
+                {...imageProps}
+                className={cx(styles.adjust, className, isLoading ? undefined : styles.imageLoaded)}
+                style={{
+                    ...imageProps.style,
+                    opacity: isLoading ? 0 : 1,
+                    transition: 'opacity 0.3s ease-in-out',
+                }}
+            />
+        </div>
+    )
 }
