@@ -4,9 +4,8 @@ import ReactDOM from 'react-dom'
 import Image from 'next/image'
 import styles from './styles.module.scss'
 
-export default function Img({ src, className, alt, width, height, ...rest }) {
+export default function Img({ src, className, alt, ...rest }) {
     const [isFull, setIsFull] = useState(false)
-    const [imageLoaded, setImageLoaded] = useState(false)
 
     function handleImageClick(state) {
         return () => {
@@ -22,7 +21,6 @@ export default function Img({ src, className, alt, width, height, ...rest }) {
         src,
         alt: alt || 'Click to enlarge',
         quality: 95,
-        onLoad: () => setImageLoaded(true),
         ...rest
     }
 
@@ -30,6 +28,10 @@ export default function Img({ src, className, alt, width, height, ...rest }) {
     if (isStaticImport) {
         baseImageProps.placeholder = 'blur'
     }
+
+    // Get dimensions from static import if available, otherwise use defaults
+    const width = isStaticImport ? src.width : 1920
+    const height = isStaticImport ? src.height : 1080
 
     return (
         <>
@@ -57,7 +59,7 @@ export default function Img({ src, className, alt, width, height, ...rest }) {
                 width={width}
                 height={height}
                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 800px"
-                style={rest.style}
+                style={{ ...rest.style, width: '100%', height: 'auto' }}
             />
         </>
     )
