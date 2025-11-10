@@ -1,16 +1,34 @@
 import { useState } from 'react'
 import cx from 'classnames'
 import ReactDOM from 'react-dom'
+import Image from 'next/image'
 import styles from './styles.module.scss'
-import Image from './../Img'
 
-export default function Img({ src, className, alt, ...rest }) {
+export default function Img({ src, className, alt, width, height, ...rest }) {
     const [isFull, setIsFull] = useState(false)
+    const [imageLoaded, setImageLoaded] = useState(false)
 
     function handleImageClick(state) {
         return () => {
             setIsFull(state)
         }
+    }
+
+    // Detect if this is a static import
+    const isStaticImport = src && typeof src === 'object' && src.blurDataURL
+
+    // Common image props
+    const baseImageProps = {
+        src,
+        alt: alt || 'Click to enlarge',
+        quality: 95,
+        onLoad: () => setImageLoaded(true),
+        ...rest
+    }
+
+    // For static imports, use Next.js blur
+    if (isStaticImport) {
+        baseImageProps.placeholder = 'blur'
     }
 
     return (
@@ -22,22 +40,24 @@ export default function Img({ src, className, alt, ...rest }) {
                         onClick={handleImageClick(false)}
                     >
                         <Image
-                            src={src}
+                            {...baseImageProps}
                             alt={alt || 'Fullscreen image'}
+                            fill
                             sizes="100vw"
-                            quality={95}
-                            {...rest}
+                            style={{ objectFit: 'contain' }}
+                            priority
                         />
                     </div>,
                     document.body
                 )}
             <Image
-                src={src}
+                {...baseImageProps}
                 className={cx(styles['full-image-thumb'], className)}
                 onClick={handleImageClick(true)}
-                alt={alt || 'Click to enlarge'}
+                width={width}
+                height={height}
                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 800px"
-                {...rest}
+                style={rest.style}
             />
         </>
     )

@@ -69,12 +69,12 @@ const SliderComponent = ({ slides, titlesControl }) => {
                 <Img src={prevArrowImg} alt="Previous" width={60} height={60} />
             </div>
             <Slider {...settings} ref={sliderRef}>
-                {slides.map(slide => (
-                    <div className={styles['slider-item']} key={slide}>
+                {slides.map((slide, index) => (
+                    <div className={styles['slider-item']} key={`slide-${index}`}>
                         <Img
                             src={slide}
-                            alt="Slide"
-                            priority={false}
+                            alt={`Slide ${index + 1}`}
+                            priority={index === 0}
                             sizes="100vw"
                         />
                     </div>

@@ -19,17 +19,28 @@ export default function Img({
     ...rest
 }) {
     const id = useRef(uuidv4())
-    const [isLoading, setIsLoading] = useState(true)
+
+    // Detect if this is a static import (has blurDataURL from Next.js)
+    const isStaticImport = src && typeof src === 'object' && src.blurDataURL
+
+    // Only use loading state for dynamic images, not static imports
+    const [isLoading, setIsLoading] = useState(!isStaticImport)
     const [imageError, setImageError] = useState(false)
     const previousSrc = useRef(src)
+    const loadStartTime = useRef(Date.now())
 
-    // Reset loading state when src changes (for carousels)
+    // Reset loading state when src changes (for carousels), but only for dynamic images
     useEffect(() => {
-        if (previousSrc.current !== src) {
+        const srcChanged = previousSrc.current !== src
+        if (srcChanged && !isStaticImport) {
             setIsLoading(true)
+            loadStartTime.current = Date.now()
+            previousSrc.current = src
+        } else if (srcChanged && isStaticImport) {
+            // For static imports, just update the ref without loading state
             previousSrc.current = src
         }
-    }, [src])
+    }, [src, isStaticImport])
 
     // Default blur placeholder for JPEG/PNG images
     const defaultBlurDataURL = 'data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAgGBgcGBQgHBwcJCQgKDBQNDAsLDBkSEw8UHRofHh0aHBwgJC4nICIsIxwcKDcpLDAxNDQ0Hyc5PTgyPC4zNDL/2wBDAQkJCQwLDBgNDRgyIRwhMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjL/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWEREiMxUf/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyJckliyjqTzSlT54b6bk+h0R//2Q=='
@@ -80,28 +91,41 @@ export default function Img({
         imageProps.loading = 'lazy'
     }
 
-    // Add loading callbacks - use onLoad instead of onLoadingComplete to avoid flashing
-    const handleLoad = () => {
-        // Small delay to ensure smooth transition
-        setTimeout(() => setIsLoading(false), 50)
-    }
+    // Only add loading callbacks for dynamic images
+    if (!isStaticImport) {
+        const handleLoad = () => {
+            const loadTime = Date.now() - loadStartTime.current
+            // Only show loading animation if image took more than 100ms to load
+            // This prevents flashing on cached/fast-loading images
+            if (loadTime > 100) {
+                // Small delay for smooth transition
+                setTimeout(() => setIsLoading(false), 50)
+            } else {
+                // Image loaded quickly, remove loading state immediately
+                setIsLoading(false)
+            }
+        }
 
-    imageProps.onLoad = handleLoad
-    imageProps.onError = () => {
-        setIsLoading(false)
-        setImageError(true)
+        imageProps.onLoad = handleLoad
+        imageProps.onError = () => {
+            setIsLoading(false)
+            setImageError(true)
+        }
     }
 
     // For static imports with blur, Next.js handles it automatically
-    if (src && typeof src === 'object' && src.blurDataURL) {
+    if (isStaticImport) {
         imageProps.placeholder = 'blur'
-        delete imageProps.blurDataURL
+        // Remove blurDataURL from imageProps to avoid duplication
+        if (imageProps.blurDataURL) {
+            delete imageProps.blurDataURL
+        }
     }
 
     return (
         <Image
             {...imageProps}
-            className={cx(styles.adjust, className, isLoading && styles.loading)}
+            className={cx(styles.adjust, className, isLoading && !isStaticImport && styles.loading)}
             style={imageProps.style}
         />
     )
