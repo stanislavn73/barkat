@@ -28,10 +28,6 @@ const ProjectsPage = () => {
             title: t.anchors.products,
         },
         {
-            id: 'projects',
-            title: t.anchors.projects,
-        },
-        {
             id: 'advantages',
             title: t.anchors.advantages,
         },
@@ -53,7 +49,7 @@ const ProjectsPage = () => {
             <Anchor id='products' onPositionChange={handleAnchorReact}>
                 <ThirdScreen />
             </Anchor>
-            <Anchor id='projects' onPositionChange={handleAnchorReact}>
+            <Anchor id='gallery' onPositionChange={handleAnchorReact}>
                 <FourthBlock />
             </Anchor>
             <Anchor id='advantages' onPositionChange={handleAnchorReact}>
