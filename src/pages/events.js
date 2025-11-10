@@ -13,7 +13,7 @@ export default function events({ locale, translations }) {
 
 export async function getStaticProps({ locale }) {
     // Only load the namespaces this page actually uses
-    const translations = loadTranslations(locale, ['common', 'projects', 'forms'])
+    const translations = loadTranslations(locale, ['common', 'projects', 'forms', 'legal'])
 
     return {
         props: {

@@ -13,7 +13,7 @@ function HomePage({ locale, translations }) {
 
 export async function getStaticProps({ locale }) {
     // Only load the namespaces this page actually uses
-    const translations = loadTranslations(locale, ['common', 'home', 'forms', 'projects'])
+    const translations = loadTranslations(locale, ['common', 'home', 'forms', 'projects', 'legal'])
 
     return {
         props: {
