@@ -45,6 +45,38 @@ const SliderComponent = ({ slides, titlesControl }) => {
         rule.titles.includes(state.currentSlide)
     )
 
+    // Determine image loading priority and quality based on position
+    const getImageProps = (index) => {
+        const totalSlides = slides.length
+
+        // First slide: highest priority, best quality
+        if (index === 0) {
+            return {
+                priority: true,
+                quality: 85,
+                sizes: '100vw'
+            }
+        }
+
+        // Adjacent slides (1, 2, and last for infinite scroll): medium priority
+        if (index === 1 || index === 2 || index === totalSlides - 1) {
+            return {
+                priority: false,
+                quality: 80,
+                sizes: '100vw',
+                loading: 'eager' // Load soon but not immediately
+            }
+        }
+
+        // Distant slides: lazy load with lower quality
+        return {
+            priority: false,
+            quality: 75,
+            sizes: '100vw',
+            loading: 'lazy' // Only load when needed
+        }
+    }
+
     return (
         <div className={styles['slider-wrapper']}>
             {title && (
@@ -69,16 +101,18 @@ const SliderComponent = ({ slides, titlesControl }) => {
                 <Img src={prevArrowImg} alt="Previous" width={60} height={60} />
             </div>
             <Slider {...settings} ref={sliderRef}>
-                {slides.map((slide, index) => (
-                    <div className={styles['slider-item']} key={`slide-${index}`}>
-                        <Img
-                            src={slide}
-                            alt={`Slide ${index + 1}`}
-                            priority={index === 0}
-                            sizes="100vw"
-                        />
-                    </div>
-                ))}
+                {slides.map((slide, index) => {
+                    const imageProps = getImageProps(index)
+                    return (
+                        <div className={styles['slider-item']} key={`slide-${index}`}>
+                            <Img
+                                src={slide}
+                                alt={`Slide ${index + 1}`}
+                                {...imageProps}
+                            />
+                        </div>
+                    )
+                })}
             </Slider>
             <div
                 className={styles['arrow right']}
